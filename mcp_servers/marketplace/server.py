@@ -158,6 +158,13 @@ async def market_stats(category: str, user_id: str | None = None) -> dict:
     return await _guard("market_stats", {"category": category}, port().market_stats(category, user_id=_user(user_id)))
 
 
+@mcp.tool(annotations=READ, structured_output=True)
+async def list_events(after_id: int = 0, user_id: str | None = None) -> MessageList:
+    """Proposal lifecycle events (viewed, replied, interview, hired, lost) after `after_id`."""
+    u = _user(user_id)
+    return MessageList(items=await _guard("list_events", {"after_id": after_id}, port().list_events(u, after_id)))
+
+
 # ------------------------------------------------------------------ write tools
 @mcp.tool(annotations=WRITE_IDEMPOTENT, structured_output=True)
 async def create_proposal_draft(draft: ProposalDraftIn, idempotency_key: str = Field(min_length=8),

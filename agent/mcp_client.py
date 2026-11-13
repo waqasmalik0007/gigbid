@@ -29,7 +29,7 @@ ALLOW: dict[str, dict[str, set[str]]] = {
     "critic": {"portfolio": {"search_evidence", "get_case_study"}},
     "compliance": {},
     "submitter": {"marketplace": {"create_proposal_draft", "submit_proposal"}},  # only after approval
-    "liaison": {"marketplace": {"list_messages", "send_message"},
+    "liaison": {"marketplace": {"list_messages", "send_message", "list_events"},
                 "workspace": {"free_slots", "create_interview_hold", "create_email_draft"}},
     "react_baseline": {"marketplace": {"get_job", "get_client_history", "market_stats"},
                        "portfolio": {"search_evidence", "get_case_study"}},

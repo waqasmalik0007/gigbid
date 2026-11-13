@@ -89,6 +89,9 @@ class UpworkLiveAdapter:
     async def market_stats(self, category, user_id="me"):
         raise NotImplementedError("Upwork exposes no market statistics; Pricing falls back to GigSim/Kaggle stats")
 
+    async def list_events(self, user_id, after_id=0):
+        return []  # Upwork changes surface through messages/offers; polled via list_messages
+
     async def create_proposal_draft(self, user_id, payload, idempotency_key, dry_run=False):
         if dry_run:
             return {"dry_run": True, "would_create_draft_on_upwork": payload,
