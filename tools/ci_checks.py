@@ -59,13 +59,29 @@ def check_prompts(files: list[Path]) -> None:
                     errors.append(f"inline system prompt (use agent/prompts/*.md): {f.relative_to(ROOT)}:{i}")
 
 
+def _floats(o, out: set) -> None:
+    if isinstance(o, float):
+        out.add(o)
+    elif isinstance(o, dict):
+        for v in o.values():
+            _floats(v, out)
+    elif isinstance(o, list):
+        for v in o:
+            _floats(v, out)
+
+
 def check_readme_numbers() -> None:
+    """Each decimal in the README results block must equal some results value rounded to the shown precision."""
+    import json
     readme = (ROOT / "README.md").read_text(encoding="utf-8") if (ROOT / "README.md").exists() else ""
-    results = " ".join(p.read_text(encoding="utf-8") for p in (ROOT / "evals/results").glob("*.json"))
+    values: set = set()
+    for p in (ROOT / "evals/results").glob("*.json"):
+        _floats(json.loads(p.read_text(encoding="utf-8")), values)
     for block in re.findall(r"<!-- results:start -->(.*?)<!-- results:end -->", readme, re.S):
-        for num in re.findall(r"(?<![\w.])\d+\.\d+(?![\w.])", block):
-            if num not in results and str(float(num)) not in results:
-                errors.append(f"README number {num} not found in evals/results/*.json")
+        for num in set(re.findall(r"(?<![\w.])\d+\.\d+(?![\w.])", block)):
+            nd = len(num.split(".")[1])
+            if not any(abs(round(v, nd) - float(num)) < 1e-9 for v in values):
+                errors.append(f"README number {num} not traceable to evals/results/*.json")
 
 
 if __name__ == "__main__":

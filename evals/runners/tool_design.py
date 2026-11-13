@@ -161,7 +161,8 @@ def main() -> None:
     if not TASKS.exists():
         TASKS.write_text("\n".join(json.dumps(t) for t in make_tasks()) + "\n")
     tasks = [json.loads(x) for x in TASKS.read_text().splitlines()]
-    sysmsg = SystemMessage("You are a freelancer's assistant. Answer by calling exactly one tool.")
+    from agent.prompts.loader import fill
+    sysmsg = SystemMessage(fill("tool_task"))
     results: dict = {"meta": {"n_tasks": len(tasks), "ts": time.strftime("%Y-%m-%d %H:%M")}, "sets": {}}
     for name, tools in SETS.items():
         llm = get_llm("critic", temperature=0.0, max_tokens=400)
