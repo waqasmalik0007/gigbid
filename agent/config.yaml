@@ -52,6 +52,12 @@ budgets:
 decision:
   bid_threshold: 0.65
   watch_threshold: 0.45
+  max_risk: 0.7
+
+eval_thresholds:          # CI smoke eval fails below these (evals/runners/smoke_eval.py)
+  min_bid_f1: 0.5
+  min_scam_recall: 0.8
+  min_recall_at_5: 0.4
 
 scheduling:
   gigsim_scout_interval_min: 30

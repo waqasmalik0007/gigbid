@@ -104,6 +104,7 @@ async def main() -> None:
     ap.add_argument("--per-persona", type=int, default=20)
     ap.add_argument("--profile", default="open")
     ap.add_argument("--concurrency", type=int, default=3)
+    ap.add_argument("--tag", default=None, help="output name (default: the profile)")
     a = ap.parse_args()
     os.environ["GIGBID_PROFILE"] = a.profile
     os.environ.setdefault("GIGBID_CHECKPOINT_FILE", str(ROOT / f"data/processed/eval_cp_{a.profile}.pkl"))
@@ -113,8 +114,9 @@ async def main() -> None:
     from langgraph.checkpoint.memory import InMemorySaver
     from agent.memory.store import serde
     app = build(InMemorySaver(serde=serde()), interrupt_before=["writer"])  # decisions only
-    out_path = ROOT / f"evals/results/decision_{a.profile}.json"
-    partial = ROOT / f"evals/results/decision_{a.profile}.partial.jsonl"
+    tag = a.tag or a.profile
+    out_path = ROOT / f"evals/results/decision_{tag}.json"
+    partial = ROOT / f"evals/results/decision_{tag}.partial.jsonl"
     rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
     done = {(r["persona"], r["job_id"]) for r in rows if "error" not in r}
     rows = [r for r in rows if "error" not in r]
