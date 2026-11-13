@@ -9,9 +9,9 @@ ONE tool set (bound as tools) and must make the first call; we score:
   argument accuracy   - the key argument is correct (exact id / category, or the keyword for search)
   tokens per task     - prompt + completion tokens (tool schemas are part of the prompt)
 Tool sets:
-  fine   - 12 narrow tools (one per field/source)
+  fine   - 14 narrow tools (one per field/source)
   coarse - 2 tools with an `action` string and free-form `params`
-  best   - the shipped MCP tool surface (9 tools) with descriptions rewritten for selection
+  best   - the shipped MCP tool surface (8 tools) with descriptions rewritten for selection
 No tools are executed; only the model's decision is measured. Results: evals/results/tool_design.json
 """
 from __future__ import annotations

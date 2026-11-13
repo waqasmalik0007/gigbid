@@ -59,7 +59,15 @@ coarse "action" tools (argument errors), at similar token cost.
 
 {{results:tools}}
 
-TODO(result): conclusion from tool_design.json.
+**Result: the hypothesis was not supported.** Tool *selection* hit the ceiling: all three sets chose an
+acceptable tool on 40/40 tasks, so these tasks are too easy for a 120B model to separate the designs. The
+differences are in arguments and tokens [tool_design.json]. The coarse set failed exactly where its
+free-form `params` dictionary allowed it: on 3 pricing tasks it passed "web development" where the
+category enum is `web_dev` (92.5% argument accuracy); typed schemas with enum descriptions prevent that.
+The rewritten descriptions of the shipped set cost 36% more prompt tokens than 14 terse narrow tools (718
+vs 527 per task) for no accuracy gain at this difficulty. **Decision:** keep typed, schema-first tools
+(the coarse failure mode is real and silent), and trim the long descriptions, which bought nothing
+measurable here. A harder task set (multi-step, ambiguous requests) is needed to test selection itself.
 
 ## 4. R&D question B: retrieval, verification, what ships
 

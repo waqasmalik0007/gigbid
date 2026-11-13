@@ -74,28 +74,43 @@ def _make(provider: str, model: str, temperature: float, max_tokens: int):
 
 
 class _Throttle:
-    """Per-model sliding-window token budget (Groq free tier: 8k tokens/min per model).
-    Sleeps before a call that would exceed TPM_LIMIT instead of provoking 429s."""
+    """Per-model sliding-window token AND request budget, shared by every process on the machine.
+
+    Groq free tier: 8k tokens/min and ~30 requests/min per model. Each process used to keep its own window,
+    so concurrent evaluations (or API + worker) overshot together. The window now lives in a small SQLite
+    ledger (THROTTLE_DB) updated under an exclusive transaction, so all processes see one budget.
+    """
 
     def __init__(self) -> None:
+        import sqlite3
         import threading
-        from collections import defaultdict, deque
         self.lock = threading.Lock()
-        self.win: dict[str, deque] = defaultdict(deque)
+        path = os.getenv("THROTTLE_DB", str(ROOT / "data/processed/throttle.sqlite3"))
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
+        self.db = sqlite3.connect(path, timeout=30, isolation_level=None, check_same_thread=False)
+        self.db.execute("CREATE TABLE IF NOT EXISTS w (model TEXT, ts REAL, tokens INTEGER)")
 
     def wait(self, model: str, est_tokens: int) -> None:
-        limit = int(os.getenv("TPM_LIMIT", "7500"))
+        tpm = int(os.getenv("TPM_LIMIT", "7000"))
+        rpm = int(os.getenv("RPM_LIMIT", "25"))
         while True:
             with self.lock:
-                now, q = time.time(), self.win[model]
-                while q and now - q[0][0] > 60:
-                    q.popleft()
-                used = sum(t for _, t in q)
-                if used + est_tokens <= limit or not q:
-                    q.append((now, est_tokens))
-                    return
-                sleep = 60 - (now - q[0][0]) + 0.2
-            time.sleep(min(sleep, 30))
+                now = time.time()
+                self.db.execute("BEGIN IMMEDIATE")
+                try:
+                    self.db.execute("DELETE FROM w WHERE ts < ?", (now - 60,))
+                    used, n, first = self.db.execute(
+                        "SELECT COALESCE(SUM(tokens),0), COUNT(*), MIN(ts) FROM w WHERE model=?", (model,)).fetchone()
+                    if n == 0 or (used + est_tokens <= tpm and n < rpm):
+                        self.db.execute("INSERT INTO w VALUES (?,?,?)", (model, now, est_tokens))
+                        self.db.execute("COMMIT")
+                        return
+                    self.db.execute("COMMIT")
+                except Exception:
+                    self.db.execute("ROLLBACK")
+                    raise
+                sleep = 60 - (now - first) + 0.3
+            time.sleep(max(0.5, min(sleep, 20)))
 
 
 throttle = _Throttle()
