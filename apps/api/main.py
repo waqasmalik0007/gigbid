@@ -41,5 +41,5 @@ def health():
     return {"ok": True}
 
 
-for r in (auth.router, jobs.router, approvals.router, runs.router):
+for r in (auth.router, jobs.router, jobs.studio, approvals.router, runs.router):
     app.include_router(r, prefix="/api")

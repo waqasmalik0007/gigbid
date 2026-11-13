@@ -14,6 +14,7 @@ from apps.api.schemas.models import Accepted, JobRow
 from apps.api.tasks import enqueue
 
 router = APIRouter(prefix="/jobs", tags=["jobs"])
+studio = APIRouter(prefix="/studio", tags=["studio"])
 ROOT = Path(__file__).resolve().parents[3]
 
 
@@ -92,3 +93,27 @@ async def upload_portfolio(file: UploadFile, user: dict = Depends(current_user))
     from rag.retriever import invalidate
     invalidate(user["persona_id"])
     return {"evidence_id": f"upload_{stem}", "status": "indexed on next retrieval"}
+
+
+@studio.post("/regenerate")
+async def regenerate_paragraph(body: dict, user: dict = Depends(current_user)):
+    """Rewrite one paragraph of a pending proposal with the Writer model; the result is claim-verified
+    and still has to go through approval (and Compliance, as an edit)."""
+    from langchain_core.messages import HumanMessage, SystemMessage
+
+    from agent.llm import text
+    from agent.prompts.loader import fill
+    from rag.retriever import get_pipeline
+    from rag.verify import split_claims, strip_unsupported, verify_claims
+    tid, para = body.get("thread_id", ""), (body.get("paragraph") or "")[:2000]
+    if f":{user['id']}:" not in tid or not para.strip():
+        raise HTTPException(400, "thread_id and paragraph required")
+    pipe = get_pipeline(user["persona_id"])
+    ev = pipe.retrieve({"title": para, "description": para}, k=4).evidence
+    out, _ = text("writer", [SystemMessage(fill("regenerate")),
+                             HumanMessage(f"Instruction: {body.get('instruction', 'improve it')}\n\nEVIDENCE:\n" +
+                                          "\n".join(f"[{e.evidence_id}] {e.snippet}" for e in ev) +
+                                          f"\n\nPARAGRAPH:\n{para}")], max_tokens=600)
+    checked = verify_claims(split_claims(out), pipe, [e.evidence_id for e in ev])
+    return {"text": strip_unsupported(out.strip(), checked),
+            "removed": [c.text for c in checked if c.status == "unsupported"]}
