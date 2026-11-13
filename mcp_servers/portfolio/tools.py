@@ -47,6 +47,15 @@ def default_persona() -> str:
     return os.getenv("PORTFOLIO_PERSONA", "me" if os.getenv("PORTFOLIO_DIR") else "ai_ml_engineer")
 
 
+def _skills_in(text: str) -> list[str]:
+    """Tool/skill names found in free text (own portfolios carry no skill tags)."""
+    import re
+
+    from rag.requirements import ALL_SKILLS
+    low = text.lower()
+    return [s for s in ALL_SKILLS if re.search(r"(?<![\w.])" + re.escape(s.lower()) + r"(?![\w])", low)]
+
+
 def load_dir_portfolio(path: Path) -> list[Item]:
     """Standalone mode for other freelancers: any folder of .md / .txt / .pdf files."""
     items = []
@@ -60,7 +69,7 @@ def load_dir_portfolio(path: Path) -> list[Item]:
         kind = "past_proposal" if "proposal" in f.parts or "proposals" in f.parts else \
             "repo_readme" if f.name.lower() == "readme.md" else "case_study"
         items.append(Item(evidence_id=f"{kind}_{f.stem}", persona="me", type=kind, title=f.stem, text=text,
-                          source=str(f), synthetic=False))
+                          skills=_skills_in(text), source=str(f), synthetic=False))
     return items
 
 
