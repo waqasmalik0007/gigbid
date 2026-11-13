@@ -22,10 +22,12 @@ import numpy as np
 from agent.handoffs import EvidenceRef
 from rag.index.bm25 import BM25Index
 from rag.index.embed import embed_docs, embed_query, rerank_scores
+from rag.index.vector_store import make_index
 from rag.ingest.loaders import Chunk, Item, fixed_chunks, item_chunks, load_persona
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTCOME_WEIGHT = {"won": 1.35, "replied": 1.15, "ignored": 0.75}
+RERANK_CHARS = 1000  # cross-encoder input per candidate (MiniLM reads ~256 tokens anyway)
 
 
 @dataclass(frozen=True)
@@ -82,6 +84,7 @@ class Pipeline:
         self._filters: dict = dict(cfg.filters)
         self.chunks = self._chunk(list(self.items.values()))
         self.mat = embed_docs([c.text for c in self.chunks])
+        self.index = make_index(f"gigbid_{persona}_{cfg.chunking}", self.mat)
         self.bm25 = BM25Index([c.text for c in self.chunks]) if cfg.retrieval == "hybrid" else None
         self.usage: dict = {"tokens_in": 0, "tokens_out": 0, "usd": 0.0, "calls": 0}
         # case studies cited by successful past proposals (outcome-aware)
@@ -122,8 +125,9 @@ class Pipeline:
         return not f or all(ch.meta.get(k) in (v if isinstance(v, list) else [v]) for k, v in f.items())
 
     def _rank_chunks(self, query: str) -> list[tuple[int, float]]:
-        dense = self.mat @ embed_query(query)
-        order = [i for i in np.argsort(-dense) if self._allowed(self.chunks[i])][: self.cfg.candidates]
+        hits = self.index.search(embed_query(query), min(len(self.chunks), self.cfg.candidates * 4))
+        dense = dict(hits)
+        order = [i for i, _ in hits if self._allowed(self.chunks[i])][: self.cfg.candidates]
         if self.cfg.retrieval == "hybrid":
             lex = self.bm25.scores(query)
             lorder = [i for i in np.argsort(-lex) if self._allowed(self.chunks[i])][: self.cfg.candidates]
@@ -138,7 +142,7 @@ class Pipeline:
             best[eid] = max(best.get(eid, -1e9), s)
         pairs = sorted(best.items(), key=lambda x: -x[1])[: self.cfg.candidates]
         if self.cfg.rerank:
-            rs = rerank_scores(query, [self.items[e].text[:1500] for e, _ in pairs])
+            rs = rerank_scores(query, [self.items[e].text[:RERANK_CHARS] for e, _ in pairs])
             pairs = sorted(zip([e for e, _ in pairs], rs), key=lambda x: -x[1])
         if self.cfg.outcome:
             def w(e: str) -> float:

@@ -93,10 +93,14 @@ def main() -> None:
                    best.with_(name="best-outcome", outcome=False)]
         a.tag = "ablation"
     OUT.mkdir(parents=True, exist_ok=True)
+    out_json = OUT / f"rag_{a.tag}.json"
+    # merge into an existing results file so variants can run in separate processes (memory) and a
+    # crash never loses finished variants
+    prev = json.loads(out_json.read_text()) if out_json.exists() else {}
     results: dict = {"meta": {"limit": a.limit, "ts": time.strftime("%Y-%m-%d %H:%M"),
                               "embed_model": __import__("rag.index.embed", fromlist=["x"]).EMBED_MODEL,
                               "rerank_model": __import__("rag.index.embed", fromlist=["x"]).RERANK_MODEL},
-                     "variants": {}}
+                     "variants": prev.get("variants", {})}
     for cfg in configs:
         allrows, per = [], {}
         for persona in PERSONAS:
@@ -111,7 +115,7 @@ def main() -> None:
                                 "<4": summarise([r for r in allrows if r["n_req"] < 4])},
             "config": {k: v for k, v in cfg.__dict__.items() if k != "filters"}}
         print(f"{cfg.name:22s} {results['variants'][cfg.name]['overall']}", flush=True)
-    (OUT / f"rag_{a.tag}.json").write_text(json.dumps(results, indent=2))
+        out_json.write_text(json.dumps(results, indent=2))
     with (OUT / f"rag_{a.tag}.csv").open("w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["variant", "recall@5", "mrr", "ndcg@10", "p95_latency_s", "n"])

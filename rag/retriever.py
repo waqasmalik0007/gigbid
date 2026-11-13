@@ -17,8 +17,10 @@ def variant_config(name: str) -> RagConfig:
 @lru_cache(maxsize=32)
 def get_pipeline(persona: str, variant: str | None = None) -> Pipeline:
     if variant is None:
+        import os
+
         from agent.llm import config
-        variant = config()["rag"]["variant"]
+        variant = os.getenv("GIGBID_RAG_VARIANT") or config()["rag"]["variant"]
     return Pipeline(persona, variant_config(variant))
 
 

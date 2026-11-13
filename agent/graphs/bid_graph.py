@@ -58,7 +58,7 @@ def _end_if(fn):
     return _r
 
 
-def build(checkpointer=None, store=None):
+def build(checkpointer=None, store=None, interrupt_before=None):
     g = StateGraph(BidState)
     for name, fn in [("intake", intake), ("job_analyst", job_analyst), ("risk_assessor", risk_assessor),
                      ("fit_matcher", fit_matcher), ("decide", decide), ("pricing", pricing), ("writer", writer),
@@ -78,7 +78,7 @@ def build(checkpointer=None, store=None):
     g.add_conditional_edges("preview", route("approval"), ["approval", END])
     g.add_conditional_edges("approval", _end_if(after_approval), ["submit", "compliance", END])
     g.add_edge("submit", END)
-    return g.compile(checkpointer=checkpointer, store=store)
+    return g.compile(checkpointer=checkpointer, store=store, interrupt_before=interrupt_before)
 
 
 def thread_config(thread_id: str, trace_id: str | None = None, user: str | None = None) -> dict:

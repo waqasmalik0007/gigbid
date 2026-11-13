@@ -103,4 +103,4 @@ def rerank_scores(query: str, docs: list[str]) -> list[float]:
     kind, m = _reranker()
     if kind == "fastembed":
         return [float(s) for s in m.rerank(query, docs)]
-    return [float(s) for s in m.predict([(query, d) for d in docs])]
+    return [float(s) for s in m.predict([(query, d) for d in docs], show_progress_bar=False)]

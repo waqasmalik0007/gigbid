@@ -1,0 +1,45 @@
+{
+  "ml_engineering": {
+    "hourly": {
+      "p25": 17.5,
+      "median": 27.5,
+      "p75": 40.0,
+      "n": 3326
+    },
+    "fixed": {
+      "p25": 30.0,
+      "median": 75.0,
+      "p75": 200.0,
+      "n": 3814
+    }
+  },
+  "web_dev": {
+    "hourly": {
+      "p25": 15.0,
+      "median": 22.5,
+      "p75": 33.0,
+      "n": 14612
+    },
+    "fixed": {
+      "p25": 30.0,
+      "median": 100.0,
+      "p75": 300.0,
+      "n": 13903
+    }
+  },
+  "data_analysis": {
+    "hourly": {
+      "p25": 12.5,
+      "median": 24.5,
+      "p75": 38.5,
+      "n": 5275
+    },
+    "fixed": {
+      "p25": 20.0,
+      "median": 50.0,
+      "p75": 150.0,
+      "n": 4475
+    }
+  },
+  "_source": "kaggle:asaniczka/all-jobs-on-upwork-200k-plus (Feb-Jul 2024)"
+}

@@ -1,0 +1,11 @@
+.git
+.env
+**/node_modules
+**/.next
+data/raw
+data/processed/*.sqlite3*
+data/processed/*.pkl
+data/processed/emb_cache
+data/gigsim/*.sqlite3*
+evals/datasets/hidden*
+**/__pycache__
