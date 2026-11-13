@@ -93,7 +93,10 @@ winning past proposals regardless of topic. Contextual chunks (a generated conte
 were the best single switch, because terse READMEs and reviews become findable.
 
 **Ablation.** Removing contextual chunks costs 14.2 points of Recall@5 and removing hybrid retrieval costs
-11.1 points [rag_ablation.json]. TODO(result): effect of adding back each losing switch.
+11.1 points [rag_ablation.json]. Adding back any losing switch also hurts: decomposition -12.7 points
+(0.375), outcome boosting -14.3 (0.359), reranking -21.0 (0.292) while raising p95 retrieval latency from
+5 ms to 3.4 s. The two shipped switches are complementary (each alone reaches 0.39 or less; together
+0.50), and none of the others earns its place on this corpus.
 
 {{results:ablation}}
 
