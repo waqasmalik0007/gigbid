@@ -17,3 +17,4 @@ data/gigsim/*.sqlite3*
 !data/processed/market_stats.json
 data/processed/*.pkl
 data/processed/emb_cache/
+evals/results/*.partial.jsonl

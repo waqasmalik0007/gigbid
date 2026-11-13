@@ -22,6 +22,17 @@ from rag.verify import split_claims, strip_unsupported, unsupported_rate, verify
 CITE = re.compile(r"\[([a-z]+_[\w-]+)\]")
 
 
+def experiment_arm(job_id: str) -> tuple[str | None, str]:
+    """X2 A/B: deterministic arm per job (hash of job_id) from config experiments.proposal_opening."""
+    import hashlib
+    exp = (config().get("experiments") or {}).get("proposal_opening") or {}
+    if not exp.get("enabled"):
+        return None, ""
+    arms = sorted(exp["arms"])
+    arm = arms[int(hashlib.sha1(job_id.encode()).hexdigest(), 16) % len(arms)]
+    return arm, exp["arms"][arm]
+
+
 def _evidence_block(evidence) -> str:
     return "\n".join(f"[{e.evidence_id}] ({e.type}{', outcome ' + e.outcome if e.outcome else ''}) "
                      f"{e.title}: {e.snippet}" for e in evidence)
@@ -46,8 +57,9 @@ async def writer(state: dict) -> dict:
     style = "\n".join(f"- {s['text']}" for s in style_memory(user)) or "- (none learned yet)"
     outcome = "\n".join(f"- {o['text']}" for o in outcome_memory(user, job.get("category"))) or "- (not enough data yet)"
     from gigsim.seed.vocab import PERSONAS
+    arm, arm_text = experiment_arm(job["job_id"])
     sys = fill("writer", persona_name=PERSONAS.get(persona, {}).get("name", persona), style_memory=style,
-               outcome_memory=outcome, critic_feedback=feedback)
+               outcome_memory=outcome, critic_feedback=f"{arm_text}\n\n{feedback}".strip())
     human = (f"JobSpec: {spec.model_dump_json() if spec else '{}'}\n"
              f"Price: {state['price'].amount} ({state['price'].budget_type})\n"
              f"Screening questions: {job.get('screening_questions')}\n\n"
@@ -59,7 +71,7 @@ async def writer(state: dict) -> dict:
     draft.job_id = job["job_id"]
     draft.revision = state.get("revisions", 0)
     draft.evidence_ids = sorted(set(CITE.findall(draft.cover_letter)) | set(draft.evidence_ids))
-    return {"draft": draft, "_usage": usage}
+    return {"draft": draft, "experiment_arm": arm, "_usage": usage}
 
 
 @node("verifier")

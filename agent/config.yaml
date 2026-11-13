@@ -58,3 +58,12 @@ scheduling:
   upwork_scout_interval_min: 180
 
 policy_pack_path: data/policy_pack
+
+# Signature extension X2: proposal A/B experiments (docs/EXTENSION.md). Arms are prompt addenda;
+# a job's arm is fixed by hashing its job_id, so re-runs and retries stay in the same arm.
+experiments:
+  proposal_opening:
+    enabled: true
+    arms:
+      A: "Opening: restate the client's core problem in one sentence, then give your single most relevant past result."
+      B: "Opening: ask one specific question about the client's project that proves you read the post, then give your single most relevant past result."

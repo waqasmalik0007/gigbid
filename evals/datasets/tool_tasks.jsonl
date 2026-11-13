@@ -1,0 +1,40 @@
+{"task": "What is the budget of job job_e6c3dd6304?", "arg": "job_e6c3dd6304", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_b16a457a33?", "arg": "job_b16a457a33", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_fa755791d0?", "arg": "job_fa755791d0", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_b6692ea5df?", "arg": "job_b6692ea5df", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_215bb47da8?", "arg": "job_215bb47da8", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_06349be70b?", "arg": "job_06349be70b", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_8bd7954c40?", "arg": "job_8bd7954c40", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "What is the budget of job job_be057d4ca4?", "arg": "job_be057d4ca4", "ok": {"fine": ["get_job_budget"], "coarse": ["marketplace"], "best": ["get_job"]}}
+{"task": "Is the client cli_d094700e37 trustworthy? Check how many people they hired and spent.", "arg": "cli_d094700e37", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_be461a0cd1 trustworthy? Check how many people they hired and spent.", "arg": "cli_be461a0cd1", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_1b64538924 trustworthy? Check how many people they hired and spent.", "arg": "cli_1b64538924", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_b1d5781111 trustworthy? Check how many people they hired and spent.", "arg": "cli_b1d5781111", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_fa35e19212 trustworthy? Check how many people they hired and spent.", "arg": "cli_fa35e19212", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_934385f53d trustworthy? Check how many people they hired and spent.", "arg": "cli_934385f53d", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_761f22b2c1 trustworthy? Check how many people they hired and spent.", "arg": "cli_761f22b2c1", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Is the client cli_902ba3cda1 trustworthy? Check how many people they hired and spent.", "arg": "cli_902ba3cda1", "ok": {"fine": ["get_client_hires", "get_client_spend"], "coarse": ["marketplace"], "best": ["get_client_history"]}}
+{"task": "Have I ever built something with RAG? Find proof in my portfolio.", "arg": "RAG", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with computer vision? Find proof in my portfolio.", "arg": "computer vision", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with Docker? Find proof in my portfolio.", "arg": "Docker", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with FastAPI? Find proof in my portfolio.", "arg": "FastAPI", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with churn prediction? Find proof in my portfolio.", "arg": "churn prediction", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with semantic search? Find proof in my portfolio.", "arg": "semantic search", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with LangGraph? Find proof in my portfolio.", "arg": "LangGraph", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Have I ever built something with fine-tuning? Find proof in my portfolio.", "arg": "fine-tuning", "ok": {"fine": ["search_case_studies", "search_repos", "search_reviews"], "coarse": ["portfolio"], "best": ["search_evidence"]}}
+{"task": "Show me the full write-up of case_proj_d007e6392d.", "arg": "case_proj_d007e6392d", "ok": {"fine": ["get_case_study_text"], "coarse": ["portfolio"], "best": ["get_case_study"]}}
+{"task": "Show me the full write-up of case_proj_2b23c5e189.", "arg": "case_proj_2b23c5e189", "ok": {"fine": ["get_case_study_text"], "coarse": ["portfolio"], "best": ["get_case_study"]}}
+{"task": "Show me the full write-up of case_proj_5820fcf035.", "arg": "case_proj_5820fcf035", "ok": {"fine": ["get_case_study_text"], "coarse": ["portfolio"], "best": ["get_case_study"]}}
+{"task": "Show me the full write-up of case_proj_0fac90ba16.", "arg": "case_proj_0fac90ba16", "ok": {"fine": ["get_case_study_text"], "coarse": ["portfolio"], "best": ["get_case_study"]}}
+{"task": "Show me the full write-up of case_proj_0e01045792.", "arg": "case_proj_0e01045792", "ok": {"fine": ["get_case_study_text"], "coarse": ["portfolio"], "best": ["get_case_study"]}}
+{"task": "Show me the full write-up of case_proj_10615e6213.", "arg": "case_proj_10615e6213", "ok": {"fine": ["get_case_study_text"], "coarse": ["portfolio"], "best": ["get_case_study"]}}
+{"task": "What do clients usually pay for web development work?", "arg": "web_dev", "ok": {"fine": ["get_market_median"], "coarse": ["marketplace"], "best": ["market_stats"]}}
+{"task": "What do clients usually pay for data analysis work?", "arg": "data_analysis", "ok": {"fine": ["get_market_median"], "coarse": ["marketplace"], "best": ["market_stats"]}}
+{"task": "What do clients usually pay for machine learning engineering work?", "arg": "ml_engineering", "ok": {"fine": ["get_market_median"], "coarse": ["marketplace"], "best": ["market_stats"]}}
+{"task": "How many Connects do I have left?", "arg": null, "ok": {"fine": ["get_connects"], "coarse": ["marketplace"], "best": ["get_connects_balance"]}}
+{"task": "How many Connects do I have left?", "arg": null, "ok": {"fine": ["get_connects"], "coarse": ["marketplace"], "best": ["get_connects_balance"]}}
+{"task": "Which skills can my portfolio actually back up?", "arg": null, "ok": {"fine": ["list_portfolio_skills"], "coarse": ["portfolio"], "best": ["list_skills"]}}
+{"task": "Which skills can my portfolio actually back up?", "arg": null, "ok": {"fine": ["list_portfolio_skills"], "coarse": ["portfolio"], "best": ["list_skills"]}}
+{"task": "Find open jobs about Shopify.", "arg": "Shopify", "ok": {"fine": ["find_jobs"], "coarse": ["marketplace"], "best": ["search_jobs"]}}
+{"task": "Find open jobs about dashboard.", "arg": "dashboard", "ok": {"fine": ["find_jobs"], "coarse": ["marketplace"], "best": ["search_jobs"]}}
+{"task": "Find open jobs about scraping.", "arg": "scraping", "ok": {"fine": ["find_jobs"], "coarse": ["marketplace"], "best": ["search_jobs"]}}

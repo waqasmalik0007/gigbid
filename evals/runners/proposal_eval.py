@@ -89,7 +89,7 @@ async def run_one(app, persona: str, row: dict, tag: str) -> dict:
     sim = score_proposal(job, clients[job["client_id"]], {"cover_letter": letter, "amount": price.amount if price else 0})
     j, ju = await judge(job, letter)
     ver = v.get("verification") or {}
-    return out | {"letter": letter, "words": len(letter.split()), "claims": ver.get("claims", 0),
+    return out | {"arm": v.get("experiment_arm"), "letter": letter, "words": len(letter.split()), "claims": ver.get("claims", 0),
                   "unsupported_before": ver.get("unsupported_before"), "unsupported_after": ver.get("unsupported_after"),
                   "critic_rounds": len(v.get("critiques") or []), "critic_passed": bool(v["critiques"][-1].passed)
                   if v.get("critiques") else None, "redactions": len(comp.redactions), "compliance_allowed": comp.allowed,

@@ -81,6 +81,7 @@ class BidState(TypedDict, total=False):
     draft: ProposalDraft
     critiques: Annotated[list[Critique], operator.add]
     verification: dict[str, Any]             # claim verification metrics (unsupported before/after)
+    experiment_arm: str | None               # X2 A/B arm for this proposal
     compliance: ComplianceVerdict
     dry_run_preview: dict[str, Any]
     approval: dict[str, Any]

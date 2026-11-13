@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "limit": null,
+    "ts": "2026-11-14 01:58",
+    "embed_model": "BAAI/bge-small-en-v1.5",
+    "rerank_model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  },
+  "variants": {
+    "best": {
+      "overall": {
+        "recall@5": 0.5019,
+        "mrr": 0.6268,
+        "ndcg@10": 0.5068,
+        "p50_latency_s": 0.0025,
+        "p95_latency_s": 0.0048,
+        "n": 544
+      },
+      "by_persona": {
+        "ai_ml_engineer": {
+          "recall@5": 0.5243,
+          "mrr": 0.6602,
+          "ndcg@10": 0.5421,
+          "p50_latency_s": 0.003,
+          "p95_latency_s": 0.0048,
+          "n": 186
+        },
+        "fullstack_web": {
+          "recall@5": 0.4961,
+          "mrr": 0.6351,
+          "ndcg@10": 0.4967,
+          "p50_latency_s": 0.0022,
+          "p95_latency_s": 0.0047,
+          "n": 171
+        },
+        "data_analyst": {
+          "recall@5": 0.485,
+          "mrr": 0.586,
+          "ndcg@10": 0.4811,
+          "p50_latency_s": 0.0023,
+          "p95_latency_s": 0.0047,
+          "n": 187
+        }
+      },
+      "by_source": {
+        "real_kaggle": {
+          "recall@5": 0.4593,
+          "mrr": 0.5876,
+          "ndcg@10": 0.4654,
+          "p50_latency_s": 0.0037,
+          "p95_latency_s": 0.0049,
+          "n": 376
+        },
+        "synthetic": {
+          "recall@5": 0.5974,
+          "mrr": 0.7145,
+          "ndcg@10": 0.5996,
+          "p50_latency_s": 0.0008,
+          "p95_latency_s": 0.0012,
+          "n": 168
+        }
+      },
+      "by_requirements": {
+        ">=4": {
+          "recall@5": 0.551,
+          "mrr": 0.7391,
+          "ndcg@10": 0.5531,
+          "p50_latency_s": 0.001,
+          "p95_latency_s": 0.0048,
+          "n": 134
+        },
+        "<4": {
+          "recall@5": 0.4859,
+          "mrr": 0.5901,
+          "ndcg@10": 0.4917,
+          "p50_latency_s": 0.003,
+          "p95_latency_s": 0.0048,
+          "n": 410
+        }
+      },
+      "config": {
+        "name": "best",
+        "chunking": "contextual",
+        "query": "whole",
+        "retrieval": "hybrid",
+        "rerank": false,
+        "outcome": false,
+        "corrective": false,
+        "candidates": 40
+      }
+    },
+    "best-contextual": {
+      "overall": {
+        "recall@5": 0.3598,
+        "mrr": 0.532,
+        "ndcg@10": 0.3611,
+        "p50_latency_s": 0.0052,
+        "p95_latency_s": 0.0157,
+        "n": 544
+      },
+      "by_persona": {
+        "ai_ml_engineer": {
+          "recall@5": 0.365,
+          "mrr": 0.5311,
+          "ndcg@10": 0.3671,
+          "p50_latency_s": 0.0052,
+          "p95_latency_s": 0.0118,
+          "n": 186
+        },
+        "fullstack_web": {
+          "recall@5": 0.3684,
+          "mrr": 0.5655,
+          "ndcg@10": 0.3729,
+          "p50_latency_s": 0.0038,
+          "p95_latency_s": 0.0098,
+          "n": 171
+        },
+        "data_analyst": {
+          "recall@5": 0.3469,
+          "mrr": 0.5021,
+          "ndcg@10": 0.3441,
+          "p50_latency_s": 0.0087,
+          "p95_latency_s": 0.019,
+          "n": 187
+        }
+      },
+      "by_source": {
+        "real_kaggle": {
+          "recall@5": 0.3474,
+          "mrr": 0.5384,
+          "ndcg@10": 0.3561,
+          "p50_latency_s": 0.0068,
+          "p95_latency_s": 0.0164,
+          "n": 376
+        },
+        "synthetic": {
+          "recall@5": 0.3876,
+          "mrr": 0.5175,
+          "ndcg@10": 0.3721,
+          "p50_latency_s": 0.0021,
+          "p95_latency_s": 0.0047,
+          "n": 168
+        }
+      },
+      "by_requirements": {
+        ">=4": {
+          "recall@5": 0.4065,
+          "mrr": 0.6264,
+          "ndcg@10": 0.4152,
+          "p50_latency_s": 0.0031,
+          "p95_latency_s": 0.0137,
+          "n": 134
+        },
+        "<4": {
+          "recall@5": 0.3446,
+          "mrr": 0.5011,
+          "ndcg@10": 0.3433,
+          "p50_latency_s": 0.0059,
+          "p95_latency_s": 0.0161,
+          "n": 410
+        }
+      },
+      "config": {
+        "name": "best-contextual",
+        "chunking": "item",
+        "query": "whole",
+        "retrieval": "hybrid",
+        "rerank": false,
+        "outcome": false,
+        "corrective": false,
+        "candidates": 40
+      }
+    },
+    "best-hybrid": {
+      "overall": {
+        "recall@5": 0.3914,
+        "mrr": 0.5318,
+        "ndcg@10": 0.3913,
+        "p50_latency_s": 0.0002,
+        "p95_latency_s": 0.0004,
+        "n": 544
+      },
+      "by_persona": {
+        "ai_ml_engineer": {
+          "recall@5": 0.3851,
+          "mrr": 0.5246,
+          "ndcg@10": 0.3869,
+          "p50_latency_s": 0.0003,
+          "p95_latency_s": 0.0005,
+          "n": 186
+        },
+        "fullstack_web": {
+          "recall@5": 0.4029,
+          "mrr": 0.5463,
+          "ndcg@10": 0.3994,
+          "p50_latency_s": 0.0001,
+          "p95_latency_s": 0.0002,
+          "n": 171
+        },
+        "data_analyst": {
+          "recall@5": 0.3872,
+          "mrr": 0.5257,
+          "ndcg@10": 0.3883,
+          "p50_latency_s": 0.0002,
+          "p95_latency_s": 0.0003,
+          "n": 187
+        }
+      },
+      "by_source": {
+        "real_kaggle": {
+          "recall@5": 0.3646,
+          "mrr": 0.5157,
+          "ndcg@10": 0.3725,
+          "p50_latency_s": 0.0002,
+          "p95_latency_s": 0.0004,
+          "n": 376
+        },
+        "synthetic": {
+          "recall@5": 0.4514,
+          "mrr": 0.5678,
+          "ndcg@10": 0.4334,
+          "p50_latency_s": 0.0002,
+          "p95_latency_s": 0.0004,
+          "n": 168
+        }
+      },
+      "by_requirements": {
+        ">=4": {
+          "recall@5": 0.4429,
+          "mrr": 0.6195,
+          "ndcg@10": 0.446,
+          "p50_latency_s": 0.0002,
+          "p95_latency_s": 0.0004,
+          "n": 134
+        },
+        "<4": {
+          "recall@5": 0.3746,
+          "mrr": 0.5031,
+          "ndcg@10": 0.3734,
+          "p50_latency_s": 0.0002,
+          "p95_latency_s": 0.0004,
+          "n": 410
+        }
+      },
+      "config": {
+        "name": "best-hybrid",
+        "chunking": "contextual",
+        "query": "whole",
+        "retrieval": "dense",
+        "rerank": false,
+        "outcome": false,
+        "corrective": false,
+        "candidates": 40
+      }
+    }
+  }
+}
