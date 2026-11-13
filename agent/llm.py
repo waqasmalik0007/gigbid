@@ -103,7 +103,7 @@ throttle = _Throttle()
 
 def _estimate(messages: list, max_tokens: int) -> int:
     chars = sum(len(getattr(m, "content", str(m))) for m in messages)
-    return chars // 3 + max_tokens // 2
+    return chars // 3 + max_tokens  # Groq reserves the full max_tokens against TPM at request time
 
 
 def get_llm(node: str, temperature: float = 0.2, max_tokens: int = 2048, fallback: bool = False):

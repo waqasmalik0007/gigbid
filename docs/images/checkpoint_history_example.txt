@@ -1,0 +1,19 @@
+1f1df7f4-1a20-6285-8011-eb121c3f5a86  next=[]  status=submitted  decision=bid  steps=18
+1f1df7f4-0a7a-62e4-8010-96f82cdab282  next=['submit']  status=approved  decision=bid  steps=17
+1f1df7f4-0a49-6314-800f-22aecade8ddb  next=['approval']  status=awaiting_approval  decision=bid  steps=17
+1f1df7f4-02bb-6ab3-800e-fd9d683b578a  next=['preview']  status=running  decision=bid  steps=16
+1f1df7f4-027e-6b87-800d-ded79b0a5f69  next=['compliance']  status=running  decision=bid  steps=15
+1f1df7f3-4460-6aa2-800c-a86bb5873c03  next=['critic']  status=running  decision=bid  steps=14
+1f1df7f3-2dfc-6dd7-800b-d75c84853165  next=['verifier']  status=running  decision=bid  steps=13
+1f1df7f2-52a1-6a0c-800a-c8a28e94fcab  next=['writer']  status=running  decision=bid  steps=12
+1f1df7f0-625b-6e85-8009-1e817027a906  next=['critic']  status=running  decision=bid  steps=11
+1f1df7f0-47eb-680c-8008-1b0c805bbf84  next=['verifier']  status=running  decision=bid  steps=10
+1f1df7ef-7b19-6bfc-8007-678bd84f2b67  next=['writer']  status=running  decision=bid  steps=9
+1f1df7ef-58d1-6422-8006-c015115bd425  next=['critic']  status=running  decision=bid  steps=8
+1f1df7ee-f9b7-6097-8005-643166dacac7  next=['verifier']  status=running  decision=bid  steps=7
+1f1df7ee-bd04-62b3-8004-286936a18f7b  next=['writer']  status=running  decision=bid  steps=6
+1f1df7ee-ae2d-6576-8003-10424f927302  next=['pricing']  status=running  decision=bid  steps=5
+1f1df7ee-ae1d-66c7-8002-c9613c935ba6  next=['decide']  status=running  decision=None  steps=4
+1f1df7ec-abd3-6443-8001-d7f13b336432  next=['job_analyst', 'risk_assessor', 'fit_matcher']  status=running  decision=None  steps=1
+1f1df7ec-97c8-6857-8000-79dc6a82be6e  next=['intake']  status=None  decision=None  steps=0
+1f1df7ec-97bf-66e3-bfff-3962e3d20c7c  next=['__start__']  status=None  decision=None  steps=0
