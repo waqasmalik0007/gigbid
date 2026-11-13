@@ -12,3 +12,5 @@ test-results/
 *.log
 .pytest_cache/
 .ruff_cache/
+data/raw/
+data/gigsim/*.sqlite3*

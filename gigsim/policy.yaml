@@ -1,0 +1,8 @@
+# GigSim platform policy. The 2 Nov "platform policy update" (change request) is applied by
+# editing ONLY this file and data/policy_pack/policy.yaml; see docs/CHANGE_REQUEST.md.
+version: "2026-10-27"
+starting_connects: 120
+connects_multiplier: 1.0
+premium_job_threshold: 1000000000000
+premium_job_extra_connects: 0
+max_cover_letter_words: null
