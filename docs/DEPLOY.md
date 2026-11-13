@@ -26,6 +26,7 @@ In the Space: **Settings → Variables and secrets**, add as *secrets*:
 | `REVIEWER_PASSWORD` | a password for the reviewer (put it only in the Classroom private comment) |
 | `DATABASE_URL` | Neon connection string (optional; otherwise SQLite in the container) |
 | `REDIS_URL` | Upstash URL (optional; otherwise agent jobs run inside the API process) |
+| `LANGSMITH_API_KEY`, `LANGSMITH_TRACING=true`, `LANGSMITH_PROJECT=gigbid` | from smith.langchain.com → Settings → API keys (free tier); every run is traced with tokens and cost per node |
 
 ## 3. Push
 

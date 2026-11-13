@@ -32,8 +32,16 @@ def graph(kind: str):
 
 
 def _cfg(thread_id: str, trace_id: str, user: str) -> dict:
-    return {"configurable": {"thread_id": thread_id}, "recursion_limit": 60,
-            "metadata": {"trace_id": trace_id, "user": user}, "run_name": thread_id}
+    """The request's trace id doubles as the LangSmith root run id (E3): the same id is in the API
+    response header, the UI, the checkpoint metadata, every MCP audit-log line and the LangSmith trace."""
+    cfg = {"configurable": {"thread_id": thread_id}, "recursion_limit": 60,
+           "metadata": {"trace_id": trace_id, "user": user}, "run_name": thread_id.split(":")[0] + "_graph",
+           "tags": [thread_id.split(":")[0]]}
+    try:
+        cfg["run_id"] = uuid.UUID(trace_id)
+    except (ValueError, TypeError):
+        pass
+    return cfg
 
 
 def _jsonable(v):
