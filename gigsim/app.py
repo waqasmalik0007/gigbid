@@ -24,7 +24,6 @@ import uuid
 from collections import defaultdict, deque
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any
 
 import yaml
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
@@ -204,18 +203,26 @@ def client_history(client_id: str, uid: str = Depends(user)):
     return {k: v for k, v in c.items() if k != "hidden"}  # hidden preferences never leave GigSim
 
 
+MARKET = ROOT / "data" / "processed" / "market_stats.json"
+
+
 @app.get("/market/stats")
 def market_stats(category: str, uid: str = Depends(user)):
+    """Real rate quartiles from the Kaggle Upwork data when prepared; else from GigSim history."""
+    if MARKET.exists():
+        stats = json.loads(MARKET.read_text())
+        if category in stats:
+            return {"category": category, "source": stats.get("_source"), **stats[category]}
     js = [j for j in world.history if j["category"] == category and j.get("budget_max")]
     if not js:
         raise HTTPException(404, "no data for category")
     out = {}
     for bt in ("fixed", "hourly"):
         vals = sorted((j["budget_min"] + j["budget_max"]) / 2 for j in js if j["budget_type"] == bt)
-        if vals:
+        if len(vals) >= 4:
             q = statistics.quantiles(vals, n=4)
             out[bt] = {"p25": round(q[0], 2), "median": round(q[1], 2), "p75": round(q[2], 2), "n": len(vals)}
-    return {"category": category, **out}
+    return {"category": category, "source": "gigsim_history", **out}
 
 
 @app.get("/connects")

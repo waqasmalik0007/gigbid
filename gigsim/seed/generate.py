@@ -14,7 +14,6 @@ docs/DATA_CARD.md). They are NOT human labels; that limitation is reported.
 from __future__ import annotations
 
 import argparse
-import csv
 import hashlib
 import json
 import random
@@ -156,22 +155,14 @@ def build_clients(n: int, rng: random.Random) -> list[dict]:
 
 
 # ------------------------------------------------------------------ jobs
-def load_kaggle_titles(kaggle_dir: Path | None) -> list[dict]:
-    """Optional: real job titles/budgets from the Kaggle Upwork datasets (attributed in DATA_CARD)."""
-    rows: list[dict] = []
-    if not kaggle_dir or not kaggle_dir.exists():
-        return rows
-    for f in kaggle_dir.glob("**/*.csv"):
-        with f.open(encoding="utf-8", errors="ignore") as fh:
-            for r in csv.DictReader(fh):
-                t = r.get("title") or r.get("Title") or r.get("job_title")
-                if t:
-                    rows.append(dict(title=t.strip(), source=f.name,
-                                     budget=r.get("budget") or r.get("Budget"),
-                                     hourly_low=r.get("hourly_low"), hourly_high=r.get("hourly_high")))
-                if len(rows) > 200_000:
-                    return rows
-    return rows
+def load_kaggle_jobs() -> dict[str, list[dict]]:
+    """Real Upwork posts prepared by gigsim/seed/kaggle_prep.py, grouped by category."""
+    f = ROOT / "data/processed/kaggle_jobs.json"
+    by_cat: dict[str, list[dict]] = {c: [] for c in CATEGORIES}
+    if f.exists():
+        for j in json.loads(f.read_text(encoding="utf-8")):
+            by_cat[j["category"]].append(j)
+    return by_cat
 
 
 def fair_band(cat: str, n_req: int, budget_type: str) -> tuple[float, float]:
@@ -182,7 +173,8 @@ def fair_band(cat: str, n_req: int, budget_type: str) -> tuple[float, float]:
     return (round(hours * lo * 1.1, -1), round(hours * (lo + hi) / 2, -1))
 
 
-def make_job(i: int, rng: random.Random, clients: list[dict], when: datetime, kaggle: list[dict]) -> dict:
+def make_job(i: int, rng: random.Random, clients: list[dict], when: datetime,
+             kaggle: dict[str, list[dict]]) -> dict:
     cat = rng.choice(list(CATEGORIES))
     skills_pool = CATEGORIES[cat]["skills"]
     n_req = rng.randint(1, 6)
@@ -193,19 +185,35 @@ def make_job(i: int, rng: random.Random, clients: list[dict], when: datetime, ka
     budget_type = rng.choice(["fixed", "hourly"])
     band = fair_band(cat, n_req, budget_type)
     factor = rng.uniform(0.5, 1.4)
-    kg = rng.choice(kaggle) if kaggle and rng.random() < 0.6 else None
-    title = kg["title"] if kg else f"{rng.choice(['Need', 'Looking for', 'Hiring'])} {cat.replace('_', ' ')} help: {req[0]}"
-    desc = (f"We are a {client['industry']} company. "
-            + (f"Must be strong in {', '.join(named)}. " if named else "")
-            + " ".join(f"We need to {IMPLIED[s]}." for s in implied)
-            + f" Deliverables: {n_req} milestones over {rng.choice([1, 2, 4, 6])} weeks.")
+    pool = kaggle.get(cat) or []
+    kg = rng.choice(pool) if pool and rng.random() < 0.7 else None
+    if kg:  # real Kaggle post: requirements are the skills actually named in its text
+        req = kg["skills"][:6]
+        named, implied = req, []
+        n_req = len(req)
+        budget_type = kg["budget_type"]
+        band = fair_band(cat, n_req, budget_type)
+        if budget_type == "hourly" and kg.get("hourly_low") and kg.get("hourly_high"):
+            bmin, bmax = kg["hourly_low"], kg["hourly_high"]
+        elif budget_type == "fixed" and kg.get("budget"):
+            bmin, bmax = kg["budget"] * 0.8, kg["budget"]
+            band = (round(kg["budget"] * 0.7), round(kg["budget"] * 1.3))
+        else:
+            bmin, bmax = band[0] * factor * 0.8, band[1] * factor
+        title, desc = kg["title"], kg["description"]
+    else:
+        title = f"{rng.choice(['Need', 'Looking for', 'Hiring'])} {cat.replace('_', ' ')} help: {req[0]}"
+        desc = (f"We are a {client['industry']} company. "
+                + (f"Must be strong in {', '.join(named)}. " if named else "")
+                + " ".join(f"We need to {IMPLIED[s]}." for s in implied)
+                + f" Deliverables: {n_req} milestones over {rng.choice([1, 2, 4, 6])} weeks.")
+        bmin, bmax = band[0] * factor * 0.8, band[1] * factor
     job = dict(
         job_id=_id("job", i), title=title, description=desc, category=cat, skills=named,
-        budget_type=budget_type,
-        budget_min=round(band[0] * factor * 0.8), budget_max=round(band[1] * factor),
+        budget_type=budget_type, budget_min=round(bmin), budget_max=round(bmax),
         connects_cost=rng.choice([4, 6, 8, 12, 16]), client_id=client["client_id"],
         posted_at=when.isoformat(), screening_questions=rng.sample(SCREENING_QUESTIONS, k=rng.randint(0, 2)),
-        source=("kaggle:" + kg["source"]) if kg else "synthetic", synthetic=kg is None,
+        source=kg["source"] if kg else "synthetic", synthetic=kg is None,
     )
     gold = dict(requirements=req, fair_band=band, is_scam=False, has_injection=False, duplicate_of=None)
 
@@ -264,13 +272,12 @@ def past_proposals(pid: str, persona: dict, jobs: list[dict], rng: random.Random
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, default=7)
-    ap.add_argument("--kaggle-dir", type=Path, default=ROOT / "data/raw/kaggle")
     ap.add_argument("--history", type=int, default=1500)
     ap.add_argument("--stream", type=int, default=300)
     ap.add_argument("--dev", type=int, default=200)
     a = ap.parse_args()
     rng = random.Random(a.seed)
-    kaggle = load_kaggle_titles(a.kaggle_dir)
+    kaggle = load_kaggle_jobs()
 
     personas = {pid: build_persona(pid, spec, rng) for pid, spec in PERSONAS.items()}
     clients = build_clients(250, rng)
@@ -308,7 +315,7 @@ def main() -> None:
                 row = {k: v for k, v in j.items() if k != "_gold"}
                 fh.write(json.dumps(dict(job=row, gold=gold_for_persona(j, p, p["evidence"]))) + "\n")
     print(f"personas={len(personas)} clients={len(clients)} history={len(history)} "
-          f"stream={len(stream)} kaggle_titles={len(kaggle)}")
+          f"stream={len(stream)} kaggle_jobs={sum(map(len, kaggle.values()))}")
 
 
 if __name__ == "__main__":
