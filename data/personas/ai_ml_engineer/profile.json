@@ -1,0 +1,257 @@
+{
+  "persona_id": "ai_ml_engineer",
+  "name": "Ayesha Khan (synthetic)",
+  "primary_category": "ml_engineering",
+  "secondary_category": "data_analysis",
+  "skills": [
+    "A/B testing",
+    "AWS SageMaker",
+    "Airflow",
+    "Docker",
+    "ETL",
+    "FastAPI",
+    "Hugging Face",
+    "LLM evaluation",
+    "LangChain",
+    "MLflow",
+    "NLP",
+    "OpenAI API",
+    "Pinecone",
+    "Power BI",
+    "PyTorch",
+    "Python",
+    "Qdrant",
+    "RAG",
+    "SQL",
+    "Snowflake",
+    "computer vision",
+    "dashboards",
+    "dbt",
+    "forecasting",
+    "pandas",
+    "scikit-learn",
+    "statistics"
+  ],
+  "floor_rate": 40,
+  "weekly_connects_budget": 80,
+  "projects": [
+    {
+      "id": "proj_4c47885533",
+      "title": "Warehouse demand forecast for a legal client",
+      "category": "data_analysis",
+      "skills": [
+        "Python",
+        "forecasting",
+        "pandas"
+      ],
+      "industry": "legal",
+      "date": "2021-07-16",
+      "result": "reduced stock-outs by 15%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_005d9e3f29",
+      "title": "Chatbot evaluation harness for a healthcare client",
+      "category": "ml_engineering",
+      "skills": [
+        "LLM evaluation",
+        "Python",
+        "LangChain"
+      ],
+      "industry": "healthcare",
+      "date": "2022-09-01",
+      "result": "caught 324 regressions before release",
+      "synthetic": true
+    },
+    {
+      "id": "proj_65c5a1c7a6",
+      "title": "Defect detection on assembly line for a travel client",
+      "category": "ml_engineering",
+      "skills": [
+        "computer vision",
+        "PyTorch",
+        "AWS SageMaker"
+      ],
+      "industry": "travel",
+      "date": "2023-07-29",
+      "result": "caught 48% of defects before packing",
+      "synthetic": true
+    },
+    {
+      "id": "proj_d007e6392d",
+      "title": "Modern data stack migration for a SaaS client",
+      "category": "data_analysis",
+      "skills": [
+        "dbt",
+        "Snowflake",
+        "Airflow",
+        "ETL"
+      ],
+      "industry": "SaaS",
+      "date": "2023-08-23",
+      "result": "cut report refresh from a day to 26 minutes",
+      "synthetic": true
+    },
+    {
+      "id": "proj_86fdc3c574",
+      "title": "Chatbot evaluation harness for a legal client",
+      "category": "ml_engineering",
+      "skills": [
+        "LLM evaluation",
+        "Python",
+        "LangChain"
+      ],
+      "industry": "legal",
+      "date": "2023-03-05",
+      "result": "caught 217 regressions before release",
+      "synthetic": true
+    },
+    {
+      "id": "proj_4058dfe795",
+      "title": "Semantic product search for a e-commerce client",
+      "category": "ml_engineering",
+      "skills": [
+        "Pinecone",
+        "Hugging Face",
+        "FastAPI",
+        "Docker"
+      ],
+      "industry": "e-commerce",
+      "date": "2023-04-05",
+      "result": "raised search click-through by 48%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_4acf42e3b8",
+      "title": "Pricing page A/B test analysis for a legal client",
+      "category": "data_analysis",
+      "skills": [
+        "A/B testing",
+        "statistics",
+        "Python"
+      ],
+      "industry": "legal",
+      "date": "2022-11-27",
+      "result": "identified a variant that lifted revenue 18%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_5820fcf035",
+      "title": "Defect detection on assembly line for a travel client",
+      "category": "ml_engineering",
+      "skills": [
+        "computer vision",
+        "PyTorch",
+        "AWS SageMaker"
+      ],
+      "industry": "travel",
+      "date": "2022-11-13",
+      "result": "caught 35% of defects before packing",
+      "synthetic": true
+    },
+    {
+      "id": "proj_0fac90ba16",
+      "title": "Semantic product search for a legal client",
+      "category": "ml_engineering",
+      "skills": [
+        "Pinecone",
+        "Hugging Face",
+        "FastAPI",
+        "Docker"
+      ],
+      "industry": "legal",
+      "date": "2023-07-27",
+      "result": "raised search click-through by 48%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_63b2db4ed7",
+      "title": "Support-ticket triage classifier for a travel client",
+      "category": "ml_engineering",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "NLP",
+        "FastAPI"
+      ],
+      "industry": "travel",
+      "date": "2022-10-07",
+      "result": "cut first-response time by 43%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_3adc72b41f",
+      "title": "Internal-docs RAG assistant for a legal client",
+      "category": "ml_engineering",
+      "skills": [
+        "LangChain",
+        "RAG",
+        "Qdrant",
+        "OpenAI API",
+        "FastAPI"
+      ],
+      "industry": "legal",
+      "date": "2021-07-10",
+      "result": "answered 241 staff questions a week with 32% judged correct",
+      "synthetic": true
+    },
+    {
+      "id": "proj_2b23c5e189",
+      "title": "Churn prediction model for a travel client",
+      "category": "ml_engineering",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "MLflow"
+      ],
+      "industry": "travel",
+      "date": "2021-05-18",
+      "result": "flagged at-risk accounts with 35% precision",
+      "synthetic": true
+    },
+    {
+      "id": "proj_10615e6213",
+      "title": "Sales KPI dashboard for a logistics client",
+      "category": "data_analysis",
+      "skills": [
+        "Power BI",
+        "SQL",
+        "dashboards"
+      ],
+      "industry": "logistics",
+      "date": "2022-11-29",
+      "result": "replaced 127 weekly spreadsheets",
+      "synthetic": true
+    },
+    {
+      "id": "proj_0e01045792",
+      "title": "Support-ticket triage classifier for a healthcare client",
+      "category": "ml_engineering",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "NLP",
+        "FastAPI"
+      ],
+      "industry": "healthcare",
+      "date": "2022-03-28",
+      "result": "cut first-response time by 45%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_10e613508d",
+      "title": "Churn prediction model for a real estate client",
+      "category": "ml_engineering",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "MLflow"
+      ],
+      "industry": "real estate",
+      "date": "2021-05-27",
+      "result": "flagged at-risk accounts with 30% precision",
+      "synthetic": true
+    }
+  ],
+  "synthetic": true
+}

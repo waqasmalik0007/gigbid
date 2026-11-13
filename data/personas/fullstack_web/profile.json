@@ -1,0 +1,292 @@
+{
+  "persona_id": "fullstack_web",
+  "name": "Daniel Okafor (synthetic)",
+  "primary_category": "web_dev",
+  "secondary_category": "ml_engineering",
+  "skills": [
+    "AWS",
+    "AWS SageMaker",
+    "Django",
+    "Docker",
+    "FastAPI",
+    "GraphQL",
+    "Hugging Face",
+    "LangChain",
+    "NLP",
+    "Next.js",
+    "Node.js",
+    "OAuth",
+    "OpenAI API",
+    "Playwright",
+    "PostgreSQL",
+    "Prisma",
+    "PyTorch",
+    "Python",
+    "Qdrant",
+    "RAG",
+    "REST API",
+    "React",
+    "Redis",
+    "Stripe",
+    "Tailwind CSS",
+    "TypeScript",
+    "Vercel",
+    "WebSockets",
+    "computer vision",
+    "fine-tuning",
+    "scikit-learn"
+  ],
+  "floor_rate": 30,
+  "weekly_connects_budget": 80,
+  "projects": [
+    {
+      "id": "proj_64e2655b9b",
+      "title": "Multi-tenant SaaS dashboard for a manufacturing client",
+      "category": "web_dev",
+      "skills": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "OAuth"
+      ],
+      "industry": "manufacturing",
+      "date": "2021-10-14",
+      "result": "onboarded 80 paying teams in the first quarter",
+      "synthetic": true
+    },
+    {
+      "id": "proj_e692e42a89",
+      "title": "Multi-tenant SaaS dashboard for a healthcare client",
+      "category": "web_dev",
+      "skills": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "OAuth"
+      ],
+      "industry": "healthcare",
+      "date": "2022-12-07",
+      "result": "onboarded 121 paying teams in the first quarter",
+      "synthetic": true
+    },
+    {
+      "id": "proj_e39b71ec26",
+      "title": "E2E test suite for checkout for a manufacturing client",
+      "category": "web_dev",
+      "skills": [
+        "Playwright",
+        "TypeScript"
+      ],
+      "industry": "manufacturing",
+      "date": "2022-08-12",
+      "result": "dropped escaped checkout bugs by 12%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_08dd81e19e",
+      "title": "Subscription billing integration for a travel client",
+      "category": "web_dev",
+      "skills": [
+        "Stripe",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "industry": "travel",
+      "date": "2022-11-24",
+      "result": "cut failed payments by 28%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_e35f11c58a",
+      "title": "Internal-docs RAG assistant for a fintech client",
+      "category": "ml_engineering",
+      "skills": [
+        "LangChain",
+        "RAG",
+        "Qdrant",
+        "OpenAI API",
+        "FastAPI"
+      ],
+      "industry": "fintech",
+      "date": "2023-02-07",
+      "result": "answered 276 staff questions a week with 38% judged correct",
+      "synthetic": true
+    },
+    {
+      "id": "proj_ffe8b16c1b",
+      "title": "Real-time logistics tracker for a real estate client",
+      "category": "web_dev",
+      "skills": [
+        "WebSockets",
+        "React",
+        "Redis",
+        "Node.js"
+      ],
+      "industry": "real estate",
+      "date": "2022-02-18",
+      "result": "showed 356 vehicles live with sub-second updates",
+      "synthetic": true
+    },
+    {
+      "id": "proj_050efe2e65",
+      "title": "Real-time logistics tracker for a legal client",
+      "category": "web_dev",
+      "skills": [
+        "WebSockets",
+        "React",
+        "Redis",
+        "Node.js"
+      ],
+      "industry": "legal",
+      "date": "2023-08-14",
+      "result": "showed 351 vehicles live with sub-second updates",
+      "synthetic": true
+    },
+    {
+      "id": "proj_00a7174bf7",
+      "title": "Support-ticket triage classifier for a legal client",
+      "category": "ml_engineering",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "NLP",
+        "FastAPI"
+      ],
+      "industry": "legal",
+      "date": "2021-09-20",
+      "result": "cut first-response time by 37%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_9b3ba7ab12",
+      "title": "E2E test suite for checkout for a SaaS client",
+      "category": "web_dev",
+      "skills": [
+        "Playwright",
+        "TypeScript"
+      ],
+      "industry": "SaaS",
+      "date": "2023-05-04",
+      "result": "dropped escaped checkout bugs by 42%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_2db83b2dcf",
+      "title": "Booking platform API for a SaaS client",
+      "category": "web_dev",
+      "skills": [
+        "Django",
+        "REST API",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "industry": "SaaS",
+      "date": "2023-07-28",
+      "result": "handled 37 bookings a day",
+      "synthetic": true
+    },
+    {
+      "id": "proj_59024294fd",
+      "title": "Subscription billing integration for a logistics client",
+      "category": "web_dev",
+      "skills": [
+        "Stripe",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "industry": "logistics",
+      "date": "2021-06-13",
+      "result": "cut failed payments by 22%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_0b0ecbd92e",
+      "title": "Defect detection on assembly line for a real estate client",
+      "category": "ml_engineering",
+      "skills": [
+        "computer vision",
+        "PyTorch",
+        "AWS SageMaker"
+      ],
+      "industry": "real estate",
+      "date": "2023-08-17",
+      "result": "caught 18% of defects before packing",
+      "synthetic": true
+    },
+    {
+      "id": "proj_ea5e516b98",
+      "title": "Marketing site on Vercel for a travel client",
+      "category": "web_dev",
+      "skills": [
+        "Next.js",
+        "Vercel",
+        "Tailwind CSS"
+      ],
+      "industry": "travel",
+      "date": "2023-01-27",
+      "result": "loaded in under 54 seconds on 3G",
+      "synthetic": true
+    },
+    {
+      "id": "proj_1a4312da58",
+      "title": "GraphQL gateway for a real estate client",
+      "category": "web_dev",
+      "skills": [
+        "GraphQL",
+        "Node.js",
+        "AWS"
+      ],
+      "industry": "real estate",
+      "date": "2023-10-11",
+      "result": "replaced 109 legacy endpoints",
+      "synthetic": true
+    },
+    {
+      "id": "proj_51a1b7e627",
+      "title": "Invoice field extraction pipeline for a travel client",
+      "category": "ml_engineering",
+      "skills": [
+        "PyTorch",
+        "Hugging Face",
+        "fine-tuning",
+        "Docker"
+      ],
+      "industry": "travel",
+      "date": "2021-10-23",
+      "result": "reduced manual data entry by 21%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_f3ca5176e6",
+      "title": "Marketing site on Vercel for a edtech client",
+      "category": "web_dev",
+      "skills": [
+        "Next.js",
+        "Vercel",
+        "Tailwind CSS"
+      ],
+      "industry": "edtech",
+      "date": "2021-12-21",
+      "result": "loaded in under 189 seconds on 3G",
+      "synthetic": true
+    },
+    {
+      "id": "proj_fa80e01164",
+      "title": "Booking platform API for a marketing agency client",
+      "category": "web_dev",
+      "skills": [
+        "Django",
+        "REST API",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "industry": "marketing agency",
+      "date": "2023-03-26",
+      "result": "handled 252 bookings a day",
+      "synthetic": true
+    }
+  ],
+  "synthetic": true
+}

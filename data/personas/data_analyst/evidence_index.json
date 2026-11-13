@@ -1,0 +1,3500 @@
+[
+  {
+    "evidence_id": "case_proj_d639906a94",
+    "type": "case_study",
+    "project_id": "proj_d639906a94",
+    "title": "Modern data stack migration for a travel client",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "Airflow",
+      "ETL"
+    ],
+    "industry": "travel",
+    "date": "2023-11-29",
+    "text": "# Modern data stack migration for a travel client\n\n_Synthetic case study. Date: 2023-11-29. Industry: travel._\n\n## Problem\nThe client needed to version-controlled SQL transformations with tests schedule nightly data loads with retries and dependency ordering.\n\n## What I built\nUsing dbt, Snowflake, Airflow, ETL, I delivered a production system.\n\n## Result\nThe work cut report refresh from a day to 337 minutes.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_d639906a94",
+    "type": "repo_readme",
+    "project_id": "proj_d639906a94",
+    "title": "repo-d639906a94",
+    "skills": [],
+    "industry": "travel",
+    "date": "2023-11-29",
+    "text": "# repo-d639906a94\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_d639906a94",
+    "type": "repo_code",
+    "project_id": "proj_d639906a94",
+    "title": "repo-d639906a94/main.py",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "Airflow",
+      "ETL"
+    ],
+    "industry": "travel",
+    "date": "2023-11-29",
+    "text": "\"\"\"Modern data stack migration for a travel client (synthetic).\"\"\"\n# uses: dbt\n# uses: Snowflake\n# uses: Airflow\n# uses: ETL\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_8e75608573",
+    "type": "case_study",
+    "project_id": "proj_8e75608573",
+    "title": "Marketing attribution report for a real estate client",
+    "skills": [
+      "Google Analytics",
+      "BigQuery",
+      "Looker"
+    ],
+    "industry": "real estate",
+    "date": "2023-06-12",
+    "text": "# Marketing attribution report for a real estate client\n\n_Synthetic case study. Date: 2023-06-12. Industry: real estate._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing Google Analytics, BigQuery, Looker, I delivered a production system.\n\n## Result\nThe work reallocated 54% of ad budget.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_2ae15d7a67",
+    "type": "case_study",
+    "project_id": "proj_2ae15d7a67",
+    "title": "Sales KPI dashboard for a SaaS client",
+    "skills": [
+      "Power BI",
+      "SQL",
+      "dashboards"
+    ],
+    "industry": "SaaS",
+    "date": "2022-10-20",
+    "text": "# Sales KPI dashboard for a SaaS client\n\n_Synthetic case study. Date: 2022-10-20. Industry: SaaS._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing Power BI, SQL, dashboards, I delivered a production system.\n\n## Result\nThe work replaced 94 weekly spreadsheets.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_2ae15d7a67",
+    "type": "repo_readme",
+    "project_id": "proj_2ae15d7a67",
+    "title": "repo-2ae15d7a67",
+    "skills": [],
+    "industry": "SaaS",
+    "date": "2022-10-20",
+    "text": "# repo-2ae15d7a67\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_2ae15d7a67",
+    "type": "repo_code",
+    "project_id": "proj_2ae15d7a67",
+    "title": "repo-2ae15d7a67/main.py",
+    "skills": [
+      "Power BI",
+      "SQL",
+      "dashboards"
+    ],
+    "industry": "SaaS",
+    "date": "2022-10-20",
+    "text": "\"\"\"Sales KPI dashboard for a SaaS client (synthetic).\"\"\"\n# uses: Power BI\n# uses: SQL\n# uses: dashboards\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_64bdccbe10",
+    "type": "case_study",
+    "project_id": "proj_64bdccbe10",
+    "title": "Modern data stack migration for a SaaS client",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "Airflow",
+      "ETL"
+    ],
+    "industry": "SaaS",
+    "date": "2022-01-21",
+    "text": "# Modern data stack migration for a SaaS client\n\n_Synthetic case study. Date: 2022-01-21. Industry: SaaS._\n\n## Problem\nThe client needed to version-controlled SQL transformations with tests schedule nightly data loads with retries and dependency ordering.\n\n## What I built\nUsing dbt, Snowflake, Airflow, ETL, I delivered a production system.\n\n## Result\nThe work cut report refresh from a day to 372 minutes.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_64bdccbe10",
+    "type": "repo_readme",
+    "project_id": "proj_64bdccbe10",
+    "title": "repo-64bdccbe10",
+    "skills": [],
+    "industry": "SaaS",
+    "date": "2022-01-21",
+    "text": "# repo-64bdccbe10\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_64bdccbe10",
+    "type": "repo_code",
+    "project_id": "proj_64bdccbe10",
+    "title": "repo-64bdccbe10/main.py",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "Airflow",
+      "ETL"
+    ],
+    "industry": "SaaS",
+    "date": "2022-01-21",
+    "text": "\"\"\"Modern data stack migration for a SaaS client (synthetic).\"\"\"\n# uses: dbt\n# uses: Snowflake\n# uses: Airflow\n# uses: ETL\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_a34a544fca",
+    "type": "case_study",
+    "project_id": "proj_a34a544fca",
+    "title": "Multi-tenant SaaS dashboard for a SaaS client",
+    "skills": [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "OAuth"
+    ],
+    "industry": "SaaS",
+    "date": "2021-04-28",
+    "text": "# Multi-tenant SaaS dashboard for a SaaS client\n\n_Synthetic case study. Date: 2021-04-28. Industry: SaaS._\n\n## Problem\nThe client needed to let users sign in with Google and Microsoft accounts.\n\n## What I built\nUsing Next.js, TypeScript, PostgreSQL, Prisma, OAuth, I delivered a production system.\n\n## Result\nThe work onboarded 383 paying teams in the first quarter.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_a3b70b59d4",
+    "type": "case_study",
+    "project_id": "proj_a3b70b59d4",
+    "title": "Shopify storefront rebuild for a healthcare client",
+    "skills": [
+      "Shopify",
+      "React",
+      "Tailwind CSS"
+    ],
+    "industry": "healthcare",
+    "date": "2023-01-11",
+    "text": "# Shopify storefront rebuild for a healthcare client\n\n_Synthetic case study. Date: 2023-01-11. Industry: healthcare._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing Shopify, React, Tailwind CSS, I delivered a production system.\n\n## Result\nThe work improved mobile conversion by 22%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_a3b70b59d4",
+    "type": "repo_readme",
+    "project_id": "proj_a3b70b59d4",
+    "title": "repo-a3b70b59d4",
+    "skills": [],
+    "industry": "healthcare",
+    "date": "2023-01-11",
+    "text": "# repo-a3b70b59d4\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_a3b70b59d4",
+    "type": "repo_code",
+    "project_id": "proj_a3b70b59d4",
+    "title": "repo-a3b70b59d4/main.py",
+    "skills": [
+      "Shopify",
+      "React",
+      "Tailwind CSS"
+    ],
+    "industry": "healthcare",
+    "date": "2023-01-11",
+    "text": "\"\"\"Shopify storefront rebuild for a healthcare client (synthetic).\"\"\"\n# uses: Shopify\n# uses: React\n# uses: Tailwind CSS\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_a0b35015cc",
+    "type": "case_study",
+    "project_id": "proj_a0b35015cc",
+    "title": "Clinic operations dashboard for a fintech client",
+    "skills": [
+      "Tableau",
+      "PostgreSQL",
+      "SQL"
+    ],
+    "industry": "fintech",
+    "date": "2023-01-27",
+    "text": "# Clinic operations dashboard for a fintech client\n\n_Synthetic case study. Date: 2023-01-27. Industry: fintech._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing Tableau, PostgreSQL, SQL, I delivered a production system.\n\n## Result\nThe work cut patient wait time 49%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_a0b35015cc",
+    "type": "repo_readme",
+    "project_id": "proj_a0b35015cc",
+    "title": "repo-a0b35015cc",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2023-01-27",
+    "text": "# repo-a0b35015cc\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_a0b35015cc",
+    "type": "repo_code",
+    "project_id": "proj_a0b35015cc",
+    "title": "repo-a0b35015cc/main.py",
+    "skills": [
+      "Tableau",
+      "PostgreSQL",
+      "SQL"
+    ],
+    "industry": "fintech",
+    "date": "2023-01-27",
+    "text": "\"\"\"Clinic operations dashboard for a fintech client (synthetic).\"\"\"\n# uses: Tableau\n# uses: PostgreSQL\n# uses: SQL\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_baafd99f80",
+    "type": "case_study",
+    "project_id": "proj_baafd99f80",
+    "title": "Warehouse demand forecast for a manufacturing client",
+    "skills": [
+      "Python",
+      "forecasting",
+      "pandas"
+    ],
+    "industry": "manufacturing",
+    "date": "2023-02-06",
+    "text": "# Warehouse demand forecast for a manufacturing client\n\n_Synthetic case study. Date: 2023-02-06. Industry: manufacturing._\n\n## Problem\nThe client needed to predict next quarter's demand per warehouse.\n\n## What I built\nUsing Python, forecasting, pandas, I delivered a production system.\n\n## Result\nThe work reduced stock-outs by 51%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_baafd99f80",
+    "type": "repo_readme",
+    "project_id": "proj_baafd99f80",
+    "title": "repo-baafd99f80",
+    "skills": [],
+    "industry": "manufacturing",
+    "date": "2023-02-06",
+    "text": "# repo-baafd99f80\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_baafd99f80",
+    "type": "repo_code",
+    "project_id": "proj_baafd99f80",
+    "title": "repo-baafd99f80/main.py",
+    "skills": [
+      "Python",
+      "forecasting",
+      "pandas"
+    ],
+    "industry": "manufacturing",
+    "date": "2023-02-06",
+    "text": "\"\"\"Warehouse demand forecast for a manufacturing client (synthetic).\"\"\"\n# uses: Python\n# uses: forecasting\n# uses: pandas\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_443aabd331",
+    "type": "case_study",
+    "project_id": "proj_443aabd331",
+    "title": "Pricing page A/B test analysis for a marketing agency client",
+    "skills": [
+      "A/B testing",
+      "statistics",
+      "Python"
+    ],
+    "industry": "marketing agency",
+    "date": "2021-12-15",
+    "text": "# Pricing page A/B test analysis for a marketing agency client\n\n_Synthetic case study. Date: 2021-12-15. Industry: marketing agency._\n\n## Problem\nThe client needed to measure whether the new pricing page actually converts better.\n\n## What I built\nUsing A/B testing, statistics, Python, I delivered a production system.\n\n## Result\nThe work identified a variant that lifted revenue 21%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_443aabd331",
+    "type": "repo_readme",
+    "project_id": "proj_443aabd331",
+    "title": "repo-443aabd331",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2021-12-15",
+    "text": "# repo-443aabd331\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_443aabd331",
+    "type": "repo_code",
+    "project_id": "proj_443aabd331",
+    "title": "repo-443aabd331/main.py",
+    "skills": [
+      "A/B testing",
+      "statistics",
+      "Python"
+    ],
+    "industry": "marketing agency",
+    "date": "2021-12-15",
+    "text": "\"\"\"Pricing page A/B test analysis for a marketing agency client (synthetic).\"\"\"\n# uses: A/B testing\n# uses: statistics\n# uses: Python\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_b2c4d0d2bb",
+    "type": "case_study",
+    "project_id": "proj_b2c4d0d2bb",
+    "title": "Warehouse demand forecast for a legal client",
+    "skills": [
+      "Python",
+      "forecasting",
+      "pandas"
+    ],
+    "industry": "legal",
+    "date": "2023-03-09",
+    "text": "# Warehouse demand forecast for a legal client\n\n_Synthetic case study. Date: 2023-03-09. Industry: legal._\n\n## Problem\nThe client needed to predict next quarter's demand per warehouse.\n\n## What I built\nUsing Python, forecasting, pandas, I delivered a production system.\n\n## Result\nThe work reduced stock-outs by 13%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_065f01e3ba",
+    "type": "case_study",
+    "project_id": "proj_065f01e3ba",
+    "title": "Survey data cleaning for a nonprofit client",
+    "skills": [
+      "data cleaning",
+      "R",
+      "Excel"
+    ],
+    "industry": "nonprofit",
+    "date": "2023-05-06",
+    "text": "# Survey data cleaning for a nonprofit client\n\n_Synthetic case study. Date: 2023-05-06. Industry: nonprofit._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing data cleaning, R, Excel, I delivered a production system.\n\n## Result\nThe work cleaned 386 responses for a published report.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_065f01e3ba",
+    "type": "repo_readme",
+    "project_id": "proj_065f01e3ba",
+    "title": "repo-065f01e3ba",
+    "skills": [],
+    "industry": "nonprofit",
+    "date": "2023-05-06",
+    "text": "# repo-065f01e3ba\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_065f01e3ba",
+    "type": "repo_code",
+    "project_id": "proj_065f01e3ba",
+    "title": "repo-065f01e3ba/main.py",
+    "skills": [
+      "data cleaning",
+      "R",
+      "Excel"
+    ],
+    "industry": "nonprofit",
+    "date": "2023-05-06",
+    "text": "\"\"\"Survey data cleaning for a nonprofit client (synthetic).\"\"\"\n# uses: data cleaning\n# uses: R\n# uses: Excel\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_1556717424",
+    "type": "case_study",
+    "project_id": "proj_1556717424",
+    "title": "Survey data cleaning for a e-commerce client",
+    "skills": [
+      "data cleaning",
+      "R",
+      "Excel"
+    ],
+    "industry": "e-commerce",
+    "date": "2021-06-27",
+    "text": "# Survey data cleaning for a e-commerce client\n\n_Synthetic case study. Date: 2021-06-27. Industry: e-commerce._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing data cleaning, R, Excel, I delivered a production system.\n\n## Result\nThe work cleaned 111 responses for a published report.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_1556717424",
+    "type": "repo_readme",
+    "project_id": "proj_1556717424",
+    "title": "repo-1556717424",
+    "skills": [],
+    "industry": "e-commerce",
+    "date": "2021-06-27",
+    "text": "# repo-1556717424\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_1556717424",
+    "type": "repo_code",
+    "project_id": "proj_1556717424",
+    "title": "repo-1556717424/main.py",
+    "skills": [
+      "data cleaning",
+      "R",
+      "Excel"
+    ],
+    "industry": "e-commerce",
+    "date": "2021-06-27",
+    "text": "\"\"\"Survey data cleaning for a e-commerce client (synthetic).\"\"\"\n# uses: data cleaning\n# uses: R\n# uses: Excel\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_19fcdf8f80",
+    "type": "case_study",
+    "project_id": "proj_19fcdf8f80",
+    "title": "Subscription billing integration for a fintech client",
+    "skills": [
+      "Stripe",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "industry": "fintech",
+    "date": "2022-07-05",
+    "text": "# Subscription billing integration for a fintech client\n\n_Synthetic case study. Date: 2022-07-05. Industry: fintech._\n\n## Problem\nThe client needed to subscription billing with proration and invoices.\n\n## What I built\nUsing Stripe, Node.js, PostgreSQL, I delivered a production system.\n\n## Result\nThe work cut failed payments by 25%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_19fcdf8f80",
+    "type": "repo_readme",
+    "project_id": "proj_19fcdf8f80",
+    "title": "repo-19fcdf8f80",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2022-07-05",
+    "text": "# repo-19fcdf8f80\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_19fcdf8f80",
+    "type": "repo_code",
+    "project_id": "proj_19fcdf8f80",
+    "title": "repo-19fcdf8f80/main.py",
+    "skills": [
+      "Stripe",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "industry": "fintech",
+    "date": "2022-07-05",
+    "text": "\"\"\"Subscription billing integration for a fintech client (synthetic).\"\"\"\n# uses: Stripe\n# uses: Node.js\n# uses: PostgreSQL\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_bc8067c6c2",
+    "type": "case_study",
+    "project_id": "proj_bc8067c6c2",
+    "title": "Marketing attribution report for a legal client",
+    "skills": [
+      "Google Analytics",
+      "BigQuery",
+      "Looker"
+    ],
+    "industry": "legal",
+    "date": "2022-07-28",
+    "text": "# Marketing attribution report for a legal client\n\n_Synthetic case study. Date: 2022-07-28. Industry: legal._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing Google Analytics, BigQuery, Looker, I delivered a production system.\n\n## Result\nThe work reallocated 60% of ad budget.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_bc8067c6c2",
+    "type": "repo_readme",
+    "project_id": "proj_bc8067c6c2",
+    "title": "repo-bc8067c6c2",
+    "skills": [],
+    "industry": "legal",
+    "date": "2022-07-28",
+    "text": "# repo-bc8067c6c2\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_bc8067c6c2",
+    "type": "repo_code",
+    "project_id": "proj_bc8067c6c2",
+    "title": "repo-bc8067c6c2/main.py",
+    "skills": [
+      "Google Analytics",
+      "BigQuery",
+      "Looker"
+    ],
+    "industry": "legal",
+    "date": "2022-07-28",
+    "text": "\"\"\"Marketing attribution report for a legal client (synthetic).\"\"\"\n# uses: Google Analytics\n# uses: BigQuery\n# uses: Looker\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_3bb22c89dc",
+    "type": "case_study",
+    "project_id": "proj_3bb22c89dc",
+    "title": "Finance ETL pipeline for a real estate client",
+    "skills": [
+      "Python",
+      "ETL",
+      "Airflow",
+      "PostgreSQL"
+    ],
+    "industry": "real estate",
+    "date": "2022-06-19",
+    "text": "# Finance ETL pipeline for a real estate client\n\n_Synthetic case study. Date: 2022-06-19. Industry: real estate._\n\n## Problem\nThe client needed to schedule nightly data loads with retries and dependency ordering.\n\n## What I built\nUsing Python, ETL, Airflow, PostgreSQL, I delivered a production system.\n\n## Result\nThe work automated 217 manual monthly steps.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_aa3efd6fa5",
+    "type": "case_study",
+    "project_id": "proj_aa3efd6fa5",
+    "title": "Pricing page A/B test analysis for a e-commerce client",
+    "skills": [
+      "A/B testing",
+      "statistics",
+      "Python"
+    ],
+    "industry": "e-commerce",
+    "date": "2023-07-31",
+    "text": "# Pricing page A/B test analysis for a e-commerce client\n\n_Synthetic case study. Date: 2023-07-31. Industry: e-commerce._\n\n## Problem\nThe client needed to measure whether the new pricing page actually converts better.\n\n## What I built\nUsing A/B testing, statistics, Python, I delivered a production system.\n\n## Result\nThe work identified a variant that lifted revenue 59%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_aa3efd6fa5",
+    "type": "repo_readme",
+    "project_id": "proj_aa3efd6fa5",
+    "title": "repo-aa3efd6fa5",
+    "skills": [],
+    "industry": "e-commerce",
+    "date": "2023-07-31",
+    "text": "# repo-aa3efd6fa5\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_aa3efd6fa5",
+    "type": "repo_code",
+    "project_id": "proj_aa3efd6fa5",
+    "title": "repo-aa3efd6fa5/main.py",
+    "skills": [
+      "A/B testing",
+      "statistics",
+      "Python"
+    ],
+    "industry": "e-commerce",
+    "date": "2023-07-31",
+    "text": "\"\"\"Pricing page A/B test analysis for a e-commerce client (synthetic).\"\"\"\n# uses: A/B testing\n# uses: statistics\n# uses: Python\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_bd21be8587",
+    "type": "case_study",
+    "project_id": "proj_bd21be8587",
+    "title": "Clinic operations dashboard for a marketing agency client",
+    "skills": [
+      "Tableau",
+      "PostgreSQL",
+      "SQL"
+    ],
+    "industry": "marketing agency",
+    "date": "2021-01-08",
+    "text": "# Clinic operations dashboard for a marketing agency client\n\n_Synthetic case study. Date: 2021-01-08. Industry: marketing agency._\n\n## Problem\nThe client needed to improve a core workflow.\n\n## What I built\nUsing Tableau, PostgreSQL, SQL, I delivered a production system.\n\n## Result\nThe work cut patient wait time 38%.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "readme_proj_bd21be8587",
+    "type": "repo_readme",
+    "project_id": "proj_bd21be8587",
+    "title": "repo-bd21be8587",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2021-01-08",
+    "text": "# repo-bd21be8587\n\nSmall internal tool. See main.py.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "code_proj_bd21be8587",
+    "type": "repo_code",
+    "project_id": "proj_bd21be8587",
+    "title": "repo-bd21be8587/main.py",
+    "skills": [
+      "Tableau",
+      "PostgreSQL",
+      "SQL"
+    ],
+    "industry": "marketing agency",
+    "date": "2021-01-08",
+    "text": "\"\"\"Clinic operations dashboard for a marketing agency client (synthetic).\"\"\"\n# uses: Tableau\n# uses: PostgreSQL\n# uses: SQL\n\ndef run():\n    ...\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_4369e66b89",
+    "type": "case_study",
+    "project_id": "proj_4369e66b89",
+    "title": "Real-time logistics tracker for a e-commerce client",
+    "skills": [
+      "WebSockets",
+      "React",
+      "Redis",
+      "Node.js"
+    ],
+    "industry": "e-commerce",
+    "date": "2023-01-26",
+    "text": "# Real-time logistics tracker for a e-commerce client\n\n_Synthetic case study. Date: 2023-01-26. Industry: e-commerce._\n\n## Problem\nThe client needed to live updates pushed to the dashboard without refresh.\n\n## What I built\nUsing WebSockets, React, Redis, Node.js, I delivered a production system.\n\n## Result\nThe work showed 264 vehicles live with sub-second updates.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "case_proj_62d8c02c9e",
+    "type": "case_study",
+    "project_id": "proj_62d8c02c9e",
+    "title": "Finance ETL pipeline for a fintech client",
+    "skills": [
+      "Python",
+      "ETL",
+      "Airflow",
+      "PostgreSQL"
+    ],
+    "industry": "fintech",
+    "date": "2021-06-14",
+    "text": "# Finance ETL pipeline for a fintech client\n\n_Synthetic case study. Date: 2021-06-14. Industry: fintech._\n\n## Problem\nThe client needed to schedule nightly data loads with retries and dependency ordering.\n\n## What I built\nUsing Python, ETL, Airflow, PostgreSQL, I delivered a production system.\n\n## Result\nThe work automated 314 manual monthly steps.\n",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_3bb22c89dc",
+    "type": "review",
+    "project_id": "proj_3bb22c89dc",
+    "title": "Review: Finance ETL pipeline for a real estate client",
+    "skills": [],
+    "industry": "real estate",
+    "date": "2022-06-19",
+    "rating": 4.8,
+    "text": "Great work on our real estate project. It automated 217 manual monthly steps. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_065f01e3ba",
+    "type": "review",
+    "project_id": "proj_065f01e3ba",
+    "title": "Review: Survey data cleaning for a nonprofit client",
+    "skills": [],
+    "industry": "nonprofit",
+    "date": "2023-05-06",
+    "rating": 5.0,
+    "text": "Great work on our nonprofit project. It cleaned 386 responses for a published report. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_bd21be8587",
+    "type": "review",
+    "project_id": "proj_bd21be8587",
+    "title": "Review: Clinic operations dashboard for a marketing agency client",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2021-01-08",
+    "rating": 4.8,
+    "text": "Great work on our marketing agency project. It cut patient wait time 38%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_a0b35015cc",
+    "type": "review",
+    "project_id": "proj_a0b35015cc",
+    "title": "Review: Clinic operations dashboard for a fintech client",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2023-01-27",
+    "rating": 5.0,
+    "text": "Great work on our fintech project. It cut patient wait time 49%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_1556717424",
+    "type": "review",
+    "project_id": "proj_1556717424",
+    "title": "Review: Survey data cleaning for a e-commerce client",
+    "skills": [],
+    "industry": "e-commerce",
+    "date": "2021-06-27",
+    "rating": 4.8,
+    "text": "Great work on our e-commerce project. It cleaned 111 responses for a published report. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_a34a544fca",
+    "type": "review",
+    "project_id": "proj_a34a544fca",
+    "title": "Review: Multi-tenant SaaS dashboard for a SaaS client",
+    "skills": [],
+    "industry": "SaaS",
+    "date": "2021-04-28",
+    "rating": 5.0,
+    "text": "Great work on our SaaS project. It onboarded 383 paying teams in the first quarter. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_baafd99f80",
+    "type": "review",
+    "project_id": "proj_baafd99f80",
+    "title": "Review: Warehouse demand forecast for a manufacturing client",
+    "skills": [],
+    "industry": "manufacturing",
+    "date": "2023-02-06",
+    "rating": 4.5,
+    "text": "Great work on our manufacturing project. It reduced stock-outs by 51%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_443aabd331",
+    "type": "review",
+    "project_id": "proj_443aabd331",
+    "title": "Review: Pricing page A/B test analysis for a marketing agency client",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2021-12-15",
+    "rating": 5.0,
+    "text": "Great work on our marketing agency project. It identified a variant that lifted revenue 21%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_62d8c02c9e",
+    "type": "review",
+    "project_id": "proj_62d8c02c9e",
+    "title": "Review: Finance ETL pipeline for a fintech client",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2021-06-14",
+    "rating": 5.0,
+    "text": "Great work on our fintech project. It automated 314 manual monthly steps. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_19fcdf8f80",
+    "type": "review",
+    "project_id": "proj_19fcdf8f80",
+    "title": "Review: Subscription billing integration for a fintech client",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2022-07-05",
+    "rating": 5.0,
+    "text": "Great work on our fintech project. It cut failed payments by 25%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "cv_data_analyst",
+    "type": "cv",
+    "project_id": null,
+    "title": "CV",
+    "skills": [
+      "A/B testing",
+      "Airflow",
+      "BigQuery",
+      "ETL",
+      "Excel",
+      "Google Analytics",
+      "Looker",
+      "Next.js",
+      "Node.js",
+      "OAuth",
+      "PostgreSQL",
+      "Power BI",
+      "Prisma",
+      "Python",
+      "R",
+      "React",
+      "Redis",
+      "SQL",
+      "Shopify",
+      "Snowflake",
+      "Stripe",
+      "Tableau",
+      "Tailwind CSS",
+      "TypeScript",
+      "WebSockets",
+      "dashboards",
+      "data cleaning",
+      "dbt",
+      "forecasting",
+      "pandas",
+      "statistics"
+    ],
+    "industry": null,
+    "date": "2024-01-01",
+    "text": "# Mariam Siddiqui (synthetic)\n\nSynthetic persona for GigBid evaluation.\n\nPrimary: data_analysis. Secondary: web_dev.\n\n## Skills\nA/B testing, Airflow, BigQuery, ETL, Excel, Google Analytics, Looker, Next.js, Node.js, OAuth, PostgreSQL, Power BI, Prisma, Python, R, React, Redis, SQL, Shopify, Snowflake, Stripe, Tableau, Tailwind CSS, TypeScript, WebSockets, dashboards, data cleaning, dbt, forecasting, pandas, statistics\n\n## Selected projects\n- Modern data stack migration for a travel client (2023): cut report refresh from a day to 337 minutes\n- Marketing attribution report for a real estate client (2023): reallocated 54% of ad budget\n- Sales KPI dashboard for a SaaS client (2022): replaced 94 weekly spreadsheets\n- Modern data stack migration for a SaaS client (2022): cut report refresh from a day to 372 minutes\n- Multi-tenant SaaS dashboard for a SaaS client (2021): onboarded 383 paying teams in the first quarter\n- Shopify storefront rebuild for a healthcare client (2023): improved mobile conversion by 22%\n- Clinic operations dashboard for a fintech client (2023): cut patient wait time 49%\n- Warehouse demand forecast for a manufacturing client (2023): reduced stock-outs by 51%",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_d639906a94",
+    "type": "past_proposal",
+    "job_title": "Free sample required",
+    "category": "web_dev",
+    "text": "You need Playwright, Node.js; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Playwright",
+      "Node.js",
+      "Next.js"
+    ],
+    "date": "2024-01-02",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_8e75608573",
+    "type": "past_proposal",
+    "job_title": "Data entry - easy money",
+    "category": "ml_engineering",
+    "text": "You need scikit-learn, computer vision; I did exactly that in 'Shopify storefront rebuild for a healthcare client'. Result: The work improved mobile conversion by 22%.",
+    "cited": [
+      "case_proj_a3b70b59d4"
+    ],
+    "outcome": "won",
+    "skills": [
+      "scikit-learn",
+      "computer vision",
+      "PyTorch",
+      "LangGraph",
+      "Python",
+      "FastAPI"
+    ],
+    "date": "2024-02-23",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_2ae15d7a67",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Playwright",
+    "category": "web_dev",
+    "text": "You need Playwright; I did exactly that in 'Warehouse demand forecast for a legal client'. Result: The work reduced stock-outs by 13%.",
+    "cited": [
+      "case_proj_b2c4d0d2bb",
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Playwright"
+    ],
+    "date": "2024-04-13",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_64bdccbe10",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: NLP",
+    "category": "ml_engineering",
+    "text": "You need NLP, PyTorch; I did exactly that in 'Multi-tenant SaaS dashboard for a SaaS client'. Result: The work onboarded 383 paying teams in the first quarter.",
+    "cited": [
+      "case_proj_a34a544fca",
+      "case_proj_2ae15d7a67"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "NLP",
+      "PyTorch",
+      "LangChain"
+    ],
+    "date": "2024-02-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a34a544fca",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Docker",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Docker",
+      "scikit-learn"
+    ],
+    "date": "2024-01-19",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a3b70b59d4",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Tailwind CSS",
+    "category": "web_dev",
+    "text": "You need Tailwind CSS; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Tailwind CSS"
+    ],
+    "date": "2024-02-29",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a0b35015cc",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: Looker",
+    "category": "data_analysis",
+    "text": "You need Looker, BigQuery; I did exactly that in 'Survey data cleaning for a nonprofit client'. Result: The work cleaned 386 responses for a published report.",
+    "cited": [
+      "case_proj_065f01e3ba"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Looker",
+      "BigQuery",
+      "pandas"
+    ],
+    "date": "2024-03-13",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_baafd99f80",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Next.js",
+    "category": "web_dev",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Next.js",
+      "PostgreSQL",
+      "WebSockets",
+      "Playwright",
+      "Stripe",
+      "Vercel"
+    ],
+    "date": "2024-01-23",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_443aabd331",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Stripe",
+    "category": "web_dev",
+    "text": "You need Stripe, Redis; I did exactly that in 'Warehouse demand forecast for a legal client'. Result: The work reduced stock-outs by 13%.",
+    "cited": [
+      "case_proj_b2c4d0d2bb",
+      "case_proj_3bb22c89dc"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Stripe",
+      "Redis"
+    ],
+    "date": "2024-03-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_b2c4d0d2bb",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: computer vision",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "replied",
+    "skills": [
+      "computer vision",
+      "Python",
+      "Hugging Face",
+      "LLM evaluation"
+    ],
+    "date": "2024-04-21",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_065f01e3ba",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: statistics",
+    "category": "data_analysis",
+    "text": "You need statistics; I did exactly that in 'Clinic operations dashboard for a marketing agency client'. Result: The work cut patient wait time 38%.",
+    "cited": [
+      "case_proj_bd21be8587",
+      "case_proj_b2c4d0d2bb"
+    ],
+    "outcome": "won",
+    "skills": [
+      "statistics"
+    ],
+    "date": "2024-03-15",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_1556717424",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Python",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "replied",
+    "skills": [
+      "Python",
+      "MLflow",
+      "FastAPI"
+    ],
+    "date": "2024-03-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_19fcdf8f80",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Python; I did exactly that in 'Warehouse demand forecast for a manufacturing client'. Result: The work reduced stock-outs by 51%.",
+    "cited": [
+      "case_proj_baafd99f80"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Qdrant",
+      "Python",
+      "fine-tuning"
+    ],
+    "date": "2024-04-22",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_bc8067c6c2",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Stripe",
+    "category": "web_dev",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Stripe",
+      "Playwright",
+      "REST API",
+      "Docker"
+    ],
+    "date": "2024-04-08",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_3bb22c89dc",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: statistics",
+    "category": "data_analysis",
+    "text": "You need statistics, forecasting; I did exactly that in 'Pricing page A/B test analysis for a e-commerce client'. Result: The work identified a variant that lifted revenue 59%.",
+    "cited": [
+      "case_proj_aa3efd6fa5"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "statistics",
+      "forecasting",
+      "dashboards",
+      "pandas",
+      "BigQuery"
+    ],
+    "date": "2024-03-18",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_aa3efd6fa5",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: MLflow",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "MLflow",
+      "computer vision"
+    ],
+    "date": "2024-03-21",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_bd21be8587",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Looker",
+    "category": "data_analysis",
+    "text": "You need Looker, R; I did exactly that in 'Shopify storefront rebuild for a healthcare client'. Result: The work improved mobile conversion by 22%.",
+    "cited": [
+      "case_proj_a3b70b59d4",
+      "case_proj_a0b35015cc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Looker",
+      "R"
+    ],
+    "date": "2024-01-24",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_4369e66b89",
+    "type": "past_proposal",
+    "job_title": "Data entry - easy money",
+    "category": "data_analysis",
+    "text": "You need statistics, PostgreSQL; I did exactly that in 'Modern data stack migration for a SaaS client'. Result: The work cut report refresh from a day to 372 minutes.",
+    "cited": [
+      "case_proj_64bdccbe10"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "statistics",
+      "PostgreSQL"
+    ],
+    "date": "2024-01-18",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_62d8c02c9e",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: Redis",
+    "category": "web_dev",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Redis",
+      "AWS",
+      "WebSockets",
+      "Playwright",
+      "Tailwind CSS",
+      "Node.js"
+    ],
+    "date": "2024-05-02",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_cf3ddd3d6c",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Google Analytics",
+    "category": "data_analysis",
+    "text": "You need Google Analytics, Airflow; I did exactly that in 'Clinic operations dashboard for a marketing agency client'. Result: The work cut patient wait time 38%.",
+    "cited": [
+      "case_proj_bd21be8587",
+      "case_proj_62d8c02c9e"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Google Analytics",
+      "Airflow",
+      "forecasting"
+    ],
+    "date": "2024-01-31",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_17dcdf61be",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Snowflake",
+    "category": "data_analysis",
+    "text": "You need Snowflake, Google Analytics; I did exactly that in 'Clinic operations dashboard for a marketing agency client'. Result: The work cut patient wait time 38%.",
+    "cited": [
+      "case_proj_bd21be8587",
+      "case_proj_443aabd331"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Snowflake",
+      "Google Analytics",
+      "Excel",
+      "data cleaning",
+      "PostgreSQL"
+    ],
+    "date": "2024-03-03",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_1de2ee63e1",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: TypeScript",
+    "category": "web_dev",
+    "text": "You need TypeScript, Stripe; I did exactly that in 'Finance ETL pipeline for a fintech client'. Result: The work automated 314 manual monthly steps.",
+    "cited": [
+      "case_proj_62d8c02c9e"
+    ],
+    "outcome": "won",
+    "skills": [
+      "TypeScript",
+      "Stripe"
+    ],
+    "date": "2024-04-11",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_0e25bd769b",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Celery; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424",
+      "case_proj_d639906a94"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Qdrant",
+      "Celery",
+      "OpenAI API"
+    ],
+    "date": "2024-02-08",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_3b310fcefb",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Django",
+    "category": "web_dev",
+    "text": "You need Django, Vercel; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Django",
+      "Vercel",
+      "WebSockets",
+      "Redis"
+    ],
+    "date": "2024-04-19",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_700304b73f",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: AWS SageMaker",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "AWS SageMaker",
+      "Hugging Face",
+      "computer vision",
+      "OpenAI API",
+      "Celery",
+      "Docker"
+    ],
+    "date": "2024-01-25",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_4614217eb7",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: FastAPI",
+    "category": "web_dev",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "Prisma",
+      "OAuth",
+      "Django",
+      "GraphQL"
+    ],
+    "date": "2024-01-04",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_dda7b06712",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: dbt",
+    "category": "data_analysis",
+    "text": "You need dbt, Looker; I did exactly that in 'Marketing attribution report for a legal client'. Result: The work reallocated 60% of ad budget.",
+    "cited": [
+      "case_proj_bc8067c6c2",
+      "case_proj_a3b70b59d4"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "dbt",
+      "Looker",
+      "SQL",
+      "PostgreSQL"
+    ],
+    "date": "2024-02-09",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_be233adcce",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: dashboards",
+    "category": "data_analysis",
+    "text": "You need dashboards, PostgreSQL; I did exactly that in 'Modern data stack migration for a travel client'. Result: The work cut report refresh from a day to 337 minutes.",
+    "cited": [
+      "case_proj_d639906a94"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "dashboards",
+      "PostgreSQL",
+      "A/B testing",
+      "Tableau"
+    ],
+    "date": "2024-04-21",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_8b2bc9734c",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: forecasting",
+    "category": "data_analysis",
+    "text": "You need forecasting, pandas; I did exactly that in 'Clinic operations dashboard for a marketing agency client'. Result: The work cut patient wait time 38%.",
+    "cited": [
+      "case_proj_bd21be8587"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "forecasting",
+      "pandas",
+      "Power BI",
+      "Airflow"
+    ],
+    "date": "2024-01-27",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_f226c3eaa6",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: Stripe",
+    "category": "web_dev",
+    "text": "You need Stripe, Node.js; I did exactly that in 'Marketing attribution report for a real estate client'. Result: The work reallocated 54% of ad budget.",
+    "cited": [
+      "case_proj_8e75608573"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Stripe",
+      "Node.js",
+      "Next.js"
+    ],
+    "date": "2024-01-09",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_f101fea8e4",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Snowflake",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Snowflake",
+      "SQL"
+    ],
+    "date": "2024-03-15",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_4ff3f03344",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: FastAPI",
+    "category": "ml_engineering",
+    "text": "You need FastAPI, MLflow; I did exactly that in 'Real-time logistics tracker for a e-commerce client'. Result: The work showed 264 vehicles live with sub-second updates.",
+    "cited": [
+      "case_proj_4369e66b89",
+      "case_proj_d639906a94"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "MLflow",
+      "NLP",
+      "OpenAI API",
+      "LangGraph"
+    ],
+    "date": "2024-04-27",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_72dca227ac",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: AWS SageMaker",
+    "category": "ml_engineering",
+    "text": "You need AWS SageMaker; I did exactly that in 'Real-time logistics tracker for a e-commerce client'. Result: The work showed 264 vehicles live with sub-second updates.",
+    "cited": [
+      "case_proj_4369e66b89"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "AWS SageMaker"
+    ],
+    "date": "2024-02-24",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_14175e0c25",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: forecasting",
+    "category": "data_analysis",
+    "text": "You need forecasting; I did exactly that in 'Modern data stack migration for a SaaS client'. Result: The work cut report refresh from a day to 372 minutes.",
+    "cited": [
+      "case_proj_64bdccbe10",
+      "case_proj_065f01e3ba"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "forecasting"
+    ],
+    "date": "2024-01-30",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_cca76849f6",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: BigQuery",
+    "category": "data_analysis",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "BigQuery",
+      "Tableau"
+    ],
+    "date": "2024-02-20",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ef45ec025a",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Power BI",
+    "category": "data_analysis",
+    "text": "You need Power BI, A/B testing; I did exactly that in 'Warehouse demand forecast for a manufacturing client'. Result: The work reduced stock-outs by 51%.",
+    "cited": [
+      "case_proj_baafd99f80",
+      "case_proj_065f01e3ba"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Power BI",
+      "A/B testing",
+      "BigQuery"
+    ],
+    "date": "2024-02-26",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_fcf40976be",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: pandas",
+    "category": "data_analysis",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "pandas",
+      "dbt",
+      "data cleaning"
+    ],
+    "date": "2024-01-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_92079b0296",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: NLP",
+    "category": "ml_engineering",
+    "text": "You need NLP, Python; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc",
+      "case_proj_2ae15d7a67"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "NLP",
+      "Python",
+      "MLflow",
+      "Qdrant"
+    ],
+    "date": "2024-01-13",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_0937e09afd",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: WebSockets",
+    "category": "web_dev",
+    "text": "You need WebSockets, Next.js; I did exactly that in 'Real-time logistics tracker for a e-commerce client'. Result: The work showed 264 vehicles live with sub-second updates.",
+    "cited": [
+      "case_proj_4369e66b89"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "WebSockets",
+      "Next.js"
+    ],
+    "date": "2024-03-14",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_d5e91220ee",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: LLM evaluation",
+    "category": "ml_engineering",
+    "text": "You need LLM evaluation, AWS SageMaker; I did exactly that in 'Real-time logistics tracker for a e-commerce client'. Result: The work showed 264 vehicles live with sub-second updates.",
+    "cited": [
+      "case_proj_4369e66b89",
+      "case_proj_b2c4d0d2bb"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "LLM evaluation",
+      "AWS SageMaker",
+      "OpenAI API",
+      "scikit-learn",
+      "fine-tuning"
+    ],
+    "date": "2024-04-14",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a7859ad08c",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Python",
+    "category": "data_analysis",
+    "text": "You need Python, Power BI; I did exactly that in 'Modern data stack migration for a travel client'. Result: The work cut report refresh from a day to 337 minutes.",
+    "cited": [
+      "case_proj_d639906a94"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Python",
+      "Power BI",
+      "pandas"
+    ],
+    "date": "2024-03-29",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c8c6d9864d",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: AWS",
+    "category": "web_dev",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "AWS",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Prisma"
+    ],
+    "date": "2024-03-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a92d23956d",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: PyTorch",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "PyTorch",
+      "Celery",
+      "LangGraph",
+      "Qdrant"
+    ],
+    "date": "2024-04-25",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a2360d997a",
+    "type": "past_proposal",
+    "job_title": "Free sample required",
+    "category": "data_analysis",
+    "text": "You need Google Analytics; I did exactly that in 'Modern data stack migration for a travel client'. Result: The work cut report refresh from a day to 337 minutes.",
+    "cited": [
+      "case_proj_d639906a94"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Google Analytics"
+    ],
+    "date": "2024-02-22",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ea74144619",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: RAG",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "RAG",
+      "LLM evaluation",
+      "scikit-learn",
+      "LangGraph",
+      "Pinecone"
+    ],
+    "date": "2024-02-13",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_e13062b45d",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: AWS",
+    "category": "web_dev",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "AWS",
+      "Next.js",
+      "Django"
+    ],
+    "date": "2024-02-28",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_3b151283e3",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Hugging Face",
+    "category": "ml_engineering",
+    "text": "You need Hugging Face; I did exactly that in 'Finance ETL pipeline for a fintech client'. Result: The work automated 314 manual monthly steps.",
+    "cited": [
+      "case_proj_62d8c02c9e",
+      "case_proj_1556717424"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Hugging Face"
+    ],
+    "date": "2024-02-24",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ecc0f1513f",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Tailwind CSS",
+    "category": "web_dev",
+    "text": "You need Tailwind CSS; I did exactly that in 'Warehouse demand forecast for a legal client'. Result: The work reduced stock-outs by 13%.",
+    "cited": [
+      "case_proj_b2c4d0d2bb"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Tailwind CSS"
+    ],
+    "date": "2024-01-23",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_b5b0f7b6a6",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Redis",
+    "category": "ml_engineering",
+    "text": "You need Redis, LangChain; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Redis",
+      "LangChain",
+      "Docker"
+    ],
+    "date": "2024-04-20",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a3606c378d",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: dashboards",
+    "category": "data_analysis",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "dashboards",
+      "Excel"
+    ],
+    "date": "2024-01-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_36034025ff",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Docker",
+    "category": "ml_engineering",
+    "text": "You need Docker, Hugging Face; I did exactly that in 'Warehouse demand forecast for a legal client'. Result: The work reduced stock-outs by 13%.",
+    "cited": [
+      "case_proj_b2c4d0d2bb",
+      "case_proj_8e75608573"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Docker",
+      "Hugging Face",
+      "Python"
+    ],
+    "date": "2024-01-12",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_336a9b5b3c",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: RAG",
+    "category": "ml_engineering",
+    "text": "You need RAG; I did exactly that in 'Subscription billing integration for a fintech client'. Result: The work cut failed payments by 25%.",
+    "cited": [
+      "case_proj_19fcdf8f80"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "RAG"
+    ],
+    "date": "2024-02-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_aec4a2e691",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: A/B testing",
+    "category": "data_analysis",
+    "text": "You need A/B testing; I did exactly that in 'Pricing page A/B test analysis for a e-commerce client'. Result: The work identified a variant that lifted revenue 59%.",
+    "cited": [
+      "case_proj_aa3efd6fa5"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "A/B testing"
+    ],
+    "date": "2024-01-13",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_98de8837c5",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Looker",
+    "category": "data_analysis",
+    "text": "You need Looker, Airflow; I did exactly that in 'Shopify storefront rebuild for a healthcare client'. Result: The work improved mobile conversion by 22%.",
+    "cited": [
+      "case_proj_a3b70b59d4"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Looker",
+      "Airflow",
+      "Snowflake",
+      "forecasting",
+      "dbt",
+      "SQL"
+    ],
+    "date": "2024-01-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_efad0a9d00",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: scikit-learn",
+    "category": "ml_engineering",
+    "text": "You need scikit-learn; I did exactly that in 'Finance ETL pipeline for a fintech client'. Result: The work automated 314 manual monthly steps.",
+    "cited": [
+      "case_proj_62d8c02c9e"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "scikit-learn"
+    ],
+    "date": "2024-02-10",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_603e308b6c",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: AWS SageMaker",
+    "category": "ml_engineering",
+    "text": "You need AWS SageMaker, NLP; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc",
+      "case_proj_d639906a94"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "AWS SageMaker",
+      "NLP",
+      "scikit-learn"
+    ],
+    "date": "2024-04-28",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ffbf6fba6e",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: Excel",
+    "category": "data_analysis",
+    "text": "You need Excel, statistics; I did exactly that in 'Survey data cleaning for a nonprofit client'. Result: The work cleaned 386 responses for a published report.",
+    "cited": [
+      "case_proj_065f01e3ba",
+      "case_proj_d639906a94"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Excel",
+      "statistics"
+    ],
+    "date": "2024-03-04",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_5107747524",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Power BI",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Power BI",
+      "PostgreSQL"
+    ],
+    "date": "2024-03-14",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_e6734a26dd",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Stripe",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "won",
+    "skills": [
+      "Stripe",
+      "Docker",
+      "React",
+      "Django",
+      "Next.js"
+    ],
+    "date": "2024-04-05",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_60a4de7958",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: PostgreSQL",
+    "category": "data_analysis",
+    "text": "You need PostgreSQL, Excel; I did exactly that in 'Sales KPI dashboard for a SaaS client'. Result: The work replaced 94 weekly spreadsheets.",
+    "cited": [
+      "case_proj_2ae15d7a67"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "PostgreSQL",
+      "Excel",
+      "Power BI"
+    ],
+    "date": "2024-01-28",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ca1fa6504a",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Celery",
+    "category": "ml_engineering",
+    "text": "You need Celery, computer vision; I did exactly that in 'Pricing page A/B test analysis for a marketing agency client'. Result: The work identified a variant that lifted revenue 21%.",
+    "cited": [
+      "case_proj_443aabd331"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Celery",
+      "computer vision",
+      "Docker",
+      "PyTorch"
+    ],
+    "date": "2024-04-18",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_e2e6d35e6b",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: AWS SageMaker",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "AWS SageMaker",
+      "Celery",
+      "Redis",
+      "Python",
+      "PyTorch"
+    ],
+    "date": "2024-01-31",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_e5e0eefbae",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Redis",
+    "category": "ml_engineering",
+    "text": "You need Redis, fine-tuning; I did exactly that in 'Warehouse demand forecast for a manufacturing client'. Result: The work reduced stock-outs by 51%.",
+    "cited": [
+      "case_proj_baafd99f80"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Redis",
+      "fine-tuning",
+      "MLflow"
+    ],
+    "date": "2024-02-12",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ac34550b20",
+    "type": "past_proposal",
+    "job_title": "Quick paid test task - start today",
+    "category": "web_dev",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Playwright",
+      "Redis",
+      "AWS",
+      "Prisma",
+      "Next.js"
+    ],
+    "date": "2024-01-31",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_9436977865",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: LangChain",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "LangChain",
+      "MLflow",
+      "RAG"
+    ],
+    "date": "2024-02-06",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_efb202789e",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: dbt",
+    "category": "data_analysis",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "dbt",
+      "Tableau",
+      "data cleaning",
+      "pandas",
+      "forecasting"
+    ],
+    "date": "2024-03-09",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_6fe11bd1a7",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Playwright",
+    "category": "web_dev",
+    "text": "You need Playwright, Django; I did exactly that in 'Pricing page A/B test analysis for a e-commerce client'. Result: The work identified a variant that lifted revenue 59%.",
+    "cited": [
+      "case_proj_aa3efd6fa5"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Playwright",
+      "Django",
+      "WebSockets",
+      "GraphQL",
+      "Vercel",
+      "Stripe"
+    ],
+    "date": "2024-02-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_18cf972232",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Airflow",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Airflow"
+    ],
+    "date": "2024-02-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_cbf2aa021e",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Django",
+    "category": "web_dev",
+    "text": "You need Django, PostgreSQL; I did exactly that in 'Pricing page A/B test analysis for a e-commerce client'. Result: The work identified a variant that lifted revenue 59%.",
+    "cited": [
+      "case_proj_aa3efd6fa5",
+      "case_proj_bd21be8587"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Django",
+      "PostgreSQL",
+      "Stripe",
+      "AWS"
+    ],
+    "date": "2024-01-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_27b16a663b",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Docker",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Docker",
+      "Hugging Face",
+      "FastAPI"
+    ],
+    "date": "2024-05-03",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_abec18eceb",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: LangGraph",
+    "category": "ml_engineering",
+    "text": "You need LangGraph, fine-tuning; I did exactly that in 'Pricing page A/B test analysis for a e-commerce client'. Result: The work identified a variant that lifted revenue 59%.",
+    "cited": [
+      "case_proj_aa3efd6fa5",
+      "case_proj_4369e66b89"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "LangGraph",
+      "fine-tuning",
+      "FastAPI",
+      "scikit-learn"
+    ],
+    "date": "2024-03-18",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_d9e9346fd9",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: LangGraph",
+    "category": "ml_engineering",
+    "text": "You need LangGraph, scikit-learn; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc",
+      "case_proj_bc8067c6c2"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "LangGraph",
+      "scikit-learn",
+      "OpenAI API",
+      "Docker",
+      "LangChain",
+      "Celery"
+    ],
+    "date": "2024-03-28",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_0ad542fa06",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: forecasting",
+    "category": "data_analysis",
+    "text": "You need forecasting, ETL; I did exactly that in 'Shopify storefront rebuild for a healthcare client'. Result: The work improved mobile conversion by 22%.",
+    "cited": [
+      "case_proj_a3b70b59d4",
+      "case_proj_4369e66b89"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "forecasting",
+      "ETL"
+    ],
+    "date": "2024-01-09",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_60dbb267f6",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Celery; I did exactly that in 'Warehouse demand forecast for a manufacturing client'. Result: The work reduced stock-outs by 51%.",
+    "cited": [
+      "case_proj_baafd99f80",
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Qdrant",
+      "Celery",
+      "AWS SageMaker",
+      "scikit-learn",
+      "Docker",
+      "fine-tuning"
+    ],
+    "date": "2024-04-25",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_7ab3394ecb",
+    "type": "past_proposal",
+    "job_title": "Data entry - easy money",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "computer vision",
+      "Redis",
+      "PyTorch"
+    ],
+    "date": "2024-03-06",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_00dcd8606e",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Looker",
+    "category": "data_analysis",
+    "text": "You need Looker, PostgreSQL; I did exactly that in 'Modern data stack migration for a SaaS client'. Result: The work cut report refresh from a day to 372 minutes.",
+    "cited": [
+      "case_proj_64bdccbe10"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Looker",
+      "PostgreSQL",
+      "Excel",
+      "SQL"
+    ],
+    "date": "2024-03-27",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_16883ba31d",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Python",
+    "category": "data_analysis",
+    "text": "You need Python, Google Analytics; I did exactly that in 'Survey data cleaning for a nonprofit client'. Result: The work cleaned 386 responses for a published report.",
+    "cited": [
+      "case_proj_065f01e3ba",
+      "case_proj_2ae15d7a67"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Python",
+      "Google Analytics",
+      "Tableau"
+    ],
+    "date": "2024-03-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_8ad6cc8552",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: BigQuery",
+    "category": "data_analysis",
+    "text": "You need BigQuery, A/B testing; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "BigQuery",
+      "A/B testing",
+      "forecasting"
+    ],
+    "date": "2024-04-18",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_e90ae219f5",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: Docker",
+    "category": "web_dev",
+    "text": "You need Docker, Django; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Docker",
+      "Django"
+    ],
+    "date": "2024-04-30",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_bf29205eef",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: SQL",
+    "category": "data_analysis",
+    "text": "You need SQL, statistics; I did exactly that in 'Modern data stack migration for a SaaS client'. Result: The work cut report refresh from a day to 372 minutes.",
+    "cited": [
+      "case_proj_64bdccbe10",
+      "case_proj_62d8c02c9e"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "SQL",
+      "statistics",
+      "A/B testing"
+    ],
+    "date": "2024-01-26",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_0b5466a9eb",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Docker",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Docker",
+      "OAuth",
+      "Node.js",
+      "Vercel",
+      "FastAPI",
+      "GraphQL"
+    ],
+    "date": "2024-02-24",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_aec68610e0",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: dashboards",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "dashboards"
+    ],
+    "date": "2024-03-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_73ffa54f0d",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Python",
+    "category": "data_analysis",
+    "text": "You need Python, dashboards; I did exactly that in 'Finance ETL pipeline for a fintech client'. Result: The work automated 314 manual monthly steps.",
+    "cited": [
+      "case_proj_62d8c02c9e",
+      "case_proj_d639906a94"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Python",
+      "dashboards",
+      "Airflow",
+      "data cleaning",
+      "R"
+    ],
+    "date": "2024-04-13",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_dfde7b80fd",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Node.js",
+    "category": "web_dev",
+    "text": "You need Node.js, Next.js; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Node.js",
+      "Next.js"
+    ],
+    "date": "2024-02-20",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_76405400ac",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: computer vision",
+    "category": "ml_engineering",
+    "text": "You need computer vision, Hugging Face; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc",
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "computer vision",
+      "Hugging Face",
+      "LangChain",
+      "scikit-learn",
+      "Qdrant"
+    ],
+    "date": "2024-01-12",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_52a78cd039",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: ETL",
+    "category": "data_analysis",
+    "text": "You need ETL, Python; I did exactly that in 'Subscription billing integration for a fintech client'. Result: The work cut failed payments by 25%.",
+    "cited": [
+      "case_proj_19fcdf8f80",
+      "case_proj_3bb22c89dc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "ETL",
+      "Python",
+      "BigQuery"
+    ],
+    "date": "2024-02-27",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_94e218f95c",
+    "type": "past_proposal",
+    "job_title": "Free sample required",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "PostgreSQL",
+      "A/B testing",
+      "Excel",
+      "pandas",
+      "R",
+      "Airflow"
+    ],
+    "date": "2024-04-29",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_2840e9720e",
+    "type": "past_proposal",
+    "job_title": "Urgent developer needed, high pay",
+    "category": "ml_engineering",
+    "text": "You need RAG, Python; I did exactly that in 'Clinic operations dashboard for a marketing agency client'. Result: The work cut patient wait time 38%.",
+    "cited": [
+      "case_proj_bd21be8587",
+      "case_proj_443aabd331"
+    ],
+    "outcome": "won",
+    "skills": [
+      "RAG",
+      "Python",
+      "Qdrant",
+      "Hugging Face",
+      "AWS SageMaker"
+    ],
+    "date": "2024-02-27",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c38d77fdfd",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Snowflake",
+    "category": "data_analysis",
+    "text": "You need Snowflake; I did exactly that in 'Warehouse demand forecast for a legal client'. Result: The work reduced stock-outs by 13%.",
+    "cited": [
+      "case_proj_b2c4d0d2bb"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Snowflake"
+    ],
+    "date": "2024-04-25",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_88297e947f",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Vercel",
+    "category": "web_dev",
+    "text": "You need Vercel, OAuth; I did exactly that in 'Multi-tenant SaaS dashboard for a SaaS client'. Result: The work onboarded 383 paying teams in the first quarter.",
+    "cited": [
+      "case_proj_a34a544fca",
+      "case_proj_62d8c02c9e"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Vercel",
+      "OAuth",
+      "Node.js",
+      "WebSockets",
+      "Tailwind CSS",
+      "Prisma"
+    ],
+    "date": "2024-01-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_3d222ebaaf",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: FastAPI",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "Celery",
+      "MLflow",
+      "Docker",
+      "Hugging Face",
+      "LangChain"
+    ],
+    "date": "2024-03-26",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_9e9a872b71",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: MLflow",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "MLflow"
+    ],
+    "date": "2024-03-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_98017e2ae5",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: PyTorch",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "PyTorch"
+    ],
+    "date": "2024-01-11",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_0537b7ae9e",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: forecasting",
+    "category": "data_analysis",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "forecasting",
+      "Power BI"
+    ],
+    "date": "2024-04-23",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_94f16fe6fa",
+    "type": "past_proposal",
+    "job_title": "Free sample required",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Vercel",
+      "Shopify",
+      "Playwright",
+      "REST API",
+      "Tailwind CSS",
+      "React"
+    ],
+    "date": "2024-05-01",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_691a41392a",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: LangChain",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "LangChain",
+      "Redis",
+      "Pinecone",
+      "FastAPI",
+      "Celery"
+    ],
+    "date": "2024-01-24",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_6217a6e065",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Celery",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Celery",
+      "Docker",
+      "computer vision",
+      "LLM evaluation",
+      "Python"
+    ],
+    "date": "2024-01-28",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_aadfbb2dc5",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: dashboards",
+    "category": "data_analysis",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "replied",
+    "skills": [
+      "dashboards",
+      "Looker",
+      "ETL",
+      "Excel",
+      "Airflow"
+    ],
+    "date": "2024-02-06",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_1e61854a79",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: fine-tuning",
+    "category": "ml_engineering",
+    "text": "You need fine-tuning, Python; I did exactly that in 'Subscription billing integration for a fintech client'. Result: The work cut failed payments by 25%.",
+    "cited": [
+      "case_proj_19fcdf8f80",
+      "case_proj_64bdccbe10"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "fine-tuning",
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "Celery",
+      "computer vision"
+    ],
+    "date": "2024-01-30",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_19a704c444",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Power BI",
+    "category": "data_analysis",
+    "text": "You need Power BI, Airflow; I did exactly that in 'Clinic operations dashboard for a marketing agency client'. Result: The work cut patient wait time 38%.",
+    "cited": [
+      "case_proj_bd21be8587",
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Power BI",
+      "Airflow",
+      "statistics",
+      "dashboards",
+      "Tableau"
+    ],
+    "date": "2024-01-04",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_76974682af",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: LangGraph",
+    "category": "ml_engineering",
+    "text": "You need LangGraph, RAG; I did exactly that in 'Real-time logistics tracker for a e-commerce client'. Result: The work showed 264 vehicles live with sub-second updates.",
+    "cited": [
+      "case_proj_4369e66b89",
+      "case_proj_aa3efd6fa5"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "LangGraph",
+      "RAG",
+      "LLM evaluation"
+    ],
+    "date": "2024-04-05",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_307f5c17af",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: ETL",
+    "category": "data_analysis",
+    "text": "You need ETL, Google Analytics; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "ETL",
+      "Google Analytics",
+      "PostgreSQL",
+      "dbt",
+      "Excel",
+      "Looker"
+    ],
+    "date": "2024-04-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_45286193f5",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Next.js",
+    "category": "web_dev",
+    "text": "You need Next.js, WebSockets; I did exactly that in 'Subscription billing integration for a fintech client'. Result: The work cut failed payments by 25%.",
+    "cited": [
+      "case_proj_19fcdf8f80"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Next.js",
+      "WebSockets",
+      "REST API",
+      "Shopify",
+      "Vercel"
+    ],
+    "date": "2024-01-08",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_5ffccfd261",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Tableau",
+    "category": "data_analysis",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Tableau"
+    ],
+    "date": "2024-03-06",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_856a5b47bc",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: pandas",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "pandas",
+      "A/B testing"
+    ],
+    "date": "2024-04-29",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_1446edb5fd",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: GraphQL",
+    "category": "web_dev",
+    "text": "You need GraphQL, REST API; I did exactly that in 'Modern data stack migration for a travel client'. Result: The work cut report refresh from a day to 337 minutes.",
+    "cited": [
+      "case_proj_d639906a94"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "GraphQL",
+      "REST API",
+      "Django"
+    ],
+    "date": "2024-01-31",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_5ca4b170c1",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: NLP",
+    "category": "ml_engineering",
+    "text": "You need NLP, AWS SageMaker; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "NLP",
+      "AWS SageMaker"
+    ],
+    "date": "2024-02-22",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_e7f023f97e",
+    "type": "past_proposal",
+    "job_title": "Looking for web dev help: Shopify",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Shopify",
+      "Tailwind CSS",
+      "Stripe",
+      "Docker",
+      "Prisma",
+      "AWS"
+    ],
+    "date": "2024-04-28",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_364fb71e17",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: MLflow",
+    "category": "ml_engineering",
+    "text": "You need MLflow, LLM evaluation; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc",
+      "case_proj_443aabd331"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "MLflow",
+      "LLM evaluation"
+    ],
+    "date": "2024-03-06",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_23f63115b4",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: scikit-learn",
+    "category": "ml_engineering",
+    "text": "You need scikit-learn, AWS SageMaker; I did exactly that in 'Survey data cleaning for a nonprofit client'. Result: The work cleaned 386 responses for a published report.",
+    "cited": [
+      "case_proj_065f01e3ba"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "scikit-learn",
+      "AWS SageMaker",
+      "Celery",
+      "LangGraph",
+      "Python"
+    ],
+    "date": "2024-01-20",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_2937130241",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: FastAPI",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "Celery",
+      "Qdrant",
+      "Pinecone"
+    ],
+    "date": "2024-04-22",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_3d2207408c",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: FastAPI",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "Tailwind CSS",
+      "AWS",
+      "Prisma",
+      "Docker",
+      "OAuth"
+    ],
+    "date": "2024-04-01",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_834083f295",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Snowflake",
+    "category": "data_analysis",
+    "text": "You need Snowflake, SQL; I did exactly that in 'Pricing page A/B test analysis for a marketing agency client'. Result: The work identified a variant that lifted revenue 21%.",
+    "cited": [
+      "case_proj_443aabd331",
+      "case_proj_1556717424"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Snowflake",
+      "SQL",
+      "forecasting",
+      "Power BI",
+      "pandas"
+    ],
+    "date": "2024-02-27",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_61dac9f948",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Python",
+    "category": "ml_engineering",
+    "text": "You need Python, fine-tuning; I did exactly that in 'Survey data cleaning for a nonprofit client'. Result: The work cleaned 386 responses for a published report.",
+    "cited": [
+      "case_proj_065f01e3ba"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Python",
+      "fine-tuning",
+      "NLP",
+      "OpenAI API",
+      "MLflow"
+    ],
+    "date": "2024-02-20",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c44c261242",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: PyTorch",
+    "category": "ml_engineering",
+    "text": "You need PyTorch, Pinecone; I did exactly that in 'Marketing attribution report for a real estate client'. Result: The work reallocated 54% of ad budget.",
+    "cited": [
+      "case_proj_8e75608573",
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "PyTorch",
+      "Pinecone",
+      "NLP",
+      "scikit-learn"
+    ],
+    "date": "2024-01-10",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_2565f03a7e",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: computer vision",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "computer vision",
+      "Redis",
+      "LangChain",
+      "MLflow",
+      "scikit-learn"
+    ],
+    "date": "2024-03-02",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c9317b4461",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: PostgreSQL",
+    "category": "data_analysis",
+    "text": "You need PostgreSQL, Python; I did exactly that in 'Marketing attribution report for a real estate client'. Result: The work reallocated 54% of ad budget.",
+    "cited": [
+      "case_proj_8e75608573"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "PostgreSQL",
+      "Python",
+      "R",
+      "Tableau"
+    ],
+    "date": "2024-03-19",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_d237fa8462",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: Google Analytics",
+    "category": "data_analysis",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Google Analytics",
+      "dashboards",
+      "R",
+      "Airflow",
+      "Python"
+    ],
+    "date": "2024-02-25",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_6847ad53ea",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: OpenAI API",
+    "category": "ml_engineering",
+    "text": "You need OpenAI API; I did exactly that in 'Real-time logistics tracker for a e-commerce client'. Result: The work showed 264 vehicles live with sub-second updates.",
+    "cited": [
+      "case_proj_4369e66b89"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "OpenAI API"
+    ],
+    "date": "2024-03-05",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_4efa3408af",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Pinecone",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Pinecone",
+      "scikit-learn"
+    ],
+    "date": "2024-02-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_1316a6e313",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Python; I did exactly that in 'Finance ETL pipeline for a fintech client'. Result: The work automated 314 manual monthly steps.",
+    "cited": [
+      "case_proj_62d8c02c9e",
+      "case_proj_1556717424"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Qdrant",
+      "Python",
+      "RAG",
+      "LLM evaluation",
+      "NLP",
+      "LangGraph"
+    ],
+    "date": "2024-01-19",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_d573575f4f",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: MLflow",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "MLflow",
+      "OpenAI API",
+      "LangGraph",
+      "Redis"
+    ],
+    "date": "2024-03-09",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_da58768f73",
+    "type": "past_proposal",
+    "job_title": "Urgent developer needed, high pay",
+    "category": "ml_engineering",
+    "text": "You need computer vision, MLflow; I did exactly that in 'Sales KPI dashboard for a SaaS client'. Result: The work replaced 94 weekly spreadsheets.",
+    "cited": [
+      "case_proj_2ae15d7a67"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "computer vision",
+      "MLflow",
+      "LangGraph",
+      "LangChain",
+      "Qdrant",
+      "AWS SageMaker"
+    ],
+    "date": "2024-02-16",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_42c0715175",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: LLM evaluation",
+    "category": "ml_engineering",
+    "text": "You need LLM evaluation; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "LLM evaluation"
+    ],
+    "date": "2024-04-25",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c98a0fe36b",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: MLflow",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "MLflow",
+      "RAG",
+      "NLP",
+      "OpenAI API",
+      "fine-tuning",
+      "Hugging Face"
+    ],
+    "date": "2024-04-19",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_ebec2f7a55",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: AWS",
+    "category": "web_dev",
+    "text": "You need AWS, REST API; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "AWS",
+      "REST API",
+      "GraphQL"
+    ],
+    "date": "2024-02-05",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_61523bd686",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Pinecone",
+    "category": "ml_engineering",
+    "text": "You need Pinecone, computer vision; I did exactly that in 'Warehouse demand forecast for a manufacturing client'. Result: The work reduced stock-outs by 51%.",
+    "cited": [
+      "case_proj_baafd99f80",
+      "case_proj_bd21be8587"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Pinecone",
+      "computer vision",
+      "LangGraph"
+    ],
+    "date": "2024-04-10",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c395ee82db",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Redis",
+    "category": "ml_engineering",
+    "text": "You need Redis, scikit-learn; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc",
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Redis",
+      "scikit-learn",
+      "Docker"
+    ],
+    "date": "2024-02-05",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_fd2b52e8c6",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Stripe",
+    "category": "web_dev",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Stripe",
+      "Next.js",
+      "Vercel",
+      "TypeScript",
+      "Node.js",
+      "Redis"
+    ],
+    "date": "2024-05-03",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_625c015443",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Python",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Python",
+      "Pinecone",
+      "OpenAI API",
+      "FastAPI",
+      "fine-tuning"
+    ],
+    "date": "2024-05-04",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_187a0b14b6",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: LangChain",
+    "category": "ml_engineering",
+    "text": "You need LangChain, AWS SageMaker; I did exactly that in 'Multi-tenant SaaS dashboard for a SaaS client'. Result: The work onboarded 383 paying teams in the first quarter.",
+    "cited": [
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "LangChain",
+      "AWS SageMaker",
+      "fine-tuning",
+      "RAG"
+    ],
+    "date": "2024-01-15",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_235ae1135b",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Hugging Face; I did exactly that in 'Clinic operations dashboard for a fintech client'. Result: The work cut patient wait time 49%.",
+    "cited": [
+      "case_proj_a0b35015cc"
+    ],
+    "outcome": "won",
+    "skills": [
+      "Qdrant",
+      "Hugging Face",
+      "LangChain",
+      "FastAPI",
+      "computer vision",
+      "RAG"
+    ],
+    "date": "2024-02-08",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_6a017b3d71",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Python; I did exactly that in 'Multi-tenant SaaS dashboard for a SaaS client'. Result: The work onboarded 383 paying teams in the first quarter.",
+    "cited": [
+      "case_proj_a34a544fca"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Qdrant",
+      "Python",
+      "PyTorch"
+    ],
+    "date": "2024-02-17",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_07826acd46",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: Redis",
+    "category": "ml_engineering",
+    "text": "Hi there! I am an expert with many years of experience in all technologies.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Redis",
+      "MLflow",
+      "FastAPI",
+      "LLM evaluation",
+      "Python",
+      "LangGraph"
+    ],
+    "date": "2024-03-05",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_f6e1f9e32e",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: Tableau",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Tableau"
+    ],
+    "date": "2024-01-10",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_134b3af911",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: Node.js",
+    "category": "web_dev",
+    "text": "You need Node.js, GraphQL; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Node.js",
+      "GraphQL",
+      "Docker",
+      "Playwright"
+    ],
+    "date": "2024-01-07",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a67dc60ba5",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Docker",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "Docker",
+      "Hugging Face",
+      "MLflow",
+      "Qdrant",
+      "FastAPI"
+    ],
+    "date": "2024-02-01",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_bbc8b87cc8",
+    "type": "past_proposal",
+    "job_title": "Hiring ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, Python; I did exactly that in 'Survey data cleaning for a e-commerce client'. Result: The work cleaned 111 responses for a published report.",
+    "cited": [
+      "case_proj_1556717424",
+      "case_proj_a3b70b59d4"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Qdrant",
+      "Python",
+      "LangGraph",
+      "PyTorch",
+      "Hugging Face",
+      "computer vision"
+    ],
+    "date": "2024-02-02",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_2a7a1ac5d9",
+    "type": "past_proposal",
+    "job_title": "Need web dev help: AWS",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "AWS"
+    ],
+    "date": "2024-05-01",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_94c5823826",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: dbt",
+    "category": "data_analysis",
+    "text": "You need dbt, dashboards; I did exactly that in 'Pricing page A/B test analysis for a marketing agency client'. Result: The work identified a variant that lifted revenue 21%.",
+    "cited": [
+      "case_proj_443aabd331"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "dbt",
+      "dashboards",
+      "statistics",
+      "Python",
+      "Google Analytics"
+    ],
+    "date": "2024-01-24",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_651f7fe94d",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: AWS SageMaker",
+    "category": "ml_engineering",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "AWS SageMaker",
+      "MLflow",
+      "RAG",
+      "Redis"
+    ],
+    "date": "2024-01-18",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_d3d1135d7e",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: OAuth",
+    "category": "web_dev",
+    "text": "You need OAuth; I did exactly that in 'Modern data stack migration for a travel client'. Result: The work cut report refresh from a day to 337 minutes.",
+    "cited": [
+      "case_proj_d639906a94",
+      "case_proj_aa3efd6fa5"
+    ],
+    "outcome": "won",
+    "skills": [
+      "OAuth"
+    ],
+    "date": "2024-04-29",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_30331be638",
+    "type": "past_proposal",
+    "job_title": "Looking for data analysis help: data cleaning",
+    "category": "data_analysis",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "data cleaning"
+    ],
+    "date": "2024-03-08",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_7375ea9ea5",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: R",
+    "category": "data_analysis",
+    "text": "You need R, PostgreSQL; I did exactly that in 'Modern data stack migration for a SaaS client'. Result: The work cut report refresh from a day to 372 minutes.",
+    "cited": [
+      "case_proj_64bdccbe10"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "R",
+      "PostgreSQL",
+      "Power BI"
+    ],
+    "date": "2024-02-29",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_b273755972",
+    "type": "past_proposal",
+    "job_title": "Hiring data analysis help: Power BI",
+    "category": "data_analysis",
+    "text": "You need Power BI, Looker; I did exactly that in 'Sales KPI dashboard for a SaaS client'. Result: The work replaced 94 weekly spreadsheets.",
+    "cited": [
+      "case_proj_2ae15d7a67"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Power BI",
+      "Looker"
+    ],
+    "date": "2024-04-06",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_aae6436380",
+    "type": "past_proposal",
+    "job_title": "Looking for ml engineering help: Qdrant",
+    "category": "ml_engineering",
+    "text": "You need Qdrant, MLflow; I did exactly that in 'Finance ETL pipeline for a real estate client'. Result: The work automated 217 manual monthly steps.",
+    "cited": [
+      "case_proj_3bb22c89dc"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Qdrant",
+      "MLflow"
+    ],
+    "date": "2024-04-26",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_c4fed241fd",
+    "type": "past_proposal",
+    "job_title": "Hiring web dev help: Tailwind CSS",
+    "category": "web_dev",
+    "text": "You need Tailwind CSS, Django; I did exactly that in 'Survey data cleaning for a nonprofit client'. Result: The work cleaned 386 responses for a published report.",
+    "cited": [
+      "case_proj_065f01e3ba"
+    ],
+    "outcome": "replied",
+    "skills": [
+      "Tailwind CSS",
+      "Django"
+    ],
+    "date": "2024-04-22",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a61967b33c",
+    "type": "past_proposal",
+    "job_title": "Need data analysis help: Looker",
+    "category": "data_analysis",
+    "text": "You need Looker; I did exactly that in 'Warehouse demand forecast for a manufacturing client'. Result: The work reduced stock-outs by 51%.",
+    "cited": [
+      "case_proj_baafd99f80"
+    ],
+    "outcome": "ignored",
+    "skills": [
+      "Looker"
+    ],
+    "date": "2024-04-09",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_a5e64f4f07",
+    "type": "past_proposal",
+    "job_title": "Need ml engineering help: FastAPI",
+    "category": "ml_engineering",
+    "text": "Hello, I have read your job post and I can do this work with 100% satisfaction.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "FastAPI",
+      "Docker",
+      "NLP",
+      "scikit-learn"
+    ],
+    "date": "2024-01-02",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "prop_6ecc8cd1f4",
+    "type": "past_proposal",
+    "job_title": "Free sample required",
+    "category": "web_dev",
+    "text": "Dear Sir/Madam, I am very passionate about this job and I am the perfect fit.",
+    "cited": [],
+    "outcome": "ignored",
+    "skills": [
+      "OAuth",
+      "React",
+      "Django"
+    ],
+    "date": "2024-05-04",
+    "synthetic": true
+  }
+]

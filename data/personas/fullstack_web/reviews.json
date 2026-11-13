@@ -1,0 +1,122 @@
+[
+  {
+    "evidence_id": "review_proj_e39b71ec26",
+    "type": "review",
+    "project_id": "proj_e39b71ec26",
+    "title": "Review: E2E test suite for checkout for a manufacturing client",
+    "skills": [],
+    "industry": "manufacturing",
+    "date": "2022-08-12",
+    "rating": 4.8,
+    "text": "Great work on our manufacturing project. It dropped escaped checkout bugs by 12%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_9b3ba7ab12",
+    "type": "review",
+    "project_id": "proj_9b3ba7ab12",
+    "title": "Review: E2E test suite for checkout for a SaaS client",
+    "skills": [],
+    "industry": "SaaS",
+    "date": "2023-05-04",
+    "rating": 4.8,
+    "text": "Great work on our SaaS project. It dropped escaped checkout bugs by 42%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_f3ca5176e6",
+    "type": "review",
+    "project_id": "proj_f3ca5176e6",
+    "title": "Review: Marketing site on Vercel for a edtech client",
+    "skills": [],
+    "industry": "edtech",
+    "date": "2021-12-21",
+    "rating": 4.8,
+    "text": "Great work on our edtech project. It loaded in under 189 seconds on 3G. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_ffe8b16c1b",
+    "type": "review",
+    "project_id": "proj_ffe8b16c1b",
+    "title": "Review: Real-time logistics tracker for a real estate client",
+    "skills": [],
+    "industry": "real estate",
+    "date": "2022-02-18",
+    "rating": 5.0,
+    "text": "Great work on our real estate project. It showed 356 vehicles live with sub-second updates. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_fa80e01164",
+    "type": "review",
+    "project_id": "proj_fa80e01164",
+    "title": "Review: Booking platform API for a marketing agency client",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2023-03-26",
+    "rating": 4.8,
+    "text": "Great work on our marketing agency project. It handled 252 bookings a day. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_1a4312da58",
+    "type": "review",
+    "project_id": "proj_1a4312da58",
+    "title": "Review: GraphQL gateway for a real estate client",
+    "skills": [],
+    "industry": "real estate",
+    "date": "2023-10-11",
+    "rating": 4.8,
+    "text": "Great work on our real estate project. It replaced 109 legacy endpoints. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_08dd81e19e",
+    "type": "review",
+    "project_id": "proj_08dd81e19e",
+    "title": "Review: Subscription billing integration for a travel client",
+    "skills": [],
+    "industry": "travel",
+    "date": "2022-11-24",
+    "rating": 5.0,
+    "text": "Great work on our travel project. It cut failed payments by 28%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_51a1b7e627",
+    "type": "review",
+    "project_id": "proj_51a1b7e627",
+    "title": "Review: Invoice field extraction pipeline for a travel client",
+    "skills": [],
+    "industry": "travel",
+    "date": "2021-10-23",
+    "rating": 5.0,
+    "text": "Great work on our travel project. It reduced manual data entry by 21%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_2db83b2dcf",
+    "type": "review",
+    "project_id": "proj_2db83b2dcf",
+    "title": "Review: Booking platform API for a SaaS client",
+    "skills": [],
+    "industry": "SaaS",
+    "date": "2023-07-28",
+    "rating": 4.5,
+    "text": "Great work on our SaaS project. It handled 37 bookings a day. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_0b0ecbd92e",
+    "type": "review",
+    "project_id": "proj_0b0ecbd92e",
+    "title": "Review: Defect detection on assembly line for a real estate client",
+    "skills": [],
+    "industry": "real estate",
+    "date": "2023-08-17",
+    "rating": 4.5,
+    "text": "Great work on our real estate project. It caught 18% of defects before packing. Would hire again.",
+    "synthetic": true
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "evidence_id": "review_proj_5820fcf035",
+    "type": "review",
+    "project_id": "proj_5820fcf035",
+    "title": "Review: Defect detection on assembly line for a travel client",
+    "skills": [],
+    "industry": "travel",
+    "date": "2022-11-13",
+    "rating": 5.0,
+    "text": "Great work on our travel project. It caught 35% of defects before packing. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_005d9e3f29",
+    "type": "review",
+    "project_id": "proj_005d9e3f29",
+    "title": "Review: Chatbot evaluation harness for a healthcare client",
+    "skills": [],
+    "industry": "healthcare",
+    "date": "2022-09-01",
+    "rating": 5.0,
+    "text": "Great work on our healthcare project. It caught 324 regressions before release. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_0e01045792",
+    "type": "review",
+    "project_id": "proj_0e01045792",
+    "title": "Review: Support-ticket triage classifier for a healthcare client",
+    "skills": [],
+    "industry": "healthcare",
+    "date": "2022-03-28",
+    "rating": 5.0,
+    "text": "Great work on our healthcare project. It cut first-response time by 45%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_86fdc3c574",
+    "type": "review",
+    "project_id": "proj_86fdc3c574",
+    "title": "Review: Chatbot evaluation harness for a legal client",
+    "skills": [],
+    "industry": "legal",
+    "date": "2023-03-05",
+    "rating": 5.0,
+    "text": "Great work on our legal project. It caught 217 regressions before release. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_10e613508d",
+    "type": "review",
+    "project_id": "proj_10e613508d",
+    "title": "Review: Churn prediction model for a real estate client",
+    "skills": [],
+    "industry": "real estate",
+    "date": "2021-05-27",
+    "rating": 4.5,
+    "text": "Great work on our real estate project. It flagged at-risk accounts with 30% precision. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_10615e6213",
+    "type": "review",
+    "project_id": "proj_10615e6213",
+    "title": "Review: Sales KPI dashboard for a logistics client",
+    "skills": [],
+    "industry": "logistics",
+    "date": "2022-11-29",
+    "rating": 5.0,
+    "text": "Great work on our logistics project. It replaced 127 weekly spreadsheets. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_4c47885533",
+    "type": "review",
+    "project_id": "proj_4c47885533",
+    "title": "Review: Warehouse demand forecast for a legal client",
+    "skills": [],
+    "industry": "legal",
+    "date": "2021-07-16",
+    "rating": 5.0,
+    "text": "Great work on our legal project. It reduced stock-outs by 15%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_2b23c5e189",
+    "type": "review",
+    "project_id": "proj_2b23c5e189",
+    "title": "Review: Churn prediction model for a travel client",
+    "skills": [],
+    "industry": "travel",
+    "date": "2021-05-18",
+    "rating": 4.8,
+    "text": "Great work on our travel project. It flagged at-risk accounts with 35% precision. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_4058dfe795",
+    "type": "review",
+    "project_id": "proj_4058dfe795",
+    "title": "Review: Semantic product search for a e-commerce client",
+    "skills": [],
+    "industry": "e-commerce",
+    "date": "2023-04-05",
+    "rating": 4.5,
+    "text": "Great work on our e-commerce project. It raised search click-through by 48%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_3adc72b41f",
+    "type": "review",
+    "project_id": "proj_3adc72b41f",
+    "title": "Review: Internal-docs RAG assistant for a legal client",
+    "skills": [],
+    "industry": "legal",
+    "date": "2021-07-10",
+    "rating": 5.0,
+    "text": "Great work on our legal project. It answered 241 staff questions a week with 32% judged correct. Would hire again.",
+    "synthetic": true
+  }
+]

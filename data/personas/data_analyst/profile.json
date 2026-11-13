@@ -1,0 +1,317 @@
+{
+  "persona_id": "data_analyst",
+  "name": "Mariam Siddiqui (synthetic)",
+  "primary_category": "data_analysis",
+  "secondary_category": "web_dev",
+  "skills": [
+    "A/B testing",
+    "Airflow",
+    "BigQuery",
+    "ETL",
+    "Excel",
+    "Google Analytics",
+    "Looker",
+    "Next.js",
+    "Node.js",
+    "OAuth",
+    "PostgreSQL",
+    "Power BI",
+    "Prisma",
+    "Python",
+    "R",
+    "React",
+    "Redis",
+    "SQL",
+    "Shopify",
+    "Snowflake",
+    "Stripe",
+    "Tableau",
+    "Tailwind CSS",
+    "TypeScript",
+    "WebSockets",
+    "dashboards",
+    "data cleaning",
+    "dbt",
+    "forecasting",
+    "pandas",
+    "statistics"
+  ],
+  "floor_rate": 22,
+  "weekly_connects_budget": 80,
+  "projects": [
+    {
+      "id": "proj_d639906a94",
+      "title": "Modern data stack migration for a travel client",
+      "category": "data_analysis",
+      "skills": [
+        "dbt",
+        "Snowflake",
+        "Airflow",
+        "ETL"
+      ],
+      "industry": "travel",
+      "date": "2023-11-29",
+      "result": "cut report refresh from a day to 337 minutes",
+      "synthetic": true
+    },
+    {
+      "id": "proj_8e75608573",
+      "title": "Marketing attribution report for a real estate client",
+      "category": "data_analysis",
+      "skills": [
+        "Google Analytics",
+        "BigQuery",
+        "Looker"
+      ],
+      "industry": "real estate",
+      "date": "2023-06-12",
+      "result": "reallocated 54% of ad budget",
+      "synthetic": true
+    },
+    {
+      "id": "proj_2ae15d7a67",
+      "title": "Sales KPI dashboard for a SaaS client",
+      "category": "data_analysis",
+      "skills": [
+        "Power BI",
+        "SQL",
+        "dashboards"
+      ],
+      "industry": "SaaS",
+      "date": "2022-10-20",
+      "result": "replaced 94 weekly spreadsheets",
+      "synthetic": true
+    },
+    {
+      "id": "proj_64bdccbe10",
+      "title": "Modern data stack migration for a SaaS client",
+      "category": "data_analysis",
+      "skills": [
+        "dbt",
+        "Snowflake",
+        "Airflow",
+        "ETL"
+      ],
+      "industry": "SaaS",
+      "date": "2022-01-21",
+      "result": "cut report refresh from a day to 372 minutes",
+      "synthetic": true
+    },
+    {
+      "id": "proj_a34a544fca",
+      "title": "Multi-tenant SaaS dashboard for a SaaS client",
+      "category": "web_dev",
+      "skills": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "OAuth"
+      ],
+      "industry": "SaaS",
+      "date": "2021-04-28",
+      "result": "onboarded 383 paying teams in the first quarter",
+      "synthetic": true
+    },
+    {
+      "id": "proj_a3b70b59d4",
+      "title": "Shopify storefront rebuild for a healthcare client",
+      "category": "web_dev",
+      "skills": [
+        "Shopify",
+        "React",
+        "Tailwind CSS"
+      ],
+      "industry": "healthcare",
+      "date": "2023-01-11",
+      "result": "improved mobile conversion by 22%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_a0b35015cc",
+      "title": "Clinic operations dashboard for a fintech client",
+      "category": "data_analysis",
+      "skills": [
+        "Tableau",
+        "PostgreSQL",
+        "SQL"
+      ],
+      "industry": "fintech",
+      "date": "2023-01-27",
+      "result": "cut patient wait time 49%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_baafd99f80",
+      "title": "Warehouse demand forecast for a manufacturing client",
+      "category": "data_analysis",
+      "skills": [
+        "Python",
+        "forecasting",
+        "pandas"
+      ],
+      "industry": "manufacturing",
+      "date": "2023-02-06",
+      "result": "reduced stock-outs by 51%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_443aabd331",
+      "title": "Pricing page A/B test analysis for a marketing agency client",
+      "category": "data_analysis",
+      "skills": [
+        "A/B testing",
+        "statistics",
+        "Python"
+      ],
+      "industry": "marketing agency",
+      "date": "2021-12-15",
+      "result": "identified a variant that lifted revenue 21%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_b2c4d0d2bb",
+      "title": "Warehouse demand forecast for a legal client",
+      "category": "data_analysis",
+      "skills": [
+        "Python",
+        "forecasting",
+        "pandas"
+      ],
+      "industry": "legal",
+      "date": "2023-03-09",
+      "result": "reduced stock-outs by 13%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_065f01e3ba",
+      "title": "Survey data cleaning for a nonprofit client",
+      "category": "data_analysis",
+      "skills": [
+        "data cleaning",
+        "R",
+        "Excel"
+      ],
+      "industry": "nonprofit",
+      "date": "2023-05-06",
+      "result": "cleaned 386 responses for a published report",
+      "synthetic": true
+    },
+    {
+      "id": "proj_1556717424",
+      "title": "Survey data cleaning for a e-commerce client",
+      "category": "data_analysis",
+      "skills": [
+        "data cleaning",
+        "R",
+        "Excel"
+      ],
+      "industry": "e-commerce",
+      "date": "2021-06-27",
+      "result": "cleaned 111 responses for a published report",
+      "synthetic": true
+    },
+    {
+      "id": "proj_19fcdf8f80",
+      "title": "Subscription billing integration for a fintech client",
+      "category": "web_dev",
+      "skills": [
+        "Stripe",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "industry": "fintech",
+      "date": "2022-07-05",
+      "result": "cut failed payments by 25%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_bc8067c6c2",
+      "title": "Marketing attribution report for a legal client",
+      "category": "data_analysis",
+      "skills": [
+        "Google Analytics",
+        "BigQuery",
+        "Looker"
+      ],
+      "industry": "legal",
+      "date": "2022-07-28",
+      "result": "reallocated 60% of ad budget",
+      "synthetic": true
+    },
+    {
+      "id": "proj_3bb22c89dc",
+      "title": "Finance ETL pipeline for a real estate client",
+      "category": "data_analysis",
+      "skills": [
+        "Python",
+        "ETL",
+        "Airflow",
+        "PostgreSQL"
+      ],
+      "industry": "real estate",
+      "date": "2022-06-19",
+      "result": "automated 217 manual monthly steps",
+      "synthetic": true
+    },
+    {
+      "id": "proj_aa3efd6fa5",
+      "title": "Pricing page A/B test analysis for a e-commerce client",
+      "category": "data_analysis",
+      "skills": [
+        "A/B testing",
+        "statistics",
+        "Python"
+      ],
+      "industry": "e-commerce",
+      "date": "2023-07-31",
+      "result": "identified a variant that lifted revenue 59%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_bd21be8587",
+      "title": "Clinic operations dashboard for a marketing agency client",
+      "category": "data_analysis",
+      "skills": [
+        "Tableau",
+        "PostgreSQL",
+        "SQL"
+      ],
+      "industry": "marketing agency",
+      "date": "2021-01-08",
+      "result": "cut patient wait time 38%",
+      "synthetic": true
+    },
+    {
+      "id": "proj_4369e66b89",
+      "title": "Real-time logistics tracker for a e-commerce client",
+      "category": "web_dev",
+      "skills": [
+        "WebSockets",
+        "React",
+        "Redis",
+        "Node.js"
+      ],
+      "industry": "e-commerce",
+      "date": "2023-01-26",
+      "result": "showed 264 vehicles live with sub-second updates",
+      "synthetic": true
+    },
+    {
+      "id": "proj_62d8c02c9e",
+      "title": "Finance ETL pipeline for a fintech client",
+      "category": "data_analysis",
+      "skills": [
+        "Python",
+        "ETL",
+        "Airflow",
+        "PostgreSQL"
+      ],
+      "industry": "fintech",
+      "date": "2021-06-14",
+      "result": "automated 314 manual monthly steps",
+      "synthetic": true
+    }
+  ],
+  "synthetic": true
+}

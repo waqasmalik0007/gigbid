@@ -1,0 +1,122 @@
+[
+  {
+    "evidence_id": "review_proj_3bb22c89dc",
+    "type": "review",
+    "project_id": "proj_3bb22c89dc",
+    "title": "Review: Finance ETL pipeline for a real estate client",
+    "skills": [],
+    "industry": "real estate",
+    "date": "2022-06-19",
+    "rating": 4.8,
+    "text": "Great work on our real estate project. It automated 217 manual monthly steps. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_065f01e3ba",
+    "type": "review",
+    "project_id": "proj_065f01e3ba",
+    "title": "Review: Survey data cleaning for a nonprofit client",
+    "skills": [],
+    "industry": "nonprofit",
+    "date": "2023-05-06",
+    "rating": 5.0,
+    "text": "Great work on our nonprofit project. It cleaned 386 responses for a published report. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_bd21be8587",
+    "type": "review",
+    "project_id": "proj_bd21be8587",
+    "title": "Review: Clinic operations dashboard for a marketing agency client",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2021-01-08",
+    "rating": 4.8,
+    "text": "Great work on our marketing agency project. It cut patient wait time 38%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_a0b35015cc",
+    "type": "review",
+    "project_id": "proj_a0b35015cc",
+    "title": "Review: Clinic operations dashboard for a fintech client",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2023-01-27",
+    "rating": 5.0,
+    "text": "Great work on our fintech project. It cut patient wait time 49%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_1556717424",
+    "type": "review",
+    "project_id": "proj_1556717424",
+    "title": "Review: Survey data cleaning for a e-commerce client",
+    "skills": [],
+    "industry": "e-commerce",
+    "date": "2021-06-27",
+    "rating": 4.8,
+    "text": "Great work on our e-commerce project. It cleaned 111 responses for a published report. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_a34a544fca",
+    "type": "review",
+    "project_id": "proj_a34a544fca",
+    "title": "Review: Multi-tenant SaaS dashboard for a SaaS client",
+    "skills": [],
+    "industry": "SaaS",
+    "date": "2021-04-28",
+    "rating": 5.0,
+    "text": "Great work on our SaaS project. It onboarded 383 paying teams in the first quarter. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_baafd99f80",
+    "type": "review",
+    "project_id": "proj_baafd99f80",
+    "title": "Review: Warehouse demand forecast for a manufacturing client",
+    "skills": [],
+    "industry": "manufacturing",
+    "date": "2023-02-06",
+    "rating": 4.5,
+    "text": "Great work on our manufacturing project. It reduced stock-outs by 51%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_443aabd331",
+    "type": "review",
+    "project_id": "proj_443aabd331",
+    "title": "Review: Pricing page A/B test analysis for a marketing agency client",
+    "skills": [],
+    "industry": "marketing agency",
+    "date": "2021-12-15",
+    "rating": 5.0,
+    "text": "Great work on our marketing agency project. It identified a variant that lifted revenue 21%. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_62d8c02c9e",
+    "type": "review",
+    "project_id": "proj_62d8c02c9e",
+    "title": "Review: Finance ETL pipeline for a fintech client",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2021-06-14",
+    "rating": 5.0,
+    "text": "Great work on our fintech project. It automated 314 manual monthly steps. Would hire again.",
+    "synthetic": true
+  },
+  {
+    "evidence_id": "review_proj_19fcdf8f80",
+    "type": "review",
+    "project_id": "proj_19fcdf8f80",
+    "title": "Review: Subscription billing integration for a fintech client",
+    "skills": [],
+    "industry": "fintech",
+    "date": "2022-07-05",
+    "rating": 5.0,
+    "text": "Great work on our fintech project. It cut failed payments by 25%. Would hire again.",
+    "synthetic": true
+  }
+]

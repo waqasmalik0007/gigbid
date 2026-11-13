@@ -1,0 +1,6252 @@
+[
+  {
+    "client_id": "cli_b6589fc6ab",
+    "name": "Client 000 (synthetic)",
+    "industry": "healthcare",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 18,
+      "total_spend": 43110.38,
+      "avg_rating_given": 4.41,
+      "member_since_days": 642
+    },
+    "hidden": {
+      "must_have": [
+        "Hugging Face",
+        "LangGraph"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.79
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_356a192b79",
+    "name": "Client 001 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 12,
+      "total_spend": 7825.26,
+      "avg_rating_given": 3.92,
+      "member_since_days": 1777
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.77
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_da4b9237ba",
+    "name": "Client 002 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 9,
+      "total_spend": 11485.48,
+      "avg_rating_given": 3.81,
+      "member_since_days": 2129
+    },
+    "hidden": {
+      "must_have": [
+        "LLM evaluation",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_77de68daec",
+    "name": "Client 003 (synthetic)",
+    "industry": "fintech",
+    "country": "Germany",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 1,
+      "total_spend": 2316.17,
+      "avg_rating_given": 3.35,
+      "member_since_days": 1739
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1b64538924",
+    "name": "Client 004 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 14,
+      "total_spend": 37895.18,
+      "avg_rating_given": 3.7,
+      "member_since_days": 1111
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 1.17,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.34
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ac3478d69a",
+    "name": "Client 005 (synthetic)",
+    "industry": "legal",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 17,
+      "hires": 9,
+      "total_spend": 17466.93,
+      "avg_rating_given": 4.02,
+      "member_since_days": 186
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "Qdrant"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.42
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c1dfd96eea",
+    "name": "Client 006 (synthetic)",
+    "industry": "logistics",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 34,
+      "hires": 20,
+      "total_spend": 32004.96,
+      "avg_rating_given": 4.33,
+      "member_since_days": 738
+    },
+    "hidden": {
+      "must_have": [
+        "GraphQL",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.17,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.31
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_902ba3cda1",
+    "name": "Client 007 (synthetic)",
+    "industry": "legal",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 6,
+      "total_spend": 16902.0,
+      "avg_rating_given": 4.19,
+      "member_since_days": 445
+    },
+    "hidden": {
+      "must_have": [
+        "forecasting",
+        "data cleaning"
+      ],
+      "budget_ceiling_factor": 1.07,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.5
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fe5dbbcea5",
+    "name": "Client 008 (synthetic)",
+    "industry": "logistics",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 40,
+      "hires": 20,
+      "total_spend": 11824.25,
+      "avg_rating_given": 4.97,
+      "member_since_days": 1433
+    },
+    "hidden": {
+      "must_have": [
+        "PyTorch",
+        "LangGraph"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.58
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0ade7c2cf9",
+    "name": "Client 009 (synthetic)",
+    "industry": "SaaS",
+    "country": "India",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 4,
+      "total_spend": 7506.32,
+      "avg_rating_given": 3.35,
+      "member_since_days": 2847
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "PyTorch"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b1d5781111",
+    "name": "Client 010 (synthetic)",
+    "industry": "real estate",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 35,
+      "hires": 34,
+      "total_spend": 98731.48,
+      "avg_rating_given": 4.95,
+      "member_since_days": 1277
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.48
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_17ba079149",
+    "name": "Client 011 (synthetic)",
+    "industry": "fintech",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 6,
+      "total_spend": 14926.34,
+      "avg_rating_given": 3.56,
+      "member_since_days": 599
+    },
+    "hidden": {
+      "must_have": [
+        "A/B testing",
+        "dashboards"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_7b52009b64",
+    "name": "Client 012 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 70,
+      "hires": 51,
+      "total_spend": 65822.95,
+      "avg_rating_given": 4.92,
+      "member_since_days": 1345
+    },
+    "hidden": {
+      "must_have": [
+        "data cleaning",
+        "Airflow"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_bd307a3ec3",
+    "name": "Client 013 (synthetic)",
+    "industry": "SaaS",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 51,
+      "hires": 35,
+      "total_spend": 20652.15,
+      "avg_rating_given": 4.81,
+      "member_since_days": 2155
+    },
+    "hidden": {
+      "must_have": [
+        "Google Analytics",
+        "dashboards"
+      ],
+      "budget_ceiling_factor": 1.18,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.68
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fa35e19212",
+    "name": "Client 014 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 30,
+      "total_spend": 8617.48,
+      "avg_rating_given": 4.43,
+      "member_since_days": 555
+    },
+    "hidden": {
+      "must_have": [
+        "statistics",
+        "dbt"
+      ],
+      "budget_ceiling_factor": 1.0,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.31
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f1abd67035",
+    "name": "Client 015 (synthetic)",
+    "industry": "edtech",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 35,
+      "hires": 21,
+      "total_spend": 51104.62,
+      "avg_rating_given": 4.43,
+      "member_since_days": 2070
+    },
+    "hidden": {
+      "must_have": [
+        "R",
+        "pandas"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.46
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1574bddb75",
+    "name": "Client 016 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 12,
+      "total_spend": 27258.24,
+      "avg_rating_given": 4.72,
+      "member_since_days": 1895
+    },
+    "hidden": {
+      "must_have": [
+        "AWS SageMaker",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.33
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0716d9708d",
+    "name": "Client 017 (synthetic)",
+    "industry": "travel",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 2,
+      "total_spend": 1822.07,
+      "avg_rating_given": 4.36,
+      "member_since_days": 2848
+    },
+    "hidden": {
+      "must_have": [
+        "BigQuery",
+        "dashboards"
+      ],
+      "budget_ceiling_factor": 0.9,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.93
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9e6a55b6b4",
+    "name": "Client 018 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 45,
+      "hires": 29,
+      "total_spend": 28986.14,
+      "avg_rating_given": 4.45,
+      "member_since_days": 1918
+    },
+    "hidden": {
+      "must_have": [
+        "Redis",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 1.25,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.36
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b3f0c7f6bb",
+    "name": "Client 019 (synthetic)",
+    "industry": "healthcare",
+    "country": "India",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.23,
+      "member_since_days": 1594
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "Shopify"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_91032ad7bb",
+    "name": "Client 020 (synthetic)",
+    "industry": "manufacturing",
+    "country": "India",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 6,
+      "total_spend": 16099.28,
+      "avg_rating_given": 3.44,
+      "member_since_days": 2890
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.4
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_472b07b9fc",
+    "name": "Client 021 (synthetic)",
+    "industry": "edtech",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 17,
+      "total_spend": 23210.22,
+      "avg_rating_given": 4.43,
+      "member_since_days": 1550
+    },
+    "hidden": {
+      "must_have": [
+        "AWS",
+        "Node.js"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.85
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_12c6fc06c9",
+    "name": "Client 022 (synthetic)",
+    "industry": "nonprofit",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 11,
+      "total_spend": 9998.94,
+      "avg_rating_given": 4.89,
+      "member_since_days": 276
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "LLM evaluation"
+      ],
+      "budget_ceiling_factor": 1.25,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.58
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d435a6cdd7",
+    "name": "Client 023 (synthetic)",
+    "industry": "healthcare",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 14,
+      "total_spend": 27690.57,
+      "avg_rating_given": 4.74,
+      "member_since_days": 619
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "GraphQL"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4d134bc072",
+    "name": "Client 024 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 62,
+      "hires": 45,
+      "total_spend": 78202.75,
+      "avg_rating_given": 4.79,
+      "member_since_days": 2957
+    },
+    "hidden": {
+      "must_have": [
+        "TypeScript",
+        "Next.js"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.39
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f6e1126ced",
+    "name": "Client 025 (synthetic)",
+    "industry": "legal",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 33,
+      "hires": 28,
+      "total_spend": 42619.23,
+      "avg_rating_given": 4.07,
+      "member_since_days": 1417
+    },
+    "hidden": {
+      "must_have": [
+        "Stripe",
+        "Shopify"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.56
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_887309d048",
+    "name": "Client 026 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 10,
+      "total_spend": 6685.31,
+      "avg_rating_given": 3.74,
+      "member_since_days": 672
+    },
+    "hidden": {
+      "must_have": [
+        "scikit-learn",
+        "Pinecone"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.59
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_bc33ea4e26",
+    "name": "Client 027 (synthetic)",
+    "industry": "SaaS",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 44,
+      "hires": 27,
+      "total_spend": 19945.98,
+      "avg_rating_given": 4.99,
+      "member_since_days": 381
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "AWS"
+      ],
+      "budget_ceiling_factor": 1.07,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.83
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0a57cb53ba",
+    "name": "Client 028 (synthetic)",
+    "industry": "SaaS",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 54,
+      "hires": 41,
+      "total_spend": 93822.49,
+      "avg_rating_given": 4.8,
+      "member_since_days": 870
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.93
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_7719a1c782",
+    "name": "Client 029 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 24,
+      "hires": 22,
+      "total_spend": 21094.89,
+      "avg_rating_given": 4.44,
+      "member_since_days": 1027
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "LLM evaluation"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.83
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_22d200f867",
+    "name": "Client 030 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Singapore",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 3,
+      "total_spend": 4714.52,
+      "avg_rating_given": 3.43,
+      "member_since_days": 309
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "computer vision"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.37
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_632667547e",
+    "name": "Client 031 (synthetic)",
+    "industry": "healthcare",
+    "country": "Sweden",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 26,
+      "hires": 6,
+      "total_spend": 15421.34,
+      "avg_rating_given": 3.47,
+      "member_since_days": 1883
+    },
+    "hidden": {
+      "must_have": [
+        "scikit-learn",
+        "NLP"
+      ],
+      "budget_ceiling_factor": 1.16,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.67
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_cb4e5208b4",
+    "name": "Client 032 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 12,
+      "total_spend": 20149.31,
+      "avg_rating_given": 4.36,
+      "member_since_days": 1801
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "LLM evaluation"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.55
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b6692ea5df",
+    "name": "Client 033 (synthetic)",
+    "industry": "fintech",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.62,
+      "member_since_days": 1151
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "Qdrant"
+      ],
+      "budget_ceiling_factor": 1.04,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f1f836cb4e",
+    "name": "Client 034 (synthetic)",
+    "industry": "fintech",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 1,
+      "total_spend": 2677.58,
+      "avg_rating_given": 4.37,
+      "member_since_days": 2660
+    },
+    "hidden": {
+      "must_have": [
+        "forecasting",
+        "pandas"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_972a67c481",
+    "name": "Client 035 (synthetic)",
+    "industry": "SaaS",
+    "country": "UAE",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 43,
+      "hires": 31,
+      "total_spend": 23393.31,
+      "avg_rating_given": 4.45,
+      "member_since_days": 1206
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.83
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fc074d5013",
+    "name": "Client 036 (synthetic)",
+    "industry": "edtech",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 26,
+      "hires": 7,
+      "total_spend": 11116.99,
+      "avg_rating_given": 4.04,
+      "member_since_days": 777
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "AWS SageMaker"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.4
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_cb7a1d775e",
+    "name": "Client 037 (synthetic)",
+    "industry": "travel",
+    "country": "Germany",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.3,
+      "member_since_days": 256
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "Playwright"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.37
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5b384ce32d",
+    "name": "Client 038 (synthetic)",
+    "industry": "logistics",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 39,
+      "hires": 19,
+      "total_spend": 53588.9,
+      "avg_rating_given": 4.88,
+      "member_since_days": 1925
+    },
+    "hidden": {
+      "must_have": [
+        "PyTorch",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.12,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ca3512f4df",
+    "name": "Client 039 (synthetic)",
+    "industry": "edtech",
+    "country": "United Kingdom",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 11,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.4,
+      "member_since_days": 516
+    },
+    "hidden": {
+      "must_have": [
+        "NLP",
+        "Pinecone"
+      ],
+      "budget_ceiling_factor": 1.0,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.82
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_af3e133428",
+    "name": "Client 040 (synthetic)",
+    "industry": "logistics",
+    "country": "UAE",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 1,
+      "total_spend": 2774.62,
+      "avg_rating_given": 3.29,
+      "member_since_days": 800
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 1.14,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.46
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_761f22b2c1",
+    "name": "Client 041 (synthetic)",
+    "industry": "SaaS",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 1,
+      "total_spend": 375.22,
+      "avg_rating_given": 4.58,
+      "member_since_days": 263
+    },
+    "hidden": {
+      "must_have": [
+        "Snowflake",
+        "Tableau"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.48
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_92cfceb39d",
+    "name": "Client 042 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Sweden",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 2,
+      "total_spend": 5575.68,
+      "avg_rating_given": 3.28,
+      "member_since_days": 1228
+    },
+    "hidden": {
+      "must_have": [
+        "SQL",
+        "pandas"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0286dd552c",
+    "name": "Client 043 (synthetic)",
+    "industry": "SaaS",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 49,
+      "hires": 45,
+      "total_spend": 125940.53,
+      "avg_rating_given": 4.62,
+      "member_since_days": 759
+    },
+    "hidden": {
+      "must_have": [
+        "React",
+        "Stripe"
+      ],
+      "budget_ceiling_factor": 1.18,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.51
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_98fbc42fae",
+    "name": "Client 044 (synthetic)",
+    "industry": "travel",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 39,
+      "hires": 23,
+      "total_spend": 17306.88,
+      "avg_rating_given": 4.03,
+      "member_since_days": 665
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.51
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fb64435156",
+    "name": "Client 045 (synthetic)",
+    "industry": "edtech",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 5,
+      "hires": 3,
+      "total_spend": 2350.06,
+      "avg_rating_given": 4.79,
+      "member_since_days": 1734
+    },
+    "hidden": {
+      "must_have": [
+        "Prisma",
+        "WebSockets"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.88
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fe2ef495a1",
+    "name": "Client 046 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 49,
+      "hires": 40,
+      "total_spend": 40903.6,
+      "avg_rating_given": 4.55,
+      "member_since_days": 2331
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.42
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_827bfc4587",
+    "name": "Client 047 (synthetic)",
+    "industry": "travel",
+    "country": "Canada",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 8,
+      "total_spend": 3051.61,
+      "avg_rating_given": 3.48,
+      "member_since_days": 1040
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "computer vision"
+      ],
+      "budget_ceiling_factor": 1.06,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.6
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_64e095fe76",
+    "name": "Client 048 (synthetic)",
+    "industry": "logistics",
+    "country": "Singapore",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 3,
+      "total_spend": 939.04,
+      "avg_rating_given": 3.38,
+      "member_since_days": 1212
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.43
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2e01e17467",
+    "name": "Client 049 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 39,
+      "hires": 20,
+      "total_spend": 18557.1,
+      "avg_rating_given": 3.87,
+      "member_since_days": 2732
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.32
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e1822db470",
+    "name": "Client 050 (synthetic)",
+    "industry": "edtech",
+    "country": "United States",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 1,
+      "total_spend": 2250.24,
+      "avg_rating_given": 3.45,
+      "member_since_days": 843
+    },
+    "hidden": {
+      "must_have": [
+        "React",
+        "AWS"
+      ],
+      "budget_ceiling_factor": 1.01,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.35
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b7eb6c689c",
+    "name": "Client 051 (synthetic)",
+    "industry": "marketing agency",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 40,
+      "hires": 27,
+      "total_spend": 13064.92,
+      "avg_rating_given": 4.63,
+      "member_since_days": 1629
+    },
+    "hidden": {
+      "must_have": [
+        "NLP",
+        "LangGraph"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.75
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a9334987ec",
+    "name": "Client 052 (synthetic)",
+    "industry": "edtech",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 42,
+      "hires": 41,
+      "total_spend": 44059.14,
+      "avg_rating_given": 4.98,
+      "member_since_days": 2330
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.54
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c5b76da3e6",
+    "name": "Client 053 (synthetic)",
+    "industry": "logistics",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 9,
+      "total_spend": 24521.09,
+      "avg_rating_given": 3.9,
+      "member_since_days": 1745
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 1.01,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.41
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_80e28a51cb",
+    "name": "Client 054 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Netherlands",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 2,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.29,
+      "member_since_days": 1528
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "RAG"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.9
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_8effee409c",
+    "name": "Client 055 (synthetic)",
+    "industry": "logistics",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 18,
+      "total_spend": 45799.53,
+      "avg_rating_given": 3.89,
+      "member_since_days": 188
+    },
+    "hidden": {
+      "must_have": [
+        "AWS SageMaker",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.89
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_54ceb91256",
+    "name": "Client 056 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 46,
+      "hires": 39,
+      "total_spend": 75619.0,
+      "avg_rating_given": 4.44,
+      "member_since_days": 2527
+    },
+    "hidden": {
+      "must_have": [
+        "Tableau",
+        "data cleaning"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.64
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9109c85a45",
+    "name": "Client 057 (synthetic)",
+    "industry": "logistics",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 3,
+      "total_spend": 945.23,
+      "avg_rating_given": 3.85,
+      "member_since_days": 2313
+    },
+    "hidden": {
+      "must_have": [
+        "Next.js",
+        "AWS"
+      ],
+      "budget_ceiling_factor": 0.9,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.71
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_667be543b0",
+    "name": "Client 058 (synthetic)",
+    "industry": "travel",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 12,
+      "total_spend": 15477.53,
+      "avg_rating_given": 4.37,
+      "member_since_days": 1515
+    },
+    "hidden": {
+      "must_have": [
+        "WebSockets",
+        "Vercel"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.62
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5a5b0f9b7d",
+    "name": "Client 059 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 17,
+      "total_spend": 22456.3,
+      "avg_rating_given": 4.0,
+      "member_since_days": 284
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.63
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e6c3dd6304",
+    "name": "Client 060 (synthetic)",
+    "industry": "healthcare",
+    "country": "Sweden",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 10,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.27,
+      "member_since_days": 2105
+    },
+    "hidden": {
+      "must_have": [
+        "scikit-learn",
+        "PyTorch"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_6c1e671f9a",
+    "name": "Client 061 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 36,
+      "hires": 33,
+      "total_spend": 24498.55,
+      "avg_rating_given": 4.74,
+      "member_since_days": 2024
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "RAG"
+      ],
+      "budget_ceiling_factor": 1.12,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_511a418e72",
+    "name": "Client 062 (synthetic)",
+    "industry": "real estate",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 7,
+      "total_spend": 19139.22,
+      "avg_rating_given": 4.56,
+      "member_since_days": 1879
+    },
+    "hidden": {
+      "must_have": [
+        "Airflow",
+        "Snowflake"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a17554a0d2",
+    "name": "Client 063 (synthetic)",
+    "industry": "fintech",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 10,
+      "hires": 5,
+      "total_spend": 6648.52,
+      "avg_rating_given": 3.63,
+      "member_since_days": 2617
+    },
+    "hidden": {
+      "must_have": [
+        "Snowflake",
+        "Excel"
+      ],
+      "budget_ceiling_factor": 1.21,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.37
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c66c65175f",
+    "name": "Client 064 (synthetic)",
+    "industry": "real estate",
+    "country": "Singapore",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 2,
+      "total_spend": 3320.13,
+      "avg_rating_given": 3.29,
+      "member_since_days": 2831
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "Snowflake"
+      ],
+      "budget_ceiling_factor": 1.25,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.82
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2a45938070",
+    "name": "Client 065 (synthetic)",
+    "industry": "travel",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 8,
+      "total_spend": 9010.57,
+      "avg_rating_given": 3.88,
+      "member_since_days": 343
+    },
+    "hidden": {
+      "must_have": [
+        "WebSockets",
+        "Tailwind CSS"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.83
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_59129aacfb",
+    "name": "Client 066 (synthetic)",
+    "industry": "travel",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 17,
+      "total_spend": 38292.65,
+      "avg_rating_given": 3.76,
+      "member_since_days": 148
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "Django"
+      ],
+      "budget_ceiling_factor": 0.97,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.54
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4d89d294cd",
+    "name": "Client 067 (synthetic)",
+    "industry": "travel",
+    "country": "France",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 2,
+      "hires": 1,
+      "total_spend": 262.41,
+      "avg_rating_given": 3.44,
+      "member_since_days": 20
+    },
+    "hidden": {
+      "must_have": [
+        "fine-tuning",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 0.97,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b4c96d8085",
+    "name": "Client 068 (synthetic)",
+    "industry": "real estate",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 7,
+      "total_spend": 4509.02,
+      "avg_rating_given": 4.26,
+      "member_since_days": 67
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "Django"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.73
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a72b20062e",
+    "name": "Client 069 (synthetic)",
+    "industry": "fintech",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 26,
+      "hires": 6,
+      "total_spend": 14990.8,
+      "avg_rating_given": 3.92,
+      "member_since_days": 1444
+    },
+    "hidden": {
+      "must_have": [
+        "Shopify",
+        "OAuth"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.46
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b7103ca278",
+    "name": "Client 070 (synthetic)",
+    "industry": "fintech",
+    "country": "Netherlands",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 6,
+      "hires": 1,
+      "total_spend": 865.47,
+      "avg_rating_given": 3.28,
+      "member_since_days": 249
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "Python"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d02560dd9d",
+    "name": "Client 071 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 19,
+      "total_spend": 47071.86,
+      "avg_rating_given": 4.29,
+      "member_since_days": 725
+    },
+    "hidden": {
+      "must_have": [
+        "Google Analytics",
+        "BigQuery"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.77
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c097638f92",
+    "name": "Client 072 (synthetic)",
+    "industry": "SaaS",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.49,
+      "member_since_days": 2695
+    },
+    "hidden": {
+      "must_have": [
+        "WebSockets",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 0.94,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.33
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_35e995c107",
+    "name": "Client 073 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 53,
+      "hires": 52,
+      "total_spend": 49127.81,
+      "avg_rating_given": 4.8,
+      "member_since_days": 2278
+    },
+    "hidden": {
+      "must_have": [
+        "Redis",
+        "Vercel"
+      ],
+      "budget_ceiling_factor": 1.24,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.88
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1f1362ea41",
+    "name": "Client 074 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 7,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.78,
+      "member_since_days": 840
+    },
+    "hidden": {
+      "must_have": [
+        "RAG",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.55
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_450ddec8dd",
+    "name": "Client 075 (synthetic)",
+    "industry": "legal",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 53,
+      "hires": 38,
+      "total_spend": 96945.28,
+      "avg_rating_given": 4.86,
+      "member_since_days": 2867
+    },
+    "hidden": {
+      "must_have": [
+        "SQL",
+        "PostgreSQL"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.5
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d54ad009d1",
+    "name": "Client 076 (synthetic)",
+    "industry": "healthcare",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 14,
+      "total_spend": 8468.12,
+      "avg_rating_given": 3.9,
+      "member_since_days": 120
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "LLM evaluation"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d321d6f7cc",
+    "name": "Client 077 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 2,
+      "hires": 1,
+      "total_spend": 2151.62,
+      "avg_rating_given": 3.27,
+      "member_since_days": 201
+    },
+    "hidden": {
+      "must_have": [
+        "scikit-learn",
+        "fine-tuning"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.65
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_eb4ac3033e",
+    "name": "Client 078 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Netherlands",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 6,
+      "hires": 3,
+      "total_spend": 2671.25,
+      "avg_rating_given": 3.32,
+      "member_since_days": 842
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "Python"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.71
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b74f5ee946",
+    "name": "Client 079 (synthetic)",
+    "industry": "healthcare",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 18,
+      "total_spend": 43515.15,
+      "avg_rating_given": 4.34,
+      "member_since_days": 2657
+    },
+    "hidden": {
+      "must_have": [
+        "Tableau",
+        "BigQuery"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b888b29826",
+    "name": "Client 080 (synthetic)",
+    "industry": "real estate",
+    "country": "UAE",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 2,
+      "total_spend": 3220.93,
+      "avg_rating_given": 3.29,
+      "member_since_days": 1188
+    },
+    "hidden": {
+      "must_have": [
+        "Shopify",
+        "React"
+      ],
+      "budget_ceiling_factor": 1.17,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.36
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1d513c0bcb",
+    "name": "Client 081 (synthetic)",
+    "industry": "travel",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 23,
+      "total_spend": 41600.43,
+      "avg_rating_given": 4.47,
+      "member_since_days": 1186
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 0.85,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.94
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_76546f9a64",
+    "name": "Client 082 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 7,
+      "hires": 2,
+      "total_spend": 5816.07,
+      "avg_rating_given": 3.83,
+      "member_since_days": 2437
+    },
+    "hidden": {
+      "must_have": [
+        "Hugging Face",
+        "computer vision"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.44
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_7d7116e23e",
+    "name": "Client 083 (synthetic)",
+    "industry": "healthcare",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 4,
+      "hires": 2,
+      "total_spend": 3145.63,
+      "avg_rating_given": 3.62,
+      "member_since_days": 2865
+    },
+    "hidden": {
+      "must_have": [
+        "R",
+        "dbt"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.56
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_be461a0cd1",
+    "name": "Client 084 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 4,
+      "total_spend": 3108.51,
+      "avg_rating_given": 3.36,
+      "member_since_days": 1088
+    },
+    "hidden": {
+      "must_have": [
+        "forecasting",
+        "R"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1352246e33",
+    "name": "Client 085 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Pakistan",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 24,
+      "hires": 4,
+      "total_spend": 1179.5,
+      "avg_rating_given": 3.43,
+      "member_since_days": 2392
+    },
+    "hidden": {
+      "must_have": [
+        "AWS",
+        "Vercel"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.78
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3c26dffc8a",
+    "name": "Client 086 (synthetic)",
+    "industry": "edtech",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 20,
+      "total_spend": 11059.19,
+      "avg_rating_given": 4.03,
+      "member_since_days": 1902
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "computer vision"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.85
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e62d7f1eb4",
+    "name": "Client 087 (synthetic)",
+    "industry": "nonprofit",
+    "country": "UAE",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 29,
+      "hires": 10,
+      "total_spend": 16621.01,
+      "avg_rating_given": 4.5,
+      "member_since_days": 669
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.95
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b37f6ddcef",
+    "name": "Client 088 (synthetic)",
+    "industry": "logistics",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 5,
+      "total_spend": 14773.66,
+      "avg_rating_given": 4.93,
+      "member_since_days": 1247
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Celery"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.48
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_16b06bd9b7",
+    "name": "Client 089 (synthetic)",
+    "industry": "SaaS",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 7,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.04,
+      "member_since_days": 2600
+    },
+    "hidden": {
+      "must_have": [
+        "Stripe",
+        "WebSockets"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.3
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2d0c8af807",
+    "name": "Client 090 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 42,
+      "hires": 24,
+      "total_spend": 55139.52,
+      "avg_rating_given": 4.83,
+      "member_since_days": 1735
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "fine-tuning"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.6
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4cd66dfabb",
+    "name": "Client 091 (synthetic)",
+    "industry": "healthcare",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 11,
+      "total_spend": 26297.24,
+      "avg_rating_given": 3.67,
+      "member_since_days": 2931
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "GraphQL"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.86
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_8ee51caaa2",
+    "name": "Client 092 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 49,
+      "hires": 39,
+      "total_spend": 92777.19,
+      "avg_rating_given": 4.42,
+      "member_since_days": 1602
+    },
+    "hidden": {
+      "must_have": [
+        "data cleaning",
+        "dbt"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_08a35293e0",
+    "name": "Client 093 (synthetic)",
+    "industry": "travel",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 3,
+      "total_spend": 2321.85,
+      "avg_rating_given": 4.13,
+      "member_since_days": 1958
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "Python"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_215bb47da8",
+    "name": "Client 094 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 9,
+      "total_spend": 21020.08,
+      "avg_rating_given": 3.58,
+      "member_since_days": 511
+    },
+    "hidden": {
+      "must_have": [
+        "Shopify",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.34
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_8e63fd3e77",
+    "name": "Client 095 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 10,
+      "total_spend": 18244.91,
+      "avg_rating_given": 3.95,
+      "member_since_days": 457
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.44
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_6fb84aed32",
+    "name": "Client 096 (synthetic)",
+    "industry": "e-commerce",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 24,
+      "hires": 4,
+      "total_spend": 2963.53,
+      "avg_rating_given": 4.03,
+      "member_since_days": 2640
+    },
+    "hidden": {
+      "must_have": [
+        "REST API",
+        "Tailwind CSS"
+      ],
+      "budget_ceiling_factor": 1.18,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_812ed4562d",
+    "name": "Client 097 (synthetic)",
+    "industry": "legal",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 8,
+      "total_spend": 19068.57,
+      "avg_rating_given": 4.04,
+      "member_since_days": 1932
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.58
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_31bd9b9f5f",
+    "name": "Client 098 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 35,
+      "hires": 24,
+      "total_spend": 21261.8,
+      "avg_rating_given": 4.07,
+      "member_since_days": 1246
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "AWS SageMaker"
+      ],
+      "budget_ceiling_factor": 1.04,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.88
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9a79be611e",
+    "name": "Client 099 (synthetic)",
+    "industry": "SaaS",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 52,
+      "hires": 50,
+      "total_spend": 125905.98,
+      "avg_rating_given": 4.87,
+      "member_since_days": 1339
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "computer vision"
+      ],
+      "budget_ceiling_factor": 1.18,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.31
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_310b86e0b6",
+    "name": "Client 100 (synthetic)",
+    "industry": "travel",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 28,
+      "hires": 10,
+      "total_spend": 5996.51,
+      "avg_rating_given": 4.38,
+      "member_since_days": 966
+    },
+    "hidden": {
+      "must_have": [
+        "RAG",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_dbc0f00485",
+    "name": "Client 101 (synthetic)",
+    "industry": "travel",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 43,
+      "hires": 26,
+      "total_spend": 62571.77,
+      "avg_rating_given": 4.3,
+      "member_since_days": 1226
+    },
+    "hidden": {
+      "must_have": [
+        "Pinecone",
+        "AWS SageMaker"
+      ],
+      "budget_ceiling_factor": 1.13,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.59
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c8306ae139",
+    "name": "Client 102 (synthetic)",
+    "industry": "SaaS",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 8,
+      "total_spend": 12200.62,
+      "avg_rating_given": 4.2,
+      "member_since_days": 2292
+    },
+    "hidden": {
+      "must_have": [
+        "PyTorch",
+        "AWS SageMaker"
+      ],
+      "budget_ceiling_factor": 1.04,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.62
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_934385f53d",
+    "name": "Client 103 (synthetic)",
+    "industry": "fintech",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 38,
+      "hires": 28,
+      "total_spend": 42288.1,
+      "avg_rating_given": 4.28,
+      "member_since_days": 2314
+    },
+    "hidden": {
+      "must_have": [
+        "data cleaning",
+        "BigQuery"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_78a8efcbaa",
+    "name": "Client 104 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 4,
+      "hires": 4,
+      "total_spend": 1030.27,
+      "avg_rating_given": 3.52,
+      "member_since_days": 197
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.32
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e114c448f4",
+    "name": "Client 105 (synthetic)",
+    "industry": "real estate",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 3,
+      "total_spend": 3467.02,
+      "avg_rating_given": 3.95,
+      "member_since_days": 2162
+    },
+    "hidden": {
+      "must_have": [
+        "R",
+        "Tableau"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.33
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_7224f997fc",
+    "name": "Client 106 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 15,
+      "total_spend": 24157.47,
+      "avg_rating_given": 3.73,
+      "member_since_days": 1122
+    },
+    "hidden": {
+      "must_have": [
+        "Vercel",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.24,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_524e05dc77",
+    "name": "Client 107 (synthetic)",
+    "industry": "travel",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 7,
+      "hires": 5,
+      "total_spend": 11979.02,
+      "avg_rating_given": 4.48,
+      "member_since_days": 174
+    },
+    "hidden": {
+      "must_have": [
+        "Playwright",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.2,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.5
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_17503a6b23",
+    "name": "Client 108 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Pakistan",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 3,
+      "hires": 2,
+      "total_spend": 4818.55,
+      "avg_rating_given": 3.28,
+      "member_since_days": 2236
+    },
+    "hidden": {
+      "must_have": [
+        "LLM evaluation",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.69
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a1422e6a16",
+    "name": "Client 109 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.35,
+      "member_since_days": 722
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "Power BI"
+      ],
+      "budget_ceiling_factor": 1.2,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.9
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5e796e4833",
+    "name": "Client 110 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 36,
+      "hires": 19,
+      "total_spend": 41579.06,
+      "avg_rating_given": 3.86,
+      "member_since_days": 1247
+    },
+    "hidden": {
+      "must_have": [
+        "RAG",
+        "Celery"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.68
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_6216f8a75f",
+    "name": "Client 111 (synthetic)",
+    "industry": "fintech",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 29,
+      "hires": 16,
+      "total_spend": 28974.4,
+      "avg_rating_given": 4.1,
+      "member_since_days": 1667
+    },
+    "hidden": {
+      "must_have": [
+        "Redis",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.91
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_601ca99d55",
+    "name": "Client 112 (synthetic)",
+    "industry": "legal",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 14,
+      "hires": 12,
+      "total_spend": 24055.4,
+      "avg_rating_given": 4.06,
+      "member_since_days": 879
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "Python"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.94
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e993215bfd",
+    "name": "Client 113 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 1,
+      "hires": 1,
+      "total_spend": 971.25,
+      "avg_rating_given": 3.59,
+      "member_since_days": 2340
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 1.14,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.8
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ecb7937db5",
+    "name": "Client 114 (synthetic)",
+    "industry": "nonprofit",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 6,
+      "total_spend": 11760.87,
+      "avg_rating_given": 4.45,
+      "member_since_days": 2915
+    },
+    "hidden": {
+      "must_have": [
+        "data cleaning",
+        "ETL"
+      ],
+      "budget_ceiling_factor": 1.12,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.33
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_efa6e44dfa",
+    "name": "Client 115 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.22,
+      "member_since_days": 1284
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "RAG"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.51
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_683e725c03",
+    "name": "Client 116 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 21,
+      "total_spend": 61021.69,
+      "avg_rating_given": 4.51,
+      "member_since_days": 488
+    },
+    "hidden": {
+      "must_have": [
+        "statistics",
+        "Power BI"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d0e2dbb0ba",
+    "name": "Client 117 (synthetic)",
+    "industry": "real estate",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 36,
+      "hires": 28,
+      "total_spend": 10354.0,
+      "avg_rating_given": 4.61,
+      "member_since_days": 2676
+    },
+    "hidden": {
+      "must_have": [
+        "Shopify",
+        "AWS"
+      ],
+      "budget_ceiling_factor": 1.2,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.4
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_12f0de3dc7",
+    "name": "Client 118 (synthetic)",
+    "industry": "logistics",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 44,
+      "hires": 32,
+      "total_spend": 67760.05,
+      "avg_rating_given": 4.25,
+      "member_since_days": 2474
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "WebSockets"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a2e33d344f",
+    "name": "Client 119 (synthetic)",
+    "industry": "fintech",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 48,
+      "hires": 44,
+      "total_spend": 108807.9,
+      "avg_rating_given": 4.86,
+      "member_since_days": 2352
+    },
+    "hidden": {
+      "must_have": [
+        "Airflow",
+        "Snowflake"
+      ],
+      "budget_ceiling_factor": 1.24,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_775bc5c30e",
+    "name": "Client 120 (synthetic)",
+    "industry": "legal",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 1,
+      "total_spend": 2432.69,
+      "avg_rating_given": 3.82,
+      "member_since_days": 830
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "Stripe"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.43
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_8bd7954c40",
+    "name": "Client 121 (synthetic)",
+    "industry": "SaaS",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 17,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.26,
+      "member_since_days": 1464
+    },
+    "hidden": {
+      "must_have": [
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "budget_ceiling_factor": 1.01,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_05a8ea5382",
+    "name": "Client 122 (synthetic)",
+    "industry": "logistics",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 17,
+      "total_spend": 12554.15,
+      "avg_rating_given": 4.06,
+      "member_since_days": 750
+    },
+    "hidden": {
+      "must_have": [
+        "Stripe",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.08,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.86
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_40bd001563",
+    "name": "Client 123 (synthetic)",
+    "industry": "real estate",
+    "country": "United Kingdom",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 1,
+      "total_spend": 1971.68,
+      "avg_rating_given": 3.28,
+      "member_since_days": 344
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.31
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f38cfe2e2f",
+    "name": "Client 124 (synthetic)",
+    "industry": "travel",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 29,
+      "hires": 11,
+      "total_spend": 19669.27,
+      "avg_rating_given": 3.57,
+      "member_since_days": 1081
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "Celery"
+      ],
+      "budget_ceiling_factor": 0.89,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.7
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0ca9277f91",
+    "name": "Client 125 (synthetic)",
+    "industry": "real estate",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 5,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.66,
+      "member_since_days": 122
+    },
+    "hidden": {
+      "must_have": [
+        "PyTorch",
+        "LLM evaluation"
+      ],
+      "budget_ceiling_factor": 1.07,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_114d4eefde",
+    "name": "Client 126 (synthetic)",
+    "industry": "SaaS",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 36,
+      "hires": 34,
+      "total_spend": 31284.84,
+      "avg_rating_given": 4.75,
+      "member_since_days": 2322
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.59
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_008451a05e",
+    "name": "Client 127 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 10,
+      "hires": 5,
+      "total_spend": 1540.84,
+      "avg_rating_given": 3.87,
+      "member_since_days": 1058
+    },
+    "hidden": {
+      "must_have": [
+        "Hugging Face",
+        "PyTorch"
+      ],
+      "budget_ceiling_factor": 1.21,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.33
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b4182bff4b",
+    "name": "Client 128 (synthetic)",
+    "industry": "marketing agency",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 29,
+      "total_spend": 17557.56,
+      "avg_rating_given": 4.48,
+      "member_since_days": 33
+    },
+    "hidden": {
+      "must_have": [
+        "Tableau",
+        "BigQuery"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.61
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_8b7471f4ae",
+    "name": "Client 129 (synthetic)",
+    "industry": "real estate",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 1,
+      "total_spend": 672.02,
+      "avg_rating_given": 3.66,
+      "member_since_days": 986
+    },
+    "hidden": {
+      "must_have": [
+        "Django",
+        "React"
+      ],
+      "budget_ceiling_factor": 1.04,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.4
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2a7541babb",
+    "name": "Client 130 (synthetic)",
+    "industry": "real estate",
+    "country": "Sweden",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 7,
+      "hires": 3,
+      "total_spend": 7137.85,
+      "avg_rating_given": 3.34,
+      "member_since_days": 407
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "Python"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.83
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e794a80eb1",
+    "name": "Client 131 (synthetic)",
+    "industry": "e-commerce",
+    "country": "UAE",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 2,
+      "total_spend": 4521.95,
+      "avg_rating_given": 3.41,
+      "member_since_days": 748
+    },
+    "hidden": {
+      "must_have": [
+        "WebSockets",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.21,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_91dfde1d6e",
+    "name": "Client 132 (synthetic)",
+    "industry": "travel",
+    "country": "Australia",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 2,
+      "total_spend": 4903.21,
+      "avg_rating_given": 3.48,
+      "member_since_days": 1077
+    },
+    "hidden": {
+      "must_have": [
+        "AWS SageMaker",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.94
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d30f79cf7f",
+    "name": "Client 133 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 48,
+      "hires": 31,
+      "total_spend": 47643.12,
+      "avg_rating_given": 4.34,
+      "member_since_days": 1182
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_95e815d154",
+    "name": "Client 134 (synthetic)",
+    "industry": "SaaS",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 5,
+      "total_spend": 13546.79,
+      "avg_rating_given": 4.87,
+      "member_since_days": 245
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "LangGraph"
+      ],
+      "budget_ceiling_factor": 1.24,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_40f7c01f41",
+    "name": "Client 135 (synthetic)",
+    "industry": "legal",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 22,
+      "total_spend": 26582.11,
+      "avg_rating_given": 4.0,
+      "member_since_days": 176
+    },
+    "hidden": {
+      "must_have": [
+        "Celery",
+        "Pinecone"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.64
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9e071a3a59",
+    "name": "Client 136 (synthetic)",
+    "industry": "travel",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 10,
+      "hires": 8,
+      "total_spend": 21520.89,
+      "avg_rating_given": 4.48,
+      "member_since_days": 2039
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "RAG"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.83
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e1a864f0b7",
+    "name": "Client 137 (synthetic)",
+    "industry": "healthcare",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.75,
+      "member_since_days": 2965
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "Google Analytics"
+      ],
+      "budget_ceiling_factor": 1.17,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.86
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_56ad4d4dea",
+    "name": "Client 138 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Germany",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 10,
+      "hires": 2,
+      "total_spend": 1790.7,
+      "avg_rating_given": 3.36,
+      "member_since_days": 2316
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Next.js"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.3
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fa755791d0",
+    "name": "Client 139 (synthetic)",
+    "industry": "healthcare",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 41,
+      "hires": 30,
+      "total_spend": 66025.56,
+      "avg_rating_given": 4.88,
+      "member_since_days": 1324
+    },
+    "hidden": {
+      "must_have": [
+        "A/B testing",
+        "dashboards"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c28aca23f1",
+    "name": "Client 140 (synthetic)",
+    "industry": "legal",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 4,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.0,
+      "member_since_days": 372
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c9ca442765",
+    "name": "Client 141 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Canada",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 4,
+      "total_spend": 998.1,
+      "avg_rating_given": 3.37,
+      "member_since_days": 2465
+    },
+    "hidden": {
+      "must_have": [
+        "fine-tuning",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 1.06,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.87
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2a2b47bf21",
+    "name": "Client 142 (synthetic)",
+    "industry": "healthcare",
+    "country": "Singapore",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 3,
+      "total_spend": 5521.58,
+      "avg_rating_given": 3.52,
+      "member_since_days": 1155
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "PostgreSQL"
+      ],
+      "budget_ceiling_factor": 0.9,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f47aea8bdc",
+    "name": "Client 143 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Sweden",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 17,
+      "hires": 5,
+      "total_spend": 3300.52,
+      "avg_rating_given": 3.46,
+      "member_since_days": 85
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "Celery"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.93
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_7320828c91",
+    "name": "Client 144 (synthetic)",
+    "industry": "SaaS",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 26,
+      "hires": 16,
+      "total_spend": 35255.68,
+      "avg_rating_given": 4.6,
+      "member_since_days": 2321
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_50336bc687",
+    "name": "Client 145 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 6,
+      "hires": 6,
+      "total_spend": 7322.46,
+      "avg_rating_given": 3.65,
+      "member_since_days": 2184
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "TypeScript"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3fcfb99ec0",
+    "name": "Client 146 (synthetic)",
+    "industry": "marketing agency",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 48,
+      "hires": 47,
+      "total_spend": 115899.75,
+      "avg_rating_given": 4.95,
+      "member_since_days": 174
+    },
+    "hidden": {
+      "must_have": [
+        "Next.js",
+        "GraphQL"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.82
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b3c0730cf3",
+    "name": "Client 147 (synthetic)",
+    "industry": "healthcare",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 9,
+      "total_spend": 12729.02,
+      "avg_rating_given": 4.32,
+      "member_since_days": 171
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 0.97,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.69
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_536fb69340",
+    "name": "Client 148 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 4,
+      "total_spend": 11237.57,
+      "avg_rating_given": 4.82,
+      "member_since_days": 1812
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "Google Analytics"
+      ],
+      "budget_ceiling_factor": 0.9,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.49
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_39dfc9ffd3",
+    "name": "Client 149 (synthetic)",
+    "industry": "legal",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 48,
+      "hires": 34,
+      "total_spend": 64867.49,
+      "avg_rating_given": 4.52,
+      "member_since_days": 2345
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.66
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_13682ac418",
+    "name": "Client 150 (synthetic)",
+    "industry": "edtech",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 31,
+      "hires": 24,
+      "total_spend": 27222.38,
+      "avg_rating_given": 4.06,
+      "member_since_days": 783
+    },
+    "hidden": {
+      "must_have": [
+        "Google Analytics",
+        "R"
+      ],
+      "budget_ceiling_factor": 1.0,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.53
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b16a457a33",
+    "name": "Client 151 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 6,
+      "total_spend": 15956.66,
+      "avg_rating_given": 3.78,
+      "member_since_days": 895
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "PyTorch"
+      ],
+      "budget_ceiling_factor": 1.16,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.87
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ac2646028f",
+    "name": "Client 152 (synthetic)",
+    "industry": "SaaS",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 21,
+      "total_spend": 47442.28,
+      "avg_rating_given": 4.38,
+      "member_since_days": 457
+    },
+    "hidden": {
+      "must_have": [
+        "Vercel",
+        "Tailwind CSS"
+      ],
+      "budget_ceiling_factor": 1.25,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a6f16ab483",
+    "name": "Client 153 (synthetic)",
+    "industry": "logistics",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 34,
+      "hires": 15,
+      "total_spend": 38699.69,
+      "avg_rating_given": 3.83,
+      "member_since_days": 2130
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "data cleaning"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_06349be70b",
+    "name": "Client 154 (synthetic)",
+    "industry": "SaaS",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 4.77,
+      "member_since_days": 1638
+    },
+    "hidden": {
+      "must_have": [
+        "OAuth",
+        "Django"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.69
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9d8974badd",
+    "name": "Client 155 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 48,
+      "hires": 37,
+      "total_spend": 37746.39,
+      "avg_rating_given": 4.73,
+      "member_since_days": 1610
+    },
+    "hidden": {
+      "must_have": [
+        "Vercel",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.78
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_6052521b76",
+    "name": "Client 156 (synthetic)",
+    "industry": "e-commerce",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 7,
+      "total_spend": 17137.87,
+      "avg_rating_given": 3.89,
+      "member_since_days": 1794
+    },
+    "hidden": {
+      "must_have": [
+        "OAuth",
+        "Playwright"
+      ],
+      "budget_ceiling_factor": 1.08,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.51
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_097ccd4f03",
+    "name": "Client 157 (synthetic)",
+    "industry": "logistics",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 16,
+      "total_spend": 4345.77,
+      "avg_rating_given": 4.71,
+      "member_since_days": 1060
+    },
+    "hidden": {
+      "must_have": [
+        "dashboards",
+        "data cleaning"
+      ],
+      "budget_ceiling_factor": 0.97,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.7
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a3d12597f9",
+    "name": "Client 158 (synthetic)",
+    "industry": "nonprofit",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 30,
+      "hires": 17,
+      "total_spend": 21941.04,
+      "avg_rating_given": 4.13,
+      "member_since_days": 1475
+    },
+    "hidden": {
+      "must_have": [
+        "Next.js",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_6b6277afcb",
+    "name": "Client 159 (synthetic)",
+    "industry": "manufacturing",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 9,
+      "total_spend": 5686.35,
+      "avg_rating_given": 3.87,
+      "member_since_days": 780
+    },
+    "hidden": {
+      "must_have": [
+        "Redis",
+        "Prisma"
+      ],
+      "budget_ceiling_factor": 1.01,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.68
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_be057d4ca4",
+    "name": "Client 160 (synthetic)",
+    "industry": "healthcare",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 38,
+      "hires": 27,
+      "total_spend": 29446.68,
+      "avg_rating_given": 4.15,
+      "member_since_days": 317
+    },
+    "hidden": {
+      "must_have": [
+        "BigQuery",
+        "Google Analytics"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0159a99ed2",
+    "name": "Client 161 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 39,
+      "hires": 23,
+      "total_spend": 23271.26,
+      "avg_rating_given": 4.8,
+      "member_since_days": 2105
+    },
+    "hidden": {
+      "must_have": [
+        "Tableau",
+        "Google Analytics"
+      ],
+      "budget_ceiling_factor": 1.21,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.67
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ae1e7198bc",
+    "name": "Client 162 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 14,
+      "total_spend": 29916.17,
+      "avg_rating_given": 3.84,
+      "member_since_days": 53
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 1.13,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.56
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_fd93751649",
+    "name": "Client 163 (synthetic)",
+    "industry": "fintech",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 29,
+      "hires": 24,
+      "total_spend": 38256.28,
+      "avg_rating_given": 4.26,
+      "member_since_days": 2276
+    },
+    "hidden": {
+      "must_have": [
+        "fine-tuning",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 1.2,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.39
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a929eb33e3",
+    "name": "Client 164 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 2,
+      "total_spend": 4653.18,
+      "avg_rating_given": 3.94,
+      "member_since_days": 446
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "LangChain"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.6
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_74cbd2c215",
+    "name": "Client 165 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 2,
+      "total_spend": 2207.8,
+      "avg_rating_given": 4.65,
+      "member_since_days": 2940
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 0.96,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.86
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_69e56976fc",
+    "name": "Client 166 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Pakistan",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.31,
+      "member_since_days": 911
+    },
+    "hidden": {
+      "must_have": [
+        "A/B testing",
+        "dashboards"
+      ],
+      "budget_ceiling_factor": 1.16,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_708a77db47",
+    "name": "Client 167 (synthetic)",
+    "industry": "travel",
+    "country": "Germany",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 2,
+      "total_spend": 434.51,
+      "avg_rating_given": 3.28,
+      "member_since_days": 1875
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Celery"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f76b2ea6b4",
+    "name": "Client 168 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 36,
+      "hires": 29,
+      "total_spend": 39375.79,
+      "avg_rating_given": 4.42,
+      "member_since_days": 1642
+    },
+    "hidden": {
+      "must_have": [
+        "AWS SageMaker",
+        "Python"
+      ],
+      "budget_ceiling_factor": 1.17,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.53
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2659fc5198",
+    "name": "Client 169 (synthetic)",
+    "industry": "edtech",
+    "country": "Netherlands",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 17,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.21,
+      "member_since_days": 1382
+    },
+    "hidden": {
+      "must_have": [
+        "NLP",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.57
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_717b2f3d88",
+    "name": "Client 170 (synthetic)",
+    "industry": "logistics",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 13,
+      "total_spend": 15139.04,
+      "avg_rating_given": 4.2,
+      "member_since_days": 1794
+    },
+    "hidden": {
+      "must_have": [
+        "Next.js",
+        "GraphQL"
+      ],
+      "budget_ceiling_factor": 1.12,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_94940e534a",
+    "name": "Client 171 (synthetic)",
+    "industry": "e-commerce",
+    "country": "India",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 6,
+      "total_spend": 9046.49,
+      "avg_rating_given": 3.55,
+      "member_since_days": 993
+    },
+    "hidden": {
+      "must_have": [
+        "RAG",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c1aa04bf42",
+    "name": "Client 172 (synthetic)",
+    "industry": "legal",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 8,
+      "total_spend": 20827.93,
+      "avg_rating_given": 3.74,
+      "member_since_days": 2776
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 1.09,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.65
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_572e207381",
+    "name": "Client 173 (synthetic)",
+    "industry": "e-commerce",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 7,
+      "total_spend": 3192.8,
+      "avg_rating_given": 4.29,
+      "member_since_days": 1117
+    },
+    "hidden": {
+      "must_have": [
+        "Playwright",
+        "React"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.55
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_d094700e37",
+    "name": "Client 174 (synthetic)",
+    "industry": "logistics",
+    "country": "UAE",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 40,
+      "hires": 34,
+      "total_spend": 69893.69,
+      "avg_rating_given": 4.45,
+      "member_since_days": 456
+    },
+    "hidden": {
+      "must_have": [
+        "scikit-learn",
+        "NLP"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.43
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_04f1241ed2",
+    "name": "Client 175 (synthetic)",
+    "industry": "edtech",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 4,
+      "total_spend": 3962.48,
+      "avg_rating_given": 3.76,
+      "member_since_days": 1662
+    },
+    "hidden": {
+      "must_have": [
+        "ETL",
+        "Airflow"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.82
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5c8f5ac0b7",
+    "name": "Client 176 (synthetic)",
+    "industry": "fintech",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 9,
+      "total_spend": 8060.21,
+      "avg_rating_given": 3.83,
+      "member_since_days": 1650
+    },
+    "hidden": {
+      "must_have": [
+        "statistics",
+        "dbt"
+      ],
+      "budget_ceiling_factor": 0.92,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.78
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_26e7458dc5",
+    "name": "Client 177 (synthetic)",
+    "industry": "fintech",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 16,
+      "total_spend": 22495.49,
+      "avg_rating_given": 4.42,
+      "member_since_days": 1251
+    },
+    "hidden": {
+      "must_have": [
+        "Airflow",
+        "A/B testing"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.91
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_25293f2761",
+    "name": "Client 178 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 46,
+      "hires": 30,
+      "total_spend": 27395.56,
+      "avg_rating_given": 4.71,
+      "member_since_days": 1791
+    },
+    "hidden": {
+      "must_have": [
+        "dashboards",
+        "statistics"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.73
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9e44d2771c",
+    "name": "Client 179 (synthetic)",
+    "industry": "travel",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 33,
+      "hires": 32,
+      "total_spend": 93681.91,
+      "avg_rating_given": 4.78,
+      "member_since_days": 2799
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "PyTorch"
+      ],
+      "budget_ceiling_factor": 1.17,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.79
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ec7f1f6506",
+    "name": "Client 180 (synthetic)",
+    "industry": "SaaS",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 38,
+      "hires": 19,
+      "total_spend": 47889.08,
+      "avg_rating_given": 3.95,
+      "member_since_days": 1161
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_aee544cedd",
+    "name": "Client 181 (synthetic)",
+    "industry": "manufacturing",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 53,
+      "hires": 39,
+      "total_spend": 63345.49,
+      "avg_rating_given": 4.53,
+      "member_since_days": 2781
+    },
+    "hidden": {
+      "must_have": [
+        "Tableau",
+        "forecasting"
+      ],
+      "budget_ceiling_factor": 1.12,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.62
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_58f0744907",
+    "name": "Client 182 (synthetic)",
+    "industry": "legal",
+    "country": "Australia",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 6,
+      "hires": 1,
+      "total_spend": 1729.93,
+      "avg_rating_given": 3.28,
+      "member_since_days": 2621
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "NLP"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.53
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_dc685e2c3f",
+    "name": "Client 183 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 3,
+      "total_spend": 6230.81,
+      "avg_rating_given": 3.56,
+      "member_since_days": 984
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "Python"
+      ],
+      "budget_ceiling_factor": 1.06,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.53
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_bcf814ab41",
+    "name": "Client 184 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Pakistan",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 24,
+      "hires": 6,
+      "total_spend": 5244.95,
+      "avg_rating_given": 3.44,
+      "member_since_days": 2588
+    },
+    "hidden": {
+      "must_have": [
+        "Node.js",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.4
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_cfa2ed2aac",
+    "name": "Client 185 (synthetic)",
+    "industry": "logistics",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 29,
+      "hires": 20,
+      "total_spend": 4692.79,
+      "avg_rating_given": 4.71,
+      "member_since_days": 2003
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "Next.js"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_87d538ef1c",
+    "name": "Client 186 (synthetic)",
+    "industry": "real estate",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 9,
+      "total_spend": 16143.48,
+      "avg_rating_given": 4.93,
+      "member_since_days": 1195
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.79
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f67462663a",
+    "name": "Client 187 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 15,
+      "total_spend": 7569.7,
+      "avg_rating_given": 4.55,
+      "member_since_days": 2012
+    },
+    "hidden": {
+      "must_have": [
+        "Celery",
+        "AWS SageMaker"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.9
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_acf1fffc01",
+    "name": "Client 188 (synthetic)",
+    "industry": "nonprofit",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 11,
+      "total_spend": 22314.65,
+      "avg_rating_given": 3.71,
+      "member_since_days": 330
+    },
+    "hidden": {
+      "must_have": [
+        "Airflow",
+        "SQL"
+      ],
+      "budget_ceiling_factor": 0.86,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.54
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e54183e2a0",
+    "name": "Client 189 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 29,
+      "total_spend": 69510.9,
+      "avg_rating_given": 4.15,
+      "member_since_days": 1281
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "Excel"
+      ],
+      "budget_ceiling_factor": 1.0,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.45
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3a2dc677d8",
+    "name": "Client 190 (synthetic)",
+    "industry": "edtech",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 12,
+      "total_spend": 3786.1,
+      "avg_rating_given": 4.19,
+      "member_since_days": 2331
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "PyTorch"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.4
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2fcc820fc1",
+    "name": "Client 191 (synthetic)",
+    "industry": "healthcare",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 31,
+      "hires": 24,
+      "total_spend": 15796.48,
+      "avg_rating_given": 4.28,
+      "member_since_days": 1825
+    },
+    "hidden": {
+      "must_have": [
+        "Playwright",
+        "TypeScript"
+      ],
+      "budget_ceiling_factor": 1.24,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.44
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_19a448c01a",
+    "name": "Client 192 (synthetic)",
+    "industry": "travel",
+    "country": "India",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.21,
+      "member_since_days": 304
+    },
+    "hidden": {
+      "must_have": [
+        "Next.js",
+        "Vercel"
+      ],
+      "budget_ceiling_factor": 1.13,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.31
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_14bb99f811",
+    "name": "Client 193 (synthetic)",
+    "industry": "SaaS",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 9,
+      "total_spend": 12967.52,
+      "avg_rating_given": 4.83,
+      "member_since_days": 2317
+    },
+    "hidden": {
+      "must_have": [
+        "Hugging Face",
+        "fine-tuning"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.6
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2a79f14120",
+    "name": "Client 194 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 68,
+      "hires": 49,
+      "total_spend": 94846.06,
+      "avg_rating_given": 4.84,
+      "member_since_days": 255
+    },
+    "hidden": {
+      "must_have": [
+        "Excel",
+        "BigQuery"
+      ],
+      "budget_ceiling_factor": 1.08,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.73
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_752ae7bdbb",
+    "name": "Client 195 (synthetic)",
+    "industry": "legal",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 6,
+      "hires": 6,
+      "total_spend": 15448.25,
+      "avg_rating_given": 3.74,
+      "member_since_days": 921
+    },
+    "hidden": {
+      "must_have": [
+        "Redis",
+        "scikit-learn"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.91
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4dea1daedb",
+    "name": "Client 196 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 27,
+      "hires": 19,
+      "total_spend": 9878.29,
+      "avg_rating_given": 4.15,
+      "member_since_days": 749
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.15,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.72
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_61188f2439",
+    "name": "Client 197 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 8,
+      "total_spend": 14010.08,
+      "avg_rating_given": 4.16,
+      "member_since_days": 937
+    },
+    "hidden": {
+      "must_have": [
+        "NLP",
+        "fine-tuning"
+      ],
+      "budget_ceiling_factor": 1.13,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.67
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c837307a9a",
+    "name": "Client 198 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 50,
+      "hires": 34,
+      "total_spend": 59213.58,
+      "avg_rating_given": 4.42,
+      "member_since_days": 2937
+    },
+    "hidden": {
+      "must_have": [
+        "Node.js",
+        "Vercel"
+      ],
+      "budget_ceiling_factor": 0.89,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.41
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2952aeca0f",
+    "name": "Client 199 (synthetic)",
+    "industry": "healthcare",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 38,
+      "hires": 27,
+      "total_spend": 64077.99,
+      "avg_rating_given": 4.21,
+      "member_since_days": 245
+    },
+    "hidden": {
+      "must_have": [
+        "OpenAI API",
+        "Qdrant"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.92
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9f9af02958",
+    "name": "Client 200 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 15,
+      "hires": 13,
+      "total_spend": 25210.6,
+      "avg_rating_given": 3.74,
+      "member_since_days": 835
+    },
+    "hidden": {
+      "must_have": [
+        "OAuth",
+        "Node.js"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.78
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_7f03f3f2fe",
+    "name": "Client 201 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 45,
+      "hires": 37,
+      "total_spend": 20114.03,
+      "avg_rating_given": 4.65,
+      "member_since_days": 1537
+    },
+    "hidden": {
+      "must_have": [
+        "Vercel",
+        "Shopify"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.69
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1e7b95c561",
+    "name": "Client 202 (synthetic)",
+    "industry": "travel",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 8,
+      "hires": 7,
+      "total_spend": 19537.0,
+      "avg_rating_given": 3.84,
+      "member_since_days": 2775
+    },
+    "hidden": {
+      "must_have": [
+        "Qdrant",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.94
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_a165fbd61c",
+    "name": "Client 203 (synthetic)",
+    "industry": "marketing agency",
+    "country": "United Kingdom",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 2,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.4,
+      "member_since_days": 768
+    },
+    "hidden": {
+      "must_have": [
+        "Django",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1cc6419540",
+    "name": "Client 204 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 43,
+      "hires": 29,
+      "total_spend": 6920.62,
+      "avg_rating_given": 4.78,
+      "member_since_days": 1412
+    },
+    "hidden": {
+      "must_have": [
+        "Airflow",
+        "data cleaning"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.32
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5f1cd7c3fb",
+    "name": "Client 205 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 37,
+      "hires": 25,
+      "total_spend": 64007.11,
+      "avg_rating_given": 4.32,
+      "member_since_days": 658
+    },
+    "hidden": {
+      "must_have": [
+        "Redis",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.94,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.53
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4afa8f9e90",
+    "name": "Client 206 (synthetic)",
+    "industry": "e-commerce",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 31,
+      "hires": 12,
+      "total_spend": 3866.84,
+      "avg_rating_given": 3.59,
+      "member_since_days": 705
+    },
+    "hidden": {
+      "must_have": [
+        "statistics",
+        "ETL"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.5
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3be76cc016",
+    "name": "Client 207 (synthetic)",
+    "industry": "logistics",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 12,
+      "total_spend": 17836.1,
+      "avg_rating_given": 4.24,
+      "member_since_days": 2503
+    },
+    "hidden": {
+      "must_have": [
+        "Next.js",
+        "Django"
+      ],
+      "budget_ceiling_factor": 1.14,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.34
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_baab340181",
+    "name": "Client 208 (synthetic)",
+    "industry": "legal",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 12,
+      "total_spend": 35737.33,
+      "avg_rating_given": 3.84,
+      "member_since_days": 149
+    },
+    "hidden": {
+      "must_have": [
+        "REST API",
+        "Node.js"
+      ],
+      "budget_ceiling_factor": 1.2,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.71
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_acfdd18ea7",
+    "name": "Client 209 (synthetic)",
+    "industry": "logistics",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 41,
+      "hires": 39,
+      "total_spend": 40996.35,
+      "avg_rating_given": 4.63,
+      "member_since_days": 1408
+    },
+    "hidden": {
+      "must_have": [
+        "Docker",
+        "Vercel"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.77
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_135debd483",
+    "name": "Client 210 (synthetic)",
+    "industry": "manufacturing",
+    "country": "UAE",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 1,
+      "total_spend": 1610.45,
+      "avg_rating_given": 3.31,
+      "member_since_days": 1007
+    },
+    "hidden": {
+      "must_have": [
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.74
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1b4a364f76",
+    "name": "Client 211 (synthetic)",
+    "industry": "edtech",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 34,
+      "hires": 16,
+      "total_spend": 6171.37,
+      "avg_rating_given": 4.0,
+      "member_since_days": 1244
+    },
+    "hidden": {
+      "must_have": [
+        "Stripe",
+        "GraphQL"
+      ],
+      "budget_ceiling_factor": 1.14,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_e2154fea5d",
+    "name": "Client 212 (synthetic)",
+    "industry": "travel",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 11,
+      "hires": 2,
+      "total_spend": 3650.69,
+      "avg_rating_given": 4.25,
+      "member_since_days": 1926
+    },
+    "hidden": {
+      "must_have": [
+        "Hugging Face",
+        "Celery"
+      ],
+      "budget_ceiling_factor": 1.14,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.51
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_19187dc98d",
+    "name": "Client 213 (synthetic)",
+    "industry": "legal",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 4,
+      "total_spend": 7816.23,
+      "avg_rating_given": 3.7,
+      "member_since_days": 980
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "Pinecone"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.48
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9a15f42d1c",
+    "name": "Client 214 (synthetic)",
+    "industry": "logistics",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 8,
+      "hires": 7,
+      "total_spend": 20277.55,
+      "avg_rating_given": 4.37,
+      "member_since_days": 2471
+    },
+    "hidden": {
+      "must_have": [
+        "Python",
+        "pandas"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.77
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_828f720439",
+    "name": "Client 215 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 26,
+      "hires": 6,
+      "total_spend": 6624.66,
+      "avg_rating_given": 3.54,
+      "member_since_days": 122
+    },
+    "hidden": {
+      "must_have": [
+        "Pinecone",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.56
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0bad865a02",
+    "name": "Client 216 (synthetic)",
+    "industry": "fintech",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 9,
+      "hires": 8,
+      "total_spend": 3553.24,
+      "avg_rating_given": 4.64,
+      "member_since_days": 2519
+    },
+    "hidden": {
+      "must_have": [
+        "Excel",
+        "data cleaning"
+      ],
+      "budget_ceiling_factor": 1.25,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.87
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_49e3d04663",
+    "name": "Client 217 (synthetic)",
+    "industry": "manufacturing",
+    "country": "UAE",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 34,
+      "hires": 33,
+      "total_spend": 44958.47,
+      "avg_rating_given": 4.87,
+      "member_since_days": 2918
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "RAG"
+      ],
+      "budget_ceiling_factor": 0.89,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.8
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3d5bdf107d",
+    "name": "Client 218 (synthetic)",
+    "industry": "SaaS",
+    "country": "UAE",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 8,
+      "total_spend": 16835.36,
+      "avg_rating_given": 3.84,
+      "member_since_days": 2283
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "fine-tuning"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c0ba17c23a",
+    "name": "Client 219 (synthetic)",
+    "industry": "manufacturing",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 28,
+      "hires": 14,
+      "total_spend": 24724.56,
+      "avg_rating_given": 4.6,
+      "member_since_days": 1490
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "LLM evaluation"
+      ],
+      "budget_ceiling_factor": 1.23,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.61
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_f37062d9a6",
+    "name": "Client 220 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 18,
+      "total_spend": 23802.54,
+      "avg_rating_given": 4.66,
+      "member_since_days": 378
+    },
+    "hidden": {
+      "must_have": [
+        "SQL",
+        "Airflow"
+      ],
+      "budget_ceiling_factor": 0.9,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.81
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9a70776c74",
+    "name": "Client 221 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 26,
+      "hires": 21,
+      "total_spend": 55405.11,
+      "avg_rating_given": 4.89,
+      "member_since_days": 673
+    },
+    "hidden": {
+      "must_have": [
+        "Vercel",
+        "React"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.86
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_1c6637a8f2",
+    "name": "Client 222 (synthetic)",
+    "industry": "SaaS",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 19,
+      "hires": 13,
+      "total_spend": 14387.48,
+      "avg_rating_given": 4.35,
+      "member_since_days": 118
+    },
+    "hidden": {
+      "must_have": [
+        "LangChain",
+        "Python"
+      ],
+      "budget_ceiling_factor": 0.88,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.86
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_af06318c33",
+    "name": "Client 223 (synthetic)",
+    "industry": "SaaS",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 25,
+      "hires": 5,
+      "total_spend": 13044.67,
+      "avg_rating_given": 3.61,
+      "member_since_days": 135
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "Python"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.43
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_bc15c774dc",
+    "name": "Client 224 (synthetic)",
+    "industry": "marketing agency",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 30,
+      "hires": 12,
+      "total_spend": 28971.87,
+      "avg_rating_given": 4.36,
+      "member_since_days": 1965
+    },
+    "hidden": {
+      "must_have": [
+        "GraphQL",
+        "Django"
+      ],
+      "budget_ceiling_factor": 1.18,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.62
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_cfe21c6800",
+    "name": "Client 225 (synthetic)",
+    "industry": "travel",
+    "country": "Pakistan",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 20,
+      "hires": 6,
+      "total_spend": 4762.74,
+      "avg_rating_given": 3.49,
+      "member_since_days": 223
+    },
+    "hidden": {
+      "must_have": [
+        "Pinecone",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 0.87,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.58
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_c1a38b8a67",
+    "name": "Client 226 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 21,
+      "hires": 18,
+      "total_spend": 11257.17,
+      "avg_rating_given": 4.99,
+      "member_since_days": 48
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.41
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_42d2a6ad49",
+    "name": "Client 227 (synthetic)",
+    "industry": "real estate",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 10,
+      "total_spend": 26694.64,
+      "avg_rating_given": 3.91,
+      "member_since_days": 144
+    },
+    "hidden": {
+      "must_have": [
+        "dashboards",
+        "Looker"
+      ],
+      "budget_ceiling_factor": 0.93,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.39
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_cad06f3c49",
+    "name": "Client 228 (synthetic)",
+    "industry": "nonprofit",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 6,
+      "hires": 6,
+      "total_spend": 2011.75,
+      "avg_rating_given": 3.62,
+      "member_since_days": 1306
+    },
+    "hidden": {
+      "must_have": [
+        "pandas",
+        "dbt"
+      ],
+      "budget_ceiling_factor": 0.9,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.58
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4c8205da36",
+    "name": "Client 229 (synthetic)",
+    "industry": "e-commerce",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 24,
+      "hires": 7,
+      "total_spend": 11214.28,
+      "avg_rating_given": 3.6,
+      "member_since_days": 470
+    },
+    "hidden": {
+      "must_have": [
+        "computer vision",
+        "Hugging Face"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.93
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_2815f6b98b",
+    "name": "Client 230 (synthetic)",
+    "industry": "nonprofit",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 12,
+      "hires": 12,
+      "total_spend": 11292.18,
+      "avg_rating_given": 4.52,
+      "member_since_days": 292
+    },
+    "hidden": {
+      "must_have": [
+        "PyTorch",
+        "Pinecone"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.54
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_eadc1dd8fc",
+    "name": "Client 231 (synthetic)",
+    "industry": "manufacturing",
+    "country": "Singapore",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 17,
+      "hires": 0,
+      "total_spend": 0.0,
+      "avg_rating_given": 3.79,
+      "member_since_days": 1364
+    },
+    "hidden": {
+      "must_have": [
+        "Celery",
+        "FastAPI"
+      ],
+      "budget_ceiling_factor": 1.01,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.93
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4f0f5c96ca",
+    "name": "Client 232 (synthetic)",
+    "industry": "SaaS",
+    "country": "Germany",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 62,
+      "hires": 42,
+      "total_spend": 9017.51,
+      "avg_rating_given": 4.57,
+      "member_since_days": 2499
+    },
+    "hidden": {
+      "must_have": [
+        "Vercel",
+        "GraphQL"
+      ],
+      "budget_ceiling_factor": 1.13,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_52fdb9f68c",
+    "name": "Client 233 (synthetic)",
+    "industry": "travel",
+    "country": "United States",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 7,
+      "hires": 6,
+      "total_spend": 8017.77,
+      "avg_rating_given": 3.41,
+      "member_since_days": 2297
+    },
+    "hidden": {
+      "must_have": [
+        "Excel",
+        "ETL"
+      ],
+      "budget_ceiling_factor": 1.07,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.3
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0ec09ef983",
+    "name": "Client 234 (synthetic)",
+    "industry": "legal",
+    "country": "UAE",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 37,
+      "hires": 19,
+      "total_spend": 32856.77,
+      "avg_rating_given": 4.37,
+      "member_since_days": 1566
+    },
+    "hidden": {
+      "must_have": [
+        "Looker",
+        "A/B testing"
+      ],
+      "budget_ceiling_factor": 0.99,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_0b7f5ada6b",
+    "name": "Client 235 (synthetic)",
+    "industry": "healthcare",
+    "country": "France",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 30,
+      "hires": 13,
+      "total_spend": 26778.43,
+      "avg_rating_given": 4.42,
+      "member_since_days": 2518
+    },
+    "hidden": {
+      "must_have": [
+        "Snowflake",
+        "PostgreSQL"
+      ],
+      "budget_ceiling_factor": 1.21,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.64
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5d23e96560",
+    "name": "Client 236 (synthetic)",
+    "industry": "healthcare",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 16,
+      "hires": 5,
+      "total_spend": 8335.04,
+      "avg_rating_given": 4.23,
+      "member_since_days": 2170
+    },
+    "hidden": {
+      "must_have": [
+        "FastAPI",
+        "Docker"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.6
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3c331613a2",
+    "name": "Client 237 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 61,
+      "hires": 51,
+      "total_spend": 64644.23,
+      "avg_rating_given": 4.91,
+      "member_since_days": 1763
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "forecasting"
+      ],
+      "budget_ceiling_factor": 0.91,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.53
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_5b7d26c4d9",
+    "name": "Client 238 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United Kingdom",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 14,
+      "total_spend": 18305.49,
+      "avg_rating_given": 4.14,
+      "member_since_days": 1837
+    },
+    "hidden": {
+      "must_have": [
+        "dbt",
+        "ETL"
+      ],
+      "budget_ceiling_factor": 1.1,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.64
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_584130e068",
+    "name": "Client 239 (synthetic)",
+    "industry": "marketing agency",
+    "country": "India",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 22,
+      "hires": 15,
+      "total_spend": 29155.31,
+      "avg_rating_given": 4.42,
+      "member_since_days": 2153
+    },
+    "hidden": {
+      "must_have": [
+        "MLflow",
+        "OpenAI API"
+      ],
+      "budget_ceiling_factor": 0.95,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.47
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_cae91e45ae",
+    "name": "Client 240 (synthetic)",
+    "industry": "legal",
+    "country": "Australia",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 18,
+      "hires": 8,
+      "total_spend": 7325.92,
+      "avg_rating_given": 3.52,
+      "member_since_days": 1097
+    },
+    "hidden": {
+      "must_have": [
+        "ETL",
+        "pandas"
+      ],
+      "budget_ceiling_factor": 1.06,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.38
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_9ffd1ae121",
+    "name": "Client 241 (synthetic)",
+    "industry": "fintech",
+    "country": "Sweden",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 28,
+      "hires": 14,
+      "total_spend": 17528.47,
+      "avg_rating_given": 4.31,
+      "member_since_days": 181
+    },
+    "hidden": {
+      "must_have": [
+        "Stripe",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.46
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_851cd04fbc",
+    "name": "Client 242 (synthetic)",
+    "industry": "logistics",
+    "country": "Sweden",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 23,
+      "hires": 5,
+      "total_spend": 6212.98,
+      "avg_rating_given": 3.43,
+      "member_since_days": 2736
+    },
+    "hidden": {
+      "must_have": [
+        "Tableau",
+        "Excel"
+      ],
+      "budget_ceiling_factor": 1.19,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.56
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_4af7f9edc0",
+    "name": "Client 243 (synthetic)",
+    "industry": "manufacturing",
+    "country": "United States",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 31,
+      "hires": 28,
+      "total_spend": 52073.68,
+      "avg_rating_given": 4.09,
+      "member_since_days": 1904
+    },
+    "hidden": {
+      "must_have": [
+        "WebSockets",
+        "Redis"
+      ],
+      "budget_ceiling_factor": 1.02,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.59
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_01592d51db",
+    "name": "Client 244 (synthetic)",
+    "industry": "fintech",
+    "country": "France",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 13,
+      "hires": 6,
+      "total_spend": 13639.53,
+      "avg_rating_given": 3.44,
+      "member_since_days": 1655
+    },
+    "hidden": {
+      "must_have": [
+        "REST API",
+        "Next.js"
+      ],
+      "budget_ceiling_factor": 1.22,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.55
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3aed9b0313",
+    "name": "Client 245 (synthetic)",
+    "industry": "healthcare",
+    "country": "Pakistan",
+    "payment_verified": false,
+    "history": {
+      "jobs_posted": 1,
+      "hires": 1,
+      "total_spend": 484.78,
+      "avg_rating_given": 3.41,
+      "member_since_days": 371
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "OAuth"
+      ],
+      "budget_ceiling_factor": 1.03,
+      "dislikes_generic_opening": false,
+      "prefers_short": true,
+      "responsiveness": 0.52
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_3464dc1150",
+    "name": "Client 246 (synthetic)",
+    "industry": "SaaS",
+    "country": "Pakistan",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 29,
+      "hires": 25,
+      "total_spend": 74866.62,
+      "avg_rating_given": 4.19,
+      "member_since_days": 215
+    },
+    "hidden": {
+      "must_have": [
+        "LangGraph",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 0.98,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.94
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_b4ef7df17d",
+    "name": "Client 247 (synthetic)",
+    "industry": "real estate",
+    "country": "Netherlands",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 10,
+      "hires": 2,
+      "total_spend": 4118.15,
+      "avg_rating_given": 4.14,
+      "member_since_days": 1233
+    },
+    "hidden": {
+      "must_have": [
+        "REST API",
+        "Playwright"
+      ],
+      "budget_ceiling_factor": 1.05,
+      "dislikes_generic_opening": true,
+      "prefers_short": true,
+      "responsiveness": 0.5
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ca3799b8ff",
+    "name": "Client 248 (synthetic)",
+    "industry": "legal",
+    "country": "Australia",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 52,
+      "hires": 43,
+      "total_spend": 32921.68,
+      "avg_rating_given": 4.64,
+      "member_since_days": 223
+    },
+    "hidden": {
+      "must_have": [
+        "PostgreSQL",
+        "REST API"
+      ],
+      "budget_ceiling_factor": 1.11,
+      "dislikes_generic_opening": false,
+      "prefers_short": false,
+      "responsiveness": 0.76
+    },
+    "synthetic": true
+  },
+  {
+    "client_id": "cli_ee44c6bcc4",
+    "name": "Client 249 (synthetic)",
+    "industry": "real estate",
+    "country": "Canada",
+    "payment_verified": true,
+    "history": {
+      "jobs_posted": 32,
+      "hires": 18,
+      "total_spend": 49936.69,
+      "avg_rating_given": 3.86,
+      "member_since_days": 2287
+    },
+    "hidden": {
+      "must_have": [
+        "PyTorch",
+        "MLflow"
+      ],
+      "budget_ceiling_factor": 0.85,
+      "dislikes_generic_opening": true,
+      "prefers_short": false,
+      "responsiveness": 0.84
+    },
+    "synthetic": true
+  }
+]

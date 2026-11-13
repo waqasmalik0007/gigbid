@@ -1,0 +1,32 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1315 >>
+stream
+BT /F1 10 Tf 50 800 Td 12 TL (# Mariam Siddiqui \(synthetic\)) ' () ' (Synthetic persona for GigBid evaluation.) ' () ' (Primary: data_analysis. Secondary: web_dev.) ' () ' (## Skills) ' (A/B testing, Airflow, BigQuery, ETL, Excel, Google Analytics, Looker, Next.js, Node.js, OAuth, PostgreSQL, Power BI, Prisma, Python, R, React, Redis, SQL, Shopify, Snowflake, Stripe, Tableau, Tailwind CSS, TypeScript, WebSockets, dashboards, data cleaning, dbt, forecasting, pandas, statistics) ' () ' (## Selected projects) ' (- Modern data stack migration for a travel client \(2023\): cut report refresh from a day to 337 minutes) ' (- Marketing attribution report for a real estate client \(2023\): reallocated 54% of ad budget) ' (- Sales KPI dashboard for a SaaS client \(2022\): replaced 94 weekly spreadsheets) ' (- Modern data stack migration for a SaaS client \(2022\): cut report refresh from a day to 372 minutes) ' (- Multi-tenant SaaS dashboard for a SaaS client \(2021\): onboarded 383 paying teams in the first quarter) ' (- Shopify storefront rebuild for a healthcare client \(2023\): improved mobile conversion by 22%) ' (- Clinic operations dashboard for a fintech client \(2023\): cut patient wait time 49%) ' (- Warehouse demand forecast for a manufacturing client \(2023\): reduced stock-outs by 51%) ' ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001608 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1678
+%%EOF
