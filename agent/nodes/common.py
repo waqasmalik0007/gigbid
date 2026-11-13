@@ -11,6 +11,7 @@ from __future__ import annotations
 import asyncio
 import functools
 import json
+import os
 import time
 from datetime import datetime, timezone
 from typing import Any, Awaitable, Callable
@@ -69,7 +70,8 @@ def node(name: str, retries: int = 2, timeout_s: float = 120, parallel: bool = F
             for attempt in range(retries + 1):
                 t0 = time.perf_counter()
                 try:
-                    out = await asyncio.wait_for(fn(state), timeout_s)
+                    # evals run many jobs through one rate budget: time queued in the throttle must not count as a hang
+                    out = await asyncio.wait_for(fn(state), timeout_s * float(os.getenv("NODE_TIMEOUT_SCALE", "1")))
                     ms = int((time.perf_counter() - t0) * 1000)
                     u = out.pop("_usage", {}) or {}
                     tok = int(u.get("tokens_in", 0) + u.get("tokens_out", 0))
@@ -84,6 +86,10 @@ def node(name: str, retries: int = 2, timeout_s: float = 120, parallel: bool = F
                     return {"status": "needs_attention", "errors": [f"marketplace unavailable: {e}"],
                             "trace": [event(name, "error", "marketplace_down", result=str(e))], "steps": 1}
                 except Exception as e:  # noqa: BLE001
+                    from agent.llm import QuotaExhausted
+                    if isinstance(e, QuotaExhausted) or isinstance(e.__cause__, QuotaExhausted):
+                        last = e
+                        break  # retrying cannot help until the daily window resets
                     last = e
                     if attempt < retries:
                         await asyncio.sleep(delay)

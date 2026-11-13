@@ -59,7 +59,7 @@ def node_model(node: str) -> str:
 def _make(provider: str, model: str, temperature: float, max_tokens: int):
     if provider == "groq":
         from langchain_groq import ChatGroq
-        return ChatGroq(model=model, temperature=temperature, max_tokens=max_tokens, timeout=60, max_retries=2)
+        return ChatGroq(model=model, temperature=temperature, max_tokens=max_tokens, timeout=60, max_retries=1)
     if provider == "ollama":
         from langchain_ollama import ChatOllama
         return ChatOllama(model=model, temperature=temperature, num_predict=max_tokens,
@@ -112,8 +112,48 @@ class _Throttle:
                 sleep = 60 - (now - first) + 0.3
             time.sleep(max(0.5, min(sleep, 20)))
 
+    # Daily quotas (Groq free tier: 200k tokens/day per model). A model that returns a per-day 429 is
+    # marked exhausted until the reset time Groq reports, and calls route to the next model in the
+    # profile's quota_fallbacks list instead of retrying into the wall for minutes.
+    def _ensure_ex(self) -> None:
+        self.db.execute("CREATE TABLE IF NOT EXISTS ex (model TEXT PRIMARY KEY, until REAL)")
+
+    def exhausted(self, model: str) -> bool:
+        with self.lock:
+            self._ensure_ex()
+            r = self.db.execute("SELECT until FROM ex WHERE model=?", (model,)).fetchone()
+            return bool(r and r[0] > time.time())
+
+    def mark_exhausted(self, model: str, seconds: float) -> None:
+        with self.lock:
+            self._ensure_ex()
+            self.db.execute("INSERT OR REPLACE INTO ex VALUES (?,?)", (model, time.time() + seconds))
+
+    def next_reset(self) -> float:
+        with self.lock:
+            self._ensure_ex()
+            r = self.db.execute("SELECT MIN(until) FROM ex WHERE until > ?", (time.time(),)).fetchone()
+            return (r[0] - time.time()) if r and r[0] else 0.0
+
 
 throttle = _Throttle()
+
+
+class QuotaExhausted(RuntimeError):
+    """Every model the node may use is out of daily quota; callers (evals) should stop and resume later."""
+
+
+def _daily_quota_seconds(err: Exception) -> float | None:
+    """Seconds until reset if `err` is a per-day rate limit (TPD/RPD), else None."""
+    import re
+    msg = str(err)
+    if "per day" not in msg:
+        return None
+    m = re.search(r"try again in (?:(\d+)h)?(?:(\d+)m)?(?:([\d.]+)s)?", msg)
+    if not m:
+        return 600.0
+    h, mi, se = (float(x) if x else 0.0 for x in m.groups())
+    return h * 3600 + mi * 60 + se + 5
 
 
 def _estimate(messages: list, max_tokens: int) -> int:
@@ -121,9 +161,23 @@ def _estimate(messages: list, max_tokens: int) -> int:
     return chars // 3 + max_tokens  # Groq reserves the full max_tokens against TPM at request time
 
 
+def _route(model: str) -> str:
+    """The configured model, or the first quota fallback that still has daily quota."""
+    if not throttle.exhausted(model):
+        return model
+    prof = config()["profiles"][profile_name()]
+    for alt in prof.get("quota_fallbacks", []):
+        if alt != model and not throttle.exhausted(alt):
+            with (ROOT / "data/processed/quota_routes.log").open("a") as fh:  # reported in the evals
+                tag = os.getenv("GIGBID_EVAL_TAG", "-")
+                fh.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')}\t{tag}\t{model}\t{alt}\n")
+            return alt
+    raise QuotaExhausted(f"all models out of daily quota; next reset in {throttle.next_reset():.0f}s")
+
+
 def get_llm(node: str, temperature: float = 0.2, max_tokens: int = 2048, fallback: bool = False):
     prof = config()["profiles"][profile_name()]
-    model = prof.get("fallback_model") if fallback else node_model(node)
+    model = _route(prof.get("fallback_model") if fallback else node_model(node))
     return _make(prof["provider"], model, temperature, max_tokens)
 
 
@@ -165,6 +219,9 @@ def structured(node: str, schema: type[T], messages: list, temperature: float = 
                 raise ValueError(f"unparseable output: {out.get('parsing_error')}")
             return out["parsed"], Usage.from_response(model, out["raw"], time.perf_counter() - t0)
         except Exception as e:  # noqa: BLE001 - retry/fallback on any model or parse failure
+            if (secs := _daily_quota_seconds(e)) is not None:
+                throttle.mark_exhausted(model, secs)
+                return structured(node, schema, messages, temperature, max_tokens)  # re-route (or QuotaExhausted)
             last_err = e
     raise RuntimeError(f"{node}: structured output failed after retries and fallback: {last_err}")
 
@@ -179,6 +236,9 @@ def text(node: str, messages: list, temperature: float = 0.3, max_tokens: int = 
             msg = llm.invoke(messages)
             return msg.content, Usage.from_response(_model_of(llm), msg, time.perf_counter() - t0)
         except Exception as e:  # noqa: BLE001
+            if (secs := _daily_quota_seconds(e)) is not None:
+                throttle.mark_exhausted(_model_of(llm), secs)
+                return text(node, messages, temperature, max_tokens)
             last_err = e
     raise RuntimeError(f"{node}: text call failed: {last_err}")
 

@@ -82,6 +82,8 @@ async def run_one(app, persona: str, row: dict, tag: str) -> dict:
     out = {"job_id": job["job_id"], "persona": persona, "status": v.get("status"), "latency_s": lat,
            "tokens": v.get("usage", {}).get("tokens_in", 0) + v.get("usage", {}).get("tokens_out", 0),
            "usd": v.get("usage", {}).get("usd", 0.0), "decision": v.get("decision").action if v.get("decision") else None}
+    if v.get("status") == "dead_letter" or any("daily quota" in str(e) for e in v.get("errors") or []):
+        return out | {"error": f"infra: {(v.get('errors') or [''])[-1][:200]}"}  # rate limit etc.: retry on resume
     if not draft or not comp:
         return out | {"no_proposal": True, "errors": v.get("errors")}
     letter = comp.cleaned_text
@@ -101,7 +103,7 @@ async def run_one(app, persona: str, row: dict, tag: str) -> dict:
 def summarise(rows: list[dict]) -> dict:
     ok = [r for r in rows if r.get("letter")]
     if not ok:
-        return {"n": 0, "attempted": len(rows)}
+        return {"n": 0, "attempted": len(rows), "errors": sum("error" in r for r in rows)}
     lat = sorted(r["latency_s"] for r in ok)
     q = lambda xs, p: round(xs[min(len(xs) - 1, int(p * len(xs)))], 2)  # noqa: E731
     js = [r["judge"]["overall"] for r in ok if r.get("judge")]
@@ -135,13 +137,19 @@ async def main() -> None:
     from agent.graphs.bid_graph import build
     from agent.memory.store import serde
     app = build(InMemorySaver(serde=serde()))
-    work = [(p, r) for p in PERSONAS for r in pick(p, a.per_persona)]
-    sem, rows = asyncio.Semaphore(a.concurrency), []
+    partial = ROOT / f"evals/results/proposals_{tag}.partial.jsonl"
+    rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
+    rows = [r for r in rows if "error" not in r]  # resumable: infrastructure failures are retried
+    done = {(r["persona"], r["job_id"]) for r in rows}
+    work = [(p, r) for p in PERSONAS for r in pick(p, a.per_persona) if (p, r["job"]["job_id"]) not in done]
+    sem = asyncio.Semaphore(a.concurrency)
 
     async def one(p, r):
         async with sem:
             res = await run_one(app, p, r, tag)
             rows.append(res)
+            with partial.open("a") as fh:
+                fh.write(json.dumps(res, default=str) + "\n")
             print(f"[{len(rows)}/{len(work)}] {p} {r['job']['job_id']} status={res.get('status')} "
                   f"unsupported {res.get('unsupported_before')}->{res.get('unsupported_after')} "
                   f"p_reply={res.get('p_reply')} judge={(res.get('judge') or {}).get('overall')} {res.get('error', '')}",

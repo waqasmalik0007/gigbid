@@ -15,6 +15,7 @@ profiles:
       compliance: {model: "openai/gpt-oss-20b"}
       liaison: {model: "openai/gpt-oss-120b"}
     fallback_model: "qwen/qwen3.8-27b"
+    quota_fallbacks: ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]   # used only when a model is out of daily quota
     injection_classifier: "meta-llama/llama-prompt-guard-2-86m"
     embeddings: "BAAI/bge-m3"
     reranker: "BAAI/bge-reranker-v2-m3"

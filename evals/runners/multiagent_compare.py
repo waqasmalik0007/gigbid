@@ -149,9 +149,14 @@ async def main() -> None:
     path = ROOT / "evals/results/multiagent_compare.json"
     results = json.loads(path.read_text()) if path.exists() else {"systems": {}}
     for system in a.systems:
+        prev = {(r["persona"], r["job_id"]): r for r in results["systems"].get(system, {}).get("rows", [])
+                if "error" not in r}  # resumable: finished jobs are kept, failed ones re-run
         rows = []
         for persona in PERSONAS:
             for row in pick(persona, a.per_persona):
+                if (persona, row["job"]["job_id"]) in prev:
+                    rows.append(prev[(persona, row["job"]["job_id"])])
+                    continue
                 tok = current_user.set(persona)
                 t0 = time.perf_counter()
                 try:
@@ -169,6 +174,9 @@ async def main() -> None:
                 finally:
                     current_user.reset(tok)
                 rows.append(r)
+                results["systems"].setdefault(system, {})["rows"] = rows + [
+                    x for k, x in prev.items() if k not in {(y["persona"], y["job_id"]) for y in rows}]
+                path.write_text(json.dumps(results, indent=2, default=str))
                 print(system, len(rows), {k: r.get(k) for k in ("decision", "gold", "unsupported_claims",
                                                                  "violations_in_output", "tokens", "error")}, flush=True)
         ok = [r for r in rows if "error" not in r]

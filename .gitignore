@@ -18,3 +18,4 @@ data/gigsim/*.sqlite3*
 data/processed/*.pkl
 data/processed/emb_cache/
 evals/results/*.partial.jsonl
+data/processed/quota_routes.log
