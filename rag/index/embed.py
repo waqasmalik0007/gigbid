@@ -13,7 +13,10 @@ from pathlib import Path
 
 import numpy as np
 
+import agent.llm  # noqa: F401  (loads .env, e.g. HF_HOME for the model cache)
+
 ROOT = Path(__file__).resolve().parents[2]
+os.environ.setdefault("HF_HUB_DISABLE_XET", "1")  # xet CDN downloads stall on some networks
 CACHE = ROOT / "data" / "processed" / "emb_cache"
 
 EMBED_MODEL = os.getenv("GIGBID_EMBED_MODEL", "BAAI/bge-small-en-v1.5")

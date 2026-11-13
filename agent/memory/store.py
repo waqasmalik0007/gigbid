@@ -18,6 +18,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def serde():
+    """Allowlist our Pydantic hand-off types for checkpoint deserialisation (LangGraph safety check)."""
+    import agent.handoffs as h
+    from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+    names = [n for n in dir(h) if isinstance(getattr(h, n), type) and n[0].isupper()]
+    return JsonPlusSerializer(allowed_msgpack_modules=[("agent.handoffs", n) for n in names])
+
+
 def _pg() -> str | None:
     url = os.getenv("DATABASE_URL", "")
     return url if url.startswith("postgres") else None
@@ -65,7 +73,7 @@ class FileSaver:
             async def aput_writes(self, *a, **kw):
                 return self.put_writes(*a, **kw)
 
-        saver = _Saver()
+        saver = _Saver(serde=serde())
         if path.exists():
             data = pickle.loads(path.read_bytes())
             for k, v in data["storage"].items():
@@ -121,7 +129,7 @@ def get_checkpointer():
         from langgraph.checkpoint.postgres import PostgresSaver
         from psycopg import Connection
         conn = Connection.connect(url, autocommit=True, prepare_threshold=0)
-        cp = PostgresSaver(conn)
+        cp = PostgresSaver(conn, serde=serde())
         cp.setup()
         return cp
     path = Path(os.getenv("GIGBID_CHECKPOINT_FILE", ROOT / "data/processed/checkpoints.pkl"))

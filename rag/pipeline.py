@@ -192,5 +192,6 @@ class Pipeline:
 
     def ref(self, eid: str, score: float) -> EvidenceRef:
         it = self.items[eid]
-        return EvidenceRef(evidence_id=eid, type=it.type, title=it.title, snippet=it.text[:300],
+        skills = f"Skills: {', '.join(it.skills)}. " if it.skills else ""
+        return EvidenceRef(evidence_id=eid, type=it.type, title=it.title, snippet=(skills + it.text)[:600],
                            score=float(score), outcome=it.outcome)

@@ -63,6 +63,9 @@ Status = Literal[
 
 class BidState(TypedDict, total=False):
     # identity
+    thread_id: str
+    trace_id: str
+    settings: dict[str, Any]                 # user settings snapshot: floor rate, Connects budget, autonomy
     user_id: str
     persona_id: str
     job_id: str
@@ -77,6 +80,7 @@ class BidState(TypedDict, total=False):
     price: PriceQuote
     draft: ProposalDraft
     critiques: Annotated[list[Critique], operator.add]
+    verification: dict[str, Any]             # claim verification metrics (unsupported before/after)
     compliance: ComplianceVerdict
     dry_run_preview: dict[str, Any]
     approval: dict[str, Any]
@@ -92,6 +96,10 @@ class BidState(TypedDict, total=False):
 
 
 class ConversationState(TypedDict, total=False):
+    trace_id: str
+    settings: dict[str, Any]
+    intent: Any
+    slots: list[dict[str, Any]]
     user_id: str
     persona_id: str
     thread_id: str
