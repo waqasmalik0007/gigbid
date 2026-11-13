@@ -1,0 +1,52 @@
+# All models, budgets, thresholds and policy rules live here, never in code.
+profile: open
+profiles:
+  open:
+    provider: groq
+    nodes:
+      scout: {model: "openai/gpt-oss-20b"}
+      job_analyst: {model: "openai/gpt-oss-20b"}
+      risk_assessor: {model: "openai/gpt-oss-20b"}
+      fit_matcher: {model: "openai/gpt-oss-20b"}
+      pricing: {model: "openai/gpt-oss-20b"}
+      writer: {model: "openai/gpt-oss-120b"}
+      verifier: {model: "openai/gpt-oss-20b"}
+      critic: {model: "openai/gpt-oss-120b"}
+      compliance: {model: "openai/gpt-oss-20b"}
+      liaison: {model: "openai/gpt-oss-120b"}
+    fallback_model: "llama-3.1-8b-instant"
+    embeddings: "BAAI/bge-m3"
+    reranker: "BAAI/bge-reranker-v2-m3"
+  local:
+    provider: ollama
+    nodes:
+      default: {model: "qwen3:8b"}
+    embeddings: "nomic-embed-text"
+    reranker: "BAAI/bge-reranker-v2-m3"
+  paid:
+    provider: openai
+    nodes:
+      default: {model: "gpt-4.1-mini"}
+    embeddings: "BAAI/bge-m3"
+    reranker: "BAAI/bge-reranker-v2-m3"
+
+rag:
+  variant: v3_rerank          # chosen by evaluation; see docs/DATA_CARD.md
+  top_k: 8
+
+budgets:
+  max_steps_per_thread: 40
+  max_tokens_per_thread: 60000
+  critic_max_loops: 2
+  p95_latency_s_per_job: 20
+  usd_per_proposal: 0.01
+
+decision:
+  bid_threshold: 0.65
+  watch_threshold: 0.45
+
+scheduling:
+  gigsim_scout_interval_min: 30
+  upwork_scout_interval_min: 180
+
+policy_pack_path: data/policy_pack
