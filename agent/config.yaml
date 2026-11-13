@@ -17,27 +17,27 @@ profiles:
     fallback_model: "qwen/qwen3.8-27b"
     quota_fallbacks: ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]   # used only when a model is out of daily quota
     injection_classifier: "meta-llama/llama-prompt-guard-2-86m"
-    embeddings: "BAAI/bge-m3"
-    reranker: "BAAI/bge-reranker-v2-m3"
+    embeddings: "BAAI/bge-small-en-v1.5"   # loaded by rag/index/embed.py (GIGBID_EMBED_MODEL overrides)
+    reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"   # GIGBID_RERANK_MODEL overrides
   open_qwen:   # second open configuration for the "choose by measurement" comparison
     provider: groq
     nodes:
       default: {model: "qwen/qwen3.8-27b"}
     fallback_model: "openai/gpt-oss-20b"
-    embeddings: "BAAI/bge-m3"
-    reranker: "BAAI/bge-reranker-v2-m3"
+    embeddings: "BAAI/bge-small-en-v1.5"   # loaded by rag/index/embed.py (GIGBID_EMBED_MODEL overrides)
+    reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"   # GIGBID_RERANK_MODEL overrides
   local:
     provider: ollama
     nodes:
       default: {model: "qwen3:8b"}
-    embeddings: "nomic-embed-text"
-    reranker: "BAAI/bge-reranker-v2-m3"
+    embeddings: "BAAI/bge-small-en-v1.5"
+    reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"   # GIGBID_RERANK_MODEL overrides
   paid:
     provider: openai
     nodes:
       default: {model: "gpt-4.1-mini"}
-    embeddings: "BAAI/bge-m3"
-    reranker: "BAAI/bge-reranker-v2-m3"
+    embeddings: "BAAI/bge-small-en-v1.5"   # loaded by rag/index/embed.py (GIGBID_EMBED_MODEL overrides)
+    reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"   # GIGBID_RERANK_MODEL overrides
 
 rag:
   variant: best              # contextual + hybrid, chosen by evals/results/rag_main.json
