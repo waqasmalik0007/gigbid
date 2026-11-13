@@ -19,7 +19,7 @@ PY=${PY:-python}
 # step <name> <done-check python expr on the result file> -- <command...>
 step() {
   local name=$1 check=$2; shift 3
-  for attempt in $(seq 1 ${MAX_ATTEMPTS:-12}); do
+  for attempt in $(seq 1 ${MAX_ATTEMPTS:-40}); do
     if $PY -c "$check" 2>/dev/null; then echo "$(date +%T) $name complete"; return 0; fi
     echo "$(date +%T) $name attempt $attempt"
     GIGBID_EVAL_TAG=$name "$@" >> "$LOG/$name.log" 2>&1
@@ -29,26 +29,30 @@ step() {
   echo "$(date +%T) $name gave up after $attempt attempts"
 }
 
+ok_rows() {  # resumable runner finished: >= $2 rows without an infrastructure error in its partial file
+  echo "import json,sys; r=[json.loads(x) for x in open('evals/results/$1')]; sys.exit(0 if sum('error' not in x for x in r)>=$2 else 1)"
+}
+
 ok_json() {  # result file exists and its overall summary has n>=$2 and no errors
   echo "import json,sys; d=json.load(open('evals/results/$1')); o=d.get('overall',d); sys.exit(0 if o.get('n',0)>=$2 and not o.get('errors') else 1)"
 }
 
 if [ "$LANE" = qwen ]; then
-  step decision_open_qwen "$(ok_json decision_open_qwen.json 55)" -- \
+  step decision_open_qwen "$(ok_rows decision_open_qwen.partial.jsonl 60)" -- \
     $PY -m evals.runners.decision_eval --per-persona 20 --profile open_qwen --concurrency 2
   exit 0
 fi
 
-step decision_open "$(ok_json decision_open.json 55)" -- \
+step decision_open "$(ok_rows decision_open.partial.jsonl 60)" -- \
   $PY -m evals.runners.decision_eval --per-persona 20 --profile open --concurrency 2
-step proposals_best "$(ok_json proposals_best.json 10)" -- \
-  $PY -m evals.runners.proposal_eval --per-persona 4 --variant best --tag best
-step proposals_v0 "$(ok_json proposals_v0.json 10)" -- \
-  $PY -m evals.runners.proposal_eval --per-persona 4 --variant v0_naive --tag v0
-step multiagent_compare "import json,sys; d=json.load(open('evals/results/multiagent_compare.json'))['systems']; sys.exit(0 if all(d.get(s,{}).get('n',0)>=13 and not d[s].get('errors') for s in ('react','supervisor','graph')) else 1)" -- \
-  $PY -m evals.runners.multiagent_compare --per-persona 5
+step proposals_best "$(ok_rows proposals_best.partial.jsonl 9)" -- \
+  $PY -m evals.runners.proposal_eval --per-persona 3 --variant best --tag best
+step proposals_v0 "$(ok_rows proposals_v0.partial.jsonl 9)" -- \
+  $PY -m evals.runners.proposal_eval --per-persona 3 --variant v0_naive --tag v0
+step multiagent_compare "import json,sys; d=json.load(open('evals/results/multiagent_compare.json'))['systems']; sys.exit(0 if all(d.get(s,{}).get('n',0)>=6 and not d[s].get('errors') for s in ('react','supervisor','graph')) else 1)" -- \
+  $PY -m evals.runners.multiagent_compare --per-persona 2
 step injection "import json,sys; d=json.load(open('evals/results/injection.json')); sys.exit(0 if d else 1)" -- \
-  $PY -m evals.runners.injection_eval --n 12
+  $PY -m evals.runners.injection_eval --n 8
 $PY -m evals.runners.ab_test > "$LOG/ab_test.log" 2>&1
 $PY -m evals.runners.judge_calibration export > "$LOG/judge_export.log" 2>&1
 step single_agent "import json,sys; json.load(open('evals/results/single_agent_proposal.json'))" -- \

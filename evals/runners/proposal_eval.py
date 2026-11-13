@@ -107,7 +107,8 @@ def summarise(rows: list[dict]) -> dict:
     lat = sorted(r["latency_s"] for r in ok)
     q = lambda xs, p: round(xs[min(len(xs) - 1, int(p * len(xs)))], 2)  # noqa: E731
     js = [r["judge"]["overall"] for r in ok if r.get("judge")]
-    return {"n": len(ok), "attempted": len(rows),
+    return {"n": len(ok), "attempted": len(rows), "errors": sum("error" in r for r in rows),
+            "no_proposal": sum(bool(r.get("no_proposal")) for r in rows),
             "unsupported_before": round(statistics.mean(r["unsupported_before"] or 0 for r in ok), 3),
             "unsupported_after": round(statistics.mean(r["unsupported_after"] or 0 for r in ok), 3),
             "unsupported_claims_per_proposal_before": round(statistics.mean((r["unsupported_before"] or 0) * r["claims"] for r in ok), 2),
@@ -140,6 +141,8 @@ async def main() -> None:
     partial = ROOT / f"evals/results/proposals_{tag}.partial.jsonl"
     rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
     rows = [r for r in rows if "error" not in r]  # resumable: infrastructure failures are retried
+    wanted = {(p, r["job"]["job_id"]) for p in PERSONAS for r in pick(p, a.per_persona)}
+    rows = [r for r in rows if (r["persona"], r["job_id"]) in wanted]  # a smaller re-run keeps only its set
     done = {(r["persona"], r["job_id"]) for r in rows}
     work = [(p, r) for p in PERSONAS for r in pick(p, a.per_persona) if (p, r["job"]["job_id"]) not in done]
     sem = asyncio.Semaphore(a.concurrency)

@@ -26,6 +26,9 @@ def export(n: int = 30) -> None:
         rows += [r | {"src": f.name} for r in json.loads(f.read_text())["rows"] if r.get("letter") and r.get("judge")]
     random.Random(1).shuffle(rows)
     rows = rows[:n]
+    if len(rows) < n:  # the free-tier quota limits system proposals; top up with judged past proposals
+        rows += _past_proposals(n - len(rows))
+        random.Random(2).shuffle(rows)
     jobs = {}
     for p in ("ai_ml_engineer", "fullstack_web", "data_analyst"):
         for line in (ROOT / f"evals/datasets/dev_{p}.jsonl").open(encoding="utf-8"):
@@ -35,11 +38,36 @@ def export(n: int = 30) -> None:
         w = csv.writer(fh)
         w.writerow(["item", "job_title", "job_post", "proposal", "human_overall (1-5)", "notes"])
         for i, r in enumerate(rows):
-            j = jobs.get(r["job_id"], {})
+            j = jobs.get(r["job_id"], r.get("_job", {}))
             w.writerow([i, j.get("title", ""), j.get("description", "")[:1200], r["letter"], "", ""])
     KEY.write_text(json.dumps([{"item": i, "job_id": r["job_id"], "judge_overall": r["judge"]["overall"], "src": r["src"]}
                                for i, r in enumerate(rows)], indent=1))
     print(f"wrote {len(rows)} items to {SHEET}")
+
+
+def _past_proposals(k: int) -> list[dict]:
+    """Persona past proposals (synthetic, from very generic to evidence-specific), judged now by the same
+    judge and prompt as the system's proposals, so the labelled set spans the whole quality range."""
+    import asyncio
+
+    from evals.runners.proposal_eval import judge
+    pool = []
+    for p in ("ai_ml_engineer", "fullstack_web", "data_analyst"):
+        pool += [x | {"persona": p} for x in json.loads((ROOT / f"data/personas/{p}/past_proposals.json").read_text())]
+    random.Random(3).shuffle(pool)
+    out = []
+
+    async def run() -> None:
+        for x in pool:
+            if len(out) >= k:
+                break
+            job = {"title": x["job_title"], "description": f"Category: {x['category']}. Skills: {', '.join(x['skills'])}"}
+            j, _ = await judge(job, x["text"])
+            if j:
+                out.append({"job_id": x["evidence_id"], "letter": x["text"], "judge": j.model_dump(),
+                            "src": "past_proposals (synthetic)", "_job": job})
+    asyncio.run(run())
+    return out
 
 
 def kappa(a: list[int], b: list[int], weighted: bool) -> float:
