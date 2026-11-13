@@ -18,8 +18,9 @@ submitter can).
 **Budgets declared before measuring** (`agent/config.yaml`): p95 latency 20 s per job analysed,
 USD 0.01 per proposal, 40 steps and 60k tokens per thread. All models are open-weight (gpt-oss-20b/120b,
 Qwen 3.8 27B on Groq's free tier; BGE-small embeddings and a MiniLM cross-encoder on CPU). The free tier
-(8k tokens/min and 1k requests/day per model) shaped both the architecture (nodes spread across models, a
-per-model token throttle) and the evaluation sizes, which are reported with every result.
+(8k tokens/min, 200k tokens/day and 1k requests/day per model) shaped both the architecture (nodes
+spread across models, a cross-process token throttle, quota-aware model routing) and the evaluation
+sizes, which are reported with every result.
 
 **Data.** No simulator or persona corpus was provided this term, so I built GigSim (FastAPI: jobs, clients
 with hidden preferences, Connects, proposals, messages, rate limits, random 5xx, an outcome model) and a
@@ -164,4 +165,12 @@ TODO(after deadline run): results against the declared budgets, without excuses.
 
 ## Appendix: reproducing
 
-`make eval` regenerates every results file; `python docs/report/build.py` rebuilds this PDF.
+`make eval` regenerates every results file (`tools/run_all_evals.sh` does the same resumably within the
+free-tier quotas); `python docs/report/build.py` rebuilds this PDF. Tests: 36 Python tests (unit, MCP
+contract snapshots, MCP server integration, API tenant isolation) and 12 Playwright end-to-end tests (6
+flows on desktop and phone viewports) pass.
+
+**Quota note.** When a model returns a per-day 429, `agent/llm.py` marks it exhausted until Groq's
+reported reset and routes that node to the next model in the profile's `quota_fallbacks` (gpt-oss-20b
+nodes to gpt-oss-120b). Every re-route is logged (`data/processed/quota_routes.log`) and reported with
+the run it affected.

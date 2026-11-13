@@ -109,6 +109,11 @@ make test    # unit + MCP contract + integration
 make eval    # retrieval, decision, proposal and outcome evaluations
 ```
 
+Tests (last local run, 14 Nov 2026): 36 Python tests pass (unit, MCP contract, MCP server
+integration, API tenant isolation), and 12 Playwright end-to-end tests pass (6 flows × desktop and phone:
+onboarding, approve, reject-needs-reason, edit-and-recheck, degraded banner, evidence on keyboard focus).
+LLM evaluations run resumably within the Groq free-tier quotas via `tools/run_all_evals.sh`.
+
 Open models only (Groq-hosted gpt-oss-20b/120b, Qwen 3.8 27B; BGE-small embeddings and a MiniLM
 cross-encoder on CPU); `GIGBID_PROFILE=local` runs everything on Ollama.
 
