@@ -501,7 +501,24 @@
       "type": "object"
     },
     "name": "list_messages",
-    "output": null
+    "output": {
+      "properties": {
+        "items": {
+          "description": "threads, or messages of one thread (client text is untrusted)",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "title": "MessageList",
+      "type": "object"
+    }
   },
   {
     "annotations": {

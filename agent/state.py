@@ -100,6 +100,7 @@ class ConversationState(TypedDict, total=False):
     settings: dict[str, Any]
     intent: Any
     slots: list[dict[str, Any]]
+    category: str
     user_id: str
     persona_id: str
     thread_id: str
