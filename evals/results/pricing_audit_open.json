@@ -1,0 +1,254 @@
+{
+  "tag": "open",
+  "n_priced": 12,
+  "replay_mismatches": 0,
+  "in_gold_band": 0.5,
+  "in_client_range": 0.917,
+  "misses": 6,
+  "misses_real_hourly": 6,
+  "misses_gold_unreachable": 4,
+  "fix_persona_floor_in_band": 0.5,
+  "fix_client_range_in_band": 0.583,
+  "rows": [
+    {
+      "job_id": "job_acca5b51d1",
+      "persona": "ai_ml_engineer",
+      "budget_type": "fixed",
+      "real_post": true,
+      "client_range": [
+        400,
+        500
+      ],
+      "gold_band": [
+        350,
+        650
+      ],
+      "price": 495.0,
+      "in_gold_band": true,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": true,
+      "in_band_client_range": true
+    },
+    {
+      "job_id": "job_72a13254fd",
+      "persona": "ai_ml_engineer",
+      "budget_type": "hourly",
+      "real_post": true,
+      "client_range": [
+        25,
+        45
+      ],
+      "gold_band": [
+        50,
+        77
+      ],
+      "price": 36.88,
+      "in_gold_band": false,
+      "in_client_range": true,
+      "gold_band_reachable": false,
+      "in_band_persona_floor": false,
+      "in_band_client_range": false
+    },
+    {
+      "job_id": "job_6229d31868",
+      "persona": "ai_ml_engineer",
+      "budget_type": "hourly",
+      "real_post": true,
+      "client_range": [
+        20,
+        45
+      ],
+      "gold_band": [
+        50,
+        77
+      ],
+      "price": 40.0,
+      "in_gold_band": false,
+      "in_client_range": true,
+      "gold_band_reachable": false,
+      "in_band_persona_floor": false,
+      "in_band_client_range": false
+    },
+    {
+      "job_id": "job_6afb24de20",
+      "persona": "fullstack_web",
+      "budget_type": "hourly",
+      "real_post": true,
+      "client_range": [
+        25,
+        45
+      ],
+      "gold_band": [
+        39,
+        64
+      ],
+      "price": 33.0,
+      "in_gold_band": false,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": false,
+      "in_band_client_range": true
+    },
+    {
+      "job_id": "job_cc6f6ede7b",
+      "persona": "fullstack_web",
+      "budget_type": "hourly",
+      "real_post": true,
+      "client_range": [
+        16,
+        35
+      ],
+      "gold_band": [
+        50,
+        77
+      ],
+      "price": 35.0,
+      "in_gold_band": false,
+      "in_client_range": true,
+      "gold_band_reachable": false,
+      "in_band_persona_floor": false,
+      "in_band_client_range": false
+    },
+    {
+      "job_id": "job_edc10c00d8",
+      "persona": "fullstack_web",
+      "budget_type": "hourly",
+      "real_post": false,
+      "client_range": [
+        42,
+        87
+      ],
+      "gold_band": [
+        39,
+        64
+      ],
+      "price": 42.0,
+      "in_gold_band": true,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": true,
+      "in_band_client_range": false
+    },
+    {
+      "job_id": "job_2b80090196",
+      "persona": "data_analyst",
+      "budget_type": "hourly",
+      "real_post": true,
+      "client_range": [
+        25,
+        50
+      ],
+      "gold_band": [
+        39,
+        64
+      ],
+      "price": 33.0,
+      "in_gold_band": false,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": false,
+      "in_band_client_range": true
+    },
+    {
+      "job_id": "job_1ff73fddc9",
+      "persona": "data_analyst",
+      "budget_type": "hourly",
+      "real_post": false,
+      "client_range": [
+        17,
+        37
+      ],
+      "gold_band": [
+        32,
+        55
+      ],
+      "price": 37.0,
+      "in_gold_band": true,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": true,
+      "in_band_client_range": true
+    },
+    {
+      "job_id": "job_c08d995514",
+      "persona": "data_analyst",
+      "budget_type": "hourly",
+      "real_post": false,
+      "client_range": [
+        25,
+        54
+      ],
+      "gold_band": [
+        32,
+        55
+      ],
+      "price": 38.5,
+      "in_gold_band": true,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": true,
+      "in_band_client_range": true
+    },
+    {
+      "job_id": "job_d3eff7c2f1",
+      "persona": "data_analyst",
+      "budget_type": "hourly",
+      "real_post": true,
+      "client_range": [
+        12,
+        20
+      ],
+      "gold_band": [
+        32,
+        55
+      ],
+      "price": 30.0,
+      "in_gold_band": false,
+      "in_client_range": false,
+      "gold_band_reachable": false,
+      "in_band_persona_floor": false,
+      "in_band_client_range": false
+    },
+    {
+      "job_id": "job_0aed854dc1",
+      "persona": "data_analyst",
+      "budget_type": "fixed",
+      "real_post": true,
+      "client_range": [
+        1600,
+        2000
+      ],
+      "gold_band": [
+        1400,
+        2600
+      ],
+      "price": 1980.0,
+      "in_gold_band": true,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": true,
+      "in_band_client_range": true
+    },
+    {
+      "job_id": "job_899a19b6be",
+      "persona": "data_analyst",
+      "budget_type": "hourly",
+      "real_post": false,
+      "client_range": [
+        22,
+        47
+      ],
+      "gold_band": [
+        32,
+        55
+      ],
+      "price": 35.0,
+      "in_gold_band": true,
+      "in_client_range": true,
+      "gold_band_reachable": true,
+      "in_band_persona_floor": true,
+      "in_band_client_range": true
+    }
+  ]
+}
