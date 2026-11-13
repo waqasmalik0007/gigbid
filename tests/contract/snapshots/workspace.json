@@ -1,0 +1,250 @@
+[
+  {
+    "annotations": {
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "readOnlyHint": false
+    },
+    "input": {
+      "properties": {
+        "body": {
+          "title": "Body",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "minLength": 8,
+          "title": "Idempotency Key",
+          "type": "string"
+        },
+        "subject": {
+          "title": "Subject",
+          "type": "string"
+        },
+        "to": {
+          "title": "To",
+          "type": "string"
+        },
+        "user_id": {
+          "title": "User Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id",
+        "to",
+        "subject",
+        "body",
+        "idempotency_key"
+      ],
+      "title": "create_email_draftArguments",
+      "type": "object"
+    },
+    "name": "create_email_draft",
+    "output": {
+      "properties": {
+        "draft_id": {
+          "title": "Draft Id",
+          "type": "string"
+        },
+        "idempotent_replay": {
+          "default": false,
+          "title": "Idempotent Replay",
+          "type": "boolean"
+        },
+        "status": {
+          "default": "draft (not sent)",
+          "title": "Status",
+          "type": "string"
+        },
+        "subject": {
+          "title": "Subject",
+          "type": "string"
+        },
+        "to": {
+          "title": "To",
+          "type": "string"
+        }
+      },
+      "required": [
+        "draft_id",
+        "to",
+        "subject"
+      ],
+      "title": "EmailDraft",
+      "type": "object"
+    }
+  },
+  {
+    "annotations": {
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "readOnlyHint": false
+    },
+    "input": {
+      "properties": {
+        "end": {
+          "title": "End",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "minLength": 8,
+          "title": "Idempotency Key",
+          "type": "string"
+        },
+        "start": {
+          "title": "Start",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "user_id": {
+          "title": "User Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id",
+        "start",
+        "end",
+        "title",
+        "idempotency_key"
+      ],
+      "title": "create_interview_holdArguments",
+      "type": "object"
+    },
+    "name": "create_interview_hold",
+    "output": {
+      "properties": {
+        "end": {
+          "title": "End",
+          "type": "string"
+        },
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "idempotent_replay": {
+          "default": false,
+          "title": "Idempotent Replay",
+          "type": "boolean"
+        },
+        "start": {
+          "title": "Start",
+          "type": "string"
+        },
+        "status": {
+          "default": "tentative",
+          "title": "Status",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "start",
+        "end",
+        "title"
+      ],
+      "title": "Hold",
+      "type": "object"
+    }
+  },
+  {
+    "annotations": {
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "readOnlyHint": true
+    },
+    "input": {
+      "properties": {
+        "days_ahead": {
+          "default": 5,
+          "maximum": 21,
+          "minimum": 1,
+          "title": "Days Ahead",
+          "type": "integer"
+        },
+        "duration_min": {
+          "default": 30,
+          "maximum": 180,
+          "minimum": 15,
+          "title": "Duration Min",
+          "type": "integer"
+        },
+        "max_slots": {
+          "default": 6,
+          "maximum": 20,
+          "minimum": 1,
+          "title": "Max Slots",
+          "type": "integer"
+        },
+        "start_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start From"
+        },
+        "user_id": {
+          "title": "User Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id"
+      ],
+      "title": "free_slotsArguments",
+      "type": "object"
+    },
+    "name": "free_slots",
+    "output": {
+      "$defs": {
+        "Slot": {
+          "properties": {
+            "end": {
+              "title": "End",
+              "type": "string"
+            },
+            "start": {
+              "title": "Start",
+              "type": "string"
+            }
+          },
+          "required": [
+            "start",
+            "end"
+          ],
+          "title": "Slot",
+          "type": "object"
+        }
+      },
+      "properties": {
+        "result": {
+          "items": {
+            "$ref": "#/$defs/Slot"
+          },
+          "title": "Result",
+          "type": "array"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "free_slotsOutput",
+      "type": "object"
+    }
+  }
+]
