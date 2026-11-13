@@ -9,7 +9,7 @@ import re
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from agent.handoffs import RiskFlag, RiskReport
-from agent.llm import structured
+from agent.llm import astructured
 from agent.mcp_client import call
 from agent.nodes.common import node
 from agent.prompts.loader import fill, untrusted
@@ -62,7 +62,7 @@ async def risk_assessor(state: dict) -> dict:
         flags.add(RiskFlag.LOW_CLIENT_QUALITY)
     if (job.get("budget_max") or 0) < 20 and job.get("budget_type") == "fixed":
         flags.add(RiskFlag.UNREALISTIC_BUDGET)
-    llm, usage = structured("risk_assessor", RiskReport, [
+    llm, usage = await astructured("risk_assessor", RiskReport, [
         SystemMessage(fill("risk_assessor")),
         HumanMessage(f"job_id: {job['job_id']}\nRule-based flags already found: {sorted(f.value for f in flags)}\n"
                      f"Client history: {client.get('history')} payment_verified={client.get('payment_verified')}\n\n"

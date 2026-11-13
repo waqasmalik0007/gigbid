@@ -101,7 +101,7 @@ async def regenerate_paragraph(body: dict, user: dict = Depends(current_user)):
     and still has to go through approval (and Compliance, as an edit)."""
     from langchain_core.messages import HumanMessage, SystemMessage
 
-    from agent.llm import text
+    from agent.llm import atext
     from agent.prompts.loader import fill
     from rag.retriever import get_pipeline
     from rag.verify import split_claims, strip_unsupported, verify_claims
@@ -110,7 +110,7 @@ async def regenerate_paragraph(body: dict, user: dict = Depends(current_user)):
         raise HTTPException(400, "thread_id and paragraph required")
     pipe = get_pipeline(user["persona_id"])
     ev = pipe.retrieve({"title": para, "description": para}, k=4).evidence
-    out, _ = text("writer", [SystemMessage(fill("regenerate")),
+    out, _ = await atext("writer", [SystemMessage(fill("regenerate")),
                              HumanMessage(f"Instruction: {body.get('instruction', 'improve it')}\n\nEVIDENCE:\n" +
                                           "\n".join(f"[{e.evidence_id}] {e.snippet}" for e in ev) +
                                           f"\n\nPARAGRAPH:\n{para}")], max_tokens=600)

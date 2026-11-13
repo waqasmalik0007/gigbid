@@ -9,7 +9,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.types import interrupt
 
 from agent.handoffs import MessageIntent, ReplyDraft
-from agent.llm import structured, text
+from agent.llm import astructured, atext
 from agent.mcp_client import call
 from agent.memory.promotion_rules import record_edit, record_outcome
 from agent.nodes.common import node
@@ -35,7 +35,7 @@ async def classify_intent(state: dict) -> dict:
     if last is None:
         return {"status": "skipped", "errors": ["no client message to answer"]}
     flags, _ = rule_flags(last["body"])
-    intent, usage = structured("liaison", MessageIntent, [
+    intent, usage = await astructured("liaison", MessageIntent, [
         SystemMessage(fill("liaison_intent")),
         HumanMessage(untrusted("untrusted_client_message", last["body"])),
     ])
@@ -67,7 +67,7 @@ async def draft_reply(state: dict) -> dict:
                floor_rate=state.get("settings", {}).get("floor_rate", PERSONAS.get(persona, {}).get("floor_rate", 30)),
                slots=[s["start"] for s in state.get("slots", [])] or "none",
                evidence="\n".join(f"[{e.evidence_id}] {e.snippet[:200]}" for e in ev))
-    body, usage = text("liaison", [SystemMessage(sys),
+    body, usage = await atext("liaison", [SystemMessage(sys),
                                    HumanMessage(untrusted("untrusted_client_message", _conversation(state["messages"])))],
                        temperature=0.3, max_tokens=600)
     from rag.verify import split_claims, strip_unsupported, verify_claims

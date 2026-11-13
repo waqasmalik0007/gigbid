@@ -73,6 +73,39 @@ def _make(provider: str, model: str, temperature: float, max_tokens: int):
     raise ValueError(f"unknown provider {provider}")
 
 
+class _Throttle:
+    """Per-model sliding-window token budget (Groq free tier: 8k tokens/min per model).
+    Sleeps before a call that would exceed TPM_LIMIT instead of provoking 429s."""
+
+    def __init__(self) -> None:
+        import threading
+        from collections import defaultdict, deque
+        self.lock = threading.Lock()
+        self.win: dict[str, deque] = defaultdict(deque)
+
+    def wait(self, model: str, est_tokens: int) -> None:
+        limit = int(os.getenv("TPM_LIMIT", "7500"))
+        while True:
+            with self.lock:
+                now, q = time.time(), self.win[model]
+                while q and now - q[0][0] > 60:
+                    q.popleft()
+                used = sum(t for _, t in q)
+                if used + est_tokens <= limit or not q:
+                    q.append((now, est_tokens))
+                    return
+                sleep = 60 - (now - q[0][0]) + 0.2
+            time.sleep(min(sleep, 30))
+
+
+throttle = _Throttle()
+
+
+def _estimate(messages: list, max_tokens: int) -> int:
+    chars = sum(len(getattr(m, "content", str(m))) for m in messages)
+    return chars // 3 + max_tokens // 2
+
+
 def get_llm(node: str, temperature: float = 0.2, max_tokens: int = 2048, fallback: bool = False):
     prof = config()["profiles"][profile_name()]
     model = prof.get("fallback_model") if fallback else node_model(node)
@@ -100,14 +133,18 @@ def _model_of(llm) -> str:
 
 def structured(node: str, schema: type[T], messages: list, temperature: float = 0.1,
                max_tokens: int = 2048) -> tuple[T, Usage]:
-    """Call the node's model for a Pydantic object; on failure retry once, then the fallback model."""
+    """Call the node's model for a Pydantic object; on failure retry once, then the fallback model.
+
+    json_schema mode first: with function calling, gpt-oss sometimes replies with bare JSON instead
+    of a tool call and Groq rejects it (400 tool_use_failed); measured on all hand-off schemas."""
     last_err: Exception | None = None
-    for fb in (False, False, True):
+    for fb, method in ((False, "json_schema"), (False, "function_calling"), (True, "json_schema")):
         llm = get_llm(node, temperature=temperature, max_tokens=max_tokens, fallback=fb)
         model = _model_of(llm)
+        throttle.wait(model, _estimate(messages, max_tokens))
         t0 = time.perf_counter()
         try:
-            runnable = llm.with_structured_output(schema, include_raw=True)
+            runnable = llm.with_structured_output(schema, include_raw=True, method=method)
             out = runnable.invoke(messages)
             if out.get("parsed") is None:
                 raise ValueError(f"unparseable output: {out.get('parsing_error')}")
@@ -121,6 +158,7 @@ def text(node: str, messages: list, temperature: float = 0.3, max_tokens: int = 
     last_err: Exception | None = None
     for fb in (False, True):
         llm = get_llm(node, temperature=temperature, max_tokens=max_tokens, fallback=fb)
+        throttle.wait(_model_of(llm), _estimate(messages, max_tokens))
         t0 = time.perf_counter()
         try:
             msg = llm.invoke(messages)
@@ -128,3 +166,14 @@ def text(node: str, messages: list, temperature: float = 0.3, max_tokens: int = 
         except Exception as e:  # noqa: BLE001
             last_err = e
     raise RuntimeError(f"{node}: text call failed: {last_err}")
+
+
+async def astructured(*args, **kwargs):
+    """structured() in a worker thread, so parallel graph branches really run concurrently."""
+    import asyncio
+    return await asyncio.to_thread(structured, *args, **kwargs)
+
+
+async def atext(*args, **kwargs):
+    import asyncio
+    return await asyncio.to_thread(text, *args, **kwargs)

@@ -12,7 +12,7 @@ import re
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from agent.handoffs import Claim, Critique, ProposalDraft
-from agent.llm import config, structured
+from agent.llm import astructured, config
 from agent.mcp_client import call
 from agent.memory.promotion_rules import outcome_memory, style_memory
 from agent.nodes.common import node
@@ -54,7 +54,7 @@ async def writer(state: dict) -> dict:
              f"EVIDENCE (cite these ids only):\n{_evidence_block(evidence)}\n\n"
              f"Phrasing that worked before (NOT evidence, do not cite):\n{examples}\n\n"
              + untrusted("untrusted_job_post", f"{job['title']}\n{job.get('description', '')[:3000]}"))
-    draft, usage = structured("writer", ProposalDraft, [SystemMessage(sys), HumanMessage(human)],
+    draft, usage = await astructured("writer", ProposalDraft, [SystemMessage(sys), HumanMessage(human)],
                               temperature=0.4, max_tokens=2500)
     draft.job_id = job["job_id"]
     draft.revision = state.get("revisions", 0)
@@ -89,7 +89,7 @@ async def verifier(state: dict) -> dict:
 async def critic(state: dict) -> dict:
     draft, job = state["draft"], state["job"]
     ver = state.get("verification", {})
-    crit, usage = structured("critic", Critique, [
+    crit, usage = await astructured("critic", Critique, [
         SystemMessage(fill("critic")),
         HumanMessage(f"JobSpec: {state['job_spec'].model_dump_json() if state.get('job_spec') else ''}\n"
                      f"Verification: {ver}\nClaims: {[c.model_dump() for c in draft.claims]}\n"
