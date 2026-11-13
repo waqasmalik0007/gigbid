@@ -85,12 +85,13 @@ def main() -> None:
     configs = [variant_config(v) for v in a.variants]
     if a.ablation:
         best = variant_config("best")
-        configs = [best,
+        configs = [best,  # remove one switch at a time ...
                    best.with_(name="best-contextual", chunking="item"),
-                   best.with_(name="best-decompose", query="whole"),
                    best.with_(name="best-hybrid", retrieval="dense"),
-                   best.with_(name="best-rerank", rerank=False),
-                   best.with_(name="best-outcome", outcome=False)]
+                   # ... and add back each switch that lost on its own
+                   best.with_(name="best+rerank", rerank=True),
+                   best.with_(name="best+decompose", query="decompose"),
+                   best.with_(name="best+outcome", outcome=True)]
         a.tag = "ablation"
     OUT.mkdir(parents=True, exist_ok=True)
     out_json = OUT / f"rag_{a.tag}.json"

@@ -39,7 +39,7 @@ profiles:
     reranker: "BAAI/bge-reranker-v2-m3"
 
 rag:
-  variant: v3_rerank          # chosen by evaluation; see docs/DATA_CARD.md
+  variant: best              # contextual + hybrid, chosen by evals/results/rag_main.json
   top_k: 8
 
 budgets:

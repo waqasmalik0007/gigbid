@@ -113,15 +113,21 @@ async def main() -> None:
     from langgraph.checkpoint.memory import InMemorySaver
     from agent.memory.store import serde
     app = build(InMemorySaver(serde=serde()), interrupt_before=["writer"])  # decisions only
-    work = [(p, r) for p in PERSONAS for r in sample(p, a.per_persona)]
+    out_path = ROOT / f"evals/results/decision_{a.profile}.json"
+    partial = ROOT / f"evals/results/decision_{a.profile}.partial.jsonl"
+    rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
+    done = {(r["persona"], r["job_id"]) for r in rows if "error" not in r}
+    rows = [r for r in rows if "error" not in r]
+    work = [(p, r) for p in PERSONAS for r in sample(p, a.per_persona) if (p, r["job"]["job_id"]) not in done]
     sem = asyncio.Semaphore(a.concurrency)
-    rows: list[dict] = []
 
     async def one(p, r):
         async with sem:
             res = await run_job(app, p, r, a.profile)
             rows.append(res)
-            print(f"[{len(rows)}/{len(work)}] {p} {r['job']['job_id']} gold={r['gold']['action']} "
+            with partial.open("a") as fh:  # resumable: a crash or reboot never loses finished jobs
+                fh.write(json.dumps(res, default=str) + "\n")
+            print(f"[{len(rows)}/{len(work) + len(done)}] {p} {r['job']['job_id']} gold={r['gold']['action']} "
                   f"pred={res.get('pred_action')} scam={res.get('pred_scam')}/{r['gold']['is_scam']} "
                   f"{res.get('error', '')}", flush=True)
 
@@ -132,7 +138,7 @@ async def main() -> None:
                          "synthetic": summarise([r for r in rows if r.get("real") is False])},
            "rows": rows}
     (ROOT / "evals/results").mkdir(parents=True, exist_ok=True)
-    (ROOT / f"evals/results/decision_{a.profile}.json").write_text(json.dumps(out, indent=2, default=str))
+    out_path.write_text(json.dumps(out, indent=2, default=str))
     print(json.dumps(out["overall"], indent=1))
 
 
