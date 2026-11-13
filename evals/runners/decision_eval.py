@@ -42,13 +42,16 @@ async def run_job(app, persona: str, row: dict, tag: str) -> dict:
     tok = current_user.set(persona)
     t0 = time.perf_counter()
     try:
-        await app.ainvoke({"job_id": job["job_id"], "job": job, "persona_id": persona, "user_id": f"eval-{persona}",
-                           "thread_id": tid, "settings": {}}, cfg)
+        await asyncio.wait_for(app.ainvoke({"job_id": job["job_id"], "job": job, "persona_id": persona,
+                                            "user_id": f"eval-{persona}", "thread_id": tid, "settings": {}}, cfg),
+                               timeout=600)
     except Exception as e:  # noqa: BLE001
         return {"job_id": job["job_id"], "persona": persona, "error": str(e)[:300]}
     finally:
         current_user.reset(tok)
     v = app.get_state(cfg).values
+    if v.get("status") == "dead_letter":  # infrastructure failure (e.g. rate limit), not a decision: retry later
+        return {"job_id": job["job_id"], "persona": persona, "error": f"dead_letter: {v.get('errors', [''])[-1][:200]}"}
     g = row["gold"]
     dec, risk, price, fit = v.get("decision"), v.get("risk_report"), v.get("price"), v.get("fit_report")
     u = v.get("usage", {})
