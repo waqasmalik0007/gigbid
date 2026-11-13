@@ -83,6 +83,7 @@ class BidState(TypedDict, total=False):
     submission: dict[str, Any]
     # control
     status: Status
+    halts: Annotated[list[str], operator.add]   # failures reported by parallel branches
     revisions: int
     steps: Annotated[int, operator.add]
     usage: Annotated[dict[str, float], merge_usage]   # tokens_in, tokens_out, usd

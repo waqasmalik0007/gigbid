@@ -1,0 +1,32 @@
+# Policy pack (ground truth for the Compliance Guard). Rules are data, not code: the 2 Nov
+# "platform policy update" is absorbed by editing this file (see docs/CHANGE_REQUEST.md).
+version: "2026-10-27"
+rules:
+  - id: no_off_platform
+    description: No off-platform contact or payment.
+    action: redact
+    patterns:
+      - '[\w.+-]+@[\w-]+\.[\w.]+'
+      - '(?<!\w)\+?\d[\d\s().-]{7,}\d'
+      - '(?i)\b(whats ?app|telegram|skype|signal|wechat|discord)\b'
+      - '(?i)\b(pay(ment)? (me )?(directly|outside|via bank|by paypal)|bank transfer|crypto|usdt|outside (of )?(the )?platform)\b'
+      - '(?i)https?://(?!github\.com)[^\s)]+'
+  - id: no_guarantees
+    description: No guarantees of results.
+    action: redact
+    patterns:
+      - '(?i)\b(guarantee[ds]?|100% (satisfaction|success|accuracy)|money[- ]back|risk[- ]free|promise you)\b'
+  - id: no_fabrication
+    description: Never fabricate experience; every claim must be verified against the portfolio.
+    action: block_if_unsupported_claims
+  - id: no_free_work
+    description: Do not propose unpaid production work.
+    action: redact
+    patterns:
+      - '(?i)\b(free (sample|trial|test)|for free|no charge|unpaid)\b'
+  - id: fair_automation
+    description: Nothing is sent without human approval; respect rate limits.
+    action: enforced_by_graph
+limits:
+  max_cover_letter_words: 300
+  min_cover_letter_words: 60
