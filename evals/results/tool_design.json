@@ -413,6 +413,528 @@
           "tokens": 477
         }
       ]
+    },
+    "coarse": {
+      "n_tools": 2,
+      "selection_accuracy": 1.0,
+      "argument_accuracy": 0.925,
+      "tokens_per_task": 316,
+      "errors": 0,
+      "model": "openai/gpt-oss-120b",
+      "rows": [
+        {
+          "task": "What is the budget of job job_e6c3dd6304?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_e6c3dd6304"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 289
+        },
+        {
+          "task": "What is the budget of job job_b16a457a33?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_b16a457a33"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 287
+        },
+        {
+          "task": "What is the budget of job job_fa755791d0?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_fa755791d0"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 287
+        },
+        {
+          "task": "What is the budget of job job_b6692ea5df?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_b6692ea5df"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 287
+        },
+        {
+          "task": "What is the budget of job job_215bb47da8?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_215bb47da8"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 294
+        },
+        {
+          "task": "What is the budget of job job_06349be70b?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_06349be70b"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 287
+        },
+        {
+          "task": "What is the budget of job job_8bd7954c40?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_8bd7954c40"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 289
+        },
+        {
+          "task": "What is the budget of job job_be057d4ca4?",
+          "tool": "marketplace",
+          "args": {
+            "action": "job",
+            "params": {
+              "id": "job_be057d4ca4"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 287
+        },
+        {
+          "task": "Is the client cli_d094700e37 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_d094700e37"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 338
+        },
+        {
+          "task": "Is the client cli_be461a0cd1 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_be461a0cd1"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 309
+        },
+        {
+          "task": "Is the client cli_1b64538924 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_1b64538924"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 309
+        },
+        {
+          "task": "Is the client cli_b1d5781111 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_b1d5781111"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 309
+        },
+        {
+          "task": "Is the client cli_fa35e19212 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_fa35e19212"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 307
+        },
+        {
+          "task": "Is the client cli_934385f53d trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_934385f53d"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 315
+        },
+        {
+          "task": "Is the client cli_761f22b2c1 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_761f22b2c1"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 336
+        },
+        {
+          "task": "Is the client cli_902ba3cda1 trustworthy? Check how many people they hired and spent.",
+          "tool": "marketplace",
+          "args": {
+            "action": "client",
+            "params": {
+              "id": "cli_902ba3cda1"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 343
+        },
+        {
+          "task": "Have I ever built something with RAG? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "RAG"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 324
+        },
+        {
+          "task": "Have I ever built something with computer vision? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "computer vision"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 344
+        },
+        {
+          "task": "Have I ever built something with Docker? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "Docker"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 337
+        },
+        {
+          "task": "Have I ever built something with FastAPI? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "FastAPI"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 343
+        },
+        {
+          "task": "Have I ever built something with churn prediction? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "churn prediction"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 290
+        },
+        {
+          "task": "Have I ever built something with semantic search? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "semantic search"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 343
+        },
+        {
+          "task": "Have I ever built something with LangGraph? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "LangGraph"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 324
+        },
+        {
+          "task": "Have I ever built something with fine-tuning? Find proof in my portfolio.",
+          "tool": "portfolio",
+          "args": {
+            "action": "search",
+            "params": {
+              "query": "fine-tuning"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 343
+        },
+        {
+          "task": "Show me the full write-up of case_proj_d007e6392d.",
+          "tool": "portfolio",
+          "args": {
+            "action": "get",
+            "params": {
+              "id": "case_proj_d007e6392d"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 325
+        },
+        {
+          "task": "Show me the full write-up of case_proj_2b23c5e189.",
+          "tool": "portfolio",
+          "args": {
+            "action": "get",
+            "params": {
+              "id": "case_proj_2b23c5e189"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 310
+        },
+        {
+          "task": "Show me the full write-up of case_proj_5820fcf035.",
+          "tool": "portfolio",
+          "args": {
+            "action": "get",
+            "params": {
+              "id": "case_proj_5820fcf035"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 304
+        },
+        {
+          "task": "Show me the full write-up of case_proj_0fac90ba16.",
+          "tool": "portfolio",
+          "args": {
+            "action": "get",
+            "params": {
+              "id": "case_proj_0fac90ba16"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 304
+        },
+        {
+          "task": "Show me the full write-up of case_proj_0e01045792.",
+          "tool": "portfolio",
+          "args": {
+            "action": "get",
+            "params": {
+              "id": "case_proj_0e01045792"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 304
+        },
+        {
+          "task": "Show me the full write-up of case_proj_10615e6213.",
+          "tool": "portfolio",
+          "args": {
+            "action": "get",
+            "params": {
+              "id": "case_proj_10615e6213"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 344
+        },
+        {
+          "task": "What do clients usually pay for web development work?",
+          "tool": "marketplace",
+          "args": {
+            "action": "stats",
+            "params": {
+              "category": "web development"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": false,
+          "tokens": 346
+        },
+        {
+          "task": "What do clients usually pay for data analysis work?",
+          "tool": "marketplace",
+          "args": {
+            "action": "stats",
+            "params": {
+              "category": "data analysis"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": false,
+          "tokens": 380
+        },
+        {
+          "task": "What do clients usually pay for machine learning engineering work?",
+          "tool": "marketplace",
+          "args": {
+            "action": "stats",
+            "params": {
+              "category": "machine learning engineering"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": false,
+          "tokens": 369
+        },
+        {
+          "task": "How many Connects do I have left?",
+          "tool": "marketplace",
+          "args": {
+            "action": "connects",
+            "params": {}
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 297
+        },
+        {
+          "task": "How many Connects do I have left?",
+          "tool": "marketplace",
+          "args": {
+            "action": "connects",
+            "params": {}
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 297
+        },
+        {
+          "task": "Which skills can my portfolio actually back up?",
+          "tool": "portfolio",
+          "args": {
+            "action": "skills",
+            "params": {}
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 339
+        },
+        {
+          "task": "Which skills can my portfolio actually back up?",
+          "tool": "portfolio",
+          "args": {
+            "action": "skills",
+            "params": {}
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 339
+        },
+        {
+          "task": "Find open jobs about Shopify.",
+          "tool": "marketplace",
+          "args": {
+            "action": "jobs",
+            "params": {
+              "query": "Shopify"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 296
+        },
+        {
+          "task": "Find open jobs about dashboard.",
+          "tool": "marketplace",
+          "args": {
+            "action": "jobs",
+            "params": {
+              "query": "dashboard"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 277
+        },
+        {
+          "task": "Find open jobs about scraping.",
+          "tool": "marketplace",
+          "args": {
+            "action": "jobs",
+            "params": {
+              "query": "scraping"
+            }
+          },
+          "selected_ok": true,
+          "arg_ok": true,
+          "tokens": 296
+        }
+      ]
     }
   }
 }
