@@ -58,7 +58,7 @@ fi
 
 if [ "$LANE" = qwen ]; then
   # R&D C: all three systems on the same model; Qwen's quota is separate from the gpt-oss proposal runs
-  step multiagent_compare "import json,sys; d=json.load(open('evals/results/multiagent_compare.json'))['systems']; sys.exit(0 if all(d.get(s,{}).get('n',0)>=6 and not d[s].get('errors') for s in ('react','supervisor','graph')) else 1)" -- \
+  step multiagent_compare "import json,sys; d=json.load(open('evals/results/multiagent_compare.json'))['systems']; sys.exit(0 if all(d.get(s,{}).get('n',0)>=12 and not d[s].get('errors') for s in ('react','supervisor','graph')) else 1)" -- \
     $PY -m evals.runners.multiagent_compare --per-persona 2 --profile open_qwen
   step decision_open_qwen "$(ok_rows decision_open_qwen.partial.jsonl 60)" -- \
     $PY -m evals.runners.decision_eval --per-persona 20 --profile open_qwen --concurrency 2

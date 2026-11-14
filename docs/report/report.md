@@ -138,7 +138,40 @@ decomposition and outcome boosting stay available as configurable components but
 
 {{results:compare}}
 
-TODO(result): analysis; where the single agent wins, and whether I would ship it.
+All three systems ran on one model (Qwen 3.8 27B, `--profile open_qwen`) with the same MCP tools, over 12
+jobs: per persona, 2 gold bids, 1 scam and 1 skip.
+
+**The comparison is incomplete, and the gap is biased.** The graph finished 12 of 12 jobs. ReAct finished
+7 and the supervisor 4; the rest failed on Qwen's daily quota after about 70 retries. The failures were
+the bid jobs, which cost the most tokens. On the jobs the baselines did finish, they produced **no
+proposals at all**, so I cannot compare proposal quality across systems. I compare them only on the jobs
+every system finished.
+
+- **Bid/skip decisions:** all three are equally good on the shared jobs. ReAct got 6 of its 7 right, and
+  the graph got the same 6 right. Both skipped `job_549843ddfe`, a gold bid. The supervisor got 4 of 4.
+  No system bid on a scam.
+- **Tokens:** the graph is *cheaper* on these jobs, not dearer: about 1,670 tokens per job on ReAct's 7,
+  against ReAct's 3,580 (2.1×). On the supervisor's 4 jobs, the graph used about 1,730 against the
+  supervisor's 2,620.
+  - The graph stops after the decision node and never loads the Writer's context.
+  - ReAct explores the portfolio with tools before deciding to skip.
+  - A graph proposal costs 12–17k tokens.
+- **Proposals:** only the graph produced any. It drafted 5 bids with 0.2 unsupported claims per letter
+  (one claim in total), 0 policy violations reaching the client, and a mean simulated reply probability of
+  0.29. Latency was 5–10 minutes per bid, almost all of it spent waiting under the rate limit.
+- **What the single agent does when told to draft:** the Part A run (`single_agent_proposal.json`,
+  `--draft`) wrote a grounded letter citing two real case studies in 9 tool calls. It also pasted its
+  working notes and the client's private statistics (total spend, rating) into the text meant for the
+  client. Nothing in a ReAct loop separates *what the agent knows* from *what reaches the client*. In
+  the graph, that separation is structural: the Writer receives only evidence, the verifier and
+  Compliance Guard run on the exact outgoing text, and approval is an interrupt.
+
+**Where the single agent wins:** it is roughly 70 lines against several thousand, and easy to change. It
+is a good choice for a read-only assistant that answers "should I bid on this?". **Would I ship it?** Not
+for anything that writes to a marketplace. Its failures are not about accuracy, which matched the graph.
+They are about guarantees the brief requires and a ReAct loop cannot enforce: nothing private leaks, no
+unsupported claim survives, and nothing is submitted without approval. With n = 4–12, this is evidence of
+a design difference, not a measured effect size.
 
 ## 6. The change request
 
@@ -192,7 +225,9 @@ A caveat on the threshold fix: the gold rule's own cut-off is 0.6 coverage and i
 client's maximum to reach the floor, so both fixes partly move the agent toward the label rule. The
 held-out-persona test guards against overfitting to these 60 jobs, not against that label bias; the
 hidden test set is the real check. The threshold and floor fixes were applied after the proposal runs so
-those runs stay comparable. Fixes
+those runs stay comparable. They are now in the shipped code: `bid_threshold` 0.60, the persona's own floor
+rate, and watch, not bid, when the client's hourly maximum is below the floor. The decision table above
+was measured before them, and the replay gives their expected effect. Fixes
 made earlier in development (each with a commit): fit thresholds that marked every requirement "none";
 parallel branches that ran serially; dropped state keys; Groq tool-call 400s; and the first "best"
 pipeline that switched on components that hurt.

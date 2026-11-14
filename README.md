@@ -101,11 +101,11 @@ Recall@5 by persona and job type:
 
 ### Multi-agent comparison (R&D C)
 
-| System | n | Bid/skip accuracy | Scams bid on | Unsupported claims / proposal | Policy violations in output / proposal | GigSim reply prob. | Tokens / job | p50 latency (s) |
+| System | n (failed) | Bid/skip accuracy | Scams bid on | Unsupported claims / proposal | Policy violations in output / proposal | GigSim reply prob. | Tokens / job | p50 latency (s) |
 |---|---|---|---|---|---|---|---|---|
-| react | 7 | 0.857 | 0 | – | – | – | 3578 | 46.4 |
-| supervisor | 4 | 1.000 | 0 | – | – | – | 2623 | 57.6 |
-| graph | 12 | 0.917 | 0 | 0.20 | 0 | 0.291 | 7242 | 73.1 |
+| react | 7 (5) | 0.857 | 0 | – | – | – | 3578 | 46.4 |
+| supervisor | 4 (8) | 1.000 | 0 | – | – | – | 2623 | 57.6 |
+| graph | 12 (0) | 0.917 | 0 | 0.20 | 0 | 0.291 | 7242 | 73.1 |
 
 ### Tool granularity (R&D A)
 

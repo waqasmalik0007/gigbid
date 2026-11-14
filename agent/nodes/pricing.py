@@ -16,6 +16,18 @@ from agent.nodes.common import node
 USD_PER_CONNECT = 0.15
 
 
+def _persona_floor(persona: str | None) -> float:
+    """The persona's own floor rate when the user has not set one (failure analysis: evaluations ran with
+    empty settings and priced at a hard-coded $30 floor, below the ML persona's $40)."""
+    import json
+    from pathlib import Path
+    f = Path(__file__).resolve().parents[2] / "data" / "personas" / str(persona) / "profile.json"
+    try:
+        return float(json.loads(f.read_text()).get("floor_rate", 30))
+    except (OSError, ValueError):
+        return 30.0
+
+
 @node("decide")
 async def decide(state: dict) -> dict:
     d = config()["decision"]
@@ -35,6 +47,11 @@ async def decide(state: dict) -> dict:
         action, reasons = "watch", reasons + [f"missing evidence for: {fit.missing_skills}"]
     else:
         action, reasons = "skip", reasons + [f"weak fit; missing {fit.missing_skills}"]
+    job = state.get("job") or {}
+    floor = float((state.get("settings") or {}).get("floor_rate") or _persona_floor(state.get("persona_id")))
+    if action == "bid" and job.get("budget_type") == "hourly" and job.get("budget_max") and job["budget_max"] < floor:
+        # failure analysis: bidding at our floor would exceed what the client said they pay
+        action, reasons = "watch", reasons + [f"client max ${job['budget_max']}/h is below floor ${floor:g}/h"]
     if spec and spec.category not in ("other", None) and action == "bid":
         reasons.append(f"category {spec.category}")
     conf = abs(fit.fit_score - d["bid_threshold"]) + (0.3 if risk.is_scam else 0)
@@ -53,7 +70,7 @@ async def pricing(state: dict) -> dict:
     stats = await call("pricing", "marketplace", "market_stats", {"category": job["category"], "user_id": user})
     q = stats.get(btype) or {}
     bal = (await call("pricing", "marketplace", "get_connects_balance", {"user_id": user}))["balance"]
-    floor = float(state.get("settings", {}).get("floor_rate", 30))
+    floor = float(state.get("settings", {}).get("floor_rate") or _persona_floor(user))
     lo, hi = job.get("budget_min") or 0, job.get("budget_max") or 0
     if btype == "hourly":
         target = q.get("median", floor) + (q.get("p75", floor) - q.get("median", floor)) * fit.fit_score

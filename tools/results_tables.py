@@ -93,10 +93,10 @@ def compare_table() -> str:
     c = load("multiagent_compare.json")
     if not c:
         return "_Multi-agent comparison not run._\n"
-    lines = ["| System | n | Bid/skip accuracy | Scams bid on | Unsupported claims / proposal | Policy violations in output / proposal | GigSim reply prob. | Tokens / job | p50 latency (s) |",
+    lines = ["| System | n (failed) | Bid/skip accuracy | Scams bid on | Unsupported claims / proposal | Policy violations in output / proposal | GigSim reply prob. | Tokens / job | p50 latency (s) |",
              "|---|---|---|---|---|---|---|---|---|"]
     for k, v in c["systems"].items():
-        lines.append(f"| {k} | {v['n']} | {f(v['bid_skip_accuracy'])} | {v['scams_bid_on']} | "
+        lines.append(f"| {k} | {v['n']} ({v.get('errors', 0)}) | {f(v['bid_skip_accuracy'])} | {v['scams_bid_on']} | "
                      f"{f(v['unsupported_claims_per_proposal'], 2)} | {f(v['violations_in_output_per_proposal'], 2)} | "
                      f"{f(v['mean_p_reply'])} | {v['tokens_per_job']} | {f(v['latency_s']['p50'], 1)} |")
     return "\n".join(lines) + "\n"
