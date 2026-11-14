@@ -60,12 +60,12 @@ def usage_of(messages) -> dict:
 async def run_react(persona: str, job: dict) -> dict:
     from langgraph.prebuilt import create_react_agent
 
-    from agent.llm import get_llm, throttle
+    from agent.llm import get_llm, slot_of, throttle
     from agent.mcp_client import get_langchain_tools
     from agent.prompts.loader import fill
     tools = await get_langchain_tools("react_baseline")
     llm = get_llm("writer", max_tokens=1500)
-    throttle.wait(llm.model_name, 6000)
+    throttle.wait(slot_of(llm), 6000)
     agent = create_react_agent(llm, tools, prompt=fill("react_baseline") + f"\nYou work for persona '{persona}'; "
                                f"pass persona='{persona}' to portfolio tools.")
     out = await agent.ainvoke({"messages": [HumanMessage(job_text(job))]}, {"recursion_limit": 16})
@@ -77,11 +77,11 @@ async def run_supervisor(persona: str, job: dict) -> dict:
     from langgraph.prebuilt import create_react_agent
     from langgraph_supervisor import create_supervisor
 
-    from agent.llm import get_llm, throttle
+    from agent.llm import get_llm, slot_of, throttle
     from agent.mcp_client import get_langchain_tools
     from agent.prompts.loader import fill
     llm = get_llm("writer", max_tokens=1500)
-    throttle.wait(llm.model_name, 6000)
+    throttle.wait(slot_of(llm), 6000)
     research_tools = [t for t in await get_langchain_tools("react_baseline")]
     analyst = create_react_agent(llm, [], name="analyst",
                                  prompt="Assess the job: requirements, scam or off-platform signals, fit. Never "

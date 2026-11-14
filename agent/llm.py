@@ -56,10 +56,18 @@ def node_model(node: str) -> str:
     return (nodes.get(node) or nodes.get("default") or next(iter(nodes.values())))["model"]
 
 
-def _make(provider: str, model: str, temperature: float, max_tokens: int):
+def groq_keys() -> list[str]:
+    """GROQ_API_KEY, then GROQ_API_KEY_2 ... _5. Each key has its own per-model minute and day quotas."""
+    names = ["GROQ_API_KEY"] + [f"GROQ_API_KEY_{i}" for i in range(2, 6)]
+    return [os.environ[n] for n in names if os.getenv(n)]
+
+
+def _make(provider: str, model: str, temperature: float, max_tokens: int, key: int = 0):
     if provider == "groq":
         from langchain_groq import ChatGroq
-        return ChatGroq(model=model, temperature=temperature, max_tokens=max_tokens, timeout=60, max_retries=1)
+        keys = groq_keys()
+        kw = {"api_key": keys[key]} if keys else {}
+        return ChatGroq(model=model, temperature=temperature, max_tokens=max_tokens, timeout=60, max_retries=1, **kw)
     if provider == "ollama":
         from langchain_ollama import ChatOllama
         return ChatOllama(model=model, temperature=temperature, num_predict=max_tokens,
@@ -129,6 +137,12 @@ class _Throttle:
             self._ensure_ex()
             self.db.execute("INSERT OR REPLACE INTO ex VALUES (?,?)", (model, time.time() + seconds))
 
+    def recent_tokens(self, slot: str) -> int:
+        with self.lock:
+            r = self.db.execute("SELECT COALESCE(SUM(tokens),0) FROM w WHERE model=? AND ts > ?",
+                                (slot, time.time() - 60)).fetchone()
+            return int(r[0])
+
     def next_reset(self) -> float:
         with self.lock:
             self._ensure_ex()
@@ -161,24 +175,40 @@ def _estimate(messages: list, max_tokens: int) -> int:
     return chars // 3 + max_tokens  # Groq reserves the full max_tokens against TPM at request time
 
 
-def _route(model: str) -> str:
-    """The configured model, or the first quota fallback that still has daily quota."""
-    if not throttle.exhausted(model):
-        return model
+def _route(model: str) -> tuple[str, int]:
+    """(model, key index): the configured model on the API key with the most headroom this minute; when
+    that model is out of daily quota on every key, the first quota fallback that still has quota.
+    Throttle and quota bookkeeping use the slot name "model#key"."""
+    n_keys = max(1, len(groq_keys()))
     prof = config()["profiles"][profile_name()]
-    for alt in prof.get("quota_fallbacks", []):
-        if alt != model and not throttle.exhausted(alt):
+    for cand in [model] + [m for m in prof.get("quota_fallbacks", []) if m != model]:
+        free = [k for k in range(n_keys) if not throttle.exhausted(f"{cand}#{k}")]
+        if not free:
+            continue
+        if cand != model:
             with (ROOT / "data/processed/quota_routes.log").open("a") as fh:  # reported in the evals
                 tag = os.getenv("GIGBID_EVAL_TAG", "-")
-                fh.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')}\t{tag}\t{model}\t{alt}\n")
-            return alt
+                fh.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')}\t{tag}\t{model}\t{cand}\n")
+        return cand, min(free, key=lambda k: throttle.recent_tokens(f"{cand}#{k}"))
     raise QuotaExhausted(f"all models out of daily quota; next reset in {throttle.next_reset():.0f}s")
+
+
+_SLOTS: dict[int, str] = {}
+
+
+def slot_of(llm) -> str:
+    """The "model#key" throttle/quota slot of a client returned by get_llm."""
+    return _SLOTS.get(id(llm), f"{_model_of(llm)}#0")
 
 
 def get_llm(node: str, temperature: float = 0.2, max_tokens: int = 2048, fallback: bool = False):
     prof = config()["profiles"][profile_name()]
-    model = _route(prof.get("fallback_model") if fallback else node_model(node))
-    return _make(prof["provider"], model, temperature, max_tokens)
+    model, key = _route(prof.get("fallback_model") if fallback else node_model(node))
+    llm = _make(prof["provider"], model, temperature, max_tokens, key)
+    if len(_SLOTS) > 5000:
+        _SLOTS.clear()
+    _SLOTS[id(llm)] = f"{model}#{key}"
+    return llm
 
 
 def cost_usd(model: str, tokens_in: int, tokens_out: int) -> float:
@@ -209,8 +239,8 @@ def structured(node: str, schema: type[T], messages: list, temperature: float = 
     last_err: Exception | None = None
     for fb, method in ((False, "json_schema"), (False, "function_calling"), (True, "json_schema")):
         llm = get_llm(node, temperature=temperature, max_tokens=max_tokens, fallback=fb)
-        model = _model_of(llm)
-        throttle.wait(model, _estimate(messages, max_tokens))
+        model, slot = _model_of(llm), slot_of(llm)
+        throttle.wait(slot, _estimate(messages, max_tokens))
         t0 = time.perf_counter()
         try:
             runnable = llm.with_structured_output(schema, include_raw=True, method=method)
@@ -220,7 +250,7 @@ def structured(node: str, schema: type[T], messages: list, temperature: float = 
             return out["parsed"], Usage.from_response(model, out["raw"], time.perf_counter() - t0)
         except Exception as e:  # noqa: BLE001 - retry/fallback on any model or parse failure
             if (secs := _daily_quota_seconds(e)) is not None:
-                throttle.mark_exhausted(model, secs)
+                throttle.mark_exhausted(slot, secs)
                 return structured(node, schema, messages, temperature, max_tokens)  # re-route (or QuotaExhausted)
             last_err = e
     raise RuntimeError(f"{node}: structured output failed after retries and fallback: {last_err}")
@@ -230,14 +260,14 @@ def text(node: str, messages: list, temperature: float = 0.3, max_tokens: int = 
     last_err: Exception | None = None
     for fb in (False, True):
         llm = get_llm(node, temperature=temperature, max_tokens=max_tokens, fallback=fb)
-        throttle.wait(_model_of(llm), _estimate(messages, max_tokens))
+        throttle.wait(slot_of(llm), _estimate(messages, max_tokens))
         t0 = time.perf_counter()
         try:
             msg = llm.invoke(messages)
             return msg.content, Usage.from_response(_model_of(llm), msg, time.perf_counter() - t0)
         except Exception as e:  # noqa: BLE001
             if (secs := _daily_quota_seconds(e)) is not None:
-                throttle.mark_exhausted(_model_of(llm), secs)
+                throttle.mark_exhausted(slot_of(llm), secs)
                 return text(node, messages, temperature, max_tokens)
             last_err = e
     raise RuntimeError(f"{node}: text call failed: {last_err}")

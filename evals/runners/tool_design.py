@@ -157,7 +157,7 @@ def arg_ok(call: dict, arg) -> bool:
 
 
 def main() -> None:
-    from agent.llm import Usage, _estimate, _model_of, get_llm, throttle
+    from agent.llm import Usage, _estimate, _model_of, get_llm, slot_of, throttle
     if not TASKS.exists():
         TASKS.write_text("\n".join(json.dumps(t) for t in make_tasks()) + "\n")
     tasks = [json.loads(x) for x in TASKS.read_text().splitlines()]
@@ -171,7 +171,7 @@ def main() -> None:
         rows = []
         for t in tasks:
             msgs = [sysmsg, HumanMessage(t["task"])]
-            throttle.wait(model, _estimate(msgs, 400) + 120 * len(tools))
+            throttle.wait(slot_of(llm), _estimate(msgs, 400) + 120 * len(tools))
             t0 = time.perf_counter()
             try:
                 m = bound.invoke(msgs)
