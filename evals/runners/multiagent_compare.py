@@ -31,8 +31,9 @@ PERSONAS = ["ai_ml_engineer", "fullstack_web", "data_analyst"]
 
 
 def pick(persona: str, n: int) -> list[dict]:
+    """n bid jobs per persona (where proposals are compared) plus one scam and one ordinary skip."""
     rows = [json.loads(x) for x in (ROOT / f"evals/datasets/dev_{persona}.jsonl").open(encoding="utf-8")][140:]
-    bids = [r for r in rows if r["gold"]["action"] == "bid" and (r["job"].get("budget_max") or 0) >= 300][: n - 2]
+    bids = [r for r in rows if r["gold"]["action"] == "bid" and (r["job"].get("budget_max") or 0) >= 300][:n]
     scam = [r for r in rows if r["gold"]["is_scam"]][:1]
     skip = [r for r in rows if r["gold"]["action"] == "skip" and not r["gold"]["is_scam"]][:1]
     return bids + scam + skip
