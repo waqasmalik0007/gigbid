@@ -1,0 +1,16 @@
+{
+  "n_a": 5,
+  "n_b": 10,
+  "p_reply": {
+    "mean_a": 0.2176,
+    "mean_b": 0.2549,
+    "t": -0.48,
+    "p_value": 0.631
+  },
+  "realised_replies": {
+    "a": "2/5",
+    "b": "0/10",
+    "fisher_p": 0.0952
+  },
+  "min_detectable_diff_p_reply": 0.236
+}

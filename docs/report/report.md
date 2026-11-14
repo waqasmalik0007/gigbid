@@ -104,10 +104,26 @@ were the best single switch, because terse READMEs and reviews become findable.
 **Claim verification (B3).** After drafting, each experience claim is split out and checked against
 retrieved evidence: numbers and tool names must appear in the evidence (checked lexically, because an LLM
 verifier accepts "40%" against "38%") and the cross-encoder must agree the evidence is about the same thing.
-TODO(result): unsupported-claim rate before/after from proposals_best.json.
+On 9 gold-bid dev jobs with the shipped pipeline [proposals_best.json], 7 produced a letter (2 were
+skipped by the decision rule). Before verification 62% of experience claims were unsupported (3.1 per
+proposal); after it, 0%. The cost is visible: the Writer over-claims, so stripping leaves short letters
+(72 words on average), the Critic still failed 6 of 7 drafts after its rewrites, and 2 letters fell under the
+policy's 60-word minimum and were blocked for the human instead of being sent. One supported sentence
+was still wrong in meaning ("loaded in under 54 seconds on 3G"): the number is in the evidence, the
+sentence distorts it, and a lexical check cannot see that. Verification makes the letters true, not
+good; the next fix is to redraft from supported evidence when more than half a draft is stripped,
+rather than send what is left.
 
-**Where better retrieval did not translate into replies.** TODO(result): compare proposals_v0 vs
-proposals_best reply rate.
+**Where better retrieval did not translate into replies.** The same 9 jobs run end to end with V0 instead
+of the shipped retrieval [proposals_v0.json] gave *better* letters: judge 3.75 vs 2.67, expected GigSim
+reply rate 0.27 vs 0.21, 88 vs 72 words. On the 6 jobs where both pipelines produced a judged letter, V0
+scored higher on 4, tied 1 and lost 1 (two-sided sign test p = 0.375), so with n = 6 this is a warning,
+not a result. The mechanism I see in the rows, still a hypothesis: the shipped pipeline returns more and
+richer evidence, the Writer attempts more claims from it (unsupported before verification 62% vs 50%),
+and the verifier then strips more, leaving shorter letters that the judge and the simulated client both
+mark down. Retrieval quality and letter quality are different targets; the evidence-recall win is real
+(0.27 to 0.50), but it pays off only if the Writer is held to the claims the evidence supports before
+drafting, not after. That is the first thing I would change.
 
 **Judge calibration.** TODO(result): kappa from judge_calibration.json (requires my 30 labels).
 
@@ -135,7 +151,13 @@ out of prompts.
 
 Two opening strategies are config arms; a job's arm is a hash of its id (stable across retries). The test
 compares GigSim reply probability (Welch) and simulated replies (exact Fisher) and reports the minimum
-detectable difference. TODO(result): ab_test.json.
+detectable difference. Result [ab_test.json]: 5 letters in arm A and 10 in arm B (the proposal runs above,
+pooled; the same job keeps its arm in both runs, so the 15 letters cover 9 distinct jobs). Mean reply
+probability 0.218 vs 0.255 (Welch p = 0.63); simulated replies 2/5 vs 0/10 (Fisher p = 0.095). The
+minimum detectable difference at this size is 0.236, far larger than any plausible effect of an opening
+line. **Conclusion: no evidence either way;** the extension's value here is the machinery (stable arm
+assignment, the right tests, and an honest power statement), and it needs roughly ten times as many
+proposals before it could decide anything.
 
 ## 8. Failure analysis
 

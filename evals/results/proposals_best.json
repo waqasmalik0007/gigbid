@@ -1,0 +1,346 @@
+{
+  "meta": {
+    "variant": "best",
+    "profile": "open",
+    "per_persona": 3,
+    "ts": "2026-11-14 18:52"
+  },
+  "overall": {
+    "n": 7,
+    "attempted": 9,
+    "errors": 0,
+    "no_proposal": 2,
+    "unsupported_before": 0.622,
+    "unsupported_after": 0,
+    "unsupported_claims_per_proposal_before": 3.14,
+    "critic_rounds_mean": 2.86,
+    "judge_overall_mean": 2.67,
+    "expected_reply_rate": 0.212,
+    "generic_opening_rate": 0.0,
+    "words_mean": 72,
+    "latency_s_per_proposal": {
+      "p50": 1198.18,
+      "p95": 1926.62
+    },
+    "tokens_per_proposal": 20716,
+    "usd_per_proposal": 0.00696
+  },
+  "by_persona": {
+    "ai_ml_engineer": {
+      "n": 2,
+      "attempted": 3,
+      "errors": 0,
+      "no_proposal": 1,
+      "unsupported_before": 0.5,
+      "unsupported_after": 0,
+      "unsupported_claims_per_proposal_before": 1.5,
+      "critic_rounds_mean": 2.5,
+      "judge_overall_mean": 4,
+      "expected_reply_rate": 0.25,
+      "generic_opening_rate": 0.0,
+      "words_mean": 96,
+      "latency_s_per_proposal": {
+        "p50": 958.07,
+        "p95": 958.07
+      },
+      "tokens_per_proposal": 20232,
+      "usd_per_proposal": 0.00692
+    },
+    "fullstack_web": {
+      "n": 2,
+      "attempted": 3,
+      "errors": 0,
+      "no_proposal": 1,
+      "unsupported_before": 0.678,
+      "unsupported_after": 0,
+      "unsupported_claims_per_proposal_before": 4.0,
+      "critic_rounds_mean": 3,
+      "judge_overall_mean": 1.5,
+      "expected_reply_rate": 0.303,
+      "generic_opening_rate": 0.0,
+      "words_mean": 50,
+      "latency_s_per_proposal": {
+        "p50": 1926.62,
+        "p95": 1926.62
+      },
+      "tokens_per_proposal": 22399,
+      "usd_per_proposal": 0.00739
+    },
+    "data_analyst": {
+      "n": 3,
+      "attempted": 3,
+      "errors": 0,
+      "no_proposal": 0,
+      "unsupported_before": 0.667,
+      "unsupported_after": 0,
+      "unsupported_claims_per_proposal_before": 3.67,
+      "critic_rounds_mean": 3,
+      "judge_overall_mean": 3,
+      "expected_reply_rate": 0.126,
+      "generic_opening_rate": 0.0,
+      "words_mean": 71,
+      "latency_s_per_proposal": {
+        "p50": 1259.25,
+        "p95": 1383.07
+      },
+      "tokens_per_proposal": 19917,
+      "usd_per_proposal": 0.00671
+    }
+  },
+  "rows": [
+    {
+      "job_id": "job_84cbb8cb3a",
+      "persona": "ai_ml_engineer",
+      "status": "submitted",
+      "latency_s": 596.1847333000042,
+      "tokens": 16381,
+      "usd": 0.0056481,
+      "decision": "bid",
+      "arm": "B",
+      "letter": "You need a system that tracks actual gameplay time while distinguishing lobby waiting, and a copy\u2011proof USB authentication key. Which game platforms (e.g., Steam, Epic, Riot) do you plan to support first, and do you already have API access or SDKs for them? In a recent SaaS data\u2011stack migration I cut report refresh from a day to 26\u202fminutes, showing I can build fast, secure pipelines and enforce strict data integrity [case_proj_d007e6392d]. I also delivered a Power\u202fBI sales KPI dashboard that replaced 127 weekly spreadsheets, proving I can create clear, user\u2011friendly interfaces for complex activity data [case_proj_10615e6213]. Can you share the USB form factor, storage size, and any preferred cryptographic modules (e.g., TPM, secure element) you envision, as well as whether you need silent installers for Windows and macOS?",
+      "words": 130,
+      "claims": 4,
+      "unsupported_before": 0.5,
+      "unsupported_after": 0.0,
+      "critic_rounds": 2,
+      "critic_passed": true,
+      "redactions": 0,
+      "compliance_allowed": true,
+      "p_reply": 0.1319,
+      "generic_opening": false,
+      "judge": {
+        "relevance": 5,
+        "specificity": 4,
+        "credibility": 4,
+        "clarity": 5,
+        "overall": 4
+      },
+      "judge_usd": 0.000159525,
+      "price": 6930.0,
+      "fair_band": [
+        4900,
+        9100
+      ]
+    },
+    {
+      "job_id": "job_befa2b1982",
+      "persona": "ai_ml_engineer",
+      "status": "skipped",
+      "latency_s": 3.191114900051616,
+      "tokens": 3075,
+      "usd": 0.0005373,
+      "decision": "watch",
+      "no_proposal": true,
+      "errors": []
+    },
+    {
+      "job_id": "job_17cc4efa7b",
+      "persona": "ai_ml_engineer",
+      "status": "submitted",
+      "latency_s": 958.0681457999744,
+      "tokens": 24082,
+      "usd": 0.008187449999999999,
+      "decision": "bid",
+      "arm": "A",
+      "letter": "You need a FastAPI service that runs a Vision Transformer on a GPU\u2011enabled EC2 instance, but the Docker build blocks GPU access. In a production computer\u2011vision system I delivered on AWS, I served a PyTorch model through FastAPI and raised search click\u2011through by 48% [case_proj_4058dfe795]. This systematic approach eliminates runtime errors, GPU utilization, and leaves a reproducible, well\u2011documented environment for future maintenance.",
+      "words": 62,
+      "claims": 2,
+      "unsupported_before": 0.5,
+      "unsupported_after": 0.0,
+      "critic_rounds": 3,
+      "critic_passed": false,
+      "redactions": 1,
+      "compliance_allowed": true,
+      "p_reply": 0.3676,
+      "generic_opening": false,
+      "judge": null,
+      "judge_usd": 0.0,
+      "price": 100.0,
+      "fair_band": [
+        50,
+        77
+      ]
+    },
+    {
+      "job_id": "job_6f34a3e0e1",
+      "persona": "fullstack_web",
+      "status": "skipped",
+      "latency_s": 605.01051990001,
+      "tokens": 2370,
+      "usd": 0.0004194,
+      "decision": "watch",
+      "no_proposal": true,
+      "errors": []
+    },
+    {
+      "job_id": "job_176908bf2a",
+      "persona": "fullstack_web",
+      "status": "submitted",
+      "latency_s": 1026.931355400011,
+      "tokens": 22270,
+      "usd": 0.0073230000000000005,
+      "decision": "bid",
+      "arm": "B",
+      "letter": "How many new sections and any specific animations do you plan to add to the landing page? In a travel\u2011industry marketing site I delivered with Next.js, Vercel, and Tailwind CSS, the page loaded in under 54\u202fseconds on 3G, providing a production\u2011ready system ready for deployment [case_proj_ea5e516b98]. I also built an edtech marketing site with the same stack, confirming repeatable quality and rapid delivery [code_proj_f3ca5176e6]. The implementation will be responsive and meet accessibility best practices, ready for deployment on your chosen platform.",
+      "words": 82,
+      "claims": 4,
+      "unsupported_before": 0.5,
+      "unsupported_after": 0.0,
+      "critic_rounds": 3,
+      "critic_passed": false,
+      "redactions": 0,
+      "compliance_allowed": true,
+      "p_reply": 0.471,
+      "generic_opening": false,
+      "judge": {
+        "relevance": 2,
+        "specificity": 1,
+        "credibility": 1,
+        "clarity": 2,
+        "overall": 1
+      },
+      "judge_usd": 0.00017030000000000002,
+      "price": 845.9,
+      "fair_band": [
+        720.0,
+        1360.0
+      ]
+    },
+    {
+      "job_id": "job_fc1200c7a7",
+      "persona": "fullstack_web",
+      "status": "blocked",
+      "latency_s": 1926.6158167000394,
+      "tokens": 22528,
+      "usd": 0.00746145,
+      "decision": "bid",
+      "arm": "B",
+      "letter": "My full\u2011stack skills\u2014Django, FastAPI, React, Stripe, Tailwind, Docker, Vercel\u2014let me build cross\u2011browser, performance\u2011optimized interfaces ready for sales [cv_fullstack_web].",
+      "words": 18,
+      "claims": 7,
+      "unsupported_before": 0.857,
+      "unsupported_after": 0.0,
+      "critic_rounds": 3,
+      "critic_passed": false,
+      "redactions": 0,
+      "compliance_allowed": false,
+      "p_reply": 0.1359,
+      "generic_opening": false,
+      "judge": {
+        "relevance": 2,
+        "specificity": 1,
+        "credibility": 1,
+        "clarity": 3,
+        "overall": 2
+      },
+      "judge_usd": 0.000132225,
+      "price": 976.64,
+      "fair_band": [
+        700,
+        1300
+      ]
+    },
+    {
+      "job_id": "job_7698330419",
+      "persona": "data_analyst",
+      "status": "submitted",
+      "latency_s": 1259.2478702999651,
+      "tokens": 20574,
+      "usd": 0.006881999999999999,
+      "decision": "bid",
+      "arm": "B",
+      "letter": "In a recent real\u2011estate attribution project I delivered a production system that integrated Google Analytics, BigQuery, and Looker, reallocating 54% of the ad budget [case_proj_8e75608573]. The pipelines will be built in Python and SQL, scheduled with Cron or Airflow, and include data\u2011quality validation steps. Could you confirm the exact CRM name and whether it provides a REST API for contact linking? This will help me plan the integration.",
+      "words": 68,
+      "claims": 6,
+      "unsupported_before": 0.667,
+      "unsupported_after": 0.0,
+      "critic_rounds": 3,
+      "critic_passed": false,
+      "redactions": 0,
+      "compliance_allowed": true,
+      "p_reply": 0.0547,
+      "generic_opening": false,
+      "judge": {
+        "relevance": 3,
+        "specificity": 3,
+        "credibility": 4,
+        "clarity": 4,
+        "overall": 4
+      },
+      "judge_usd": 6.42e-05,
+      "price": 2970.0,
+      "fair_band": [
+        2100,
+        3900
+      ]
+    },
+    {
+      "job_id": "job_77ba9cd915",
+      "persona": "data_analyst",
+      "status": "submitted",
+      "latency_s": 1383.0651014000177,
+      "tokens": 18238,
+      "usd": 0.005972400000000001,
+      "decision": "bid",
+      "arm": "B",
+      "letter": "Confidence in your split\u2011payment integration on Shopify\u202fPlus using Stripe is essential, and you\u2019re also looking for cost\u2011effective alternatives. Can you confirm whether each seller is set up as a separate Stripe Connect managed account and if you already have webhook listeners for payout events? In a fintech project I built a full Stripe integration that cut failed payments by 25% [case_proj_19fcdf8f80]. I also rebuilt a Shopify storefront that lifted mobile conversion by 22% [case_proj_a3b70b59d4]. These tools provide reliable split\u2011payment handling, real\u2011time validation, and simplify future changes. Could you share the details of your current Stripe Connect accounts and webhook configuration?",
+      "words": 101,
+      "claims": 4,
+      "unsupported_before": 0.5,
+      "unsupported_after": 0.0,
+      "critic_rounds": 3,
+      "critic_passed": false,
+      "redactions": 0,
+      "compliance_allowed": true,
+      "p_reply": 0.2002,
+      "generic_opening": false,
+      "judge": {
+        "relevance": 3,
+        "specificity": 2,
+        "credibility": 2,
+        "clarity": 4,
+        "overall": 2
+      },
+      "judge_usd": 0.00013666,
+      "price": 1188.0,
+      "fair_band": [
+        840,
+        1560
+      ]
+    },
+    {
+      "job_id": "job_00fd4b4549",
+      "persona": "data_analyst",
+      "status": "blocked",
+      "latency_s": 1198.1832549999817,
+      "tokens": 20938,
+      "usd": 0.007264724999999999,
+      "decision": "bid",
+      "arm": "A",
+      "letter": "You need reliable Odoo module development, customization, maintenance, and IT support while collaborating with your vendor. My most relevant recent result is a real\u2011time clinic operations dashboard for a fintech client that integrated PostgreSQL data and delivered actionable metrics, built with Python and PostgreSQL [code_proj_a0b35015cc].",
+      "words": 45,
+      "claims": 6,
+      "unsupported_before": 0.833,
+      "unsupported_after": 0.0,
+      "critic_rounds": 3,
+      "critic_passed": false,
+      "redactions": 0,
+      "compliance_allowed": false,
+      "p_reply": 0.124,
+      "generic_opening": false,
+      "judge": {
+        "relevance": 3,
+        "specificity": 3,
+        "credibility": 3,
+        "clarity": 4,
+        "overall": 3
+      },
+      "judge_usd": 0.00015,
+      "price": 884.2,
+      "fair_band": [
+        570.0,
+        1170.0
+      ]
+    }
+  ]
+}
