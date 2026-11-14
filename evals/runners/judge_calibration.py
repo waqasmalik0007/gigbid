@@ -21,6 +21,11 @@ KEY = ROOT / "evals/datasets/judge_labels_key.json"
 
 
 def export(n: int = 30) -> None:
+    if SHEET.exists():  # never overwrite human labels
+        with SHEET.open(encoding="utf-8") as fh:
+            if any((r.get("human_overall (1-5)") or "").strip() for r in csv.DictReader(fh)):
+                print(f"{SHEET} already has human labels; not overwriting (delete it to re-export)")
+                return
     rows = []
     for f in sorted((ROOT / "evals/results").glob("proposals_*.json")):
         rows += [r | {"src": f.name} for r in json.loads(f.read_text())["rows"] if r.get("letter") and r.get("judge")]

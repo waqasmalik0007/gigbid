@@ -1,0 +1,182 @@
+[
+ {
+  "item": 0,
+  "job_id": "job_77ba9cd915",
+  "judge_overall": 4,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 1,
+  "job_id": "prop_3b151283e3",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 2,
+  "job_id": "prop_62d8c02c9e",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 3,
+  "job_id": "prop_433b702165",
+  "judge_overall": 2,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 4,
+  "job_id": "job_00fd4b4549",
+  "judge_overall": 2,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 5,
+  "job_id": "prop_12145908c4",
+  "judge_overall": 4,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 6,
+  "job_id": "job_84cbb8cb3a",
+  "judge_overall": 5,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 7,
+  "job_id": "job_befa2b1982",
+  "judge_overall": 4,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 8,
+  "job_id": "prop_59f78c3c33",
+  "judge_overall": 5,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 9,
+  "job_id": "prop_f2eba4778c",
+  "judge_overall": 4,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 10,
+  "job_id": "prop_6217a6e065",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 11,
+  "job_id": "prop_d155b17591",
+  "judge_overall": 4,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 12,
+  "job_id": "job_fc1200c7a7",
+  "judge_overall": 3,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 13,
+  "job_id": "prop_11996608a2",
+  "judge_overall": 1,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 14,
+  "job_id": "job_77ba9cd915",
+  "judge_overall": 2,
+  "src": "proposals_best.json"
+ },
+ {
+  "item": 15,
+  "job_id": "job_fc1200c7a7",
+  "judge_overall": 2,
+  "src": "proposals_best.json"
+ },
+ {
+  "item": 16,
+  "job_id": "prop_603e308b6c",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 17,
+  "job_id": "prop_a61967b33c",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 18,
+  "job_id": "job_7698330419",
+  "judge_overall": 4,
+  "src": "proposals_best.json"
+ },
+ {
+  "item": 19,
+  "job_id": "prop_d9e9346fd9",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 20,
+  "job_id": "job_17cc4efa7b",
+  "judge_overall": 4,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 21,
+  "job_id": "job_7698330419",
+  "judge_overall": 4,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 22,
+  "job_id": "prop_1b793496bd",
+  "judge_overall": 1,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 23,
+  "job_id": "job_00fd4b4549",
+  "judge_overall": 3,
+  "src": "proposals_best.json"
+ },
+ {
+  "item": 24,
+  "job_id": "job_176908bf2a",
+  "judge_overall": 1,
+  "src": "proposals_best.json"
+ },
+ {
+  "item": 25,
+  "job_id": "prop_e5e0eefbae",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 26,
+  "job_id": "job_84cbb8cb3a",
+  "judge_overall": 4,
+  "src": "proposals_best.json"
+ },
+ {
+  "item": 27,
+  "job_id": "job_176908bf2a",
+  "judge_overall": 4,
+  "src": "proposals_v0.json"
+ },
+ {
+  "item": 28,
+  "job_id": "prop_a3b6178ed1",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ },
+ {
+  "item": 29,
+  "job_id": "prop_6a017b3d71",
+  "judge_overall": 3,
+  "src": "past_proposals (synthetic)"
+ }
+]
