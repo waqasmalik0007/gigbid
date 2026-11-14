@@ -8,6 +8,7 @@
   (docs/RUNBOOK.md justifies the interval). Polite: a 1.5 s pause between searches.
 * run_bid / resume_thread / run_conversation: graph executions (idempotent, see worker/runner.py).
 * poll_events (cron): marketplace events -> pipeline board + outcome memory + conversation runs.
+* recover_degraded (cron): threads parked while the marketplace was down resume once it answers again.
 """
 from __future__ import annotations
 
@@ -34,6 +35,29 @@ async def resume_thread(ctx, user: dict, thread_id: str, decision: dict, trace_i
 
 async def run_conversation(ctx, user: dict, thread: str, category: str = "other", trace_id: str | None = None):
     return await runner.start_conversation(user, thread, category, trace_id)
+
+
+async def recover_thread(ctx, user: dict, thread_id: str, trace_id: str | None = None):
+    return await runner.recover(user, thread_id, trace_id)
+
+
+async def recover_degraded(ctx):
+    """Degraded mode (A6): once the marketplace answers again, resume every thread parked by the outage."""
+    from agent.mcp_client import call
+    resumed = 0
+    for u in _users():
+        threads = runner.degraded_threads(u["id"])
+        if not threads:
+            continue
+        try:
+            await call("pricing", "marketplace", "get_connects_balance", {"user_id": u["persona_id"]}, timeout=6,
+                       retries=0)
+        except Exception:  # noqa: BLE001 - still down: keep them queued
+            return {"resumed": resumed, "still_down": True}
+        for t in threads:
+            await ctx["redis"].enqueue_job("recover_thread", u, t, _job_id=f"recover:{t}:{int(time.time() // 120)}")
+            resumed += 1
+    return {"resumed": resumed}
 
 
 def _users() -> list[dict]:
@@ -64,8 +88,9 @@ async def poll_events(ctx):
 
 
 class WorkerSettings:
-    functions = [run_bid, resume_thread, run_conversation, scout_all, poll_events]
-    cron_jobs = [cron(scout_all, minute=set(range(0, 60, 5))), cron(poll_events, minute=set(range(0, 60, 2)))]
+    functions = [run_bid, resume_thread, run_conversation, recover_thread, scout_all, poll_events, recover_degraded]
+    cron_jobs = [cron(scout_all, minute=set(range(0, 60, 5))), cron(poll_events, minute=set(range(0, 60, 2))),
+                 cron(recover_degraded, minute=set(range(1, 60, 2)))]
     redis_settings = RedisSettings.from_dsn(os.getenv("REDIS_URL", "redis://localhost:6379/0"))
     max_jobs = 4
     job_timeout = 900

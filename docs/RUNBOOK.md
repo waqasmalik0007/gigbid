@@ -36,14 +36,18 @@ Measured values are in `evals/results/decision_*.json` and `proposals_*.json` an
 
 ## Free-tier limits
 
-Groq free tier: 8,000 tokens/minute and 1,000 requests/day **per model**. `agent/llm.py` throttles each
-model with a sliding window (`TPM_LIMIT`, default 7,500) and spreads nodes across models.
+Groq free tier, **per model**: 8,000 tokens/minute, 200,000 tokens/day and 1,000 requests/day.
+`agent/llm.py` throttles each model with a sliding window shared by every process on the machine (a SQLite
+ledger; `TPM_LIMIT`, default 7,000; `RPM_LIMIT`, default 25) and spreads nodes across models. A per-day
+429 marks the model exhausted until Groq's reported reset and routes calls to the profile's
+`quota_fallbacks` (logged in `data/processed/quota_routes.log`); when every model is out, nodes fail fast
+with `QuotaExhausted` and the resumable evaluation runners (`tools/run_all_evals.sh`) retry later.
 
 ## Incidents
 
 | Symptom | Where to look | Action |
 |---|---|---|
-| Red "Marketplace unavailable" banner | `/api/health/marketplace`, GigSim / marketplace MCP logs | Restart GigSim/marketplace server; parked jobs (`needs_attention`) can be re-run from the job page; approvals are preserved. |
+| Red "Marketplace unavailable" banner | `/api/health/marketplace`, GigSim / marketplace MCP logs | Restart GigSim/marketplace server. Nothing else: threads parked as `needs_attention` by the outage resume automatically from the checkpoint before the failed step (`worker/runner.py::recover`, triggered by the `recover_degraded` cron and by the health check the banner polls); an approved proposal is submitted exactly once (`tests/unit/test_degraded_recovery.py`). |
 | Run stuck in `dead_letter` | Runs page, `run_events`, trace id in audit log | Read the error; replay from the failed node with `get_state_history`. |
 | 429s from Groq | API logs | Lower concurrency or `TPM_LIMIT`; switch profile to `open_qwen` for cheap nodes. |
 | Policy update released | `docs/CHANGE_REQUEST.md` | Edit `gigsim/policy.yaml` and `data/policy_pack/policy.yaml` only. |

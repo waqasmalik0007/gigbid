@@ -31,7 +31,7 @@ async def enqueue(fn: str, *args, job_key: str | None = None, **kw) -> str:
         return "queued"
     from worker import runner
     target = {"run_bid": runner.start_bid, "resume_thread": runner.resume,
-              "run_conversation": runner.start_conversation}[fn]
+              "run_conversation": runner.start_conversation, "recover_thread": runner.recover}[fn]
 
     async def _wrap():
         try:

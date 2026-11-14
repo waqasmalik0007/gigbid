@@ -31,10 +31,11 @@ def graph(kind: str):
     return _graphs[kind]
 
 
-def _cfg(thread_id: str, trace_id: str, user: str) -> dict:
+def _cfg(thread_id: str, trace_id: str, user: str, checkpoint_id: str | None = None) -> dict:
     """The request's trace id doubles as the LangSmith root run id (E3): the same id is in the API
     response header, the UI, the checkpoint metadata, every MCP audit-log line and the LangSmith trace."""
-    cfg = {"configurable": {"thread_id": thread_id}, "recursion_limit": 60,
+    conf = {"thread_id": thread_id} | ({"checkpoint_id": checkpoint_id} if checkpoint_id else {})
+    cfg = {"configurable": conf, "recursion_limit": 60,
            "metadata": {"trace_id": trace_id, "user": user}, "run_name": thread_id.split(":")[0] + "_graph",
            "tags": [thread_id.split(":")[0]]}
     try:
@@ -54,9 +55,9 @@ def _jsonable(v):
     return v
 
 
-async def _execute(kind: str, thread_id: str, user: dict, inp, trace_id: str) -> dict:
+async def _execute(kind: str, thread_id: str, user: dict, inp, trace_id: str, checkpoint_id: str | None = None) -> dict:
     app = graph(kind)
-    cfg = _cfg(thread_id, trace_id, user["id"])
+    cfg = _cfg(thread_id, trace_id, user["id"], checkpoint_id)
     tu, tt = current_user.set(user["persona_id"]), current_trace.set(trace_id)
     upsert("runs", {"thread_id": thread_id}, {"user_id": user["id"], "kind": kind, "status": "running",
                                             "trace_id": trace_id, "updated": time.time(),
@@ -77,7 +78,7 @@ async def _execute(kind: str, thread_id: str, user: dict, inp, trace_id: str) ->
     finally:
         current_user.reset(tu)
         current_trace.reset(tt)
-    st = app.get_state(cfg)
+    st = app.get_state({"configurable": {"thread_id": thread_id}})  # latest, not the checkpoint we resumed from
     vals = st.values
     status = "awaiting_approval" if st.next else vals.get("status", "done")
     upsert("runs", {"thread_id": thread_id}, {"status": status, "usage": vals.get("usage", {}), "updated": time.time(),
@@ -139,3 +140,51 @@ def pending_interrupt(thread_id: str) -> dict | None:
         for it in t.interrupts:
             return it.value
     return None
+
+
+MARKET_DOWN = "marketplace unavailable"
+
+
+def _degraded(vals: dict) -> bool:
+    return vals.get("status") == "needs_attention" and any(MARKET_DOWN in str(e) for e in vals.get("errors") or [])
+
+
+def degraded_threads(user_id: str) -> list[str]:
+    """Threads parked because the marketplace was down (A6 degraded mode), oldest first."""
+    from apps.api.db import rows
+    out = []
+    for r in rows("SELECT thread_id FROM runs WHERE user_id=? AND status='needs_attention' ORDER BY updated", user_id):
+        kind = "bid" if r["thread_id"].startswith("bid:") else "conversation"
+        if _degraded(graph(kind).get_state({"configurable": {"thread_id": r["thread_id"]}}).values):
+            out.append(r["thread_id"])
+    return out
+
+
+async def recover(user: dict, thread_id: str, trace_id: str | None = None) -> dict:
+    """Resume a thread that stopped because the marketplace was unreachable, once it is back.
+
+    Errors are append-only in the state, so the newest checkpoint with no "marketplace unavailable"
+    error and a pending node is the point just before the failed step; the run continues from there
+    (a fork of the same thread). An approved proposal whose submit failed therefore re-runs only
+    `submit`, whose idempotency keys ({thread}:draft, {thread}:submit) make it exactly-once."""
+    if thread_id in _recovering:  # health polls can ask twice; one recovery per thread at a time
+        return {"thread_id": thread_id, "status": "running", "recovered": False}
+    kind = "bid" if thread_id.startswith("bid:") else "conversation"
+    app = graph(kind)
+    latest = app.get_state({"configurable": {"thread_id": thread_id}})
+    if not _degraded(latest.values):
+        return {"thread_id": thread_id, "status": latest.values.get("status"), "recovered": False}
+    _recovering.add(thread_id)
+    try:
+        for snap in app.get_state_history({"configurable": {"thread_id": thread_id}}):
+            if snap.next and not any(MARKET_DOWN in str(e) for e in snap.values.get("errors") or []):
+                add_event(thread_id, user["id"], "_run", {"status": "recovering", "from": list(snap.next)})
+                out = await _execute(kind, thread_id, user, None, trace_id or uuid.uuid4().hex,
+                                     snap.config["configurable"]["checkpoint_id"])
+                return out | {"recovered": True}
+        return {"thread_id": thread_id, "status": "needs_attention", "recovered": False}
+    finally:
+        _recovering.discard(thread_id)
+
+
+_recovering: set[str] = set()

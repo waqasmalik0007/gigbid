@@ -139,7 +139,14 @@ async def marketplace_health(user: dict = Depends(current_user)):
     try:
         bal = await asyncio.wait_for(call("pricing", "marketplace", "get_connects_balance",
                                           {"user_id": user["persona_id"]}, timeout=6, retries=0), 10)
-        return {"ok": True, "connects": bal["balance"]}
     except Exception as e:  # noqa: BLE001
         return {"ok": False, "error": str(e)[:200], "message": "Marketplace unavailable: new work is queued and "
                 "will resume automatically. Approvals you make are saved."}
+    # back up: resume this user's threads parked by the outage (the worker cron does the same for everyone)
+    from apps.api.tasks import enqueue
+    from worker import runner
+    resumed = []
+    for t in runner.degraded_threads(user["id"]):
+        await enqueue("recover_thread", user, t, job_key=f"recover:{t}")
+        resumed.append(t)
+    return {"ok": True, "connects": bal["balance"], "resumed": resumed}
