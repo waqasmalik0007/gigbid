@@ -533,6 +533,53 @@
     ]
    }
   },
+  "/api/studio/regenerate": {
+   "post": {
+    "tags": [
+     "studio"
+    ],
+    "summary": "Regenerate Paragraph",
+    "description": "Rewrite one paragraph of a pending proposal with the Writer model; the result is claim-verified\nand still has to go through approval (and Compliance, as an edit).",
+    "operationId": "regenerate_paragraph_api_studio_regenerate_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "additionalProperties": true,
+        "type": "object",
+        "title": "Body"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "HTTPBearer": []
+     }
+    ]
+   }
+  },
   "/api/approvals": {
    "get": {
     "tags": [

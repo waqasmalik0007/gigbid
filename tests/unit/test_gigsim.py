@@ -1,6 +1,5 @@
 """GigSim behaviour: auth, hidden prefs stay hidden, idempotency, Connects, dry_run, rate limit."""
 import importlib
-import os
 
 import pytest
 from fastapi.testclient import TestClient
