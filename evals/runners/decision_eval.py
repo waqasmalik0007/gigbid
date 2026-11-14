@@ -122,7 +122,7 @@ async def main() -> None:
     partial = ROOT / f"evals/results/decision_{tag}.partial.jsonl"
     rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
     done = {(r["persona"], r["job_id"]) for r in rows if "error" not in r}
-    rows = [r for r in rows if "error" not in r]
+    rows = list({(r["persona"], r["job_id"]): r for r in rows if "error" not in r}.values())  # dedupe
     work = [(p, r) for p in PERSONAS for r in sample(p, a.per_persona) if (p, r["job"]["job_id"]) not in done]
     sem = asyncio.Semaphore(a.concurrency)
 

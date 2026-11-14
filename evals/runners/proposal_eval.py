@@ -140,7 +140,7 @@ async def main() -> None:
     app = build(InMemorySaver(serde=serde()))
     partial = ROOT / f"evals/results/proposals_{tag}.partial.jsonl"
     rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
-    rows = [r for r in rows if "error" not in r]  # resumable: infrastructure failures are retried
+    rows = list({(r["persona"], r["job_id"]): r for r in rows if "error" not in r}.values())  # resumable, deduped
     wanted = {(p, r["job"]["job_id"]) for p in PERSONAS for r in pick(p, a.per_persona)}
     rows = [r for r in rows if (r["persona"], r["job_id"]) in wanted]  # a smaller re-run keeps only its set
     done = {(r["persona"], r["job_id"]) for r in rows}
