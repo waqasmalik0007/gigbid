@@ -193,9 +193,10 @@ TODO(after deadline run): results against the declared budgets, without excuses.
 ## Appendix: reproducing
 
 `make eval` regenerates every results file (`tools/run_all_evals.sh` does the same resumably within the
-free-tier quotas); `python docs/report/build.py` rebuilds this PDF. Tests: 36 Python tests (unit, MCP
-contract snapshots, MCP server integration, API tenant isolation) and 12 Playwright end-to-end tests (6
-flows on desktop and phone viewports) pass.
+free-tier quotas); `python docs/report/build.py` rebuilds this PDF. Tests: 39 Python tests (unit, MCP
+contract snapshots, MCP server integration, API tenant isolation, degraded-mode recovery with
+exactly-once submit, evidence removal) and 14 Playwright end-to-end tests (7 flows on desktop and phone
+viewports) pass.
 
 **Quota note.** When a model returns a per-day 429, `agent/llm.py` marks it exhausted until Groq's
 reported reset and routes that node to the next model in the profile's `quota_fallbacks` (gpt-oss-20b

@@ -29,6 +29,8 @@ export function ApprovalPanel({ threadId, payload, onDone }: { threadId: string;
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [paraBusy, setParaBusy] = useState<number | null>(null);
+  const [note, setNote] = useState<string | null>(null);
+  const [gone, setGone] = useState<string[]>([]);
   const isProposal = payload.kind === "proposal";
   const evidence = useMemo(() => {
     const m: Record<string, Evidence> = {};
@@ -63,17 +65,30 @@ export function ApprovalPanel({ threadId, payload, onDone }: { threadId: string;
     setParaBusy(i);
     try {
       const paras = text.split(/\n\s*\n/);
-      const r = await call<{ text: string }>(`/studio/regenerate`, {
+      const r = await call<{ text: string; removed?: string[] }>(`/studio/regenerate`, {
         method: "POST",
         body: JSON.stringify({ thread_id: threadId, paragraph: paras[i], instruction: "make it more specific to the client" }),
       });
       paras[i] = r.text;
       setText(paras.join("\n\n"));
+      setNote(r.removed?.length
+        ? `Claim verifier removed ${r.removed.length} unsupported sentence(s): ${r.removed.join(" | ")}`
+        : "Regenerated; every claim is supported by current evidence.");
       setMode("edit");
     } catch (e) {
       setErr(e instanceof Error ? e.message : String(e));
     } finally {
       setParaBusy(null);
+    }
+  }
+
+  async function removeEvidence(id: string) {
+    try {
+      await call(`/portfolio/${encodeURIComponent(id)}`, { method: "DELETE" });
+      setGone((g) => [...g, id]);
+      setNote(`${id} removed from your portfolio. Regenerate a paragraph: claims that relied on it are now unsupported.`);
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : String(e));
     }
   }
 
@@ -115,6 +130,25 @@ export function ApprovalPanel({ threadId, payload, onDone }: { threadId: string;
           <span>Why are you rejecting it? (required; GigBid learns from this)</span>
           <input value={reason} onChange={(e) => setReason(e.target.value)} data-testid="reject-reason" />
         </label>
+      )}
+
+      {note && <p className="muted" role="status" data-testid="regen-note">{note}</p>}
+
+      {isProposal && (payload.evidence ?? []).length > 0 && (
+        <details className="sub" data-testid="evidence-list">
+          <summary>Evidence used ({payload.evidence.length})</summary>
+          <ul>
+            {payload.evidence.map((e: Evidence) => (
+              <li key={e.evidence_id}>
+                <code>{e.evidence_id}</code> · {e.type} · {e.title}{" "}
+                {gone.includes(e.evidence_id)
+                  ? <Badge tone="warn">removed</Badge>
+                  : <button className="btn link small" onClick={() => removeEvidence(e.evidence_id)}
+                            aria-label={`Remove ${e.evidence_id} from portfolio`}>remove from portfolio</button>}
+              </li>
+            ))}
+          </ul>
+        </details>
       )}
 
       {isProposal && payload.screening_answers?.length > 0 && (

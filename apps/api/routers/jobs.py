@@ -117,3 +117,16 @@ async def regenerate_paragraph(body: dict, user: dict = Depends(current_user)):
     checked = verify_claims(split_claims(out), pipe, [e.evidence_id for e in ev])
     return {"text": strip_unsupported(out.strip(), checked),
             "removed": [c.text for c in checked if c.status == "unsupported"]}
+
+
+@router.delete("/portfolio/{evidence_id}")
+async def delete_evidence(evidence_id: str, user: dict = Depends(current_user)):
+    """Remove one evidence item from the user's portfolio. Claims that relied on it become unsupported the
+    next time a draft is verified or regenerated (viva Q3)."""
+    if not re.fullmatch(r"[\w.-]{3,120}", evidence_id):
+        raise HTTPException(400, "bad evidence id")
+    from rag.ingest.loaders import remove_evidence
+    from rag.retriever import invalidate
+    remove_evidence(user["persona_id"], evidence_id)
+    invalidate(user["persona_id"])
+    return {"removed": evidence_id}

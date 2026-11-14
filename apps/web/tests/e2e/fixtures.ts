@@ -16,11 +16,11 @@ export const PAYLOAD = {
   dry_run: { dry_run: true, connects_cost: 8, balance: 120 },
 };
 
-export type Calls = { approvals: any[] };
+export type Calls = { approvals: any[]; removed: string[] };
 
 /** Mock the GigBid API so UI behaviour is tested without a backend. */
 export async function mockApi(page: Page, opts: { marketplaceDown?: boolean } = {}): Promise<Calls> {
-  const calls: Calls = { approvals: [] };
+  const calls: Calls = { approvals: [], removed: [] };
   await page.addInitScript(() => window.localStorage.setItem("gigbid_token", "test-token"));
   await page.route("**/api/**", async (route: Route) => {
     const url = new URL(route.request().url());
@@ -38,6 +38,16 @@ export async function mockApi(page: Page, opts: { marketplaceDown?: boolean } = 
       calls.approvals.push(body);
       if (body.action === "reject" && !body.reason) return json({ detail: "a reason is required to reject" }, 422);
       return json({ thread_id: "bid:u1:job_1", dispatch: "queued" });
+    }
+    if (p.startsWith("/portfolio/") && route.request().method() === "DELETE") {
+      calls.removed.push(decodeURIComponent(p.split("/").pop() ?? ""));
+      return json({ removed: calls.removed.at(-1) });
+    }
+    if (p === "/studio/regenerate") {
+      // after the evidence is gone, the verifier strips the claim that relied on it
+      return calls.removed.length
+        ? json({ text: "You need answers grounded in your PDFs.", removed: ["I built a RAG assistant that answered 300 staff questions a week."] })
+        : json({ text: PAYLOAD.cover_letter, removed: [] });
     }
     if (p.endsWith("/stream")) return route.fulfill({ status: 200, contentType: "text/event-stream", body: 'data: {"node":"_run","data":{"status":"awaiting_approval"},"ts":1}\n\n' });
     return json({});

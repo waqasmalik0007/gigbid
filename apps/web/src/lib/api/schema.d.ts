@@ -231,6 +231,27 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/jobs/portfolio/{evidence_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * Delete Evidence
+         * @description Remove one evidence item from the user's portfolio. Claims that relied on it become unsupported the
+         *     next time a draft is verified or regenerated (viva Q3).
+         */
+        delete: operations["delete_evidence_api_jobs_portfolio__evidence_id__delete"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/studio/regenerate": {
         parameters: {
             query?: never;
@@ -1037,6 +1058,37 @@ export interface operations {
                 "multipart/form-data": components["schemas"]["Body_upload_portfolio_api_jobs_portfolio_upload_post"];
             };
         };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    delete_evidence_api_jobs_portfolio__evidence_id__delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                evidence_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             /** @description Successful Response */
             200: {

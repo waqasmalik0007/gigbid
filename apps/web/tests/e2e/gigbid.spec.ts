@@ -59,3 +59,14 @@ test("evidence appears on keyboard focus of a claim", async ({ page }) => {
   await page.getByTestId("claim").first().focus();
   await expect(page.getByRole("tooltip").first()).toContainText("case_proj_1");
 });
+
+test("removing evidence then regenerating drops the claim that relied on it", async ({ page }) => {
+  const calls = await mockApi(page);
+  await page.goto("/approvals");
+  await page.getByTestId("evidence-list").locator("summary").click();
+  await page.getByRole("button", { name: "Remove case_proj_1 from portfolio" }).click();
+  await expect.poll(() => calls.removed).toEqual(["case_proj_1"]);
+  await page.getByRole("button", { name: "Regenerate paragraph 1" }).click();
+  await expect(page.getByTestId("regen-note")).toContainText("removed 1 unsupported sentence");
+  await expect(page.getByTestId("edit-box")).not.toHaveValue(/300 staff questions/);
+});

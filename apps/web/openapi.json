@@ -533,6 +533,52 @@
     ]
    }
   },
+  "/api/jobs/portfolio/{evidence_id}": {
+   "delete": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Delete Evidence",
+    "description": "Remove one evidence item from the user's portfolio. Claims that relied on it become unsupported the\nnext time a draft is verified or regenerated (viva Q3).",
+    "operationId": "delete_evidence_api_jobs_portfolio__evidence_id__delete",
+    "security": [
+     {
+      "HTTPBearer": []
+     }
+    ],
+    "parameters": [
+     {
+      "name": "evidence_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Evidence Id"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
   "/api/studio/regenerate": {
    "post": {
     "tags": [
