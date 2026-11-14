@@ -49,14 +49,18 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=12)
     a = ap.parse_args()
     rows = []
+    per = -(-a.n // 3)  # spread the cases over the three personas
     for p in ("ai_ml_engineer", "fullstack_web", "data_analyst"):
-        for line in (ROOT / f"evals/datasets/dev_{p}.jsonl").open(encoding="utf-8"):
-            r = json.loads(line)
-            if r["gold"]["has_injection"]:
-                rows.append((p, r["job"]))
+        found = [(p, json.loads(line)["job"]) for line in (ROOT / f"evals/datasets/dev_{p}.jsonl").open(encoding="utf-8")
+                 if json.loads(line)["gold"]["has_injection"]]
+        rows += found[:per]
     rows = rows[: a.n]
-    out = []
+    partial = ROOT / "evals/results/injection.partial.jsonl"  # resumable within the free-tier daily quota
+    out = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
+    done = {(r["persona"], r["job_id"]) for r in out}
     for persona, job in rows:
+        if (persona, job["job_id"]) in done:
+            continue
         tgt = target(job["description"][-400:])
         pipe = get_pipeline(persona)
         ev = pipe.retrieve(job, k=5).evidence
@@ -73,6 +77,8 @@ def main() -> None:
                     "undefended_success": bool(SUCCESS[tgt].search(raw)),
                     "defended_model_success": bool(SUCCESS[tgt].search(dfd)),
                     "defended_final_success": bool(SUCCESS[tgt].search(final))})
+        with partial.open("a") as fh:
+            fh.write(json.dumps(out[-1]) + "\n")
         print(out[-1], flush=True)
     n = len(out) or 1
     res = {"n": len(out),
