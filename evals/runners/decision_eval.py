@@ -26,8 +26,12 @@ ROOT = Path(__file__).resolve().parents[2]
 PERSONAS = ["ai_ml_engineer", "fullstack_web", "data_analyst"]
 
 
-def sample(persona: str, n: int, seed: int = 11) -> list[dict]:
-    rows = [json.loads(line) for line in (ROOT / f"evals/datasets/dev_{persona}.jsonl").open(encoding="utf-8")][:120]
+def sample(persona: str, n: int, seed: int = 11, split: str = "dev") -> list[dict]:
+    path = ROOT / f"evals/datasets/{split}_{persona}.jsonl"
+    rows = [json.loads(line) for line in path.open(encoding="utf-8")]
+    if split != "dev":  # a held-out set (e.g. the instructor's hidden set) is evaluated in full
+        return rows
+    rows = rows[:120]
     special = [r for r in rows if r["gold"]["is_scam"] or r["gold"]["has_injection"]]
     rest = [r for r in rows if r not in special]
     random.Random(seed).shuffle(rest)
@@ -108,6 +112,7 @@ async def main() -> None:
     ap.add_argument("--profile", default="open")
     ap.add_argument("--concurrency", type=int, default=3)
     ap.add_argument("--tag", default=None, help="output name (default: the profile)")
+    ap.add_argument("--split", default="dev", help="dataset prefix: evals/datasets/<split>_<persona>.jsonl")
     a = ap.parse_args()
     os.environ["GIGBID_PROFILE"] = a.profile
     os.environ.setdefault("GIGBID_CHECKPOINT_FILE", str(ROOT / f"data/processed/eval_cp_{a.profile}.pkl"))
@@ -123,7 +128,7 @@ async def main() -> None:
     rows: list[dict] = [json.loads(x) for x in partial.read_text().splitlines()] if partial.exists() else []
     done = {(r["persona"], r["job_id"]) for r in rows if "error" not in r}
     rows = list({(r["persona"], r["job_id"]): r for r in rows if "error" not in r}.values())  # dedupe
-    work = [(p, r) for p in PERSONAS for r in sample(p, a.per_persona) if (p, r["job"]["job_id"]) not in done]
+    work = [(p, r) for p in PERSONAS for r in sample(p, a.per_persona, split=a.split) if (p, r["job"]["job_id"]) not in done]
     sem = asyncio.Semaphore(a.concurrency)
 
     async def one(p, r):

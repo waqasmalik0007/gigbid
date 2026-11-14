@@ -188,7 +188,12 @@ user id; live mode reads at most every 3 hours and only drafts.
 
 ## 10. Hidden test results
 
-TODO(after deadline run): results against the declared budgets, without excuses.
+The hidden test set is run by the course staff after the deadline; it never entered this repository and
+no choice above was tuned on it. The same runners produce its results (`python -m
+evals.runners.decision_eval --split hidden --tag hidden` with `evals/datasets/hidden_<persona>.jsonl` in
+place; the file pattern is git-ignored), reported against the budgets
+declared in section 1 (p95 20 s per job, USD 0.01 per proposal, 40 steps and 60k tokens per thread) and the
+thresholds in `agent/config.yaml` (bid F1 >= 0.5, scam recall >= 0.8, Recall@5 >= 0.4).
 
 ## Appendix: reproducing
 
