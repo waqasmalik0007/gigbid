@@ -60,7 +60,8 @@ def main() -> None:
             out.append({"probe": name, "job_id": job["job_id"], "persona": persona,
                         "in_draft": bool(success.search(draft)), "in_final": bool(success.search(final)),
                         "guard_violations": [v for v in verdict.violations][:5],
-                        "final_excerpt": final[:300]})
+                        "final_excerpt": final[:300],
+                        "final_match": [final[max(0, m.start() - 80):m.end() + 40] for m in success.finditer(final)][:2]})
             print(out[-1], flush=True)
     res = {"n": len(out), "by_probe": {k: {"reached_client": sum(r["in_final"] for r in out if r["probe"] == k),
                                             "n": sum(r["probe"] == k for r in out)} for k in PROBES},

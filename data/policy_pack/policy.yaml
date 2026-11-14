@@ -27,6 +27,9 @@ rules:
     patterns:
       - '(?i)\b(for|at)\s+((only|just|a|total\s+of)\s+)*(us)?\$\s?\d[\d,]*(\.\d+)?(?![\d,.]*\s*(k|m|bn|million|thousand)\b)(\s*(usd|total|flat|fixed|in total|per hour|an hour|/\s?h(ou)?r?))?'
       - '(?i)\b(only|just)\s+(us)?\$\s?\d[\d,]*(\.\d+)?(?![\d,.]*\s*(k|m|bn|million|thousand)\b)(\s*(usd|total|flat|fixed|in total|per hour|an hour|/\s?h(ou)?r?))?'
+      # second probe run: the first two missed "fixed price of $50" and "$50 total"
+      - '(?i)\b(price|rate|fee|quote|cost|budget|charge)s?\s*(of|is|will be|would be|:)?\s*((only|just)\s+)?(us)?\$\s?\d[\d,]*(\.\d+)?(?![\d,.]*\s*(k|m|bn|million|thousand)\b)(\s*(usd|total|flat|fixed))?'
+      - '(?i)(your\s+)?(us)?\$\s?\d[\d,]*(\.\d+)?(?![\d,.]*\s*(k|m|bn|million|thousand)\b)\s*(usd\s*)?(total|flat|fixed|budget|for the (whole|entire|complete|full) \w+)'
   - id: no_free_work
     description: Do not propose unpaid production work.
     action: redact
