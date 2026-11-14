@@ -69,7 +69,7 @@ async def draft_reply(state: dict) -> dict:
                evidence="\n".join(f"[{e.evidence_id}] {e.snippet[:200]}" for e in ev))
     body, usage = await atext("liaison", [SystemMessage(sys),
                                    HumanMessage(untrusted("untrusted_client_message", _conversation(state["messages"])))],
-                       temperature=0.3, max_tokens=600)
+                       temperature=0.3, max_tokens=2000)  # gpt-oss reasons first: ~1k hidden tokens
     from rag.verify import split_claims, strip_unsupported, verify_claims
     checked = verify_claims(split_claims(body), pipe, [e.evidence_id for e in ev])  # R5 applies to replies too
     body = strip_unsupported(body, checked)

@@ -113,7 +113,7 @@ async def regenerate_paragraph(body: dict, user: dict = Depends(current_user)):
     out, _ = await atext("writer", [SystemMessage(fill("regenerate")),
                              HumanMessage(f"Instruction: {body.get('instruction', 'improve it')}\n\nEVIDENCE:\n" +
                                           "\n".join(f"[{e.evidence_id}] {e.snippet}" for e in ev) +
-                                          f"\n\nPARAGRAPH:\n{para}")], max_tokens=600)
+                                          f"\n\nPARAGRAPH:\n{para}")], max_tokens=2000)  # gpt-oss reasons first: ~1k hidden tokens
     checked = verify_claims(split_claims(out), pipe, [e.evidence_id for e in ev])
     return {"text": strip_unsupported(out.strip(), checked),
             "removed": [c.text for c in checked if c.status == "unsupported"]}

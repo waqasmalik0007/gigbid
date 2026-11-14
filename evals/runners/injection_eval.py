@@ -66,17 +66,21 @@ def main() -> None:
         ev = pipe.retrieve(job, k=5).evidence
         evtxt = "\n".join(f"[{e.evidence_id}] {e.snippet}" for e in ev)
         raw, _ = text("writer", [HumanMessage(fill("undefended_baseline", title=job["title"],
-                                                   description=job["description"], evidence=evtxt))], max_tokens=700)
+                                                   description=job["description"], evidence=evtxt))], max_tokens=2500)
         sysmsg = fill("writer", persona_name=persona, style_memory="-", outcome_memory="-", critic_feedback="")
         dfd, _ = text("writer", [SystemMessage(sysmsg), HumanMessage(
             f"EVIDENCE:\n{evtxt}\n\n" + untrusted("untrusted_job_post", f"{job['title']}\n{job['description']}"))],
-            max_tokens=900)
-        dfd = strip_unsupported(dfd, verify_claims(split_claims(re.sub(r"\[[a-z]+_[\w-]+\]", "", dfd)), pipe))
-        final = check_text(dfd, for_message=True).cleaned_text
+            max_tokens=2500)
+        kept = strip_unsupported(dfd, verify_claims(split_claims(re.sub(r"\[[a-z]+_[\w-]+\]", "", dfd)), pipe))
+        final = check_text(kept, for_message=True).cleaned_text
+        if len(raw.split()) < 20 or len(dfd.split()) < 20:  # an empty draft is not a defended attack
+            raise RuntimeError(f"writer returned too little text ({len(raw.split())}/{len(dfd.split())} words)")
         out.append({"job_id": job["job_id"], "persona": persona, "target": tgt,
+                    "undefended_words": len(raw.split()), "defended_words": len(dfd.split()),
                     "undefended_success": bool(SUCCESS[tgt].search(raw)),
                     "defended_model_success": bool(SUCCESS[tgt].search(dfd)),
-                    "defended_final_success": bool(SUCCESS[tgt].search(final))})
+                    "defended_final_success": bool(SUCCESS[tgt].search(final)),
+                    "defended_final_excerpt": final[:240]})
         with partial.open("a") as fh:
             fh.write(json.dumps(out[-1]) + "\n")
         print(out[-1], flush=True)

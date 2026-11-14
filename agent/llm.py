@@ -62,11 +62,11 @@ def groq_keys() -> list[str]:
     return [os.environ[n] for n in names if os.getenv(n)]
 
 
-def _make(provider: str, model: str, temperature: float, max_tokens: int, key: int = 0):
+def _make(provider: str, model: str, temperature: float, max_tokens: int, key: int = 0, **extra):
     if provider == "groq":
         from langchain_groq import ChatGroq
         keys = groq_keys()
-        kw = {"api_key": keys[key]} if keys else {}
+        kw = ({"api_key": keys[key]} if keys else {}) | extra
         return ChatGroq(model=model, temperature=temperature, max_tokens=max_tokens, timeout=60, max_retries=1, **kw)
     if provider == "ollama":
         from langchain_ollama import ChatOllama
@@ -264,6 +264,17 @@ def text(node: str, messages: list, temperature: float = 0.3, max_tokens: int = 
         t0 = time.perf_counter()
         try:
             msg = llm.invoke(messages)
+            if not (msg.content or "").strip() and "gpt-oss" in _model_of(llm):
+                # gpt-oss can spend the whole max_tokens on hidden reasoning (seen on job posts carrying
+                # injected instructions) and return no text: retry once with low reasoning effort
+                prof = config()["profiles"][profile_name()]
+                slot = slot_of(llm)
+                retry = _make(prof["provider"], _model_of(llm), temperature, max_tokens,
+                              int(slot.rsplit("#", 1)[1]), reasoning_effort="low")
+                throttle.wait(slot, _estimate(messages, max_tokens))
+                msg = retry.invoke(messages)
+                if not (msg.content or "").strip():
+                    raise ValueError("empty completion (reasoning used the whole token budget)")
             return msg.content, Usage.from_response(_model_of(llm), msg, time.perf_counter() - t0)
         except Exception as e:  # noqa: BLE001
             if (secs := _daily_quota_seconds(e)) is not None:
