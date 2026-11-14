@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf 
 COPY pyproject.toml ./
 # CPU-only torch keeps the image small enough for free hosts
 RUN pip install --index-url https://download.pytorch.org/whl/cpu torch==2.11.0 \
- && pip install "$(python -c "import tomllib;print(' '.join(d for d in tomllib.load(open('pyproject.toml','rb'))['project']['dependencies'] if not d.startswith('torch')))")"
+ && python -c "import tomllib;print('\n'.join(d for d in tomllib.load(open('pyproject.toml','rb'))['project']['dependencies'] if not d.startswith('torch')))" > /tmp/requirements.txt \
+ && pip install -r /tmp/requirements.txt
 COPY agent ./agent
 COPY rag ./rag
 COPY mcp_servers ./mcp_servers

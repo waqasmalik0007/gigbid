@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl supervisor
 WORKDIR /app
 COPY pyproject.toml ./
 RUN pip install --index-url https://download.pytorch.org/whl/cpu torch==2.11.0 \
- && pip install "$(python -c "import tomllib;print(' '.join(d for d in tomllib.load(open('pyproject.toml','rb'))['project']['dependencies'] if not d.startswith('torch')))")"
+ && python -c "import tomllib;print('\n'.join(d for d in tomllib.load(open('pyproject.toml','rb'))['project']['dependencies'] if not d.startswith('torch')))" > /tmp/requirements.txt \
+ && pip install -r /tmp/requirements.txt
 COPY . .
 RUN python -c "from rag.index.embed import embed_docs, rerank_scores; embed_docs(['warm']); rerank_scores('a',['b'])"
 COPY --from=web /web/.next/standalone /web
