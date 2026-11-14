@@ -109,6 +109,9 @@ async def run_graph(app, persona: str, job: dict) -> dict:
     if app.get_state(cfg).next:
         await app.ainvoke(Command(resume={"action": "approve", "user_id": "eval"}), cfg)
     v = app.get_state(cfg).values
+    if v.get("status") in ("dead_letter", "needs_attention") or (v.get("halts") and not v.get("decision")):
+        # an infrastructure failure is not a "skip" decision: record an error so the job is re-run
+        raise RuntimeError(f"graph {v.get('status') or v.get('halts')}: {(v.get('errors') or [''])[-1][:200]}")
     dec = v.get("decision").action if v.get("decision") else "skip"
     letter = v["compliance"].cleaned_text if v.get("compliance") else ""
     u = v.get("usage", {})
