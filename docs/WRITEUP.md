@@ -103,14 +103,27 @@ hybrid search costs 11.1.
 
 ## Better retrieval is not the end of the story
 
-Retrieval is measured against gold evidence. The product is measured by whether clients reply.
-RESULT_PLACEHOLDER_REPLY_RATE
+Retrieval is measured against gold evidence. The product is measured by whether clients reply. So I ran
+the whole agent team end to end on the same nine jobs twice, once with the naive retriever and once with
+the shipped one, and scored each letter with an LLM judge and with the simulator's model of a client.
+
+The naive retriever won. Judge 3.75 against 2.67, expected reply rate 0.27 against 0.21. Nine jobs is far
+too few to call it (on the six jobs where both produced a judged letter, naive won four, tied one and lost
+one), but the direction was a surprise, and the rows suggest why. Better retrieval hands the Writer more
+evidence, the Writer tries to say more with it, and more of what it says is not quite supported.
 
 The other half of grounding is verification. After the Writer drafts, every sentence that claims
 experience is checked against the evidence: numbers and tool names must appear in it (checked lexically,
 because language models happily accept "40%" against "38%"), and a cross-encoder must agree the evidence is
 about the same thing. Unsupported sentences are removed before a critic ever sees the draft.
-RESULT_PLACEHOLDER_VERIFICATION
+
+It works, and it is blunt. Before verification, 62% of the experience claims in the shipped pipeline's
+letters were unsupported; after it, none were. But a letter with half its sentences cut is short and
+choppy: the average fell to 72 words, the critic rejected most of them, and two dropped below the policy's
+60-word minimum and were held back for the human instead of being sent. One sentence that survived was
+still wrong: "loaded in under 54 seconds on 3G" contains a number from the evidence and a meaning that
+isn't in it. Verification made the letters true. It did not make them good. The fix I would make next
+is to hold the Writer to the supported claims before it drafts, not to cut after.
 
 ## What I would tell someone building this
 
