@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
 import re
 import statistics
 import time
@@ -139,7 +140,9 @@ async def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--per-persona", type=int, default=5)
     ap.add_argument("--systems", nargs="*", default=["react", "supervisor", "graph"])
+    ap.add_argument("--profile", default="open", help="one model profile for all three systems")
     a = ap.parse_args()
+    os.environ["GIGBID_PROFILE"] = a.profile
     from langgraph.checkpoint.memory import InMemorySaver
 
     from agent.graphs.bid_graph import build
@@ -148,6 +151,9 @@ async def main() -> None:
     app = build(InMemorySaver(serde=serde()))
     path = ROOT / "evals/results/multiagent_compare.json"
     results = json.loads(path.read_text()) if path.exists() else {"systems": {}}
+    if results.get("meta", {}).get("profile", a.profile) != a.profile:
+        results = {"systems": {}}  # never mix rows from two model profiles
+    results["meta"] = {"profile": a.profile, "per_persona": a.per_persona}
     for system in a.systems:
         prev = {(r["persona"], r["job_id"]): r for r in results["systems"].get(system, {}).get("rows", [])
                 if "error" not in r}  # resumable: finished jobs are kept, failed ones re-run

@@ -38,6 +38,9 @@ ok_json() {  # result file exists and its overall summary has n>=$2 and no error
 }
 
 if [ "$LANE" = qwen ]; then
+  # R&D C: all three systems on the same model; Qwen's quota is separate from the gpt-oss proposal runs
+  step multiagent_compare "import json,sys; d=json.load(open('evals/results/multiagent_compare.json'))['systems']; sys.exit(0 if all(d.get(s,{}).get('n',0)>=6 and not d[s].get('errors') for s in ('react','supervisor','graph')) else 1)" -- \
+    $PY -m evals.runners.multiagent_compare --per-persona 2 --profile open_qwen
   step decision_open_qwen "$(ok_rows decision_open_qwen.partial.jsonl 60)" -- \
     $PY -m evals.runners.decision_eval --per-persona 20 --profile open_qwen --concurrency 2
   exit 0
@@ -49,8 +52,6 @@ step proposals_best "$(ok_rows proposals_best.partial.jsonl 9)" -- \
   $PY -m evals.runners.proposal_eval --per-persona 3 --variant best --tag best
 step proposals_v0 "$(ok_rows proposals_v0.partial.jsonl 9)" -- \
   $PY -m evals.runners.proposal_eval --per-persona 3 --variant v0_naive --tag v0
-step multiagent_compare "import json,sys; d=json.load(open('evals/results/multiagent_compare.json'))['systems']; sys.exit(0 if all(d.get(s,{}).get('n',0)>=6 and not d[s].get('errors') for s in ('react','supervisor','graph')) else 1)" -- \
-  $PY -m evals.runners.multiagent_compare --per-persona 2
 step injection "import json,sys; d=json.load(open('evals/results/injection.json')); sys.exit(0 if d else 1)" -- \
   $PY -m evals.runners.injection_eval --n 8
 $PY -m evals.runners.ab_test > "$LOG/ab_test.log" 2>&1
