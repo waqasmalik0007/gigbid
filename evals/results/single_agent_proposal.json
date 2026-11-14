@@ -1,0 +1,90 @@
+{
+  "job_id": "job_07eb1cd77a",
+  "title": "Looking for ml engineering help: RAG",
+  "persona": "ai_ml_engineer",
+  "profile": "open_qwen",
+  "model": "qwen/qwen3.8-27b",
+  "draft_mode": true,
+  "output": "I have what I need. The client is verified (46 jobs, 30 hires, 4.71 rating, $27k spend) — a solid, legitimate client. The job is a genuine ML engineering task (RAG + OpenAI API + Redis + defect detection). I have strong matching evidence: a production defect-detection system [case_proj_65c5a1c7a6] and a production RAG assistant using OpenAI API [case_proj_3adc72b41f].\n\nNote: the post is a bit muddled (a \"marketing agency\" wanting production-line defect detection), but the technical requirements are clear and match my portfolio. I'll bid at the upper end of the budget given the 6-week, 4-milestone scope.\n\n---\n\n**Proposal**\n\nHi — your brief maps directly to two production systems I've shipped.\n\nFor the defect-detection core, I built a production computer-vision pipeline that detects defects from photos taken on a production line, using PyTorch and AWS SageMaker; it caught 48% of defects before packing [case_proj_65c5a1c7a6]. I can adapt that architecture to your line's camera feed and defect classes.\n\nFor the RAG layer, I delivered a production RAG assistant built on LangChain, Qdrant, the OpenAI API, and FastAPI that answered 241 staff questions a week [case_proj_3adc72b41f]. I'll use Redis for caching and as a fast vector/lookup store to keep latency low and cut OpenAI token costs.\n\nOn your screening questions: a similar project is the assembly-line defect detector above [case_proj_65c5a1c7a6]. I test that results work via a labeled holdout set with precision/recall/F1 targets, a regression suite, and a small human-in-the-loop review of flagged images before each milestone sign-off.\n\nI can structure this as your 4 milestones over 6 weeks: (1) data + baseline detector, (2) RAG + Redis integration, (3) tuning + evaluation, (4) deployment + docs.\n\nHappy to start with a short paid discovery task if useful.\n\nDECISION: bid\nPRICE: 2600",
+  "tokens": 12371,
+  "cited_ids": [
+    "case_proj_3adc72b41f",
+    "case_proj_65c5a1c7a6"
+  ],
+  "claims": [
+    {
+      "text": "I have what I need.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "evidence does not match"
+    },
+    {
+      "text": "The client is verified (46 jobs, 30 hires, 4.71 rating, $27k spend) — a solid, legitimate client.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "not in evidence: ['46', '71']"
+    },
+    {
+      "text": "I have strong matching evidence: a production defect-detection system  and a production RAG assistant using OpenAI API .",
+      "evidence_ids": [
+        "case_proj_3adc72b41f"
+      ],
+      "status": "supported",
+      "note": null
+    },
+    {
+      "text": "Note: the post is a bit muddled (a \"marketing agency\" wanting production-line defect detection), but the technical requirements are clear and match my portfolio.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "no evidence retrieved"
+    },
+    {
+      "text": "I'll bid at the upper end of the budget given the 6-week, 4-milestone scope.  ---  **Proposal**  Hi — your brief maps directly to two production systems I've shipped.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "evidence does not match"
+    },
+    {
+      "text": "For the defect-detection core, I built a production computer-vision pipeline that detects defects from photos taken on a production line, using PyTorch and AWS SageMaker; it caught 48% of defects before packing .",
+      "evidence_ids": [
+        "case_proj_65c5a1c7a6",
+        "case_proj_5820fcf035",
+        "code_proj_65c5a1c7a6"
+      ],
+      "status": "supported",
+      "note": null
+    },
+    {
+      "text": "I can adapt that architecture to your line's camera feed and defect classes.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "evidence does not match"
+    },
+    {
+      "text": "For the RAG layer, I delivered a production RAG assistant built on LangChain, Qdrant, the OpenAI API, and FastAPI that answered 241 staff questions a week .",
+      "evidence_ids": [
+        "case_proj_3adc72b41f"
+      ],
+      "status": "supported",
+      "note": null
+    },
+    {
+      "text": "I'll use Redis for caching and as a fast vector/lookup store to keep latency low and cut OpenAI token costs.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "no evidence retrieved"
+    },
+    {
+      "text": "I test that results work via a labeled holdout set with precision/recall/F1 targets, a regression suite, and a small human-in-the-loop review of flagged images before each milestone sign-off.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "evidence does not match"
+    },
+    {
+      "text": "I can structure this as your 4 milestones over 6 weeks: (1) data + baseline detector, (2) RAG + Redis integration, (3) tuning + evaluation, (4) deployment + docs.",
+      "evidence_ids": [],
+      "status": "unsupported",
+      "note": "no evidence retrieved"
+    }
+  ]
+}

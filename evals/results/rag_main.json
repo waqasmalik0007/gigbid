@@ -1,7 +1,7 @@
 {
   "meta": {
     "limit": null,
-    "ts": "2026-11-14 01:58",
+    "ts": "2026-11-14 19:31",
     "embed_model": "BAAI/bge-small-en-v1.5",
     "rerank_model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
   },
@@ -659,6 +659,88 @@
         "rerank": false,
         "outcome": false,
         "corrective": false,
+        "candidates": 40
+      }
+    },
+    "v8_corrective": {
+      "overall": {
+        "recall@5": 0.0914,
+        "mrr": 0.1598,
+        "ndcg@10": 0.0795,
+        "p50_latency_s": 0.9366,
+        "p95_latency_s": 2.2206,
+        "n": 544
+      },
+      "by_persona": {
+        "ai_ml_engineer": {
+          "recall@5": 0.0911,
+          "mrr": 0.1864,
+          "ndcg@10": 0.0845,
+          "p50_latency_s": 0.9756,
+          "p95_latency_s": 2.6013,
+          "n": 186
+        },
+        "fullstack_web": {
+          "recall@5": 0.1178,
+          "mrr": 0.1623,
+          "ndcg@10": 0.0896,
+          "p50_latency_s": 0.8955,
+          "p95_latency_s": 1.9621,
+          "n": 171
+        },
+        "data_analyst": {
+          "recall@5": 0.0676,
+          "mrr": 0.131,
+          "ndcg@10": 0.0652,
+          "p50_latency_s": 0.8997,
+          "p95_latency_s": 2.1501,
+          "n": 187
+        }
+      },
+      "by_source": {
+        "real_kaggle": {
+          "recall@5": 0.0809,
+          "mrr": 0.1314,
+          "ndcg@10": 0.0678,
+          "p50_latency_s": 0.7714,
+          "p95_latency_s": 1.7307,
+          "n": 376
+        },
+        "synthetic": {
+          "recall@5": 0.115,
+          "mrr": 0.2232,
+          "ndcg@10": 0.1056,
+          "p50_latency_s": 1.4375,
+          "p95_latency_s": 2.8364,
+          "n": 168
+        }
+      },
+      "by_requirements": {
+        ">=4": {
+          "recall@5": 0.1424,
+          "mrr": 0.2935,
+          "ndcg@10": 0.1263,
+          "p50_latency_s": 1.6533,
+          "p95_latency_s": 2.8181,
+          "n": 134
+        },
+        "<4": {
+          "recall@5": 0.0748,
+          "mrr": 0.1161,
+          "ndcg@10": 0.0641,
+          "p50_latency_s": 0.7619,
+          "p95_latency_s": 1.7329,
+          "n": 410
+        }
+      },
+      "config": {
+        "name": "v8_corrective",
+        "chunking": "item",
+        "query": "decompose",
+        "retrieval": "hybrid",
+        "rerank": true,
+        "outcome": false,
+        "corrective": true,
         "candidates": 40
       }
     }

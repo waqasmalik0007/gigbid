@@ -58,18 +58,28 @@ def usage_of(messages) -> dict:
     return {"tokens": ti + to}
 
 
-async def run_react(persona: str, job: dict) -> dict:
+async def run_react(persona: str, job: dict, note: str = "") -> dict:
     from langgraph.prebuilt import create_react_agent
 
     from agent.llm import get_llm, slot_of, throttle
     from agent.mcp_client import get_langchain_tools
     from agent.prompts.loader import fill
     tools = await get_langchain_tools("react_baseline")
-    llm = get_llm("writer", max_tokens=1500)
-    throttle.wait(slot_of(llm), 6000)
-    agent = create_react_agent(llm, tools, prompt=fill("react_baseline") + f"\nYou work for persona '{persona}'; "
-                               f"pass persona='{persona}' to portfolio tools.")
-    out = await agent.ainvoke({"messages": [HumanMessage(job_text(job))]}, {"recursion_limit": 16})
+    from agent.llm import _daily_quota_seconds
+    for attempt in range(2):  # a per-day 429 marks this key's slot exhausted; the retry routes to another key
+        llm = get_llm("writer", max_tokens=1500)
+        throttle.wait(slot_of(llm), 6000)
+        agent = create_react_agent(llm, tools, prompt=fill("react_baseline") + f"\nYou work for persona "
+                                   f"'{persona}'; pass persona='{persona}' to portfolio tools.")
+        try:
+            out = await agent.ainvoke({"messages": [HumanMessage(job_text(job) + (f"\n\n{note}" if note else ""))]},
+                                      {"recursion_limit": 16})
+            break
+        except Exception as e:  # noqa: BLE001
+            secs = _daily_quota_seconds(e)
+            if secs is None or attempt:
+                raise
+            throttle.mark_exhausted(slot_of(llm), secs)
     msgs = out["messages"]
     return {"text": msgs[-1].content, **usage_of(msgs)}
 

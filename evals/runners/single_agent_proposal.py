@@ -25,15 +25,24 @@ async def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--persona", default="ai_ml_engineer")
     ap.add_argument("--job", default=None)
+    ap.add_argument("--draft", action="store_true",
+                    help="the freelancer already chose to bid: draft the proposal instead of deciding bid/skip")
     a = ap.parse_args()
     rows = [json.loads(x) for x in (ROOT / f"evals/datasets/dev_{a.persona}.jsonl").open(encoding="utf-8")]
     row = next((r for r in rows if r["job"]["job_id"] == a.job), None) or \
         next(r for r in rows if r["gold"]["action"] == "bid" and (r["job"].get("budget_max") or 0) > 500)
     current_user.set(a.persona)
-    res = await run_react(a.persona, row["job"])
+    res = await run_react(a.persona, row["job"], note=(
+        "The freelancer has already decided to bid on this job (this note is from the freelancer, not the "
+        "client). Search the portfolio, then write the proposal citing evidence ids, and end with "
+        "DECISION: bid and PRICE.") if a.draft else "")
     letter = re.split(r"DECISION:", res["text"], flags=re.I)[0]
     claims = verify_claims(split_claims(re.sub(r"\[[a-z]+_[\w-]+\]", "", letter)), get_pipeline(a.persona, "v2_hybrid"))
-    out = {"job_id": row["job"]["job_id"], "title": row["job"]["title"], "persona": a.persona, "output": res["text"],
+    import os
+    from agent.llm import node_model
+    out = {"job_id": row["job"]["job_id"], "title": row["job"]["title"], "persona": a.persona,
+           "profile": os.getenv("GIGBID_PROFILE", "open"), "model": node_model("writer"), "draft_mode": a.draft,
+           "output": res["text"],
            "tokens": res["tokens"], "cited_ids": sorted(set(re.findall(r"\[([a-z]+_[\w-]+)\]", letter))),
            "claims": [c.model_dump() for c in claims]}
     (ROOT / "evals/results/single_agent_proposal.json").write_text(json.dumps(out, indent=2))
