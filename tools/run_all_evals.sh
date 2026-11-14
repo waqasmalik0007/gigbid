@@ -19,6 +19,19 @@ PY=${PY:-python}
 # step <name> <done-check python expr on the result file> -- <command...>
 step() {
   local name=$1 check=$2; shift 3
+  # one lane per step at a time: a second lane waits for the first, then finds the step complete
+  local lock="$LOG/$name.lock"
+  until mkdir "$lock" 2>/dev/null; do
+    if [ -f "$lock/pid" ] && ! kill -0 "$(cat "$lock/pid")" 2>/dev/null; then rm -rf "$lock"; continue; fi
+    sleep 60
+  done
+  echo $$ > "$lock/pid"
+  _step "$name" "$check" "$@"
+  rm -rf "$lock"
+}
+
+_step() {
+  local name=$1 check=$2; shift 2
   for attempt in $(seq 1 ${MAX_ATTEMPTS:-40}); do
     if $PY -c "$check" 2>/dev/null; then echo "$(date +%T) $name complete"; return 0; fi
     echo "$(date +%T) $name attempt $attempt"
@@ -36,6 +49,12 @@ ok_rows() {  # resumable runner finished: >= $2 rows without an infrastructure e
 ok_json() {  # result file exists and its overall summary has n>=$2 and no errors
   echo "import json,sys; d=json.load(open('evals/results/$1')); o=d.get('overall',d); sys.exit(0 if o.get('n',0)>=$2 and not o.get('errors') else 1)"
 }
+
+if [ "$LANE" = v0 ]; then  # with several API keys the V0 proposal run can go in parallel with "best"
+  step proposals_v0 "$(ok_rows proposals_v0.partial.jsonl 9)" -- \
+    $PY -m evals.runners.proposal_eval --per-persona 3 --variant v0_naive --tag v0
+  exit 0
+fi
 
 if [ "$LANE" = qwen ]; then
   # R&D C: all three systems on the same model; Qwen's quota is separate from the gpt-oss proposal runs
