@@ -69,6 +69,11 @@ approving resumes the thread. Submission uses idempotency keys `"{thread_id}:dra
 checkpoint write replays the same response instead of submitting twice
 (`tests/integration/test_mcp_servers.py::test_marketplace_read_and_idempotent_write`).
 Replay from any node: `graph.get_state_history(config)` then `graph.invoke(None, checkpoint_config)`.
+The same mechanism drives degraded-mode recovery: a node that meets a dead marketplace returns
+`needs_attention` with a "marketplace unavailable" error; once the marketplace answers, `worker/runner.py::recover`
+resumes the thread from the newest checkpoint without that error (for an approved proposal, just before
+`submit`), so the outage costs a delay, never a lost approval or a double submit
+(`tests/unit/test_degraded_recovery.py`).
 
 ## Failure handling (C7)
 
