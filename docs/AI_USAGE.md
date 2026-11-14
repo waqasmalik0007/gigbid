@@ -28,3 +28,13 @@ AI coding assistants were allowed for this assignment. I am accountable for ever
    was changed to contextual + hybrid (R6).
 7. **The CI checker flagged false positives** (the `f` in `fill(` as an inline prompt; a Kaggle post
    containing "sk-SQLAlchemy" as an API key). Patterns tightened.
+8. **A quota failure counted as a correct answer.** In the R&D C runner, a graph run that dead-lettered
+   on Groq's daily quota had no decision, and the code defaulted it to "skip"; on skip jobs that scored as
+   correct with 0 tokens. Six such rows were found by their zero token counts, deleted, and the runner now
+   records an error and re-runs the job.
+9. **A Dockerfile that could never build.** All pinned dependencies were passed to pip as one quoted
+   string; Docker was not available locally, so it was caught by review. Now installed from a generated
+   requirements file.
+10. **Degraded mode without recovery.** The banner and `needs_attention` status existed, but nothing
+    resumed parked work when the marketplace came back. Added checkpoint-based recovery and a test that
+    proves an approved proposal is still submitted exactly once.
