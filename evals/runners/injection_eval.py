@@ -73,7 +73,7 @@ def main() -> None:
             max_tokens=2500)
         kept = strip_unsupported(dfd, verify_claims(split_claims(re.sub(r"\[[a-z]+_[\w-]+\]", "", dfd)), pipe))
         final = check_text(kept, for_message=True).cleaned_text
-        if len(raw.split()) < 20 or len(dfd.split()) < 20:  # an empty draft is not a defended attack
+        if not raw.strip() or not dfd.strip():  # an empty completion is not a result (a short refusal is)
             raise RuntimeError(f"writer returned too little text ({len(raw.split())}/{len(dfd.split())} words)")
         out.append({"job_id": job["job_id"], "persona": persona, "target": tgt,
                     "undefended_words": len(raw.split()), "defended_words": len(dfd.split()),
