@@ -78,6 +78,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--http", type=int, default=None, help="serve streamable HTTP on this port")
     a = ap.parse_args()
+    # Import the numeric stack on the main thread: FastMCP runs sync tools in a worker thread, and a first
+    # import of numpy's C extensions there hung forever on Windows under stdio (found testing uvx install).
+    import numpy  # noqa: F401
+    import rag.pipeline  # noqa: F401
     if a.http:
         from mcp_servers.common.http import serve_with_bearer
         serve_with_bearer(mcp, a.http, os.getenv("MCP_BEARER_TOKEN", ""))

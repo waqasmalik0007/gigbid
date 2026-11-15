@@ -17,7 +17,7 @@ sdk: docker
 app_port: 7860
 pinned: false
 ---
-GigBid: multi-agent freelancer copilot. Source: https://github.com/<you>/gigbid
+GigBid: multi-agent freelancer copilot. Source: https://github.com/waqasmalik0007/gigbid
 MD
 cd "$OUT"
 git init -q && git add -A && git commit -qm "Deploy GigBid"
