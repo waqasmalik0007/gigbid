@@ -25,7 +25,6 @@ Point it at a folder of your files (`proposals/` sub-folder = past proposals):
 # the server indexes the folder at startup, ~30-60 s, then each search takes about a second)
 PORTFOLIO_DIR=~/my-portfolio uvx --from "git+https://github.com/waqasmalik0007/gigbid" gigbid-portfolio-mcp
 
-# Docker
 # Docker, from a clone of the repository (the shared Python image; override its command)
 docker build -f infra/docker/python.Dockerfile -t gigbid-py .
 docker run -i --rm -v ~/my-portfolio:/portfolio -e PORTFOLIO_DIR=/portfolio gigbid-py python -m mcp_servers.portfolio.server
