@@ -4,7 +4,7 @@
 #   L=/path/to/live-copy PY=/path/to/python NODE=/path/to/node CLOUDFLARED=/path/to/cloudflared bash tools/serve_public.sh
 L="${L:-/d/gigbid_work/live}"; cd "$L"
 PY="${PY:-python}"; NODE="${NODE:-node}"; CLOUDFLARED="${CLOUDFLARED:-cloudflared}"
-export PYTHONPATH="$L" GIGSIM_DB="$L/gigsim_live.sqlite3" GIGBID_APP_DB="$L/app.sqlite3" \n  PYTHONIOENCODING=utf-8 OPENBLAS_NUM_THREADS=1
+export PYTHONPATH="$L" GIGSIM_DB="$L/gigsim_live.sqlite3" GIGBID_APP_DB="$L/app.sqlite3" \n  PYTHONIOENCODING=utf-8 PYTHONUTF8=1 OPENBLAS_NUM_THREADS=1
 mkdir -p "$L/logs"
 keep() { local name=$1; shift; while true; do echo "--- $(date +%T) start $name" >> "$L/logs/$name.log"; "$@" >> "$L/logs/$name.log" 2>&1; sleep 5; done; }
 keep gigsim "$PY" -m uvicorn gigsim.app:app --host 127.0.0.1 --port 8101 --log-level warning &

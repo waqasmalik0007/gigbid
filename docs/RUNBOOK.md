@@ -14,6 +14,12 @@ cd apps/web && npm ci && npm run dev
 
 Reviewer account: `REVIEWER_EMAIL` / `REVIEWER_PASSWORD` env vars seed it at API start-up (AI/ML persona).
 
+**On Windows, set `PYTHONUTF8=1` before starting GigSim.** GigSim is frozen (`gigsim/MANIFEST.sha256`)
+and reads its JSON data with the platform's default encoding. Windows defaults to cp1252, which garbles
+non-ASCII characters in real job posts (dashes and quotes appear as `â€”` in the Writer's letters). The
+agent and RAG code read files as UTF-8 explicitly; GigSim relies on this setting rather than a code change
+to the frozen simulator. Linux and Docker already default to UTF-8.
+
 ## Scheduling (E1)
 
 The Arq worker (`arq worker.tasks.WorkerSettings`) runs `scout_all` every 5 minutes but only acts when
