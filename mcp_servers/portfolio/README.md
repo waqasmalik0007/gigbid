@@ -21,7 +21,8 @@ best matching project".
 Point it at a folder of your files (`proposals/` sub-folder = past proposals):
 
 ```bash
-# uvx, straight from the public repository
+# uvx, straight from the public repository (first run installs ~110 packages incl. PyTorch;
+# the server indexes the folder at startup, ~30-60 s, then each search takes about a second)
 PORTFOLIO_DIR=~/my-portfolio uvx --from "git+https://github.com/waqasmalik0007/gigbid" gigbid-portfolio-mcp
 
 # Docker
