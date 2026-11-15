@@ -1,6 +1,6 @@
 # Four of the six "advanced RAG" tricks I tried made my retrieval worse
 
-*Draft for LinkedIn/Medium (~1,500 words). Every number comes from the project's results files.*
+*Published with the GigBid repository (~1,500 words). Every number comes from the project's results files.*
 
 I spent a weekend building GigBid, a multi-agent copilot for freelancers: a team of LangGraph agents
 that reads job posts, flags scams, decides whether a job is worth bidding on, and drafts a proposal in

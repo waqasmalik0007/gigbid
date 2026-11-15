@@ -43,3 +43,9 @@ AI coding assistants were allowed for this assignment. I am accountable for ever
 items. Short on time, I asked the coding assistant to label them, blind to the judge's scores. Every row
 of `evals/datasets/judge_labels.csv` says so in its notes, and report section 4 says the resulting kappa
 compares two models, not the judge against a human.
+
+**The demo video was recorded by a script, not by me live.** Claude wrote a Playwright script
+(`D:\gigbid_work\video\record.cjs`, outside the repo) that signs in to the live app, walks through the
+demo script with on-screen captions, and records the screen. There is no narration. The app, data and
+results shown are the real live deployment at the time of recording (15 Nov 2026), and the approval
+shown in the video really submitted the proposal to GigSim.

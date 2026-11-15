@@ -6,9 +6,10 @@ approves it.**
 
 * Live app: **https://trailers-july-ranch-icon.trycloudflare.com** (reviewer login in the Classroom private comment). Served from my machine through a
   Cloudflare tunnel (Hugging Face now charges for Docker Spaces; see [docs/DEPLOY.md](docs/DEPLOY.md)).
-* Demo video (3 min): **VIDEO_URL**
-* Public traces: **TRACE_LINKS**
-* Portfolio MCP server: [`mcp_servers/portfolio`](mcp_servers/portfolio/README.md) · Write-up: **WRITEUP_URL**
+* Demo video (3 min): **[https://github.com/waqasmalik0007/gigbid/releases/download/v1.0/gigbid_demo.webm](https://github.com/waqasmalik0007/gigbid/releases/download/v1.0/gigbid_demo.webm)** (captioned walkthrough of the live app, recorded with a Playwright script)
+* Traces: every run's node-by-node timeline (inputs, outputs, tokens, cost, errors) is under **Runs** in the live app,
+  and `tools/replay.py` replays or forks any checkpoint. LangSmith tracing is supported but was not configured for the free deployment.
+* Portfolio MCP server: [`mcp_servers/portfolio`](mcp_servers/portfolio/README.md) · Write-up: **[docs/WRITEUP.md](https://github.com/waqasmalik0007/gigbid/blob/master/docs/WRITEUP.md)**
 
 ![demo](docs/images/demo.gif)
 
