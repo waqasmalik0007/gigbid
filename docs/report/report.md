@@ -1,6 +1,6 @@
 # GigBid: R&D design review
 
-AI-4016 · individual assignment · repository: https://github.com/waqasmalik0007/gigbid · live app: https://wishes-roster-since-presence.trycloudflare.com · every number below is
+AI-4016 · individual assignment · roll no. 23i-0569 · section C · repository: https://github.com/waqasmalik0007/gigbid · live app: https://wishes-roster-since-presence.trycloudflare.com · every number below is
 generated from `evals/results/*.json` (`tools/results_tables.py`); file names are given in brackets.
 
 ## 1. Problem and constraints
