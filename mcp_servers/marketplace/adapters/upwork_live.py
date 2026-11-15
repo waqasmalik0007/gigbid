@@ -53,7 +53,7 @@ class UpworkLiveAdapter:
                                                       "headers": {"Authorization": f"Bearer {token}"}}})
             try:
                 tools = {t.name: t for t in await client.get_tools()}
-            except Exception as e:  # noqa: BLE001
+            except Exception as e:
                 raise MarketplaceUnavailable(f"Upwork MCP unreachable: {e}") from e
             self._tools[user_id] = tools
         for name in TOOL_MAP[method]:

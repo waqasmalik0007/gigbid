@@ -78,10 +78,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--http", type=int, default=None, help="serve streamable HTTP on this port")
     a = ap.parse_args()
-    # Import the numeric stack on the main thread: FastMCP runs sync tools in a worker thread, and a first
-    # import of numpy's C extensions there hung forever on Windows under stdio (found testing uvx install).
-    import numpy  # noqa: F401
-    import rag.pipeline  # noqa: F401
+    # Build the index on the main thread before serving. FastMCP runs sync tools in a worker thread, and a
+    # first import of numpy/scipy BLAS extensions there hung forever on Windows under stdio (found testing
+    # the uvx install). Warming here does every import and model load once, and makes the first call fast.
+    os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+    t.pipeline(t.default_persona()).retrieve({"title": "warm-up", "description": "warm-up"}, ["warm-up"], k=1)
     if a.http:
         from mcp_servers.common.http import serve_with_bearer
         serve_with_bearer(mcp, a.http, os.getenv("MCP_BEARER_TOKEN", ""))
