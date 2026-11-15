@@ -66,7 +66,7 @@ def main() -> None:
         api.add_space_variable(repo, "LANGSMITH_TRACING", "true")
         api.add_space_variable(repo, "LANGSMITH_PROJECT", "gigbid")
     out = Path(os.getenv("SPACE_DIR", ROOT.parent / "gigbid-space"))
-    subprocess.run(["bash", "tools/make_space.sh", a.user, a.space], cwd=ROOT, check=True,
+    subprocess.run([os.getenv("BASH_EXE", "bash"), "tools/make_space.sh", a.user, a.space], cwd=ROOT, check=True,
                    env=os.environ | {"SPACE_DIR": str(out)})
     api.upload_folder(repo_id=repo, repo_type="space", folder_path=str(out), ignore_patterns=[".git/*"],
                       commit_message="Deploy GigBid from GitHub HEAD")
