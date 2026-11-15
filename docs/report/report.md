@@ -309,3 +309,17 @@ viewports) pass.
 reported reset and routes that node to the next model in the profile's `quota_fallbacks` (gpt-oss-20b
 nodes to gpt-oss-120b). Every re-route is logged (`data/processed/quota_routes.log`) and reported with
 the run it affected.
+
+## Submission links
+
+| Item | Link |
+|---|---|
+| Deployed app (reviewer login: in the separate login PDF attached to the submission) | https://wishes-roster-since-presence.trycloudflare.com |
+| Public GitHub repository | https://github.com/waqasmalik0007/gigbid |
+| 3-minute demo video | https://github.com/waqasmalik0007/gigbid/releases/download/v1.0/gigbid_demo.webm |
+| Published Portfolio MCP server (uvx) | https://github.com/waqasmalik0007/gigbid/tree/master/mcp_servers/portfolio |
+| Technical write-up | https://github.com/waqasmalik0007/gigbid/blob/master/docs/WRITEUP.md |
+| Source ZIP | https://github.com/waqasmalik0007/gigbid/releases/tag/v1.0 |
+
+The app runs on my machine through a Cloudflare tunnel (docs/DEPLOY.md). If the link above has changed
+after a restart, the current one is posted on the Classroom submission.
