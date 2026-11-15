@@ -12,7 +12,7 @@ CACHE = Path(__file__).resolve().parents[1] / "data/processed/hyde_cache.json"
 
 
 def hypothetical_proposal(job: dict) -> tuple[str, dict]:
-    cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+    cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     jid = job.get("job_id", "")
     if jid in cache:
         return cache[jid], {}

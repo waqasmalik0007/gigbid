@@ -104,7 +104,7 @@ class FileStore:
 
         st = _Store()
         if path.exists():
-            for ns, k, v in json.loads(path.read_text()):
+            for ns, k, v in json.loads(path.read_text(encoding="utf-8")):
                 st.put(tuple(ns), k, v)
         return st
 

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 @lru_cache
 def policy() -> dict:
-    return yaml.safe_load((ROOT / config()["policy_pack_path"] / "policy.yaml").read_text())
+    return yaml.safe_load((ROOT / config()["policy_pack_path"] / "policy.yaml").read_text(encoding="utf-8"))
 
 
 def check_text(text: str, claims=None, for_message: bool = False) -> ComplianceVerdict:

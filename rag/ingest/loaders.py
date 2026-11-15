@@ -71,7 +71,7 @@ def load_persona(persona: str) -> list[Item]:
         items.append(Item(evidence_id=f"upload_{extra.stem}", persona=persona, type="upload",
                           title=extra.stem, text=extra.read_text(encoding="utf-8"), source=str(extra),
                           synthetic=False))
-    removed = set(json.loads((base / "removed.json").read_text())) if (base / "removed.json").exists() else set()
+    removed = set(json.loads((base / "removed.json").read_text(encoding="utf-8"))) if (base / "removed.json").exists() else set()
     return [i for i in items if i.evidence_id not in removed]  # evidence the user removed is never retrieved
 
 
@@ -85,7 +85,7 @@ def remove_evidence(persona: str, evidence_id: str) -> None:
             f.unlink()
             return
     path = base / "removed.json"
-    removed = set(json.loads(path.read_text())) if path.exists() else set()
+    removed = set(json.loads(path.read_text(encoding="utf-8"))) if path.exists() else set()
     path.write_text(json.dumps(sorted(removed | {evidence_id}), indent=1))
 
 

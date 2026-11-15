@@ -30,7 +30,7 @@ PRICES = {
 def _load_env() -> None:
     env = ROOT / ".env"
     if env.exists():
-        for line in env.read_text().splitlines():
+        for line in env.read_text(encoding="utf-8").splitlines():
             if "=" in line and not line.lstrip().startswith("#"):
                 k, v = line.split("=", 1)
                 v = v.split("#")[0].strip()
@@ -43,7 +43,7 @@ _load_env()
 
 @lru_cache
 def config() -> dict[str, Any]:
-    return yaml.safe_load((ROOT / "agent" / "config.yaml").read_text())
+    return yaml.safe_load((ROOT / "agent" / "config.yaml").read_text(encoding="utf-8"))
 
 
 def profile_name() -> str:

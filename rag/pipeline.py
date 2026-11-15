@@ -68,7 +68,7 @@ def _context_line(it: Item) -> str:
     """Contextual-retrieval prefix. Generated once per item and cached (template fallback, no LLM
     needed): situates a fragment (e.g. a terse README) within its project, type and skills."""
     cache_f = ROOT / "data/processed/context_lines.json"
-    cache = json.loads(cache_f.read_text()) if cache_f.exists() else {}
+    cache = json.loads(cache_f.read_text(encoding="utf-8")) if cache_f.exists() else {}
     if it.evidence_id in cache:
         return cache[it.evidence_id]
     proj = it.title if it.type == "case_study" else (it.project_id or "")

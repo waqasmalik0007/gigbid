@@ -45,18 +45,18 @@ BOOT = time.time()
 
 def load_policy() -> dict:
     p = Path(os.getenv("GIGSIM_POLICY_FILE", ROOT / "gigsim" / "policy.yaml"))
-    return yaml.safe_load(p.read_text()) if p.exists() else {}
+    return yaml.safe_load(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
 # ---------------------------------------------------------------- world
 class World:
     def __init__(self) -> None:
-        self.clients = {c["client_id"]: c for c in json.loads((DATA / "clients.json").read_text())}
-        self.history = json.loads((DATA / "jobs_history.json").read_text())
-        self.stream = sorted(json.loads((DATA / "jobs_stream.json").read_text()), key=lambda j: j["posted_at"])
+        self.clients = {c["client_id"]: c for c in json.loads((DATA / "clients.json").read_text(encoding="utf-8"))}
+        self.history = json.loads((DATA / "jobs_history.json").read_text(encoding="utf-8"))
+        self.stream = sorted(json.loads((DATA / "jobs_stream.json").read_text(encoding="utf-8")), key=lambda j: j["posted_at"])
         extra = DATA / "jobs_extra.json"  # hidden-test runner can drop new jobs/clients here
         if extra.exists():
-            ex = json.loads(extra.read_text())
+            ex = json.loads(extra.read_text(encoding="utf-8"))
             self.stream += ex.get("jobs", [])
             self.clients |= {c["client_id"]: c for c in ex.get("clients", [])}
         self.jobs = {j["job_id"]: j for j in self.history + self.stream}
@@ -210,7 +210,7 @@ MARKET = ROOT / "data" / "processed" / "market_stats.json"
 def market_stats(category: str, uid: str = Depends(user)):
     """Real rate quartiles from the Kaggle Upwork data when prepared; else from GigSim history."""
     if MARKET.exists():
-        stats = json.loads(MARKET.read_text())
+        stats = json.loads(MARKET.read_text(encoding="utf-8"))
         if category in stats:
             return {"category": category, "source": stats.get("_source"), **stats[category]}
     js = [j for j in world.history if j["category"] == category and j.get("budget_max")]

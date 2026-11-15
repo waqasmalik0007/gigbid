@@ -23,7 +23,7 @@ def _persona_floor(persona: str | None) -> float:
     from pathlib import Path
     f = Path(__file__).resolve().parents[2] / "data" / "personas" / str(persona) / "profile.json"
     try:
-        return float(json.loads(f.read_text()).get("floor_rate", 30))
+        return float(json.loads(f.read_text(encoding="utf-8")).get("floor_rate", 30))
     except (OSError, ValueError):
         return 30.0
 

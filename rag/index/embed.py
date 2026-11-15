@@ -51,7 +51,7 @@ class EmbedCache:
         CACHE.mkdir(parents=True, exist_ok=True)
         slug = EMBED_MODEL.replace("/", "_")
         self.vec_path, self.key_path = CACHE / f"{slug}.npy", CACHE / f"{slug}.json"
-        self.keys: dict[str, int] = json.loads(self.key_path.read_text()) if self.key_path.exists() else {}
+        self.keys: dict[str, int] = json.loads(self.key_path.read_text(encoding="utf-8")) if self.key_path.exists() else {}
         self.vecs = np.load(self.vec_path) if self.vec_path.exists() else np.zeros((0, 384), np.float32)
 
     @staticmethod
