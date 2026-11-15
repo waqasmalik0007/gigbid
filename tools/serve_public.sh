@@ -12,5 +12,5 @@ keep api "$PY" -m uvicorn apps.api.main:app --host 127.0.0.1 --port 8000 --log-l
 (cd web && export PORT=3000 HOSTNAME=127.0.0.1 NODE_ENV=production && keep web "$NODE" server.js) &
 keep tunnel "$CLOUDFLARED" tunnel --no-autoupdate --url http://127.0.0.1:3000 &
 # publish the current tunnel URL
-while true; do u=$(grep -o 'https://[a-z0-9-]*\.trycloudflare\.com' logs/tunnel.log 2>/dev/null | tail -1)
+while true; do u=$(grep -oE 'https://[a-z0-9]+(-[a-z0-9]+)+\.trycloudflare\.com' logs/tunnel.log 2>/dev/null | tail -1)
   [ -n "$u" ] && [ "$u" != "$(cat URL.txt 2>/dev/null)" ] && echo "$u" > URL.txt; sleep 10; done

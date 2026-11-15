@@ -4,7 +4,7 @@
 proposals in which every claim links to real portfolio evidence. Nothing reaches a client until a human
 approves it.**
 
-* Live app: **https://trailers-july-ranch-icon.trycloudflare.com** (reviewer login in the Classroom private comment). Served from my machine through a
+* Live app: **https://wishes-roster-since-presence.trycloudflare.com** (reviewer login in the Classroom private comment). Served from my machine through a
   Cloudflare tunnel (Hugging Face now charges for Docker Spaces; see [docs/DEPLOY.md](docs/DEPLOY.md)).
 * Demo video (3 min): **[https://github.com/waqasmalik0007/gigbid/releases/download/v1.0/gigbid_demo.webm](https://github.com/waqasmalik0007/gigbid/releases/download/v1.0/gigbid_demo.webm)** (captioned walkthrough of the live app, recorded with a Playwright script)
 * Traces: every run's node-by-node timeline (inputs, outputs, tokens, cost, errors) is under **Runs** in the live app,
