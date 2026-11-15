@@ -82,7 +82,9 @@ def main() -> None:
     # first import of numpy/scipy BLAS extensions there hung forever on Windows under stdio (found testing
     # the uvx install). Warming here does every import and model load once, and makes the first call fast.
     os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
-    t.pipeline(t.default_persona()).retrieve({"title": "warm-up", "description": "warm-up"}, ["warm-up"], k=1)
+    import scipy.linalg  # noqa: F401  (lazily imported by retrieval; hung in the tool thread under MCP Inspector)
+    t.search_evidence("warm-up")  # the exact code path of the tool, not just the index
+    t.list_skills()
     if a.http:
         from mcp_servers.common.http import serve_with_bearer
         serve_with_bearer(mcp, a.http, os.getenv("MCP_BEARER_TOKEN", ""))

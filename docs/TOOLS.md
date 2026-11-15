@@ -62,3 +62,19 @@ the node wrapper parks the job as `needs_attention` (reason "marketplace unavail
 failing it, the scout skips its cycle, and `/api/health/marketplace` drives the red banner in the UI.
 Approvals already given are kept in the checkpoint and submitted once the server is back
 (`agent/nodes/common.py`, `apps/web/src/components/DegradedBanner.tsx`).
+
+## MCP Inspector screenshots (A7)
+
+The Portfolio server under the official MCP Inspector (v2.15, stdio), 15 Nov 2026. The server was started
+with `python -m mcp_servers.portfolio.server`; the tool call is a live `search_evidence`.
+
+| | |
+|---|---|
+| Connected (protocol 2025-11-25) | ![connected](images/inspector_1_connected.png) |
+| Tool list with annotations | ![tools](images/inspector_2_tools.png) |
+| `search_evidence` call and result | ![call](images/inspector_3_search_evidence_call.png) |
+| Prompts | ![prompts](images/inspector_4_prompts.png) |
+| Resources | ![resources](images/inspector_5_resources.png) |
+
+The Inspector run found one more Windows hang: retrieval imported scipy lazily inside the tool thread.
+The server now runs one real `search_evidence` call at startup (`mcp_servers/portfolio/server.py`).

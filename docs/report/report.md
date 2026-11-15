@@ -318,6 +318,7 @@ the run it affected.
 | Public GitHub repository | https://github.com/waqasmalik0007/gigbid |
 | 3-minute demo video | https://github.com/waqasmalik0007/gigbid/releases/download/v1.0/gigbid_demo.webm |
 | Published Portfolio MCP server (uvx) | https://github.com/waqasmalik0007/gigbid/tree/master/mcp_servers/portfolio |
+| MCP Inspector screenshots | https://github.com/waqasmalik0007/gigbid/blob/master/docs/TOOLS.md#mcp-inspector-screenshots-a7 |
 | Technical write-up | https://github.com/waqasmalik0007/gigbid/blob/master/docs/WRITEUP.md |
 | Source ZIP | https://github.com/waqasmalik0007/gigbid/releases/tag/v1.0 |
 
