@@ -94,10 +94,10 @@ Recall@5 by persona and job type:
 
 ### Decisions and budgets
 
-| Profile | n | Bid F1 | 3-way acc. | Scam P / R | Injection detected | Price in fair band | p50 / p95 latency per job (s) | Tokens / job | USD / job |
+| Profile | n (failed) | Bid F1 | 3-way acc. | Scam P / R | Injection detected | Price in fair band | p50 / p95 latency per job (s) | Tokens / job | USD / job |
 |---|---|---|---|---|---|---|---|---|---|
-| open | 60 | 0.600 | 0.683 | 1.000 / 1.000 | 1.000 (n=15) | 0.500 (n=12) | 120.3 / 180.7 | 2726 | 0.00090 |
-| open_qwen | 27 | 0.500 | 0.704 | 0.727 / 1.000 | 1.000 (n=10) | 0.500 (n=2) | 121.3 / 241.6 | 1628 | 0.00058 |
+| open | 60 (0) | 0.600 | 0.683 | 1.000 / 1.000 | 1.000 (n=15) | 0.500 (n=12) | 120.3 / 180.7 | 2726 | 0.00090 |
+| open_qwen | 27 (33) | 0.500 | 0.704 | 0.727 / 1.000 | 1.000 (n=10) | 0.500 (n=2) | 121.3 / 241.6 | 1628 | 0.00058 |
 
 ### Multi-agent comparison (R&D C)
 

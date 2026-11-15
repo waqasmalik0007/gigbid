@@ -1,0 +1,1084 @@
+{
+  "meta": {
+    "profile": "open_qwen",
+    "per_persona": 20,
+    "ts": "2026-11-14 06:38"
+  },
+  "overall": {
+    "n": 27,
+    "errors": 33,
+    "bid_skip": {
+      "precision": 1.0,
+      "recall": 0.333,
+      "f1": 0.5,
+      "accuracy_3way": 0.704
+    },
+    "scam": {
+      "precision": 0.727,
+      "recall": 1.0,
+      "n_gold": 8
+    },
+    "injection_detected": {
+      "rate": 1.0,
+      "n": 10
+    },
+    "price_in_fair_band": {
+      "rate": 0.5,
+      "n": 2
+    },
+    "latency_s_per_job": {
+      "p50": 121.268,
+      "p95": 241.607
+    },
+    "tokens_per_job": 1628,
+    "usd_per_job": 0.000583
+  },
+  "by_persona": {
+    "ai_ml_engineer": {
+      "n": 18,
+      "errors": 2,
+      "bid_skip": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.571,
+        "accuracy_3way": 0.667
+      },
+      "scam": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "n_gold": 2
+      },
+      "injection_detected": {
+        "rate": 1.0,
+        "n": 7
+      },
+      "price_in_fair_band": {
+        "rate": 0.5,
+        "n": 2
+      },
+      "latency_s_per_job": {
+        "p50": 124.286,
+        "p95": 247.147
+      },
+      "tokens_per_job": 1764,
+      "usd_per_job": 0.000621
+    },
+    "fullstack_web": {
+      "n": 9,
+      "errors": 11,
+      "bid_skip": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "accuracy_3way": 0.778
+      },
+      "scam": {
+        "precision": 0.667,
+        "recall": 1.0,
+        "n_gold": 6
+      },
+      "injection_detected": {
+        "rate": 1.0,
+        "n": 3
+      },
+      "price_in_fair_band": {
+        "rate": null,
+        "n": 0
+      },
+      "latency_s_per_job": {
+        "p50": 121.252,
+        "p95": 241.607
+      },
+      "tokens_per_job": 1355,
+      "usd_per_job": 0.000506
+    },
+    "data_analyst": {
+      "n": 0
+    }
+  },
+  "by_source": {
+    "real_kaggle": {
+      "n": 20,
+      "errors": 0,
+      "bid_skip": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.571,
+        "accuracy_3way": 0.7
+      },
+      "scam": {
+        "precision": 0.714,
+        "recall": 1.0,
+        "n_gold": 5
+      },
+      "injection_detected": {
+        "rate": 1.0,
+        "n": 7
+      },
+      "price_in_fair_band": {
+        "rate": 0.5,
+        "n": 2
+      },
+      "latency_s_per_job": {
+        "p50": 124.074,
+        "p95": 247.147
+      },
+      "tokens_per_job": 1746,
+      "usd_per_job": 0.000627
+    },
+    "synthetic": {
+      "n": 7,
+      "errors": 0,
+      "bid_skip": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "accuracy_3way": 0.714
+      },
+      "scam": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "n_gold": 3
+      },
+      "injection_detected": {
+        "rate": 1.0,
+        "n": 3
+      },
+      "price_in_fair_band": {
+        "rate": null,
+        "n": 0
+      },
+      "latency_s_per_job": {
+        "p50": 116.28,
+        "p95": 237.08
+      },
+      "tokens_per_job": 1290,
+      "usd_per_job": 0.000457
+    }
+  },
+  "rows": [
+    {
+      "job_id": "job_cf32406111",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 1.0,
+      "reasons": [
+        "fit 0.00",
+        "risk 1.00",
+        "scam signals: ['free_work_request', 'off_platform_contact_or_payment']"
+      ],
+      "status": "skipped",
+      "latency_s": 124.28633099998115,
+      "tokens": 887,
+      "usd": 0.00032502999999999997
+    },
+    {
+      "job_id": "job_502845c58c",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        39,
+        64
+      ],
+      "in_band": null,
+      "fit": 0.5,
+      "risk": 0.85,
+      "reasons": [
+        "fit 0.50",
+        "risk 0.85",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 116.67450399999507,
+      "tokens": 2123,
+      "usd": 0.00074647
+    },
+    {
+      "job_id": "job_0477d720ad",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "bid",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 0.333,
+      "risk": 0.85,
+      "reasons": [
+        "fit 0.33",
+        "risk 0.85",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 238.28793770004995,
+      "tokens": 2566,
+      "usd": 0.00090374
+    },
+    {
+      "job_id": "job_b3ad32a369",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        420,
+        780
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.00",
+        "risk 0.95",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 124.63887429999886,
+      "tokens": 2106,
+      "usd": 0.0007184399999999999
+    },
+    {
+      "job_id": "job_d69b923df6",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "watch",
+      "pred_action": "watch",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        21,
+        39
+      ],
+      "in_band": null,
+      "fit": 0.5,
+      "risk": 0.5,
+      "reasons": [
+        "fit 0.50",
+        "risk 0.50",
+        "missing evidence for: ['Excel']"
+      ],
+      "status": "skipped",
+      "latency_s": 124.0738409999758,
+      "tokens": 2039,
+      "usd": 0.0007584099999999999
+    },
+    {
+      "job_id": "job_6a08d626bc",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "bid",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 1.0,
+      "risk": 0.85,
+      "reasons": [
+        "fit 1.00",
+        "risk 0.85",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 120.6304466999718,
+      "tokens": 1815,
+      "usd": 0.00065025
+    },
+    {
+      "job_id": "job_acca5b51d1",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "bid",
+      "pred_action": "bid",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": 495.0,
+      "fair_band": [
+        350,
+        650
+      ],
+      "in_band": true,
+      "fit": 1.0,
+      "risk": 0.15,
+      "reasons": [
+        "fit 1.00",
+        "risk 0.15",
+        "strong evidence for 2 of 2 requirements",
+        "category ml_engineering"
+      ],
+      "status": "running",
+      "latency_s": 61.153985999990255,
+      "tokens": 1081,
+      "usd": 0.00040739
+    },
+    {
+      "job_id": "job_7cb3f42379",
+      "persona": "ai_ml_engineer",
+      "real": false,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.00",
+        "risk 0.95",
+        "scam signals: ['free_work_request', 'vague_scope']"
+      ],
+      "status": "skipped",
+      "latency_s": 176.57832229998894,
+      "tokens": 1109,
+      "usd": 0.00044370999999999994
+    },
+    {
+      "job_id": "job_7340ca224c",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "watch",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        175,
+        325
+      ],
+      "in_band": null,
+      "fit": 0.25,
+      "risk": 0.1,
+      "reasons": [
+        "fit 0.25",
+        "risk 0.10",
+        "weak fit; missing ['PostgreSQL', 'Django', 'Celery']"
+      ],
+      "status": "skipped",
+      "latency_s": 115.4565063000191,
+      "tokens": 1567,
+      "usd": 0.00055733
+    },
+    {
+      "job_id": "job_40e0ce8abc",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        2450,
+        4550
+      ],
+      "in_band": null,
+      "fit": 0.25,
+      "risk": 0.65,
+      "reasons": [
+        "fit 0.25",
+        "risk 0.65",
+        "weak fit; missing ['PostgreSQL', 'Node.js', 'React']"
+      ],
+      "status": "skipped",
+      "latency_s": 120.70020590000786,
+      "tokens": 1807,
+      "usd": 0.0006416299999999999
+    },
+    {
+      "job_id": "job_72a13254fd",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "bid",
+      "pred_action": "bid",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": 36.88,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": false,
+      "fit": 0.75,
+      "risk": 0.15,
+      "reasons": [
+        "fit 0.75",
+        "risk 0.15",
+        "strong evidence for 3 of 4 requirements",
+        "category ml_engineering"
+      ],
+      "status": "running",
+      "latency_s": 247.14746609999565,
+      "tokens": 2329,
+      "usd": 0.0008194099999999998
+    },
+    {
+      "job_id": "job_eac6819d6e",
+      "persona": "ai_ml_engineer",
+      "real": false,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        750.0,
+        1530.0
+      ],
+      "in_band": null,
+      "fit": 0.333,
+      "risk": 0.1,
+      "reasons": [
+        "fit 0.33",
+        "risk 0.10",
+        "weak fit; missing ['Google Analytics', 'Looker']"
+      ],
+      "status": "skipped",
+      "latency_s": 60.04065759998048,
+      "tokens": 981,
+      "usd": 0.00037359
+    },
+    {
+      "job_id": "job_cea8be18f8",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "watch",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        32,
+        55
+      ],
+      "in_band": null,
+      "fit": 0.25,
+      "risk": 0.15,
+      "reasons": [
+        "fit 0.25",
+        "risk 0.15",
+        "weak fit; missing ['Looking for a long time SEO and SEA expert partnership', 'Looking for a long time SEO and SEA expert partnershipWe are looking for a partner that helps us to improve our internet marketing for airisprotect', 'Planned Milestones (not part of milestone 1!):In further milestones we plan to use the groups to create dedicated landing pages for each (one by one by relevanc']"
+      ],
+      "status": "skipped",
+      "latency_s": 236.4315740999882,
+      "tokens": 2708,
+      "usd": 0.00095692
+    },
+    {
+      "job_id": "job_581a8ed69c",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        39,
+        64
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 0.05,
+      "reasons": [
+        "fit 0.00",
+        "risk 0.05",
+        "weak fit; missing ['Node.js', 'Next.js', 'React']"
+      ],
+      "status": "skipped",
+      "latency_s": 59.20694050000748,
+      "tokens": 1253,
+      "usd": 0.00046927
+    },
+    {
+      "job_id": "job_4a4ab45448",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        39,
+        64
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 0.05,
+      "reasons": [
+        "fit 0.00",
+        "risk 0.05",
+        "weak fit; missing ['TypeScript', 'GraphQL', 'Node.js', 'React']"
+      ],
+      "status": "skipped",
+      "latency_s": 237.34780930000124,
+      "tokens": 1583,
+      "usd": 0.0005622699999999999
+    },
+    {
+      "job_id": "job_74da6152f5",
+      "persona": "fullstack_web",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        175,
+        325
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.00",
+        "risk 0.95",
+        "scam signals: ['free_work_request']"
+      ],
+      "status": "skipped",
+      "latency_s": 60.10441259999061,
+      "tokens": 1001,
+      "usd": 0.00038328999999999994
+    },
+    {
+      "job_id": "job_6229d31868",
+      "persona": "ai_ml_engineer",
+      "real": true,
+      "gold_action": "bid",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 1.0,
+      "risk": 1.0,
+      "reasons": [
+        "fit 1.00",
+        "risk 1.00",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 124.78295889997389,
+      "tokens": 2025,
+      "usd": 0.00070695
+    },
+    {
+      "job_id": "job_a85f2d02e2",
+      "persona": "fullstack_web",
+      "real": false,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        32,
+        55
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.00",
+        "risk 0.95",
+        "scam signals: ['free_work_request']"
+      ],
+      "status": "skipped",
+      "latency_s": 64.4113613999798,
+      "tokens": 937,
+      "usd": 0.00034793
+    },
+    {
+      "job_id": "job_c1d2fb8480",
+      "persona": "fullstack_web",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": true,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        32,
+        55
+      ],
+      "in_band": null,
+      "fit": 0.167,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.17",
+        "risk 0.95",
+        "scam signals: ['low_client_quality', 'prompt_injection', 'vague_scope']"
+      ],
+      "status": "skipped",
+      "latency_s": 121.25162499997532,
+      "tokens": 2275,
+      "usd": 0.0008070499999999999
+    },
+    {
+      "job_id": "job_3b8be1ddb4",
+      "persona": "fullstack_web",
+      "real": false,
+      "gold_action": "bid",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": true,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 0.75,
+      "risk": 1.0,
+      "reasons": [
+        "fit 0.75",
+        "risk 1.00",
+        "scam signals: ['prompt_injection']"
+      ],
+      "status": "skipped",
+      "latency_s": 237.07986460003303,
+      "tokens": 1162,
+      "usd": 0.00046478
+    },
+    {
+      "job_id": "job_190c4a7006",
+      "persona": "fullstack_web",
+      "real": true,
+      "gold_action": "watch",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": true,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        570.0,
+        1170.0
+      ],
+      "in_band": null,
+      "fit": 0.25,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.25",
+        "risk 0.95",
+        "scam signals: ['low_client_quality', 'prompt_injection']"
+      ],
+      "status": "skipped",
+      "latency_s": 120.16484250000212,
+      "tokens": 1582,
+      "usd": 0.0005799799999999999
+    },
+    {
+      "job_id": "job_bd358eb393",
+      "persona": "fullstack_web",
+      "real": false,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        32,
+        55
+      ],
+      "in_band": null,
+      "fit": 0.5,
+      "risk": 1.0,
+      "reasons": [
+        "fit 0.50",
+        "risk 1.00",
+        "scam signals: ['off_platform_contact_or_payment', 'vague_scope']"
+      ],
+      "status": "skipped",
+      "latency_s": 116.27970700000878,
+      "tokens": 1075,
+      "usd": 0.00042784999999999996
+    },
+    {
+      "job_id": "job_636fd04ebe",
+      "persona": "fullstack_web",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        14,
+        26
+      ],
+      "in_band": null,
+      "fit": 0.5,
+      "risk": 0.95,
+      "reasons": [
+        "fit 0.50",
+        "risk 0.95",
+        "scam signals: ['off_platform_contact_or_payment', 'unrealistic_budget', 'vague_scope']"
+      ],
+      "status": "skipped",
+      "latency_s": 241.60694179998245,
+      "tokens": 1544,
+      "usd": 0.0005755599999999999
+    },
+    {
+      "job_id": "job_1ff73fddc9",
+      "persona": "ai_ml_engineer",
+      "real": false,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        32,
+        55
+      ],
+      "in_band": null,
+      "fit": 0.25,
+      "risk": 0.85,
+      "reasons": [
+        "fit 0.25",
+        "risk 0.85",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 63.84522849996574,
+      "tokens": 1687,
+      "usd": 0.0006107299999999999
+    },
+    {
+      "job_id": "job_290a52e4dd",
+      "persona": "ai_ml_engineer",
+      "real": false,
+      "gold_action": "watch",
+      "pred_action": "skip",
+      "gold_scam": false,
+      "pred_scam": false,
+      "gold_injection": true,
+      "pred_injection": true,
+      "price": null,
+      "fair_band": [
+        32,
+        55
+      ],
+      "in_band": null,
+      "fit": 0.375,
+      "risk": 0.7,
+      "reasons": [
+        "fit 0.38",
+        "risk 0.70",
+        "risk above threshold"
+      ],
+      "status": "skipped",
+      "latency_s": 128.27529499999946,
+      "tokens": 2081,
+      "usd": 0.0005289100000000001
+    },
+    {
+      "job_id": "job_ae694b0755",
+      "persona": "fullstack_web",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        50,
+        77
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 1.0,
+      "reasons": [
+        "fit 0.00",
+        "risk 1.00",
+        "scam signals: ['free_work_request', 'low_client_quality']"
+      ],
+      "status": "skipped",
+      "latency_s": 121.26835860003484,
+      "tokens": 1683,
+      "usd": 0.00061617
+    },
+    {
+      "job_id": "job_732c0a1fc1",
+      "persona": "fullstack_web",
+      "real": true,
+      "gold_action": "skip",
+      "pred_action": "skip",
+      "gold_scam": true,
+      "pred_scam": true,
+      "gold_injection": false,
+      "pred_injection": false,
+      "price": null,
+      "fair_band": [
+        280,
+        520
+      ],
+      "in_band": null,
+      "fit": 0.0,
+      "risk": 1.0,
+      "reasons": [
+        "fit 0.00",
+        "risk 1.00",
+        "scam signals: ['free_work_request', 'off_platform_contact_or_payment']"
+      ],
+      "status": "skipped",
+      "latency_s": 179.99023639998632,
+      "tokens": 940,
+      "usd": 0.00035509999999999996
+    },
+    {
+      "job_id": "job_bbd10f0f88",
+      "persona": "ai_ml_engineer",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 52s"
+    },
+    {
+      "job_id": "job_1f6ae7aaf5",
+      "persona": "ai_ml_engineer",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 52s"
+    },
+    {
+      "job_id": "job_afc97ea131",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 48s"
+    },
+    {
+      "job_id": "job_9bda887d24",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 47s"
+    },
+    {
+      "job_id": "job_4a7c9f93e2",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 46s"
+    },
+    {
+      "job_id": "job_183723726a",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 46s"
+    },
+    {
+      "job_id": "job_6afb24de20",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 45s"
+    },
+    {
+      "job_id": "job_4a839f86b1",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 44s"
+    },
+    {
+      "job_id": "job_eab06fe04d",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 44s"
+    },
+    {
+      "job_id": "job_cc6f6ede7b",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 43s"
+    },
+    {
+      "job_id": "job_4226003e26",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 42s"
+    },
+    {
+      "job_id": "job_fdcd8c7d50",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 42s"
+    },
+    {
+      "job_id": "job_edc10c00d8",
+      "persona": "fullstack_web",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 38s"
+    },
+    {
+      "job_id": "job_bf5ce6bca1",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 37s"
+    },
+    {
+      "job_id": "job_2b80090196",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 35s"
+    },
+    {
+      "job_id": "job_b3ad32a369",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 35s"
+    },
+    {
+      "job_id": "job_c18557ded9",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 33s"
+    },
+    {
+      "job_id": "job_ff6d1d2c33",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 33s"
+    },
+    {
+      "job_id": "job_ee02c29275",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 32s"
+    },
+    {
+      "job_id": "job_1ff73fddc9",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 31s"
+    },
+    {
+      "job_id": "job_cb6c53bcb8",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 30s"
+    },
+    {
+      "job_id": "job_961cc96ada",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 30s"
+    },
+    {
+      "job_id": "job_cf39da87bb",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 30s"
+    },
+    {
+      "job_id": "job_05fa2de99c",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 28s"
+    },
+    {
+      "job_id": "job_c08d995514",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 27s"
+    },
+    {
+      "job_id": "job_4c8596c838",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 27s"
+    },
+    {
+      "job_id": "job_d3eff7c2f1",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 26s"
+    },
+    {
+      "job_id": "job_0aed854dc1",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 25s"
+    },
+    {
+      "job_id": "job_fee8346a5a",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 25s"
+    },
+    {
+      "job_id": "job_fc4bcf654b",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 24s"
+    },
+    {
+      "job_id": "job_14b2132509",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 22s"
+    },
+    {
+      "job_id": "job_899a19b6be",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 22s"
+    },
+    {
+      "job_id": "job_7aeed2e80f",
+      "persona": "data_analyst",
+      "error": "dead_letter: risk_assessor failed after 3 attempts: all models out of daily quota; next reset in 22s"
+    }
+  ]
+}

@@ -72,7 +72,7 @@ def persona_table() -> str:
 
 
 def decision_table() -> str:
-    lines = ["| Profile | n | Bid F1 | 3-way acc. | Scam P / R | Injection detected | Price in fair band | p50 / p95 latency per job (s) | Tokens / job | USD / job |",
+    lines = ["| Profile | n (failed) | Bid F1 | 3-way acc. | Scam P / R | Injection detected | Price in fair band | p50 / p95 latency per job (s) | Tokens / job | USD / job |",
              "|---|---|---|---|---|---|---|---|---|---|"]
     any_ = False
     for prof in ("open", "open_qwen"):
@@ -81,7 +81,7 @@ def decision_table() -> str:
             continue
         any_ = True
         o = d["overall"]
-        lines.append(f"| {prof} | {o['n']} | {f(o['bid_skip']['f1'])} | {f(o['bid_skip']['accuracy_3way'])} | "
+        lines.append(f"| {prof} | {o['n']} ({o.get('errors', 0)}) | {f(o['bid_skip']['f1'])} | {f(o['bid_skip']['accuracy_3way'])} | "
                      f"{f(o['scam']['precision'])} / {f(o['scam']['recall'])} | {f(o['injection_detected']['rate'])} "
                      f"(n={o['injection_detected']['n']}) | {f(o['price_in_fair_band']['rate'])} "
                      f"(n={o['price_in_fair_band']['n']}) | {f(o['latency_s_per_job']['p50'], 1)} / "
