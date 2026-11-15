@@ -22,10 +22,12 @@ Point it at a folder of your files (`proposals/` sub-folder = past proposals):
 
 ```bash
 # uvx, straight from the public repository
-PORTFOLIO_DIR=~/my-portfolio uvx --from "git+https://github.com/<you>/gigbid" gigbid-portfolio-mcp
+PORTFOLIO_DIR=~/my-portfolio uvx --from "git+https://github.com/waqasmalik0007/gigbid" gigbid-portfolio-mcp
 
 # Docker
-docker run -i --rm -v ~/my-portfolio:/portfolio -e PORTFOLIO_DIR=/portfolio <you>/gigbid-portfolio-mcp
+# Docker, from a clone of the repository (the shared Python image; override its command)
+docker build -f infra/docker/python.Dockerfile -t gigbid-py .
+docker run -i --rm -v ~/my-portfolio:/portfolio -e PORTFOLIO_DIR=/portfolio gigbid-py python -m mcp_servers.portfolio.server
 ```
 
 Claude Desktop (`claude_desktop_config.json`):
@@ -35,7 +37,7 @@ Claude Desktop (`claude_desktop_config.json`):
   "mcpServers": {
     "portfolio": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/<you>/gigbid", "gigbid-portfolio-mcp"],
+      "args": ["--from", "git+https://github.com/waqasmalik0007/gigbid", "gigbid-portfolio-mcp"],
       "env": { "PORTFOLIO_DIR": "/Users/me/my-portfolio" }
     }
   }

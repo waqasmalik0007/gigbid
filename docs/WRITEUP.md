@@ -142,4 +142,4 @@ synthetic, and the simulated clients are a model of clients, not clients. But th
 GigBid ships contextual chunks plus hybrid search because the measurements chose it, not because a blog
 post did.
 
-*Code, results files and the full report: REPO_URL*
+*Code, results files and the full report: https://github.com/waqasmalik0007/gigbid*

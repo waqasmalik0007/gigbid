@@ -1,6 +1,6 @@
 # GigBid: R&D design review
 
-AI-4016 · individual assignment · repository: REPO_URL · live app: LIVE_URL · every number below is
+AI-4016 · individual assignment · repository: https://github.com/waqasmalik0007/gigbid · live app: LIVE_URL · every number below is
 generated from `evals/results/*.json` (`tools/results_tables.py`); file names are given in brackets.
 
 ## 1. Problem and constraints
