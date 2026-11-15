@@ -4,7 +4,8 @@
 proposals in which every claim links to real portfolio evidence. Nothing reaches a client until a human
 approves it.**
 
-* Live app: **LIVE_URL** (reviewer login in the Classroom private comment)
+* Live app: **https://trailers-july-ranch-icon.trycloudflare.com** (reviewer login in the Classroom private comment). Served from my machine through a
+  Cloudflare tunnel (Hugging Face now charges for Docker Spaces; see [docs/DEPLOY.md](docs/DEPLOY.md)).
 * Demo video (3 min): **VIDEO_URL**
 * Public traces: **TRACE_LINKS**
 * Portfolio MCP server: [`mcp_servers/portfolio`](mcp_servers/portfolio/README.md) · Write-up: **WRITEUP_URL**

@@ -1,8 +1,37 @@
-# Deploying GigBid (free)
+# Deploying GigBid
 
-Target: a **Hugging Face Docker Space** (free CPU: 2 vCPU, 16 GB RAM), which fits the open embedding and
-reranker models. One container runs the web app (port 7860), the API, GigSim and the MCP servers; Postgres
-and Redis are optional managed services.
+**What the live link runs on (option B).** On 15 Nov, Hugging Face refused to create the Space: Docker
+Spaces now need a PRO subscription (`402 Payment Required`). The free hosts I could find give 512 MB of RAM,
+which is too little for the local embedding and reranker models. So the submitted live app runs on my own
+machine and is exposed through a free Cloudflare quick tunnel.
+
+## Option B: your own machine + Cloudflare tunnel (free, what the live link uses)
+
+1. Make an isolated copy, so evaluation state never mixes with the live app:
+   `git archive HEAD | tar -x -C <live-dir>`.
+2. Write `<live-dir>/.env` with the secrets in the table below, and set `GIGSIM_BASE_URL=http://127.0.0.1:8101`
+   and `MCP_TRANSPORT=inproc`.
+3. Build the web app with `NEXT_PUBLIC_API_URL=""` and `API_INTERNAL_URL=http://127.0.0.1:8000`, then copy
+   `.next/standalone` (plus `.next/static`) to `<live-dir>/web`.
+4. Run `L=<live-dir> PY=python NODE=node CLOUDFLARED=cloudflared bash tools/serve_public.sh`.
+   - It starts GigSim, the API, the web server and the tunnel.
+   - It restarts any of them that exits.
+   - It writes the current public URL to `<live-dir>/URL.txt`.
+
+**Limits:**
+- The machine must stay on and awake.
+- A quick tunnel's URL changes if `cloudflared` restarts. A named tunnel on your own domain avoids
+  this, but needs a Cloudflare account.
+
+## Option A: Hugging Face Docker Space (needs HF PRO since Nov 2026)
+
+`python tools/deploy_space.py <hf-username>` does steps 2–3 below in one go. It creates the Space, sets the
+secrets, uploads `git archive HEAD` with `infra/docker/allinone.Dockerfile`, and writes the reviewer login to
+a file outside the repo.
+
+The Space is a single container on 2 vCPU and 16 GB RAM, enough for the open embedding and reranker models.
+It runs the web app (port 7860), the API, GigSim and the MCP servers. Postgres and Redis are optional
+managed services.
 
 ## 1. Accounts (one-time, ~10 minutes)
 
