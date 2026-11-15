@@ -38,3 +38,8 @@ AI coding assistants were allowed for this assignment. I am accountable for ever
 10. **Degraded mode without recovery.** The banner and `needs_attention` status existed, but nothing
     resumed parked work when the marketplace came back. Added checkpoint-based recovery and a test that
     proves an approved proposal is still submitted exactly once.
+
+**Judge calibration labels were made by Claude, not by me.** The brief (B4) asks the student to label 30
+items. Short on time, I asked the coding assistant to label them, blind to the judge's scores. Every row
+of `evals/datasets/judge_labels.csv` says so in its notes, and report section 4 says the resulting kappa
+compares two models, not the judge against a human.

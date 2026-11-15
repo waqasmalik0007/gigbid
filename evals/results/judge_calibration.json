@@ -1,0 +1,38 @@
+{
+  "n": 30,
+  "cohen_kappa": 0.104,
+  "cohen_kappa_quadratic": 0.144,
+  "exact_agreement": 0.267,
+  "largest_disagreements": [
+    {
+      "item": 8,
+      "human": 1,
+      "judge": 5,
+      "notes": "[labelled by Claude (AI assistant), at the user's request; not a human label] mismatched; free-sample post"
+    },
+    {
+      "item": 5,
+      "human": 1,
+      "judge": 4,
+      "notes": "[labelled by Claude (AI assistant), at the user's request; not a human label] one line, weak match"
+    },
+    {
+      "item": 9,
+      "human": 1,
+      "judge": 4,
+      "notes": "[labelled by Claude (AI assistant), at the user's request; not a human label] mismatched"
+    },
+    {
+      "item": 11,
+      "human": 1,
+      "judge": 4,
+      "notes": "[labelled by Claude (AI assistant), at the user's request; not a human label] mismatched"
+    },
+    {
+      "item": 1,
+      "human": 1,
+      "judge": 3,
+      "notes": "[labelled by Claude (AI assistant), at the user's request; not a human label] evidence unrelated to NLP"
+    }
+  ]
+}

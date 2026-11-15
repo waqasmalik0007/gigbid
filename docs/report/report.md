@@ -128,7 +128,21 @@ mark down. Retrieval quality and letter quality are different targets; the evide
 (0.27 to 0.50), but it pays off only if the Writer is held to the claims the evidence supports before
 drafting, not after. That is the first thing I would change.
 
-**Judge calibration.** TODO(result): kappa from judge_calibration.json (requires my 30 labels).
+**Judge calibration** [judge_calibration.json]. The brief asks for 30 items labelled by me. **These labels
+were made by an AI assistant (Claude) at my request, not by me**, blind to the judge's scores. So the
+numbers below measure agreement between two models, not the judge's calibration against a human.
+
+Agreement is poor: Cohen's κ 0.10, quadratic-weighted κ 0.14, exact agreement 27% (n = 30). The
+disagreement has one cause:
+- **Template letters** follow the form "You need X; I did exactly that in '<unrelated project>'. Result:
+  <metric>". All 14 were labelled 1–2, but the judge gave them a mean of 3.2, and gave a React/Node letter
+  citing an assembly-line defect detector a 5. **The judge rewards the shape "claim plus metric" without
+  checking that the project is relevant to the job.**
+- **The 16 real proposals:** the judge tracks the labels in order. Its mean scores are 1.5, 2.8, 3.5 and
+  3.6 for letters labelled 1 to 4. Here κ is 0.24, quadratic κ 0.49, and 12 of 16 are within one point.
+
+The proposal scores above are on real proposals, where the judge is more usable. Its blindness to
+relevance is still a reason to read the judge column next to the unsupported-claim rate, never alone.
 
 **What ships.** Contextual chunks + hybrid BM25/dense (`rag/variants/best.py`), chosen by Recall@5 and
 nDCG@10 on the full dev set, with sub-millisecond-to-millisecond retrieval latency; the reranker,
